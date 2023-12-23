@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DrainBlood.Upgrades;
 
-public class Bloodletting : DrainBloodUpgrade
+public class Bloodletting : SkillUpgrade<DrainBlood>
 {
     public Bloodletting()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DrainBlood.Upgrades;
 
-public class SapSpirit : DrainBloodUpgrade
+public class SapSpirit : SkillUpgrade<DrainBlood>
 {
     public SapSpirit()
     {

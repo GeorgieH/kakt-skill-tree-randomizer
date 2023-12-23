@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MarkTarget.Upgrades;
 
-public class Entangle : MarkTargetUpgrade
+public class Entangle : SkillUpgrade<MarkTarget>
 {
     public Entangle()
     {

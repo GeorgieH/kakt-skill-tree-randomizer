@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.JumpingAttack.Upgrades;
 
-public class Recoil : JumpingAttackUpgrade
+public class Recoil : SkillUpgrade<JumpingAttack>
 {
     public Recoil()
     {

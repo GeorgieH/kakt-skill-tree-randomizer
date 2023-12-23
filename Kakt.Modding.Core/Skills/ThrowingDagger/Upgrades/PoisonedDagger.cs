@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ThrowingDagger.Upgrades;
 
-public class PoisonedDagger : ThrowingDaggerUpgrade
+public class PoisonedDagger : SkillUpgrade<ThrowingDagger>
 {
     public PoisonedDagger()
     {

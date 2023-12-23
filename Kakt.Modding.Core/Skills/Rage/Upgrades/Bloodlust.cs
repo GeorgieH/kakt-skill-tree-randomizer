@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Rage.Upgrades;
 
-public class Bloodlust : RageUpgrade
+public class Bloodlust : SkillUpgrade<Rage>
 {
     public Bloodlust()
     {

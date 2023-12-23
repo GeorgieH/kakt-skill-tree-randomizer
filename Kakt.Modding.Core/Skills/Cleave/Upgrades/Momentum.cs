@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Cleave.Upgrades;
 
-public class Momentum : CleaveUpgrade
+public class Momentum : SkillUpgrade<Cleave>
 {
     public Momentum()
     {

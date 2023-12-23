@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.RupturingStrike.Upgrades;
 
-public class Hemorrhage : RupturingStrikeUpgrade
+public class Hemorrhage : SkillUpgrade<RupturingStrike>
 {
     public Hemorrhage()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DefensiveStance.Upgrades;
 
-public class ActiveDefense : DefensiveStanceUpgrade
+public class ActiveDefense : SkillUpgrade<DefensiveStance>
 {
     public ActiveDefense()
     {

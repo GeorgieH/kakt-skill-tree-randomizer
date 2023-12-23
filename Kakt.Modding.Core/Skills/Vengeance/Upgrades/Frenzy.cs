@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Vengeance.Upgrades;
 
-public class Frenzy : VengeanceUpgrade
+public class Frenzy : SkillUpgrade<Vengeance>
 {
     public Frenzy()
     {

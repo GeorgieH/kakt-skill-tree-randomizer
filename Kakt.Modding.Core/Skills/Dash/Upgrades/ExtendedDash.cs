@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Dash.Upgrades;
 
-public class ExtendedDash : DashUpgrade
+public class ExtendedDash : SkillUpgrade<Dash>
 {
     public ExtendedDash()
     {

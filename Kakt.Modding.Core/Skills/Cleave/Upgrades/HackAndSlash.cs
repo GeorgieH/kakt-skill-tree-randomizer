@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Cleave.Upgrades;
 
-public class HackAndSlash : CleaveUpgrade
+public class HackAndSlash : SkillUpgrade<Cleave>
 {
     public HackAndSlash()
     {

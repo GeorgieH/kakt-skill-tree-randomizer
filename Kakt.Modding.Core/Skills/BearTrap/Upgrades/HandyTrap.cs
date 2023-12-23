@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.BearTrap.Upgrades;
 
-public class HandyTrap : BearTrapUpgrade
+public class HandyTrap : SkillUpgrade<BearTrap>
 {
     public HandyTrap()
     {

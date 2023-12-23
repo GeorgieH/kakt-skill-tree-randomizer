@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FlamingStrike.Upgrades;
 
-public class UndeadBane : FlamingStrikeUpgrade
+public class UndeadBane : SkillUpgrade<FlamingStrike>
 {
     public UndeadBane()
     {

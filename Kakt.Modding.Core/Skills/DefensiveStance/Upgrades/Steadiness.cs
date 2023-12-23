@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DefensiveStance.Upgrades;
 
-public class Steadiness : DefensiveStanceUpgrade
+public class Steadiness : SkillUpgrade<DefensiveStance>
 {
     public Steadiness()
     {

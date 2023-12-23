@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DebilitatingThrow.Upgrades;
 
-public class Daze : DebilitatingThrowUpgrade
+public class Daze : SkillUpgrade<DebilitatingThrow>
 {
     public Daze()
     {

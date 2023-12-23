@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.SoothingWords.Upgrades;
 
-public class Healer : SoothingWordsUpgrade
+public class Healer : SkillUpgrade<SoothingWords>
 {
     public Healer()
     {

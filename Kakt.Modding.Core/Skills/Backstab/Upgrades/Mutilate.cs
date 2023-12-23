@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Backstab.Upgrades;
 
-public class Mutilate : BackstabUpgrade
+public class Mutilate : SkillUpgrade<Backstab>
 {
     public Mutilate()
     {

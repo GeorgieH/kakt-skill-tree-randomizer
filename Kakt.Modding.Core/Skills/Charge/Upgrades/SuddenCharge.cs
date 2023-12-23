@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Charge.Upgrades;
 
-public class SuddenCharge : ChargeUpgrade
+public class SuddenCharge : SkillUpgrade<Charge>
 {
     public SuddenCharge()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DebilitatingThrow.Upgrades;
 
-public class SteadyAim : DebilitatingThrowUpgrade
+public class SteadyAim : SkillUpgrade<DebilitatingThrow>
 {
     public SteadyAim()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.EarthShaker.Upgrades;
 
-public class EarthSplitter : EarthShakerUpgrade
+public class EarthSplitter : SkillUpgrade<EarthShaker>
 {
     public EarthSplitter()
     {

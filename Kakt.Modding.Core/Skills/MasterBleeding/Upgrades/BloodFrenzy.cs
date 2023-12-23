@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterBleeding.Upgrades;
 
-public class BloodFrenzy : MasterBleedingUpgrade
+public class BloodFrenzy : SkillUpgrade<MasterBleeding>
 {
     public BloodFrenzy()
     {

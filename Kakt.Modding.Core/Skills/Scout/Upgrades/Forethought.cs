@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
 
-public class Forethought : ScoutUpgrade
+public class Forethought : SkillUpgrade<Scout>
 {
     public Forethought()
     {

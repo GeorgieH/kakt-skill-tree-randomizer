@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Flurry.Upgrades;
 
-public class ExtendedFlurry : FlurryUpgrade
+public class ExtendedFlurry : SkillUpgrade<Flurry>
 {
     public ExtendedFlurry()
     {

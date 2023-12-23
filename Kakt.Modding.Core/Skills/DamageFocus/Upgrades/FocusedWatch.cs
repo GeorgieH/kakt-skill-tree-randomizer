@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DamageFocus.Upgrades;
 
-public class FocusedWatch : DamageFocusUpgrade
+public class FocusedWatch : SkillUpgrade<DamageFocus>
 {
     public FocusedWatch()
     {

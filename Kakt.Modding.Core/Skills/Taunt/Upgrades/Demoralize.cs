@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Taunt.Upgrades;
 
-public class Demoralize : TauntUpgrade
+public class Demoralize : SkillUpgrade<Taunt>
 {
     public Demoralize()
     {

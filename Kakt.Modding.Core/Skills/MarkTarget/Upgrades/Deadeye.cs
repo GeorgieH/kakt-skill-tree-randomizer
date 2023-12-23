@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MarkTarget.Upgrades;
 
-public class Deadeye : MarkTargetUpgrade
+public class Deadeye : SkillUpgrade<MarkTarget>
 {
     public Deadeye()
     {

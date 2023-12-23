@@ -1,6 +1,5 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike;
 
-public abstract class StrikeUpgrade : SkillUpgrade
+public abstract class StrikeUpgrade : SkillUpgrade<Strike>
 {
-    public override string Prerequisite => nameof(Strike);
 }

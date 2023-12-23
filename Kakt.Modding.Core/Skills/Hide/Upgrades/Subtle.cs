@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Hide.Upgrades;
 
-public class Subtle : HideUpgrade
+public class Subtle : SkillUpgrade<Hide>
 {
     public Subtle()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PoisonTrap.Upgrades;
 
-public class ThickCloud : PoisonTrapUpgrade
+public class ThickCloud : SkillUpgrade<PoisonTrap>
 {
     public ThickCloud()
     {

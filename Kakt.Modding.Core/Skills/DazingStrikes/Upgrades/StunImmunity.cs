@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DazingStrikes.Upgrades;
 
-public class StunImmunity : DazingStrikesUpgrade
+public class StunImmunity : SkillUpgrade<DazingStrikes>
 {
     public StunImmunity()
     {

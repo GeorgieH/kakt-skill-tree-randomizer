@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Whirlwind.Upgrades;
 
-public class RagingWind : WhirlwindUpgrade
+public class RagingWind : SkillUpgrade<Whirlwind>
 {
     public RagingWind()
     {

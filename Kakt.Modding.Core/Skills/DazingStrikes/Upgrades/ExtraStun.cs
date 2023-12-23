@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DazingStrikes.Upgrades;
 
-public class ExtraStun : DazingStrikesUpgrade
+public class ExtraStun : SkillUpgrade<DazingStrikes>
 {
     public ExtraStun()
     {

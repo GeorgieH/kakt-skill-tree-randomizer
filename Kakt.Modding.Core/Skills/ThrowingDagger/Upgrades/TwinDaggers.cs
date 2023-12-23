@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ThrowingDagger.Upgrades;
 
-public class TwinDaggers : ThrowingDaggerUpgrade
+public class TwinDaggers : SkillUpgrade<ThrowingDagger>
 {
     public TwinDaggers()
     {

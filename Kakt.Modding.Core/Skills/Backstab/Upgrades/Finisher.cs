@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Backstab.Upgrades;
 
-public class Finisher : BackstabUpgrade
+public class Finisher : SkillUpgrade<Backstab>
 {
     public override string Name => "Hero_vanguard__backstab_finisher";
 }

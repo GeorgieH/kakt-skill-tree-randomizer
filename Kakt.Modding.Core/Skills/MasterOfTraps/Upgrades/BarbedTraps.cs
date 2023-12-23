@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterOfTraps.Upgrades;
 
-public class BarbedTraps : MasterOfTrapsUpgrade
+public class BarbedTraps : SkillUpgrade<MasterOfTraps>
 {
     public BarbedTraps()
     {

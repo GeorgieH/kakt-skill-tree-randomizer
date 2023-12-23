@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MeleeExpertise.Upgrades;
 
-public class HeatOfTheBattle : MeleeExpertiseUpgrade
+public class HeatOfTheBattle : SkillUpgrade<MeleeExpertise>
 {
     public HeatOfTheBattle()
     {

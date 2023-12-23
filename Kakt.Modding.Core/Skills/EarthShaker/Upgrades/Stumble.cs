@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.EarthShaker.Upgrades;
 
-public class Stumble : EarthShakerUpgrade
+public class Stumble : SkillUpgrade<EarthShaker>
 {
     public Stumble()
     {

@@ -1,4 +1,6 @@
-﻿namespace Kakt.Modding.Core.Skills;
+﻿using System.Reflection;
+
+namespace Kakt.Modding.Core.Skills;
 
 public abstract class SkillUpgrade
 {

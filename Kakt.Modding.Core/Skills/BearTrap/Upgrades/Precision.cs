@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.BearTrap.Upgrades;
 
-public class Precision : BearTrapUpgrade
+public class Precision : SkillUpgrade<BearTrap>
 {
     public Precision()
     {

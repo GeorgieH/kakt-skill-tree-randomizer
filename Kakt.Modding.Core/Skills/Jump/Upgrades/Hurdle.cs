@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Jump.Upgrades;
 
-public class Hurdle : JumpUpgrade
+public class Hurdle : SkillUpgrade<Jump>
 {
     public Hurdle()
     {

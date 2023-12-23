@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DeathStrike.Upgrades;
 
-public class Swiftness : DeathStrikeUpgrade
+public class Swiftness : SkillUpgrade<DeathStrike>
 {
     public Swiftness()
     {

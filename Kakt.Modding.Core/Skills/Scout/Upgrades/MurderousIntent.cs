@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
 
-public class MurderousIntent : ScoutUpgrade
+public class MurderousIntent : SkillUpgrade<Scout>
 {
     public MurderousIntent()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Whirlwind.Upgrades;
 
-public class Bladestorm : WhirlwindUpgrade
+public class Bladestorm : SkillUpgrade<Whirlwind>
 {
     public Bladestorm()
     {

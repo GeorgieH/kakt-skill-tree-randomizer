@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Hide.Upgrades;
 
-public class Preparation : HideUpgrade
+public class Preparation : SkillUpgrade<Hide>
 {
     public Preparation()
     {

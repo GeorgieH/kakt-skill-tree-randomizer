@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MeleeExpertise.Upgrades;
 
-public class Overdrive : MeleeExpertiseUpgrade
+public class Overdrive : SkillUpgrade<MeleeExpertise>
 {
     public Overdrive()
     {

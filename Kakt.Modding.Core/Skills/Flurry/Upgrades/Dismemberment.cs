@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Flurry.Upgrades;
 
-public class Dismemberment : FlurryUpgrade
+public class Dismemberment : SkillUpgrade<Flurry>
 {
     public Dismemberment()
     {

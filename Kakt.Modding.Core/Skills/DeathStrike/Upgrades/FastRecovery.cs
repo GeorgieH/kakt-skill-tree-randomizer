@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DeathStrike.Upgrades;
 
-public class FastRecovery : DeathStrikeUpgrade
+public class FastRecovery : SkillUpgrade<DeathStrike>
 {
     public FastRecovery()
     {

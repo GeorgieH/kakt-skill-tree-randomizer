@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterBleeding.Upgrades;
 
-public class BleedingImmunity : MasterBleedingUpgrade
+public class BleedingImmunity : SkillUpgrade<MasterBleeding>
 {
     public BleedingImmunity()
     {

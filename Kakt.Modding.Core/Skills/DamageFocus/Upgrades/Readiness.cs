@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DamageFocus.Upgrades;
 
-public class Readiness : DamageFocusUpgrade
+public class Readiness : SkillUpgrade<DamageFocus>
 {
     public Readiness()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterOfTraps.Upgrades;
 
-public class BetterTools : MasterOfTrapsUpgrade
+public class BetterTools : SkillUpgrade<MasterOfTraps>
 {
     public BetterTools()
     {

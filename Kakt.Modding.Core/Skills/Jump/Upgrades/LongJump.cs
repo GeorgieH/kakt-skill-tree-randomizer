@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Jump.Upgrades;
 
-public class LongJump : JumpUpgrade
+public class LongJump : SkillUpgrade<Jump>
 {
     public LongJump()
     {
