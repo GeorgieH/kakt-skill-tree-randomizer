@@ -1,20 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FlamingStrike;
 
-public class FlamingStrike : Skill
+public class FlamingStrike : ActiveSkill
 {
     public override string Name => "SirPercivale__flamingStrike";
-
-    public override bool Starter
-    {
-        get => true;
-        set { return; }
-    }
-
-    public override SkillTier Tier
-    {
-        get => SkillTier.One;
-        set { return; }
-    }
-
-    public override SkillType Type => SkillType.Active;
 }

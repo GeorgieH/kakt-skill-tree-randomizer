@@ -2,6 +2,10 @@
 
 public class Blight : PoisonCutUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Ten;
+    public Blight()
+    {
+        LevelLimit = HeroLevelLimits.Ten;
+    }
+
     public override string Name => "SirTristan__poisonCut_blight";
 }

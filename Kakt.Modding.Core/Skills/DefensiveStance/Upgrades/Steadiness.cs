@@ -2,6 +2,10 @@
 
 public class Steadiness : DefensiveStanceUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Five;
+    public Steadiness()
+    {
+        LevelLimit = HeroLevelLimits.Five;
+    }
+
     public override string Name => "Hero_champion__defensiveStance_steadiness";
 }

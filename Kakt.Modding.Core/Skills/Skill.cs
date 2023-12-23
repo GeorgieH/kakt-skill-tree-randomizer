@@ -6,11 +6,12 @@ public abstract class Skill : IEquatable<Skill?>
 
     private readonly HashSet<SkillUpgrade> upgrades = [];
 
-    public virtual int Cost { get; set; }
+    public int Cost { get; set; } = SkillCosts.Two;
+    public string? IconName { get; set; }
     public Position2D IconPosition { get; set; }
     public abstract string Name { get; }
-    public virtual bool Starter { get; set; }
-    public virtual SkillTier Tier { get; set; }
+    public bool Starter { get; set; }
+    public SkillTier Tier { get; set; }
     public abstract SkillType Type { get; }
     public IEnumerable<SkillUpgrade> Upgrades => upgrades;
 

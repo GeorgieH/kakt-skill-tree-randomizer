@@ -2,6 +2,10 @@
 
 public class CharredFlesh : FlamingStrikeUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Five;
+    public CharredFlesh()
+    {
+        LevelLimit = HeroLevelLimits.Five;
+    }
+
     public override string Name => "SirPercivale__flamingStrike_charredFlesh";
 }

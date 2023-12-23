@@ -2,6 +2,10 @@
 
 public class GloryKill : ChampionStrikeUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Ten;
+    public GloryKill()
+    {
+        LevelLimit = HeroLevelLimits.Ten;
+    }
+
     public override string Name => "Hero_champion__strike_gloryKill";
 }

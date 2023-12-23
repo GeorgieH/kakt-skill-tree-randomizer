@@ -2,6 +2,10 @@
 
 public class SweepingStrike : DefenderStrikeUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Ten;
+    public SweepingStrike()
+    {
+        LevelLimit = HeroLevelLimits.Ten;
+    }
+
     public override string Name => "Hero_defender__strike_sweepingStrike";
 }

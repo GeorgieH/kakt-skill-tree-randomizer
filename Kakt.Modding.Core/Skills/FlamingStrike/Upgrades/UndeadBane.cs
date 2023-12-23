@@ -2,6 +2,10 @@
 
 public class UndeadBane : FlamingStrikeUpgrade
 {
-    public override int LevelLimit { get; set; } = HeroLevelLimits.Ten;
+    public UndeadBane()
+    {
+        LevelLimit = HeroLevelLimits.Ten;
+    }
+
     public override string Name => "SirPercivale__flamingStrike_undeadbane";
 }
