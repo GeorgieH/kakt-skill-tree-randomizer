@@ -1,10 +1,5 @@
-﻿using Kakt.Modding.Core.Heroes;
+﻿namespace Kakt.Modding.Core.Skills.DeathStrike;
 
-namespace Kakt.Modding.Core.Skills.DeathStrike;
-
-[HeroClassRestriction(HeroClass.Champion)]
-[HeroClassRestriction(HeroClass.Defender)]
-[HeroClassRestriction(HeroClass.Sage)]
 [SkillAttributes(SkillAttributes.Melee)]
 public class DeathStrike : ActiveSkill
 {

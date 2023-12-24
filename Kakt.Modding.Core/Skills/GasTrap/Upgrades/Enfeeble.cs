@@ -1,6 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.PoisonTrap.Upgrades;
 
-public class Enfeeble : SkillUpgrade<PoisonTrap>
+[CausesEffect(Effect.Weakness)]
+public class Enfeeble : SkillUpgrade<GasTrap>
 {
     public override string Name => "Hero_vanguard__poisonTrap_enfeeble";
 }

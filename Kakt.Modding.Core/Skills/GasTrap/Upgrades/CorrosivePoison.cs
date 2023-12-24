@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PoisonTrap.Upgrades;
 
-public class CorrosivePoison : SkillUpgrade<PoisonTrap>
+public class CorrosivePoison : SkillUpgrade<GasTrap>
 {
     public CorrosivePoison()
     {

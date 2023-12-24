@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.IceWall.Upgrades;
 
+[CausesEffect(Effect.Frozen)]
 public class EndlessWinter : SkillUpgrade<IceWall>
 {
     public EndlessWinter()

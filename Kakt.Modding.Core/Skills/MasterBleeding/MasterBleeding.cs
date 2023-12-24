@@ -1,6 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterBleeding;
 
-public class MasterBleeding : PassiveSkill
+[RequiresEffect(Effect.Bleeding)]
+public class MasterBleeding : UpgradablePassiveSkill
 {
     public override string Name => "Hero_champion__masterBleeding";
 }

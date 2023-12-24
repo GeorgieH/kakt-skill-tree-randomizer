@@ -1,13 +1,13 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Core.Skills.Strike.Champion;
+using Kakt.Modding.Randomization.Skills;
+using Kakt.Modding.Randomization.Skills.Default;
 
 namespace Kakt.Modding.Randomization;
 
 public class DefaultSkillTreeRandomizer
 {
-    private static readonly Random random = new();
-
     public IEnumerable<Hero> Generate()
     {
         var heroes = Heroes.GetAll();
@@ -48,7 +48,7 @@ public class DefaultSkillTreeRandomizer
     {
         Skill skill;
 
-        if (hero.Class == HeroClass.Champion)
+        if (hero is Champion)
         {
             skill = AsStarterSkill(new ChampionStrike());
         }
@@ -70,32 +70,49 @@ public class DefaultSkillTreeRandomizer
 
     private static void AddActiveSkill(Hero hero, SkillTier skillTier, bool starter = false)
     {
-        var skillType = Skills
-            .ActiveSkillTypes
-            .Except(hero.Skills.Where(s => s is ActiveSkill).Select(s => s.GetType()))
-            .Random(random);
+        var selector =
+            new NewActiveSkillSelector(
+            new HeroClassSkillSelector(
+            new RandomSkillSelector()));
 
-        var skill = (Skill)Activator.CreateInstance(skillType)!;
+        var input = new SkillSelectorInput(hero, Core.Skills.Skills.ActiveSkillTypes);
+        var output = selector.SelectSkill(input);
+        var skill = CreateSkillInstance(output.SkillType, skillTier);
         skill.Starter = starter;
-        skill.Tier = skillTier;
         hero.AddSkill(skill);
     }
 
     private static void AddUpgradablePassiveSkill(Hero hero, SkillTier skillTier)
     {
-        var skillType = Skills.UpgradeablePassiveSkillTypes.Random(random);
+        var selector =
+            new NewUpgradablePassiveSkillSelector(
+            new HeroClassSkillSelector(
+            new RandomSkillSelector()));
 
-        var skill = (Skill)Activator.CreateInstance(skillType)!;
-        skill.Tier = skillTier;
+        var input = new SkillSelectorInput(hero, Core.Skills.Skills.UpgradeablePassiveSkillTypes);
+        var output = selector.SelectSkill(input);
+        var skill = CreateSkillInstance(output.SkillType, skillTier);
         hero.AddSkill(skill);
     }
 
     private static void AddPassiveSkill(Hero hero, SkillTier skillTier)
     {
-        var skillType = Skills.PassiveSkillTypes.Random(random);
+        var selector =
+            new NewPassiveSkillSelector(
+            new HeroClassSkillSelector(
+            new RandomSkillSelector()));
 
+        var input = new SkillSelectorInput(hero, Core.Skills.Skills.PassiveSkillTypes);
+        var output = selector.SelectSkill(input);
+        var skill = CreateSkillInstance(output.SkillType, skillTier);
+        hero.AddSkill(skill);
+    }
+
+    private static Skill CreateSkillInstance(Type skillType, SkillTier skillTier)
+    {
         var skill = (Skill)Activator.CreateInstance(skillType)!;
         skill.Tier = skillTier;
-        hero.AddSkill(skill);
+
+        return skill;
     }
 }

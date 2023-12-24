@@ -1,7 +1,8 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterOfFire;
 
 [ConfigurationElement("MasterofFire")]
-public class MasterOfFire : PassiveSkill
+[RequiresEffect(Effect.Burning)]
+public class MasterOfFire : UpgradablePassiveSkill
 {
     public override string Name => "Hero_arcanist__masterofFire";
 }

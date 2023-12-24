@@ -1,7 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Heroes;
 
-public class LadyIsolde : Hero
+public class LadyIsolde : Sage
 {
-    public override HeroClass Class => HeroClass.Sage;
     public override string Name => nameof(LadyIsolde);
 }

@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Judgement.Upgrade;
 
+[CausesEffect(Effect.Blind)]
 public class BlindingJustice : SkillUpgrade<Judgement>
 {
     public BlindingJustice()

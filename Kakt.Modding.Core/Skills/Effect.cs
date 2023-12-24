@@ -3,6 +3,7 @@
 public enum Effect
 {
     Bleeding,
+    Blind,
     Burning,
     Chill,
     Frozen,

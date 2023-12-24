@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Vanguard.Upgrades;
 
+[RequiresEffect(Effect.Bleeding)]
 public class RelentlessStrikes : VanguardStrikeUpgrade
 {
     public RelentlessStrikes()

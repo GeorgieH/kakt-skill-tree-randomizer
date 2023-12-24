@@ -1,7 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Heroes;
 
-public class SirGawain : Hero
+public class SirGawain : Defender
 {
-    public override HeroClass Class => HeroClass.Defender;
     public override string Name => nameof(SirGawain);
 }

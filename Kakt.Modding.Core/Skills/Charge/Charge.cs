@@ -1,9 +1,6 @@
-﻿using Kakt.Modding.Core.Heroes;
+﻿namespace Kakt.Modding.Core.Skills.Charge;
 
-namespace Kakt.Modding.Core.Skills.Charge;
-
-[HeroClassRestriction(HeroClass.Vanguard)]
-[SkillAttributes(SkillAttributes.Melee)]
+[SkillAttributes(SkillAttributes.Movement | SkillAttributes.Melee)]
 public class Charge : ActiveSkill
 {
     public override string Name => "Hero_vanguard__charge";
