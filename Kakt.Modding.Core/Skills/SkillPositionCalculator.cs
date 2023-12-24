@@ -5,26 +5,29 @@
 // U = Upgrade
 
 // Skill tree layout:
+/*
+T1 || S1 | S2 | S3 |
+   || S4 | S5 | S6 | S7 |
 
-// T1 || S1 | S2 | S3 |
-//    || S4 | S5 | S6 | S7 |
+T2 || S1 | S2 | S3 |
+   || S4 | S5 | S6 |
 
-// T2 || S1 | S2 | S3 |
-//    || S4 | S5 | S6 |
-
-// T3 || S1 | S2 | S3 |
-//    || S4 | S5 | S6 | S7 |
+T3 || S1 | S2 | S3 |
+   || S4 | S5 | S6 | S7 |
+*/
 
 // For each active skill:
-
-// U1 |            | U3
-//    | Skill card |
-// U2 |            | U4
+/*
+U1 |            | U3
+   | Skill card |
+U2 |            | U4
+*/
 
 // For each passive skill:
-
-// |    Skill card     |
-// | U1 | U2 | U3 | U4 |
+/*
+|    Skill card     |
+| U1 | U2 | U3 | U4 |
+*/
 
 public static class SkillPositionCalculator
 {

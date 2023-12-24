@@ -4,7 +4,7 @@ public abstract class Skill : IEquatable<Skill?>
 {
     private const int MaxUpgradeCount = 4;
 
-    private readonly HashSet<SkillUpgrade> upgrades = [];
+    private readonly List<SkillUpgrade> upgrades = [];
 
     public int Cost { get; set; } = SkillCosts.Two;
     public string? IconName { get; set; }
@@ -22,12 +22,12 @@ public abstract class Skill : IEquatable<Skill?>
             throw new ArgumentException($"Skills can only have a maximum of {MaxUpgradeCount} upgrades");
         }
 
-        var result = upgrades.Add(skillUpgrade);
-
-        if (!result)
+        if (upgrades.Contains(skillUpgrade))
         {
             throw new ArgumentException($"Skill upgrade has already been added ({skillUpgrade.Name})");
         }
+
+        upgrades.Add(skillUpgrade);
     }
 
     public override bool Equals(object? obj)

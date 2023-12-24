@@ -4,7 +4,7 @@ namespace Kakt.Modding.Core.Heroes;
 
 public abstract class Hero : IEquatable<Hero?>
 {
-    private readonly HashSet<Skill> skills = [];
+    private readonly List<Skill> skills = [];
 
     public abstract HeroClass Class { get; }
 
@@ -14,12 +14,12 @@ public abstract class Hero : IEquatable<Hero?>
 
     public void AddSkill(Skill skill)
     {
-        var result = skills.Add(skill);
-
-        if (!result)
+        if (skills.Contains(skill))
         {
             throw new ArgumentException($"Skill has already been added ({skill.Name})");
         }
+
+        skills.Add(skill);
     }
 
     public override bool Equals(object? obj)

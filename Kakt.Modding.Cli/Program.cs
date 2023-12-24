@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Kakt.Modding.Randomization;
+
+var randomizer = new DefaultSkillTreeRandomizer();
+randomizer.Generate();

@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Backstab.Upgrades;
 
+[CausesEffect(Effect.Vulnerability)]
 public class Mutilate : SkillUpgrade<Backstab>
 {
     public Mutilate()

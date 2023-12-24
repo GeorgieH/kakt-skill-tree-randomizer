@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DrainBlood.Upgrades;
 
+[CausesEffect(Effect.Weakness)]
 public class Bloodletting : SkillUpgrade<DrainBlood>
 {
     public Bloodletting()
