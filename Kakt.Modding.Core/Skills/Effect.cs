@@ -10,6 +10,7 @@ public enum Effect
     Knockback,
     Knockdown,
     Poison,
+    Shock,
     Slow,
     Stun,
     Vulnerability,

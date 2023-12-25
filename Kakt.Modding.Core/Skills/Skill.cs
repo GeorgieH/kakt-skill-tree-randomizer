@@ -17,16 +17,6 @@ public abstract class Skill : IEquatable<Skill?>
 
     public void AddUpgrade(SkillUpgrade skillUpgrade)
     {
-        if (upgrades.Count == MaxUpgradeCount)
-        {
-            throw new ArgumentException($"Skills can only have a maximum of {MaxUpgradeCount} upgrades");
-        }
-
-        if (upgrades.Contains(skillUpgrade))
-        {
-            throw new ArgumentException($"Skill upgrade has already been added ({skillUpgrade.Name})");
-        }
-
         upgrades.Add(skillUpgrade);
     }
 

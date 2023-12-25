@@ -12,11 +12,6 @@ public abstract class Hero : IEquatable<Hero?>
 
     public void AddSkill(Skill skill)
     {
-        if (skills.Contains(skill))
-        {
-            throw new ArgumentException($"Skill has already been added ({skill.Name})");
-        }
-
         skills.Add(skill);
     }
 

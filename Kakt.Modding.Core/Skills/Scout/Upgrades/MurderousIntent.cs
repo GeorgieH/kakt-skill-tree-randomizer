@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
 
+[RequiresSkillWithAttribute(SkillAttributes.Movement)]
 public class MurderousIntent : SkillUpgrade<Scout>
 {
     public MurderousIntent()
