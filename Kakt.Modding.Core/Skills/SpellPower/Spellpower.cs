@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Core.Skills.SpellPower;
+﻿namespace Kakt.Modding.Core.Skills.Spellpower;
 
 [RequiresSkillWithAttribute(SkillAttributes.Ranged)]
 public class Spellpower : PassiveSkill
