@@ -12,6 +12,7 @@ public enum Effect
     Knockdown,
     Poison,
     Shock,
+    Silence,
     Slow,
     Stun,
     Vulnerability,
