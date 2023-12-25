@@ -1,6 +1,6 @@
-﻿namespace Kakt.Modding.Core.Skills.FleetFooted.Upgrades;
+﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
 
-public class FirstDodge : SkillUpgrade<FleetFooted>
+public class FirstDodge : SkillUpgrade<Scout>
 {
     public FirstDodge()
     {

@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FreezingAttack.Upgrades;
 
+[CausesEffect(Effect.Chill)]
 public class LastingCold : SkillUpgrade<FreezingAttack>
 {
     public LastingCold()

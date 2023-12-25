@@ -7,6 +7,7 @@ public enum Effect
     Burning,
     Chill,
     Frozen,
+    Hidden,
     Knockback,
     Knockdown,
     Poison,
