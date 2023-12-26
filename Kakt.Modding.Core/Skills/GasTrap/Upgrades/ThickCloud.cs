@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Core.Skills.PoisonTrap.Upgrades;
+﻿namespace Kakt.Modding.Core.Skills.GasTrap.Upgrades;
 
 [CausesEffect(Effect.Slow)]
 public class ThickCloud : SkillUpgrade<GasTrap>

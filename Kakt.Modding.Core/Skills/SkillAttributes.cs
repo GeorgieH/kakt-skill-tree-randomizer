@@ -5,13 +5,14 @@ public enum SkillAttributes
 {
     None = 0,
     Area = 1,
-    Hex = 2,
-    Lightning = 4,
-    Melee = 8,
-    Movement = 16,
-    Ranged = 32,
-    Spell = 64,
-    Summon = 128,
-    Support = 256,
-    Trap = 512
+    Fire = 2,
+    Hex = 4,
+    Lightning = 8,
+    Melee = 16,
+    Movement = 32,
+    Ranged = 64,
+    Spell = 128,
+    Summon = 256,
+    Support = 512,
+    Trap = 1024
 }

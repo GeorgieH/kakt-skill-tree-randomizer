@@ -1,7 +1,11 @@
 ﻿namespace Kakt.Modding.Core.Skills.SmokeBomb;
 
-[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Area)]
 public class SirDamasSmokeBomb : SmokeBomb
 {
+    public SirDamasSmokeBomb()
+    {
+        IconName = "SirTristan__smokeBomb";
+    }
+
     public override string Name => "SirDamas__smokeBomb";
 }

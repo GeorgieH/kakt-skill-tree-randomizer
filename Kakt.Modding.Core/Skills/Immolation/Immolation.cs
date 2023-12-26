@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Immolation;
 
-[SkillAttributes(SkillAttributes.Melee)]
+[SkillAttributes(SkillAttributes.Melee | SkillAttributes.Fire)]
 [CausesEffect(Effect.Burning)]
 public class Immolation : ActiveSkill
 {

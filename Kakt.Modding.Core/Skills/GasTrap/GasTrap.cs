@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Core.Skills.PoisonTrap;
+﻿namespace Kakt.Modding.Core.Skills.GasTrap;
 
 [ConfigurationElement("PoisonTrap")]
 [SkillAttributes(SkillAttributes.Trap)]

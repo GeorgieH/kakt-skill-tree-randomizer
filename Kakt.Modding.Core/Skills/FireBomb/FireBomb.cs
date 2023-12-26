@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FireBomb;
 
-[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Area)]
+[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Fire | SkillAttributes.Area)]
 [CausesEffect(Effect.Burning)]
 public class FireBomb : ActiveSkill
 {

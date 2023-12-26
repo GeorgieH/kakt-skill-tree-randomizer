@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.FireArrow;
 
 [ConfigurationElement("FireBolt")]
-[SkillAttributes(SkillAttributes.Ranged)]
+[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Fire)]
 [CausesEffect(Effect.Burning)]
 public class FireArrow : ActiveSkill
 {
