@@ -1,6 +1,6 @@
-﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
+﻿namespace Kakt.Modding.Core.Skills.Scout.Marksman.Upgrades;
 
-public class FirstDodge : SkillUpgrade<Scout>
+public class FirstDodge : SkillUpgrade<MarksmanScout>
 {
     public FirstDodge()
     {

@@ -6,27 +6,34 @@
 
 // Skill tree layout:
 /*
+-----------------------------
 T1 || S1 | S2 | S3 |
    || S4 | S5 | S6 | S7 |
-
-T2 || S1 | S2 | S3 |
-   || S4 | S5 | S6 |
-
-T3 || S1 | S2 | S3 |
-   || S4 | S5 | S6 | S7 |
+-----------------------------
+T2 || S8  | S9  | S10 |
+   || S11 | S12 | S13 |
+-----------------------------
+T3 || S14 | S15 | S16 |
+   || S17 | S18 | S19 | S20 |
+-----------------------------
 */
 
 // For each active skill:
 /*
-U1 |            | U3
-   | Skill card |
-U2 |            | U4
+------------------------
+| U1 |            | U3 |
+|    | Skill card |    |
+| U2 |            | U4 |
+------------------------
 */
 
 // For each passive skill:
 /*
+---------------------
 |    Skill card     |
+---------------------
 | U1 | U2 | U3 | U4 |
+---------------------
 */
 
 public static class SkillPositionCalculator
@@ -41,49 +48,30 @@ public static class SkillPositionCalculator
 
     public static SkillPositionCalculatorOutput Calculate(SkillPositionCalculatorInput input)
     {
-        var p = new Position2D();
-
-        if (input.Skill.Tier == SkillTier.One)
+        var p = input.SkillNumber switch
         {
-            p = input.SkillNumber switch
-            {
-                1 => SkillPositions.Tier1Skill1,
-                2 => SkillPositions.Tier1Skill2,
-                3 => SkillPositions.Tier1Skill3,
-                4 => input.Skill.Type == SkillType.Active ? SkillPositions.Tier1ActiveSkill4 : SkillPositions.Tier1PassiveSkill4,
-                5 => SkillPositions.Tier1Skill5,
-                6 => SkillPositions.Tier1Skill6,
-                7 => SkillPositions.Tier1Skill7,
-                _ => throw SkillNumberOutOfRange(input)
-            };
-        }
-        else if (input.Skill.Tier == SkillTier.Two)
-        {
-            p = input.SkillNumber switch
-            {
-                1 => SkillPositions.Tier2Skill1,
-                2 => SkillPositions.Tier2Skill2,
-                3 => SkillPositions.Tier2Skill3,
-                4 => SkillPositions.Tier2Skill4,
-                5 => SkillPositions.Tier2Skill5,
-                6 => SkillPositions.Tier2Skill6,
-                _ => throw SkillNumberOutOfRange(input)
-            };
-        }
-        else if (input.Skill.Tier == SkillTier.Three)
-        {
-            p = input.SkillNumber switch
-            {
-                1 => SkillPositions.Tier3Skill1,
-                2 => SkillPositions.Tier3Skill2,
-                3 => SkillPositions.Tier3Skill3,
-                4 => SkillPositions.Tier3Skill4,
-                5 => SkillPositions.Tier3Skill5,
-                6 => SkillPositions.Tier3Skill6,
-                7 => SkillPositions.Tier3Skill7,
-                _ => throw SkillNumberOutOfRange(input)
-            };
-        }
+            1 => SkillPositions.Tier1Skill1,
+            2 => SkillPositions.Tier1Skill2,
+            3 => SkillPositions.Tier1Skill3,
+            4 => input.Skill.Type == SkillType.Active ? SkillPositions.Tier1ActiveSkill4 : SkillPositions.Tier1PassiveSkill4,
+            5 => SkillPositions.Tier1Skill5,
+            6 => SkillPositions.Tier1Skill6,
+            7 => SkillPositions.Tier1Skill7,
+            8 => SkillPositions.Tier2Skill1,
+            9 => SkillPositions.Tier2Skill2,
+            10 => SkillPositions.Tier2Skill3,
+            11 => SkillPositions.Tier2Skill4,
+            12 => SkillPositions.Tier2Skill5,
+            13 => SkillPositions.Tier2Skill6,
+            14 => SkillPositions.Tier3Skill1,
+            15 => SkillPositions.Tier3Skill2,
+            16 => SkillPositions.Tier3Skill3,
+            17 => SkillPositions.Tier3Skill4,
+            18 => SkillPositions.Tier3Skill5,
+            19 => SkillPositions.Tier3Skill6,
+            20 => SkillPositions.Tier3Skill7,
+            _ => throw SkillNumberOutOfRange(input)
+        };
 
         if (input.Skill.Upgrades.Any())
         {

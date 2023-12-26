@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Sage.Upgrades;
 
 [RequiresEffects(Effects.Freeze)]
-public class Splinter : SageStrikeUpgrade
+public class Splinter : SkillUpgrade<SageStrike>
 {
     public Splinter()
     {

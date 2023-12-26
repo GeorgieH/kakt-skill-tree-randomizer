@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Defender.Upgrades;
 
-public class SweepingStrike : DefenderStrikeUpgrade
+public class SweepingStrike : SkillUpgrade<DefenderStrike>
 {
     public SweepingStrike()
     {

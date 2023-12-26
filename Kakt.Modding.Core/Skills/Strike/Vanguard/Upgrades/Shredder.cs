@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Vanguard.Upgrades;
 
-public class Shredder : VanguardStrikeUpgrade
+public class Shredder : SkillUpgrade<VanguardStrike>
 {
     public Shredder()
     {

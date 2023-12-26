@@ -4,11 +4,11 @@ namespace Kakt.Modding.Core.Skills;
 
 public abstract class SkillUpgrade<T> : SkillUpgrade where T : Skill
 {
-    private static readonly string prerequisite;
+    private readonly string prerequisite;
 
-    static SkillUpgrade()
+    protected SkillUpgrade()
     {
-        var attr = typeof(T).GetCustomAttribute<ConfigurationElementAttribute>();
+        var attr = typeof(T).GetCustomAttribute<ConfigurationElementAttribute>(true);
         prerequisite = attr is null ? typeof(T).Name : attr.Name;
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Sage.Upgrades;
 
-public class DrainingStrike : SageStrikeUpgrade
+public class DrainingStrike : SkillUpgrade<SageStrike>
 {
     public DrainingStrike()
     {

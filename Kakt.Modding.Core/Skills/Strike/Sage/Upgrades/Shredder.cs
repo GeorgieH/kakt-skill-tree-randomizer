@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Sage.Upgrades;
 
-public class Shredder : SageStrikeUpgrade
+public class Shredder : SkillUpgrade<SageStrike>
 {
     public Shredder()
     {

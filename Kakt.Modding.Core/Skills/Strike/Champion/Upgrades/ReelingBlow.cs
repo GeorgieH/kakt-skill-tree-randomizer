@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.Strike.Champion.Upgrades;
 
 [CausesEffects(Effects.Vulnerability)]
-public class ReelingBlow : ChampionStrikeUpgrade
+public class ReelingBlow : SkillUpgrade<ChampionStrike>
 {
     public ReelingBlow()
     {
