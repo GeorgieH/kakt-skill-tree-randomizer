@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.MasterOfIce;
 
 [ConfigurationElement("MasterofIce")]
-[RequiresEffect(Effect.Chill | Effect.Frozen)]
+[RequiresEffects(Effects.Chill | Effects.Freeze)]
 public class MasterOfIce : UpgradablePassiveSkill
 {
     public override string Name => "Hero_sage__masterOfice";

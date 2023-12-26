@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ExtraBleeding;
 
-[RequiresEffect(Effect.Bleeding)]
+[RequiresEffects(Effects.Bleed)]
 public class ExtraBleeding : PassiveSkill
 {
     public override string Name => "Hero_champion__extraBleeding";

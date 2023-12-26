@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Cleave.Upgrades;
 
-[CausesEffect(Effect.Knockback)]
+[CausesEffects(Effects.Knockback)]
 public class HackAndSlash : SkillUpgrade<Cleave>
 {
     public HackAndSlash()

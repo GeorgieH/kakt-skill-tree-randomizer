@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.CripplingShot;
 
 [SkillAttributes(SkillAttributes.Ranged)]
-[CausesEffect(Effect.Slow)]
+[CausesEffects(Effects.Slow)]
 public class CripplingShot : ActiveSkill
 {
     public override string Name => "SirDamas__cripplingShot";

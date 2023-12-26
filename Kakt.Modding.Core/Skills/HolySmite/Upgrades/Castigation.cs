@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.HolySmite.Upgrades;
 
-[CausesEffect(Effect.Stun)]
+[CausesEffects(Effects.Stun)]
 public class Castigation : SkillUpgrade<HolySmite>
 {
     public Castigation()

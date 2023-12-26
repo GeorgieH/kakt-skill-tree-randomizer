@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Teleport.Upgrades;
 
-[CausesEffect(Effect.Hidden)]
+[CausesEffects(Effects.Hidden)]
 public class ShadowGate : SkillUpgrade<Teleport>
 {
     public ShadowGate()

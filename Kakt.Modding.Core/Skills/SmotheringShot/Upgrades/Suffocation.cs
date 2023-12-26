@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.SmotheringShot.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class Suffocation : SkillUpgrade<SmotheringShot>
 {
     public Suffocation()

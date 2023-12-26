@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Scout.Upgrades;
 
-[RequiresSkillWithAttribute(SkillAttributes.Movement)]
+[RequiresSkillAttributes(SkillAttributes.Movement)]
 public class Forethought : SkillUpgrade<Scout>
 {
     public Forethought()

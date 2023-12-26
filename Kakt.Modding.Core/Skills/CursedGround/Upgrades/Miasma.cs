@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.CursedGround.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class Miasma : SkillUpgrade<CursedGround>
 {
     public Miasma()

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Hide;
 
-[CausesEffect(Effect.Hidden)]
+[CausesEffects(Effects.Hidden)]
 public class Hide : ActiveSkill
 {
     public override string Name => "Hero_vanguard__hide";

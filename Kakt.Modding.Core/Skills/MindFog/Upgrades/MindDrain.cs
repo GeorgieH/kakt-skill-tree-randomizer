@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.MindFog.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class MindDrain : SkillUpgrade<MindFog>
 {
     public MindDrain()

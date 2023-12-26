@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ChainLightning.Upgrades;
 
-[CausesEffect(Effect.Shock)]
+[CausesEffects(Effects.Shock)]
 public class ScourgeOfMordred : SkillUpgrade<ChainLightning>
 {
     public ScourgeOfMordred()

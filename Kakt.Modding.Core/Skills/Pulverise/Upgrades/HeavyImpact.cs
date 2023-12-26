@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Pulverise.Upgrades;
 
-[CausesEffect(Effect.Stun)]
+[CausesEffects(Effects.Stun)]
 public class HeavyImpact : SkillUpgrade<Pulverise>
 {
     public HeavyImpact()

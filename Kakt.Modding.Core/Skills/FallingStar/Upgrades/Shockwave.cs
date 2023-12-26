@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FallingStar.Upgrades;
 
-[CausesEffect(Effect.Knockdown)]
+[CausesEffects(Effects.Knockdown)]
 public class Shockwave : SkillUpgrade<FallingStar>
 {
     public Shockwave()

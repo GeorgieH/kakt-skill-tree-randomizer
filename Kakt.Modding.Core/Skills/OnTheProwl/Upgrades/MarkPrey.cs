@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.OnTheProwl.Upgrades;
 
-[CausesEffect(Effect.Vulnerability)]
+[CausesEffects(Effects.Vulnerability)]
 public class MarkPrey : SkillUpgrade<OnTheProwl>
 {
     public MarkPrey()

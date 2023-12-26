@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PowerAttack.Upgrades;
 
-[CausesEffect(Effect.Stun)]
+[CausesEffects(Effects.Stun)]
 public class StunningBlow : SkillUpgrade<PowerAttack>
 {
     public StunningBlow()

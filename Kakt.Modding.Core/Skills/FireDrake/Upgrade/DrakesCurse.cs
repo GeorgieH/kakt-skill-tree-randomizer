@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FireDrake.Upgrade;
 
-[CausesEffect(Effect.Vulnerability)]
+[CausesEffects(Effects.Vulnerability)]
 public class DrakesCurse : SkillUpgrade<FireDrake>
 {
     public DrakesCurse()

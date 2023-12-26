@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Thunderbolt.Upgrades;
 
-[CausesEffect(Effect.Stun)]
+[CausesEffects(Effects.Stun)]
 public class Thunderblast : SkillUpgrade<Thunderbolt>
 {
     public Thunderblast()

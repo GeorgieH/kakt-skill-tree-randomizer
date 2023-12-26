@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ForceCleave.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class Feebleness : SkillUpgrade<ForceCleave>
 {
     public Feebleness()

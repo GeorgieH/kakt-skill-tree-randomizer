@@ -1,7 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ExtraStun;
 
-[RequiresEffect(Effect.Slow)]
-[RequiresEffect(Effect.Stun)]
+[RequiresEffects(Effects.Slow | Effects.Stun)]
 public class ExtraStun : PassiveSkill
 {
     public override string Name => "Hero_champion__extraStun";

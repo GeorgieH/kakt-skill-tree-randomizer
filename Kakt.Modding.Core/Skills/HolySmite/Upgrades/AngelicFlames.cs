@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.HolySmite.Upgrades;
 
-[CausesEffect(Effect.Burning)]
+[CausesEffects(Effects.Burn)]
 public class AngelicFlames : SkillUpgrade<HolySmite>
 {
     public AngelicFlames()

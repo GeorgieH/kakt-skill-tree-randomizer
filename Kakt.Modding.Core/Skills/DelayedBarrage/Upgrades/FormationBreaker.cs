@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.DelayedBarrage.Upgrades;
 
-[CausesEffect(Effect.Vulnerability)]
+[CausesEffects(Effects.Vulnerability)]
 public class FormationBreaker : SkillUpgrade<DelayedBarrage>
 {
     public FormationBreaker()

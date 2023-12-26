@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ThrowingAxe.Upgrades;
 
-[CausesEffect(Effect.Knockdown)]
+[CausesEffects(Effects.Knockdown)]
 public class HeavyHanded : SkillUpgrade<ThrowingAxe>
 {
     public HeavyHanded()

@@ -1,7 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.JumpingAttack.Upgrades;
 
-[CausesEffect(Effect.Knockback)]
-[CausesEffect(Effect.Knockdown)]
+[CausesEffects(Effects.Knockback | Effects.Knockdown)]
 public class Recoil : SkillUpgrade<JumpingAttack>
 {
     public Recoil()

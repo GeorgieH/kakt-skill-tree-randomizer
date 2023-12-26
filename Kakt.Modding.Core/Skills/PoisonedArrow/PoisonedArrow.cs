@@ -2,7 +2,7 @@
 
 [ConfigurationElement("PoisonedBolt")]
 [SkillAttributes(SkillAttributes.Ranged)]
-[CausesEffect(Effect.Poison)]
+[CausesEffects(Effects.Poison)]
 public class PoisonedArrow : ActiveSkill
 {
     public override string Name => "Hero_marksman__poisonedBolt";

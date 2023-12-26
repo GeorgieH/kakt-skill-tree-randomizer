@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Assault.Upgrades;
 
-[CausesEffect(Effect.Shock)]
+[CausesEffects(Effects.Shock)]
 public class ShockingAssault : SkillUpgrade<Assault>
 {
     public ShockingAssault()

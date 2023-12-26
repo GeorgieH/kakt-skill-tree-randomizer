@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.Sprint;
 
 [SkillAttributes(SkillAttributes.Movement)]
-[CausesEffect(Effect.Hidden)]
+[CausesEffects(Effects.Hidden)]
 public class Sprint : ActiveSkill
 {
     public override string Name => "Hero_vanguard__sprint";

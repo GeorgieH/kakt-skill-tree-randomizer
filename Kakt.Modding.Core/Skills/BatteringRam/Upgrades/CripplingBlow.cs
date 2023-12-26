@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.BatteringRam.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class CripplingBlow : SkillUpgrade<BatteringRam>
 {
     public CripplingBlow()

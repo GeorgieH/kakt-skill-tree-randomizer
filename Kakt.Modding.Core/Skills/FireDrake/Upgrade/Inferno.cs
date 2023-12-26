@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FireDrake.Upgrade;
 
-[CausesEffect(Effect.Burning)]
+[CausesEffects(Effects.Burn)]
 public class Inferno : SkillUpgrade<FireDrake>
 {
     public Inferno()

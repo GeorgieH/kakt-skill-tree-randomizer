@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.CripplingShot.Upgrades;
 
-[CausesEffect(Effect.Poison)]
+[CausesEffects(Effects.Poison)]
 public class PoisonArrows : SkillUpgrade<CripplingShot>
 {
     public PoisonArrows()

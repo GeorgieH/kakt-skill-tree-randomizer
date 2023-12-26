@@ -1,7 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.IceSpikes.Upgrades;
 
-[CausesEffect(Effect.Knockback)]
-[CausesEffect(Effect.Knockdown)]
+[CausesEffects(Effects.Knockback | Effects.Knockdown)]
 public class BurstingSpikes : SkillUpgrade<IceSpikes>
 {
     public BurstingSpikes()

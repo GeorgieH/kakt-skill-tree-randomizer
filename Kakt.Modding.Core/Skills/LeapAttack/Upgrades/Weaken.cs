@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.LeapAttack.Upgrades;
 
-[CausesEffect(Effect.Weakness)]
+[CausesEffects(Effects.Weakness)]
 public class Weaken : SkillUpgrade<LeapAttack>
 {
     public Weaken()

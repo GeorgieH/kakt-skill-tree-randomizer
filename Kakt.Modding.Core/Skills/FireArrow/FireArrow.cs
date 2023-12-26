@@ -2,7 +2,7 @@
 
 [ConfigurationElement("FireBolt")]
 [SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Fire)]
-[CausesEffect(Effect.Burning)]
+[CausesEffects(Effects.Burn)]
 public class FireArrow : ActiveSkill
 {
     public override string Name => "Hero_marksman__fireBolt";

@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.FlamingStrike;
 
 [SkillAttributes(SkillAttributes.Melee | SkillAttributes.Fire)]
-[CausesEffect(Effect.Burning)]
+[CausesEffects(Effects.Burn)]
 public class FlamingStrike : ActiveSkill
 {
     public override string Name => "SirPercivale__flamingStrike";

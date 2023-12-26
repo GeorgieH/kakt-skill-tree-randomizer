@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PiercingShot.Upgrades;
 
-[CausesEffect(Effect.Bleeding)]
+[CausesEffects(Effects.Bleed)]
 public class OpenWounds : SkillUpgrade<PiercingShot>
 {
     public OpenWounds()

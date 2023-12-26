@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Spellpower;
 
-[RequiresSkillWithAttribute(SkillAttributes.Ranged)]
+[RequiresSkillAttributes(SkillAttributes.Ranged)]
 public class Spellpower : PassiveSkill
 {
     public override string Name => "Hero_arcanist__spellpower";

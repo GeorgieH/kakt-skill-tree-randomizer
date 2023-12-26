@@ -2,7 +2,7 @@
 
 [ConfigurationElement("BloodCurse")]
 [SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Spell | SkillAttributes.Hex)]
-[CausesEffect(Effect.Bleeding)]
+[CausesEffects(Effects.Bleed)]
 public class BloodHex : ActiveSkill
 {
     public override string Name => "Hero_arcanist__bloodCurse";

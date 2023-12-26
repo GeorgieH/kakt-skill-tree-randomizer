@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Kick.Upgrades;
 
-[CausesEffect(Effect.Knockdown)]
+[CausesEffects(Effects.Knockdown)]
 public class Kneebreaker : SkillUpgrade<Kick>
 {
     public Kneebreaker()

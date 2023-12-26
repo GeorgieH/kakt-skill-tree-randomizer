@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PointBlankVolley.Upgrades;
 
-[CausesEffect(Effect.Knockback)]
+[CausesEffects(Effects.Knockback)]
 public class ForcefulBlast : SkillUpgrade<PointBlankVolley>
 {
     public ForcefulBlast()

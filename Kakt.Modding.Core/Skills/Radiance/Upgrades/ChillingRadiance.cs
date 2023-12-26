@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Radiance.Upgrades;
 
-[CausesEffect(Effect.Chill)]
+[CausesEffects(Effects.Chill)]
 public class ChillingRadiance : SkillUpgrade<Radiance>
 {
     public ChillingRadiance()

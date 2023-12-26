@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.SmotheringShot.Upgrades;
 
-[CausesEffect(Effect.Slow)]
+[CausesEffects(Effects.Slow)]
 public class Slowness : SkillUpgrade<SmotheringShot>
 {
     public Slowness()
