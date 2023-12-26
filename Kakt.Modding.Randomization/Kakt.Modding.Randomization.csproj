@@ -11,14 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <Compile Update=".\Skills\Default\CompatibleWithHeroClassSkillSelector.*.cs">
-		  <DependentUpon>.\Skills\CompatibleWithHeroClassSkillSelector.cs</DependentUpon>
-	  </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Skills\Default\HeroClassSkillSelector.Champion.cs">
-      <DependentUpon>HeroClassSkillSelector.cs</DependentUpon>
+    <Compile Update="Skills\Default\Filters\HeroClassSkillFilter.*.cs">
+      <DependentUpon>HeroClassSkillFilter.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 

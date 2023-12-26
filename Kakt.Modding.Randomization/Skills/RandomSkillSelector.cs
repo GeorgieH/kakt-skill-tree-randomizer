@@ -6,7 +6,10 @@ public class RandomSkillSelector : ISkillSelector
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        var skillType = input.SkillTypes.Random(random);
+        var skillType = input.SkillTypes
+            .Except(input.ExcludedSkillTypes)
+            .Random(random);
+
         return new SkillSelectorOutput(skillType);
     }
 }

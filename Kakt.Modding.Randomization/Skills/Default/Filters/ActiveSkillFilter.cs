@@ -1,19 +1,19 @@
 ﻿using Kakt.Modding.Core.Skills;
 
-namespace Kakt.Modding.Randomization.Skills;
+namespace Kakt.Modding.Randomization.Skills.Default.Filters;
 
-public class NewActiveSkillSelector : ISkillSelector
+public class ActiveSkillFilter : ISkillSelector
 {
     private readonly ISkillSelector next;
 
-    public NewActiveSkillSelector(ISkillSelector next)
+    public ActiveSkillFilter(ISkillSelector next)
     {
         this.next = next;
     }
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        var existingActiveSkillTypes = input.Hero.Skills
+        var existingActiveSkillTypes = input.Hero.SkillTree.Skills
             .Where(s => s is ActiveSkill)
             .Select(s => s.GetType());
 

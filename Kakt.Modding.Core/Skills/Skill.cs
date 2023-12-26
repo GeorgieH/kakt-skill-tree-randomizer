@@ -2,8 +2,6 @@
 
 public abstract class Skill : IEquatable<Skill?>
 {
-    private const int MaxUpgradeCount = 4;
-
     private readonly List<SkillUpgrade> upgrades = [];
 
     public int Cost { get; set; } = SkillCosts.Two;

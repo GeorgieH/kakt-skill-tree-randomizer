@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Core.Skills.Stealth;
+﻿namespace Kakt.Modding.Core.Skills.LowProfile;
 
 [ConfigurationElement("Stealth")]
 public class LowProfile : PassiveSkill

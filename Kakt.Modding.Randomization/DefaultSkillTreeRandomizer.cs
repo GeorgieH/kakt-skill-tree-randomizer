@@ -2,7 +2,8 @@
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Core.Skills.Strike.Champion;
 using Kakt.Modding.Randomization.Skills;
-using Kakt.Modding.Randomization.Skills.Default;
+using Kakt.Modding.Randomization.Skills.Default.Filters;
+using Kakt.Modding.Randomization.Skills.Default.Validators;
 
 namespace Kakt.Modding.Randomization;
 
@@ -14,37 +15,35 @@ public class DefaultSkillTreeRandomizer
 
         foreach (var hero in heroes)
         {
-            // Tier 1
-            AssignBasicAttack(hero);
-            AddActiveSkill(hero, SkillTier.One);
-            AddActiveSkill(hero, SkillTier.One, true);
-            AddUpgradablePassiveSkill(hero, SkillTier.One);
-            AddPassiveSkill(hero, SkillTier.One);
-            AddPassiveSkill(hero, SkillTier.One);
-            AddPassiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
 
-            // Tier 2
-            AddActiveSkill(hero, SkillTier.Two);
-            AddActiveSkill(hero, SkillTier.Two);
-            AddUpgradablePassiveSkill(hero, SkillTier.Two);
-            AddActiveSkill(hero, SkillTier.Two);
-            AddPassiveSkill(hero, SkillTier.Two);
-            AddPassiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierTwoActiveSkillOne = GetActiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierTwoActiveSkillTwo = GetActiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierTwoActiveSkillThree = GetActiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierThreeActiveSkillOne = GetActiveSkill(hero, SkillTier.Three);
+            hero.SkillTree.TierThreeActiveSkillTwo = GetActiveSkill(hero, SkillTier.Three);
 
-            // Tier 3
-            AddActiveSkill(hero, SkillTier.Three);
-            AddUpgradablePassiveSkill(hero, SkillTier.Three);
-            AddUpgradablePassiveSkill(hero, SkillTier.Three);
-            AddActiveSkill(hero, SkillTier.Three);
-            AddPassiveSkill(hero, SkillTier.Three);
-            AddPassiveSkill(hero, SkillTier.Three);
-            AddPassiveSkill(hero, SkillTier.Three);
+            hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierTwoUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Three);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillTwo = GetUpgradablePassiveSkill(hero, SkillTier.Three);
+
+            hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierOnePassiveSkillThree = GetPassiveSkill(hero, SkillTier.One);
+            hero.SkillTree.TierTwoPassiveSkillOne = GetPassiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierTwoPassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Two);
+            hero.SkillTree.TierThreePassiveSkillOne = GetPassiveSkill(hero, SkillTier.Three);
+            hero.SkillTree.TierThreePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Three);
+            hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three);
         }
 
         return heroes;
     }
 
-    private static void AssignBasicAttack(Hero hero)
+    private static ActiveSkill GetBasicAttack(Hero hero)
     {
         Skill skill;
 
@@ -57,7 +56,7 @@ public class DefaultSkillTreeRandomizer
             throw new NotImplementedException();
         }
 
-        hero.AddSkill(skill);
+        return (ActiveSkill)skill;
     }
 
     private static Skill AsStarterSkill(Skill skill)
@@ -68,49 +67,77 @@ public class DefaultSkillTreeRandomizer
         return skill;
     }
 
-    private static void AddActiveSkill(Hero hero, SkillTier skillTier, bool starter = false)
+    private static ActiveSkill GetActiveSkill(Hero hero, SkillTier skillTier, bool starter = false)
     {
-        var selector =
-            new NewActiveSkillSelector(
-            new HeroClassSkillSelector(
+        var skillSelector =
+            new HeroClassSkillFilter(
+            new ActiveSkillFilter(
             new RandomSkillSelector()));
 
-        var input = new SkillSelectorInput(hero, Core.Skills.Skills.ActiveSkillTypes);
-        var output = selector.SelectSkill(input);
-        var skill = CreateSkillInstance(output.SkillType, skillTier);
+        var input = new SkillSelectorInput(hero);
+
+        var skill = RetryUntilSuccessful<ActiveSkill>(hero, skillTier, input, skillSelector);
         skill.Starter = starter;
-        hero.AddSkill(skill);
+
+        return skill;
     }
 
-    private static void AddUpgradablePassiveSkill(Hero hero, SkillTier skillTier)
+    private static UpgradablePassiveSkill GetUpgradablePassiveSkill(Hero hero, SkillTier skillTier)
     {
-        var selector =
-            new NewUpgradablePassiveSkillSelector(
-            new HeroClassSkillSelector(
-            new RandomSkillSelector()));
+        var skillSelector =
+            new HeroClassSkillFilter(
+            new UpgradablePassiveSkillFilter(
+            new ArmourerValidator(
+            new RandomSkillSelector())));
 
-        var input = new SkillSelectorInput(hero, Core.Skills.Skills.UpgradeablePassiveSkillTypes);
-        var output = selector.SelectSkill(input);
-        var skill = CreateSkillInstance(output.SkillType, skillTier);
-        hero.AddSkill(skill);
+        var input = new SkillSelectorInput(hero);
+
+        return RetryUntilSuccessful<UpgradablePassiveSkill>(hero, skillTier, input, skillSelector);
     }
 
-    private static void AddPassiveSkill(Hero hero, SkillTier skillTier)
+    private static PassiveSkill GetPassiveSkill(Hero hero, SkillTier skillTier)
     {
-        var selector =
-            new NewPassiveSkillSelector(
-            new HeroClassSkillSelector(
-            new RandomSkillSelector()));
+        var skillSelector =
+            new HeroClassSkillFilter(
+            new PassiveSkillFilter(
+            new ArmourerValidator(
+            new RandomSkillSelector())));
 
-        var input = new SkillSelectorInput(hero, Core.Skills.Skills.PassiveSkillTypes);
-        var output = selector.SelectSkill(input);
-        var skill = CreateSkillInstance(output.SkillType, skillTier);
-        hero.AddSkill(skill);
+        var input = new SkillSelectorInput(hero);
+
+        return RetryUntilSuccessful<PassiveSkill>(hero, skillTier, input, skillSelector);
     }
 
-    private static Skill CreateSkillInstance(Type skillType, SkillTier skillTier)
+    private static T RetryUntilSuccessful<T>(Hero hero, SkillTier skillTier, SkillSelectorInput input, ISkillSelector skillSelector) where T : Skill
     {
-        var skill = (Skill)Activator.CreateInstance(skillType)!;
+        T skill = null!;
+
+        try
+        {
+            var output = skillSelector.SelectSkill(input);
+            skill = CreateSkillInstance<T>(output.SkillType, skillTier);
+        }
+        catch (InvalidSkillSelectionException ex)
+        {
+            var excludedSkillTypes = new HashSet<Type>(input.ExcludedSkillTypes)
+            {
+                ex.SkillType
+            };
+
+            input = new SkillSelectorInput(hero)
+            {
+                ExcludedSkillTypes = excludedSkillTypes
+            };
+
+            RetryUntilSuccessful<T>(hero, skillTier, input, skillSelector);
+        }
+
+        return skill!;
+    }
+
+    private static T CreateSkillInstance<T>(Type skillType, SkillTier skillTier) where T : Skill
+    {
+        var skill = (T)Activator.CreateInstance(skillType)!;
         skill.Tier = skillTier;
 
         return skill;

@@ -1,12 +1,12 @@
 ﻿using Kakt.Modding.Core.Heroes;
 
-namespace Kakt.Modding.Randomization.Skills.Default;
+namespace Kakt.Modding.Randomization.Skills.Default.Filters;
 
-public partial class HeroClassSkillSelector : ISkillSelector
+public partial class HeroClassSkillFilter : ISkillSelector
 {
     private readonly ISkillSelector next;
 
-    public HeroClassSkillSelector(ISkillSelector next)
+    public HeroClassSkillFilter(ISkillSelector next)
     {
         this.next = next;
     }

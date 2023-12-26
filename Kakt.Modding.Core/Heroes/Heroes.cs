@@ -1,31 +1,44 @@
-﻿using System.Reflection;
-
-namespace Kakt.Modding.Core.Heroes;
+﻿namespace Kakt.Modding.Core.Heroes;
 
 public static class Heroes
 {
-    private static readonly Type HeroType = typeof(Hero);
-
-    private static readonly Type[] HeroTypes = GetAllHeroTypes();
-
     public static IEnumerable<Hero> GetAll()
     {
-        var heroes = new HashSet<Hero>();
-
-        foreach (var type in HeroTypes)
+        return new HashSet<Hero>
         {
-            var instance = (Hero)Activator.CreateInstance(type)!;
-            heroes.Add(instance);
-        }
-
-        return heroes;
-    }
-
-    private static Type[] GetAllHeroTypes()
-    {
-        return AssemblyTypes
-            .AllConcreteTypes
-            .Where(HeroType.IsAssignableFrom)
-            .ToArray();
+            new BlackKnight(),
+            new FaerieKnight(),
+            new LadyBoudicea(),
+            new LadyDindraine(),
+            new LadyGuinevere(),
+            new LadyIsolde(),
+            new LadyMorganaLeFey(),
+            new LadyMorgawse(),
+            new Merlin(),
+            new RedKnight(),
+            new SirBalan(),
+            new SirBalin(),
+            new SirBedievere(),
+            new SirBors(),
+            new SirBrunorLeNoir(),
+            new SirDagonet(),
+            new SirDamas(),
+            new SirEctor(),
+            new SirGalahad(),
+            new SirGawain(),
+            new SirGeraint(),
+            new SirKay(),
+            new SirLancelot(),
+            new SirLanval(),
+            new SirLeodegrance(),
+            new SirLucan(),
+            new SirMordred(),
+            new SirPelleas(),
+            new SirPercival(),
+            new SirTegyr(),
+            new SirTristan(),
+            new SirYvain(),
+            new WhiteKnight()
+        };
     }
 }

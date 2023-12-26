@@ -1,10 +1,10 @@
-﻿namespace Kakt.Modding.Randomization.Skills.Default;
+﻿namespace Kakt.Modding.Randomization.Skills.Default.Filters;
 
-public class NewUpgradablePassiveSkillSelector
+public class UpgradablePassiveSkillFilter : ISkillSelector
 {
     private readonly ISkillSelector next;
 
-    public NewUpgradablePassiveSkillSelector(ISkillSelector next)
+    public UpgradablePassiveSkillFilter(ISkillSelector next)
     {
         this.next = next;
     }

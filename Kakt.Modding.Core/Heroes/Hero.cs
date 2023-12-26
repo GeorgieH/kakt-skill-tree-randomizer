@@ -4,16 +4,9 @@ namespace Kakt.Modding.Core.Heroes;
 
 public abstract class Hero : IEquatable<Hero?>
 {
-    private readonly List<Skill> skills = [];
-
     public abstract string Name { get; }
 
-    public IEnumerable<Skill> Skills => skills;
-
-    public void AddSkill(Skill skill)
-    {
-        skills.Add(skill);
-    }
+    public SkillTree SkillTree { get; } = new();
 
     public override bool Equals(object? obj)
     {
