@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Kakt.Modding.Configuration.IO\Kakt.Modding.Configuration.IO.csproj" />
     <ProjectReference Include="..\Kakt.Modding.Randomization\Kakt.Modding.Randomization.csproj" />
   </ItemGroup>
 

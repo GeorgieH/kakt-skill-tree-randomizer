@@ -55,6 +55,8 @@ public class DefaultSkillTreeRandomizer
             hero.SkillTree.TierThreePassiveSkillOne = GetPassiveSkill(hero, SkillTier.Three, 18);
             hero.SkillTree.TierThreePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Three, 19);
             hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three, 20);
+
+            DeduplicateSkillNames(hero);
         }
 
         return heroes;
@@ -178,5 +180,41 @@ public class DefaultSkillTreeRandomizer
         }
 
         return skill!;
+    }
+
+    private static void DeduplicateSkillNames(Hero hero)
+    {
+        var skillRegister = new Dictionary<string, int>();
+
+        void DeduplicateSkillName(ISkill skill)
+        {
+            var skillName = skill.Name;
+
+            if (skillRegister!.TryGetValue(skillName, out var index))
+            {
+                var newIndex = ++index;
+                skillRegister[skillName] = newIndex;
+                skill.OverrideName($"{skillName}{newIndex}");
+
+                if (string.IsNullOrWhiteSpace(skill.IconName))
+                {
+                    skill.IconName = skillName;
+                }
+            }
+            else
+            {
+                skillRegister.Add(skillName, 1);
+            }
+        }
+
+        foreach (var skill in hero.SkillTree.Skills)
+        {
+            DeduplicateSkillName(skill!);
+
+            foreach (var skillUpgrade in skill.Upgrades)
+            {
+                DeduplicateSkillName(skillUpgrade);
+            }
+        }
     }
 }

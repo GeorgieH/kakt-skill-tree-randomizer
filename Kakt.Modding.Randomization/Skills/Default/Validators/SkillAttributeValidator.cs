@@ -1,4 +1,8 @@
-﻿namespace Kakt.Modding.Randomization.Skills.Default.Validators;
+﻿using Kakt.Modding.Core.Skills;
+using Kakt.Modding.Core;
+using System.Reflection;
+
+namespace Kakt.Modding.Randomization.Skills.Default.Validators;
 
 public class SkillAttributeValidator : ISkillSelector
 {
@@ -11,6 +15,19 @@ public class SkillAttributeValidator : ISkillSelector
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        throw new NotImplementedException();
+        var output = this.next.SelectSkill(input);
+        var attr = output.SkillType.GetCustomAttribute<RequiresSkillAttributesAttribute>();
+
+        if (attr is null)
+        {
+            return output;
+        }
+
+        if (!input.Hero.HasSkillAttributes(attr.SkillAttributes))
+        {
+            throw new InvalidSkillSelectionException(output.SkillType);
+        }
+
+        return output;
     }
 }

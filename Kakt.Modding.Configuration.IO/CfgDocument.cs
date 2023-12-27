@@ -56,4 +56,9 @@ public class CfgDocument
 
         return document;
     }
+
+    public override string ToString()
+    {
+        throw new NotImplementedException();
+    }
 }
