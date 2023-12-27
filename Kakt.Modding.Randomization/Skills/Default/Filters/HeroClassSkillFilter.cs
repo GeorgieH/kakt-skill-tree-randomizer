@@ -15,7 +15,12 @@ public partial class HeroClassSkillFilter : ISkillSelector
     {
         var skillTypes = input.Hero switch
         {
+            Arcanist => ArcanistSkills,
             Champion => ChampionSkills,
+            Defender => DefenderSkills,
+            Marksman => MarksmanSkills,
+            Sage => SageSkills,
+            Vanguard => VanguardSkills,
             _ => throw new NotImplementedException()
         };
 

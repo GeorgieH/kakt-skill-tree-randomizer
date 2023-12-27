@@ -24,7 +24,7 @@ using Kakt.Modding.Core.Skills.PoisonBomb;
 using Kakt.Modding.Core.Skills.QuickFooted;
 using Kakt.Modding.Core.Skills.Rage;
 using Kakt.Modding.Core.Skills.Robust;
-using Kakt.Modding.Core.Skills.Scout;
+using Kakt.Modding.Core.Skills.Scout.Vanguard;
 using Kakt.Modding.Core.Skills.SerratedTraps;
 using Kakt.Modding.Core.Skills.SmokeBomb;
 using Kakt.Modding.Core.Skills.ThrowingDagger;
@@ -62,7 +62,7 @@ public partial class HeroClassSkillFilter
         typeof(QuickFooted),
         typeof(Rage),
         typeof(Robust),
-        typeof(Scout),
+        typeof(VanguardScout),
         typeof(SerratedTraps),
         typeof(SirTristanSmokeBomb),
         typeof(Sprint),

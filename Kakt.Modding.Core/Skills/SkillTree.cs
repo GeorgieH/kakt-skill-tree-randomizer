@@ -2,127 +2,147 @@
 
 public class SkillTree
 {
-    private readonly Skill[] skills = new Skill[20];
+    private readonly Skill?[] skills = new Skill?[20];
 
-    public IEnumerable<Skill> Skills => skills;
+    public IEnumerable<Skill?> Skills => skills;
 
-    public ActiveSkill TierOneActiveSkillOne
+    public IEnumerable<UpgradablePassiveSkill?> UpgradablePassiveSkills =>
+    [
+        TierOneUpgradablePassiveSkillOne,
+        TierTwoUpgradablePassiveSkillOne,
+        TierThreeUpgradablePassiveSkillOne,
+        TierThreeUpgradablePassiveSkillTwo
+    ];
+
+    public IEnumerable<PassiveSkill?> PassiveSkills =>
+    [
+        TierOnePassiveSkillOne,
+        TierOnePassiveSkillTwo,
+        TierOnePassiveSkillThree,
+        TierTwoPassiveSkillOne,
+        TierTwoPassiveSkillTwo,
+        TierThreePassiveSkillOne,
+        TierThreePassiveSkillTwo,
+        TierThreePassiveSkillThree
+    ];
+
+    public ActiveSkill? TierOneActiveSkillOne
     {
-        get => (ActiveSkill)skills[0];
+        get => skills[0] as ActiveSkill;
         set => skills[0] = value;
     }
 
-    public ActiveSkill TierOneActiveSkillTwo
+    public ActiveSkill? TierOneActiveSkillTwo
     {
-        get => (ActiveSkill)skills[1];
+        get => skills[1] as ActiveSkill;
         set => skills[1] = value;
     }
 
-    public ActiveSkill TierOneActiveSkillThree
+    public ActiveSkill? TierOneActiveSkillThree
     {
-        get => (ActiveSkill)skills[2];
+        get => skills[2] as ActiveSkill;
         set => skills[2] = value;
     }
 
-    public UpgradablePassiveSkill TierOneUpgradablePassiveSkillOne
+    public UpgradablePassiveSkill? TierOneUpgradablePassiveSkillOne
     {
-        get => (UpgradablePassiveSkill)skills[3];
+        get => skills[3] as UpgradablePassiveSkill;
         set => skills[3] = value;
     }
 
-    public PassiveSkill TierOnePassiveSkillOne
+    public PassiveSkill? TierOnePassiveSkillOne
     {
-        get => (PassiveSkill)skills[4];
+        get => skills[4] as PassiveSkill;
         set => skills[4] = value;
     }
 
-    public PassiveSkill TierOnePassiveSkillTwo
+    public PassiveSkill? TierOnePassiveSkillTwo
     {
-        get => (PassiveSkill)skills[5];
+        get => skills[5] as PassiveSkill;
         set => skills[5] = value;
     }
 
-    public PassiveSkill TierOnePassiveSkillThree
+    public PassiveSkill? TierOnePassiveSkillThree
     {
-        get => (PassiveSkill)skills[6];
+        get => skills[6] as PassiveSkill;
         set => skills[6] = value;
     }
 
-    public ActiveSkill TierTwoActiveSkillOne
+    public ActiveSkill? TierTwoActiveSkillOne
     {
-        get => (ActiveSkill)skills[7];
+        get => skills[7] as ActiveSkill;
         set => skills[7] = value;
     }
 
-    public ActiveSkill TierTwoActiveSkillTwo
+    public ActiveSkill? TierTwoActiveSkillTwo
     {
-        get => (ActiveSkill)skills[8];
+        get => skills[8] as ActiveSkill;
         set => skills[8] = value;
     }
 
-    public UpgradablePassiveSkill TierTwoUpgradablePassiveSkillOne
+    public UpgradablePassiveSkill? TierTwoUpgradablePassiveSkillOne
     {
-        get => (UpgradablePassiveSkill)skills[9];
+        get => skills[9] as UpgradablePassiveSkill;
         set => skills[9] = value;
     }
 
-    public ActiveSkill TierTwoActiveSkillThree
+    public ActiveSkill? TierTwoActiveSkillThree
     {
-        get => (ActiveSkill)skills[10];
+        get => skills[10] as ActiveSkill;
         set => skills[10] = value;
     }
 
-    public PassiveSkill TierTwoPassiveSkillOne
+    public PassiveSkill? TierTwoPassiveSkillOne
     {
-        get => (PassiveSkill)skills[11];
+        get => skills[11] as PassiveSkill;
         set => skills[11] = value;
     }
 
-    public PassiveSkill TierTwoPassiveSkillTwo
+    public PassiveSkill? TierTwoPassiveSkillTwo
     {
-        get => (PassiveSkill)skills[12];
+        get => skills[12] as PassiveSkill;
         set => skills[12] = value;
     }
 
-    public ActiveSkill TierThreeActiveSkillOne
+    public ActiveSkill? TierThreeActiveSkillOne
     {
-        get => (ActiveSkill)skills[13];
+        get => skills[13] as ActiveSkill;
         set => skills[13] = value;
     }
 
-    public UpgradablePassiveSkill TierThreeUpgradablePassiveSkillOne
+    public UpgradablePassiveSkill? TierThreeUpgradablePassiveSkillOne
     {
-        get => (UpgradablePassiveSkill)skills[14];
+        get => skills[14] as UpgradablePassiveSkill;
         set => skills[14] = value;
     }
 
-    public UpgradablePassiveSkill TierThreeUpgradablePassiveSkillTwo
+    public UpgradablePassiveSkill? TierThreeUpgradablePassiveSkillTwo
     {
-        get => (UpgradablePassiveSkill)skills[15];
+        get => skills[15] as UpgradablePassiveSkill;
         set => skills[15] = value;
     }
 
-    public ActiveSkill TierThreeActiveSkillTwo
+    public ActiveSkill? TierThreeActiveSkillTwo
     {
-        get => (ActiveSkill)skills[16];
+        get => skills[16] as ActiveSkill;
         set => skills[16] = value;
     }
 
-    public PassiveSkill TierThreePassiveSkillOne
+    public PassiveSkill? TierThreePassiveSkillOne
     {
-        get => (PassiveSkill)skills[17];
+        get => skills[17] as PassiveSkill;
         set => skills[17] = value;
     }
 
-    public PassiveSkill TierThreePassiveSkillTwo
+    public PassiveSkill? TierThreePassiveSkillTwo
     {
-        get => (PassiveSkill)skills[18];
+        get => skills[18] as PassiveSkill;
         set => skills[18] = value;
     }
 
-    public PassiveSkill TierThreePassiveSkillThree
+    public PassiveSkill? TierThreePassiveSkillThree
     {
-        get => (PassiveSkill)skills[19];
+        get => skills[19] as PassiveSkill;
         set => skills[19] = value;
     }
 }

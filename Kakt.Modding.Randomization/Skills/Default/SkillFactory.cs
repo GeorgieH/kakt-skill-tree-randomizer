@@ -41,6 +41,8 @@ public static class SkillFactory
             AddUpgrades(skill, skillUpgrades.Take(4 - skillUpgrades.Count));
         }
 
+        skill.Upgrades[0].LevelLimit = 0;
+        skill.Upgrades[1].LevelLimit = 0;
         skill.Upgrades[2].LevelLimit = HeroLevelLimits.Five;
         skill.Upgrades[3].LevelLimit = HeroLevelLimits.Ten;
     }

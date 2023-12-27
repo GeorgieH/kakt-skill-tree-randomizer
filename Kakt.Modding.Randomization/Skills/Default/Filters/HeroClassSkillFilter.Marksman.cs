@@ -26,6 +26,7 @@ using Kakt.Modding.Core.Skills.RazorArrow;
 using Kakt.Modding.Core.Skills.Ready;
 using Kakt.Modding.Core.Skills.Robust;
 using Kakt.Modding.Core.Skills.Scout;
+using Kakt.Modding.Core.Skills.Scout.Marksman;
 using Kakt.Modding.Core.Skills.Sentinel;
 using Kakt.Modding.Core.Skills.Skirmisher;
 using Kakt.Modding.Core.Skills.SmokeBomb;
@@ -67,7 +68,7 @@ public partial class HeroClassSkillFilter
         typeof(RazorArrow),
         typeof(Ready),
         typeof(Robust),
-        typeof(Scout),
+        typeof(MarksmanScout),
         typeof(Sentinel),
         typeof(Skirmisher),
         typeof(SirDamasSmokeBomb),

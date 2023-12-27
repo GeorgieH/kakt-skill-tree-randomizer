@@ -34,25 +34,24 @@ public class DefaultSkillTreeRandomizer
         foreach (var hero in heroes)
         {
             hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
-
             hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
             hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, true);
-            hero.SkillTree.TierTwoActiveSkillOne = GetActiveSkill(hero, SkillTier.Two, 8);
-            hero.SkillTree.TierTwoActiveSkillTwo = GetActiveSkill(hero, SkillTier.Two, 9);
-            hero.SkillTree.TierTwoActiveSkillThree = GetActiveSkill(hero, SkillTier.Two, 11);
-            hero.SkillTree.TierThreeActiveSkillOne = GetActiveSkill(hero, SkillTier.Three, 14);
-            hero.SkillTree.TierThreeActiveSkillTwo = GetActiveSkill(hero, SkillTier.Three, 17);
-
             hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4);
-            hero.SkillTree.TierTwoUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Two, 10);
-            hero.SkillTree.TierThreeUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Three, 15);
-            hero.SkillTree.TierThreeUpgradablePassiveSkillTwo = GetUpgradablePassiveSkill(hero, SkillTier.Three, 16);
-
             hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One, 5);
             hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One, 6);
             hero.SkillTree.TierOnePassiveSkillThree = GetPassiveSkill(hero, SkillTier.One, 7);
+
+            hero.SkillTree.TierTwoActiveSkillOne = GetActiveSkill(hero, SkillTier.Two, 8);
+            hero.SkillTree.TierTwoActiveSkillTwo = GetActiveSkill(hero, SkillTier.Two, 9);
+            hero.SkillTree.TierTwoActiveSkillThree = GetActiveSkill(hero, SkillTier.Two, 11);
+            hero.SkillTree.TierTwoUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Two, 10);
             hero.SkillTree.TierTwoPassiveSkillOne = GetPassiveSkill(hero, SkillTier.Two, 12);
             hero.SkillTree.TierTwoPassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Two, 13);
+
+            hero.SkillTree.TierThreeActiveSkillOne = GetActiveSkill(hero, SkillTier.Three, 14);
+            hero.SkillTree.TierThreeActiveSkillTwo = GetActiveSkill(hero, SkillTier.Three, 17);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Three, 15);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillTwo = GetUpgradablePassiveSkill(hero, SkillTier.Three, 16);
             hero.SkillTree.TierThreePassiveSkillOne = GetPassiveSkill(hero, SkillTier.Three, 18);
             hero.SkillTree.TierThreePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Three, 19);
             hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three, 20);
@@ -111,7 +110,7 @@ public class DefaultSkillTreeRandomizer
             new ActiveSkillFilter(
             new RandomSkillSelector()));
 
-        var input = new SkillSelectorInput(hero);
+        var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<ActiveSkill>(hero, skillTier, input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber, starter);
 
@@ -123,10 +122,14 @@ public class DefaultSkillTreeRandomizer
         var skillSelector =
             new HeroClassSkillFilter(
             new UpgradablePassiveSkillFilter(
+            new OncePerSkillTreeValidator(
+            new OncePerSkillTierValidator(
+            new SkillAttributeValidator(
+            new EffectValidator(
             new ArmourerValidator(
-            new RandomSkillSelector())));
+            new RandomSkillSelector())))))));
 
-        var input = new SkillSelectorInput(hero);
+        var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<UpgradablePassiveSkill>(hero, skillTier, input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber);
 
@@ -138,10 +141,14 @@ public class DefaultSkillTreeRandomizer
         var skillSelector =
             new HeroClassSkillFilter(
             new PassiveSkillFilter(
+            new OncePerSkillTreeValidator(
+            new OncePerSkillTierValidator(
+            new SkillAttributeValidator(
+            new EffectValidator(
             new ArmourerValidator(
-            new RandomSkillSelector())));
+            new RandomSkillSelector())))))));
 
-        var input = new SkillSelectorInput(hero);
+        var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<PassiveSkill>(hero, skillTier, input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber);
 
@@ -159,12 +166,10 @@ public class DefaultSkillTreeRandomizer
         }
         catch (InvalidSkillSelectionException ex)
         {
-            var excludedSkillTypes = new HashSet<Type>(input.ExcludedSkillTypes)
-            {
-                ex.SkillType
-            };
+            var excludedSkillTypes = input.ExcludedSkillTypes;
+            excludedSkillTypes.Add(ex.SkillType);
 
-            input = new SkillSelectorInput(hero)
+            input = new SkillSelectorInput(hero, skillTier)
             {
                 ExcludedSkillTypes = excludedSkillTypes
             };

@@ -11,6 +11,19 @@ public class PassiveSkillFilter : ISkillSelector
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        throw new NotImplementedException();
+        var existingUpgradablePassiveSkillTypes = input.Hero.SkillTree.UpgradablePassiveSkills
+            .Where(s => s is not null)
+            .Select(s => s!.GetType());
+
+        var existingPassiveSkillTypesAtSameTier = input.Hero.SkillTree.PassiveSkills
+            .Where(s => s is not null)
+            .Where(s => s!.Tier == input.SkillTier)
+            .Select(s => s!.GetType());
+
+        var existingSkillTypes = existingUpgradablePassiveSkillTypes.Concat(existingPassiveSkillTypesAtSameTier);
+
+        input.SkillTypes = input.SkillTypes.Except(existingSkillTypes);
+
+        return this.next.SelectSkill(input);
     }
 }

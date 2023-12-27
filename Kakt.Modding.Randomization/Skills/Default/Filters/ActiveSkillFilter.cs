@@ -13,14 +13,13 @@ public class ActiveSkillFilter : ISkillSelector
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        var existingActiveSkillTypes = input.Hero.SkillTree.Skills
+        var existingSkillTypes = input.Hero.SkillTree.Skills
+            .Where(s => s is not null)
             .Where(s => s is ActiveSkill)
-            .Select(s => s.GetType());
+            .Select(s => s!.GetType());
 
-        input.SkillTypes = input.SkillTypes.Except(existingActiveSkillTypes);
+        input.SkillTypes = input.SkillTypes.Except(existingSkillTypes);
 
-        var output = this.next.SelectSkill(input);
-
-        return output;
+        return this.next.SelectSkill(input);
     }
 }
