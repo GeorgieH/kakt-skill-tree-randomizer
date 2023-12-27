@@ -6,20 +6,21 @@ public partial class CfgProperty : CfgElement
 {
     private static readonly Regex Regex = GetRegex();
 
-    public CfgProperty(string key, string value)
+    public CfgProperty(string key, object value)
     {
         Key = key;
         Value = value;
     }
 
     public string Key { get; }
-    public string Value { get; }
+    public object Value { get; }
 
     public static bool TryParse(string line, out CfgProperty property)
     {
         property = null!;
 
-        var matches = Regex.Matches(line);
+        var l = line.Trim();
+        var matches = Regex.Matches(l);
 
         if (matches.Count == 1)
         {
@@ -34,9 +35,9 @@ public partial class CfgProperty : CfgElement
         return false;
     }
 
-    public override string ToString()
+    public override string ToString(int indentationLevel)
     {
-        return $"{Key}={Value}";
+        return $"{GetIndentation(indentationLevel)}{Key}={Value}";
     }
 
     [GeneratedRegex("(?<key>.*)=(?<value>.*)")]

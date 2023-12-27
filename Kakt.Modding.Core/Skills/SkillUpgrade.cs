@@ -3,6 +3,7 @@
 public abstract class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
 {
     private string? nameOverride;
+    private string? prerequisiteOverride;
 
     public int Cost => 1;
     public string? IconName { get; set; }
@@ -18,9 +19,19 @@ public abstract class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
         return string.IsNullOrWhiteSpace(nameOverride) ? Name : nameOverride;
     }
 
+    public string GetPrerequisiteOrOverride()
+    {
+        return string.IsNullOrWhiteSpace(prerequisiteOverride) ? Prerequisite : prerequisiteOverride;
+    }
+
     public void OverrideName(string nameOverride)
     {
         this.nameOverride = nameOverride;
+    }
+
+    public void OverridePrerequisite(string prerequisiteOverride)
+    {
+        this.prerequisiteOverride = prerequisiteOverride;
     }
 
     public override bool Equals(object? obj)

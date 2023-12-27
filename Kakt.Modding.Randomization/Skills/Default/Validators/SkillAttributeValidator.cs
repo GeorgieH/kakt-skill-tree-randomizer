@@ -16,7 +16,7 @@ public class SkillAttributeValidator : ISkillSelector
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
         var output = this.next.SelectSkill(input);
-        var attr = output.SkillType.GetCustomAttribute<RequiresSkillAttributesAttribute>();
+        var attr = output.SkillType.GetCustomAttribute<RequiresSkillAttributesAttribute>(true);
 
         if (attr is null)
         {

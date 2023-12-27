@@ -1,7 +1,11 @@
-﻿namespace Kakt.Modding.Configuration.IO;
+﻿using System.Text;
+
+namespace Kakt.Modding.Configuration.IO;
 
 public class CfgDocument
 {
+    public static readonly string Indent = "    ";
+
     public List<CfgElement> Elements { get; } = [];
 
     public static CfgDocument Parse(string path)
@@ -57,8 +61,29 @@ public class CfgDocument
         return document;
     }
 
+    public void OverwriteObject(string name, CfgObject newObj)
+    {
+        var index = Elements.FindIndex(e => e is CfgObject o && o.Name == name);
+
+        if (index == -1)
+        {
+            Elements.Add(newObj);
+        }
+        else
+        {
+            Elements[index] = newObj;
+        }
+    }
+
     public override string ToString()
     {
-        throw new NotImplementedException();
+        var stringBuilder = new StringBuilder();
+
+        foreach (var element in Elements)
+        {
+            stringBuilder.AppendLine(element.ToString(0));
+        }
+
+        return stringBuilder.ToString();
     }
 }

@@ -13,17 +13,19 @@ public class CfgComment : CfgElement
     {
         comment = null!;
 
-        if (line.StartsWith("//"))
+        var l = line.Trim();
+
+        if (l.StartsWith("//"))
         {
-            comment = new CfgComment(line.Remove(0, 2));
+            comment = new CfgComment(l.Remove(0, 2));
             return true;
         }
 
         return false;
     }
 
-    public override string ToString()
+    public override string ToString(int indentationLevel)
     {
-        return $"//{Content}";
+        return $"{GetIndentation(indentationLevel)}// {Content}";
     }
 }

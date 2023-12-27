@@ -192,7 +192,7 @@ public class DefaultSkillTreeRandomizer
 
             if (skillRegister!.TryGetValue(skillName, out var index))
             {
-                var newIndex = ++index;
+                var newIndex = index + 1;
                 skillRegister[skillName] = newIndex;
                 skill.OverrideName($"{skillName}{newIndex}");
 
@@ -211,7 +211,7 @@ public class DefaultSkillTreeRandomizer
         {
             DeduplicateSkillName(skill!);
 
-            foreach (var skillUpgrade in skill.Upgrades)
+            foreach (var skillUpgrade in skill!.Upgrades)
             {
                 DeduplicateSkillName(skillUpgrade);
             }

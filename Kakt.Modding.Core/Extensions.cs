@@ -6,14 +6,24 @@ namespace Kakt.Modding.Core;
 
 public static class Extensions
 {
+    public static string GetConfigurationElementName(this Hero hero)
+    {
+        return GetConfigurationElementName(hero);
+    }
+
     public static string GetConfigurationElementName(this Skill skill)
     {
-        var skillType = skill.GetType();
-        var attr = skillType.GetCustomAttribute<ConfigurationElementAttribute>();
+        return GetConfigurationElementName(skill);
+    }
+
+    public static string GetConfigurationElementName(this object obj)
+    {
+        var type = obj.GetType();
+        var attr = type.GetCustomAttribute<ConfigurationElementAttribute>(true);
 
         if (attr is null)
         {
-            return skillType.Name;
+            return type.Name;
         }
 
         return attr.Name;
@@ -47,7 +57,7 @@ public static class Extensions
 
     private static bool CanCauseEffects(object obj, Effects effects)
     {
-        var attr = obj.GetType().GetCustomAttribute<CausesEffects>();
+        var attr = obj.GetType().GetCustomAttribute<CausesEffects>(true);
 
         if (attr is null)
         {
@@ -68,7 +78,7 @@ public static class Extensions
 
     public static bool HasSkillAttributes(this Skill skill, SkillAttributes skillAttributes)
     {
-        var attr = skill.GetType().GetCustomAttribute<SkillAttributesAttribute>();
+        var attr = skill.GetType().GetCustomAttribute<SkillAttributesAttribute>(true);
 
         if (attr is null)
         {

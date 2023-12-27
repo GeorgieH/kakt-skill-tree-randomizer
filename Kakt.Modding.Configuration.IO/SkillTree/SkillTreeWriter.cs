@@ -6,6 +6,10 @@ public static class SkillTreeWriter
 {
     public static void Overwrite(CfgDocument document, IEnumerable<Hero> heroes)
     {
-        throw new NotImplementedException();
+        foreach (var hero in heroes)
+        {
+            var heroObj = CfgObjectFactory.Get(hero);
+            document.OverwriteObject(heroObj.Name, heroObj);
+        }
     }
 }

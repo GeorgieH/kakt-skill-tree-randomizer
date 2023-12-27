@@ -16,7 +16,7 @@ public class EffectValidator : ISkillSelector
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
         var output = this.next.SelectSkill(input);
-        var attr = output.SkillType.GetCustomAttribute<RequiresEffects>();
+        var attr = output.SkillType.GetCustomAttribute<RequiresEffects>(true);
 
         if (attr is null)
         {
