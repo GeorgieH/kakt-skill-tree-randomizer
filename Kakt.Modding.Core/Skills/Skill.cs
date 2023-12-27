@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills;
 
-public abstract class Skill : ISkill, IEquatable<Skill?>
+public abstract class Skill : ISkill
 {
     private string? nameOverride;
 
@@ -21,20 +21,5 @@ public abstract class Skill : ISkill, IEquatable<Skill?>
     public void OverrideName(string nameOverride)
     {
         this.nameOverride = nameOverride;
-    }
-
-    public override bool Equals(object? obj)
-    {
-        return Equals(obj as Skill);
-    }
-
-    public bool Equals(Skill? other)
-    {
-        return other is not null && Name == other.Name;
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(Name);
     }
 }

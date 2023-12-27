@@ -37,7 +37,7 @@ public partial class CfgProperty : CfgElement
 
     public override string ToString(int indentationLevel)
     {
-        return $"{GetIndentation(indentationLevel)}{Key}={Value}";
+        return $"{GetIndentation(indentationLevel)}{Key}={Value}{Environment.NewLine}";
     }
 
     [GeneratedRegex("(?<key>.*)=(?<value>.*)")]

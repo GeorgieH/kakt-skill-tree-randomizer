@@ -30,42 +30,49 @@ using Kakt.Modding.Core.Skills.ThunderStorm;
 using Kakt.Modding.Core.Skills.Unburdened;
 using Kakt.Modding.Core.Skills.WishOfDeath;
 
-namespace Kakt.Modding.Randomization.Skills.Default.Filters;
+namespace Kakt.Modding.Randomization.Skills.Default;
 
-public partial class HeroClassSkillFilter
+public static partial class SkillRepository
 {
-    private static readonly IEnumerable<Type> SageSkills = CommonSkills!.Concat(new HashSet<Type>
+    private static IEnumerable<Type>? SageSkills;
+
+    public static IEnumerable<Type> GetSageSkills()
     {
-        typeof(Bless),
-        typeof(ChainLightning),
-        typeof(CleansingFire),
-        typeof(CounterAttack),
-        typeof(MarksmanDash),
-        typeof(Dedication),
-        typeof(Divine),
-        typeof(EnchantedWeapon),
-        typeof(Favoured),
-        typeof(FreezingAttack),
-        typeof(FrostArmour),
-        typeof(GlobeOfProtection),
-        typeof(IceAura),
-        typeof(IceLance),
-        typeof(IceShield),
-        typeof(IceSpikes),
-        typeof(IceWall),
-        typeof(Inspire),
-        typeof(Ironclad),
-        typeof(Judgement),
-        typeof(MassProtection),
-        typeof(MonsterHunter),
-        typeof(Mysticism),
-        typeof(PurgingStrike),
-        typeof(RayOfLight),
-        typeof(StrongWilled),
-        typeof(Teleport),
-        typeof(Thunderbolt),
-        typeof(ThunderStorm),
-        typeof(Unburdened),
-        typeof(WishOfDeath)
-    });
+        SageSkills ??= new HashSet<Type>
+        {
+            typeof(Bless),
+            typeof(ChainLightning),
+            typeof(CleansingFire),
+            typeof(CounterAttack),
+            typeof(MarksmanDash),
+            typeof(Dedication),
+            typeof(Divine),
+            typeof(EnchantedWeapon),
+            typeof(Favoured),
+            typeof(FreezingAttack),
+            typeof(FrostArmour),
+            typeof(GlobeOfProtection),
+            typeof(IceAura),
+            typeof(IceLance),
+            typeof(IceShield),
+            typeof(IceSpikes),
+            typeof(IceWall),
+            typeof(Inspire),
+            typeof(Ironclad),
+            typeof(Judgement),
+            typeof(MassProtection),
+            typeof(MonsterHunter),
+            typeof(Mysticism),
+            typeof(PurgingStrike),
+            typeof(RayOfLight),
+            typeof(StrongWilled),
+            typeof(Teleport),
+            typeof(Thunderbolt),
+            typeof(ThunderStorm),
+            typeof(Unburdened),
+            typeof(WishOfDeath)
+        }.Concat(GetCommonSkills());
+
+        return SageSkills;
+    }
 }

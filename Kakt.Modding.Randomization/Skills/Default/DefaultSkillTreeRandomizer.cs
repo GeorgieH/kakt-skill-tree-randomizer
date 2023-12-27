@@ -6,12 +6,14 @@ using Kakt.Modding.Core.Skills.IceBolt;
 using Kakt.Modding.Core.Skills.LightningStrike;
 using Kakt.Modding.Core.Skills.ShadowBolt;
 using Kakt.Modding.Core.Skills.Shoot;
+using Kakt.Modding.Core.Skills.Strike;
 using Kakt.Modding.Core.Skills.Strike.Champion;
 using Kakt.Modding.Core.Skills.Strike.Defender;
 using Kakt.Modding.Core.Skills.Strike.Sage;
 using Kakt.Modding.Core.Skills.Strike.Vanguard;
 using Kakt.Modding.Randomization.Skills.Default.Filters;
 using Kakt.Modding.Randomization.Skills.Default.Validators;
+using System.Diagnostics;
 
 namespace Kakt.Modding.Randomization.Skills.Default;
 
@@ -27,12 +29,21 @@ public class DefaultSkillTreeRandomizer
         new ShadowBolt()
     ];
 
+    private readonly ILogger logger;
+
+    public DefaultSkillTreeRandomizer(ILogger logger)
+    {
+        this.logger = logger;
+    }
+
     public IEnumerable<Hero> Generate()
     {
         var heroes = Heroes.GetAll();
 
         foreach (var hero in heroes)
         {
+            logger.Log($"Randomizing {hero.GetType().Name}...");
+
             hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
             hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
             hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, true);
@@ -69,6 +80,10 @@ public class DefaultSkillTreeRandomizer
         if (hero is FaerieKnight)
         {
             skill = new LightningStrike();
+        }
+        else if (hero is SirMordred)
+        {
+            skill = new SirMordredStrike();
         }
         else if (hero is Arcanist)
         {
@@ -159,7 +174,7 @@ public class DefaultSkillTreeRandomizer
 
     private static T GetSkill<T>(Hero hero, SkillTier skillTier, SkillSelectorInput input, ISkillSelector skillSelector) where T : Skill
     {
-        T skill = null!;
+        T skill;
 
         try
         {
@@ -176,10 +191,10 @@ public class DefaultSkillTreeRandomizer
                 ExcludedSkillTypes = excludedSkillTypes
             };
 
-            GetSkill<T>(hero, skillTier, input, skillSelector);
+            skill = GetSkill<T>(hero, skillTier, input, skillSelector);
         }
 
-        return skill!;
+        return skill;
     }
 
     private static void DeduplicateSkillNames(Hero hero)

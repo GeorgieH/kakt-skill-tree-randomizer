@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.SmokeBomb;
 
+[SkillUpgradeType(typeof(SmokeBomb))]
 public class SirDamasSmokeBomb : SmokeBomb
 {
     public SirDamasSmokeBomb()

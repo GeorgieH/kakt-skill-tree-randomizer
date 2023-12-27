@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.GasTrap;
 
+[SkillUpgradeType(typeof(GasTrap))]
 public class SirDamasGasTrap : GasTrap
 {
     public SirDamasGasTrap()

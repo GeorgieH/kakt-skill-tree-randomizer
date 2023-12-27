@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.ForceBolt;
 
+[SkillUpgradeType(typeof(ForceBolt))]
 public class FaerieKnightForceBolt : ForceBolt
 {
     public FaerieKnightForceBolt()

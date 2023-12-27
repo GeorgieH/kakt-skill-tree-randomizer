@@ -27,8 +27,10 @@ public class CfgDocument
             }
         }
 
-        foreach (var line in File.ReadLines(path))
+        foreach (var l in File.ReadLines(path))
         {
+            var line = l.Trim();
+
             if (string.IsNullOrWhiteSpace(line))
             {
                 continue;

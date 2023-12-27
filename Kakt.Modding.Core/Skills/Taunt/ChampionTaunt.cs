@@ -1,6 +1,7 @@
 ﻿namespace Kakt.Modding.Core.Skills.Taunt;
 
 [SkillAttributes(SkillAttributes.Support)]
+[SkillUpgradeType(typeof(Taunt))]
 public class ChampionTaunt : Taunt
 {
     public ChampionTaunt()

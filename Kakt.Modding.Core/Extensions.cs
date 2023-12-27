@@ -6,24 +6,14 @@ namespace Kakt.Modding.Core;
 
 public static class Extensions
 {
-    public static string GetConfigurationElementName(this Hero hero)
-    {
-        return GetConfigurationElementName(hero);
-    }
-
     public static string GetConfigurationElementName(this Skill skill)
     {
-        return GetConfigurationElementName(skill);
-    }
-
-    public static string GetConfigurationElementName(this object obj)
-    {
-        var type = obj.GetType();
-        var attr = type.GetCustomAttribute<ConfigurationElementAttribute>(true);
+        var skillType = skill.GetType();
+        var attr = skillType.GetCustomAttribute<ConfigurationElementAttribute>(true);
 
         if (attr is null)
         {
-            return type.Name;
+            return skillType.Name;
         }
 
         return attr.Name;

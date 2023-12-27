@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.PoisonBomb;
 
+[SkillUpgradeType(typeof(PoisonBomb))]
 public class LadyBoudiceaPoisonBomb : PoisonBomb
 {
     public LadyBoudiceaPoisonBomb()

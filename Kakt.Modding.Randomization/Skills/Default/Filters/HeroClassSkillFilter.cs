@@ -15,16 +15,16 @@ public partial class HeroClassSkillFilter : ISkillSelector
     {
         var skillTypes = input.Hero switch
         {
-            Arcanist => ArcanistSkills,
-            Champion => ChampionSkills,
-            Defender => DefenderSkills,
-            Marksman => MarksmanSkills,
-            Sage => SageSkills,
-            Vanguard => VanguardSkills,
+            Arcanist => SkillRepository.GetArcanistSkills(),
+            Champion => SkillRepository.GetChampionSkills(),
+            Defender => SkillRepository.GetDefenderSkills(),
+            Marksman => SkillRepository.GetMarksmanSkills(),
+            Sage => SkillRepository.GetSageSkills(),
+            Vanguard => SkillRepository.GetVanguardSkills(),
             _ => throw new NotImplementedException()
         };
 
-        input.SkillTypes = input.SkillTypes.Intersect(skillTypes);
+        input.SkillTypes = skillTypes;
 
         return this.next.SelectSkill(input);
     }

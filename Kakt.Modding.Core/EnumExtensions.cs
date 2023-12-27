@@ -6,7 +6,7 @@ public static class EnumExtensions
     {
         foreach (T value in Enum.GetValues<T>())
         {
-            if (input.HasFlag(value))
+            if (Convert.ToInt32(value) != 0 && input.HasFlag(value))
             {
                 yield return value;
             }

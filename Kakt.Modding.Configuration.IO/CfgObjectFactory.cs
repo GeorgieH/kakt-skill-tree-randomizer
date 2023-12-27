@@ -9,8 +9,7 @@ public static class CfgObjectFactory
 {
     public static CfgObject Get(Hero hero)
     {
-        var heroName = hero.GetConfigurationElementName();
-        var heroObj = new CfgObject(heroName);
+        var heroObj = new CfgObject(hero.Name);
 
         var skillRegister = new Dictionary<string, List<int>>();
 
@@ -106,6 +105,12 @@ public static class CfgObjectFactory
         var obj = new CfgObject($"{skillName}_p{index}");
 
         obj.Elements.Add(new CfgProperty("Cost", skillUpgrade.Cost));
+
+        if (skillUpgrade.LevelLimit > 0)
+        {
+            obj.Elements.Add(new CfgProperty("LevelLimit", skillUpgrade.LevelLimit));
+        }
+
         obj.Elements.Add(new CfgProperty("Prerequisite", skillUpgrade.GetPrerequisiteOrOverride()));
 
         if (!string.IsNullOrWhiteSpace(skillUpgrade.IconName))

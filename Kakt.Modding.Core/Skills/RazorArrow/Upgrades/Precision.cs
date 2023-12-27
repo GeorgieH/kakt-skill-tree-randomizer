@@ -7,5 +7,5 @@ public class Precision : SkillUpgrade<RazorArrow>
         LevelLimit = HeroLevelLimits.Five;
     }
 
-    public override string Name => throw new NotImplementedException();
+    public override string Name => "Hero_marksman__razorArrow_precision";
 }

@@ -37,49 +37,56 @@ using Kakt.Modding.Core.Skills.Taunt;
 using Kakt.Modding.Core.Skills.Vengeance;
 using Kakt.Modding.Core.Skills.Whirlwind;
 
-namespace Kakt.Modding.Randomization.Skills.Default.Filters;
+namespace Kakt.Modding.Randomization.Skills.Default;
 
-public partial class HeroClassSkillFilter
+public static partial class SkillRepository
 {
-    private static readonly IEnumerable<Type> ChampionSkills = CommonSkills!.Concat(new HashSet<Type>
+    private static IEnumerable<Type>? ChampionSkills;
+
+    public static IEnumerable<Type> GetChampionSkills()
     {
-        typeof(Assault),
-        typeof(BlessedWeapon),
-        typeof(BlackKnightCastStigma),
-        typeof(Cleave),
-        typeof(CounterAttack),
-        typeof(DazingStrikes),
-        typeof(DeathStrike),
-        typeof(DefensiveStance),
-        typeof(DrainBlood),
-        typeof(EarthShaker),
-        typeof(ExtraAreaDamage),
-        typeof(ExtraBleeding),
-        typeof(ExtraStun),
-        typeof(HardenedArmour),
-        typeof(HexCleave),
-        typeof(HolyArmour),
-        typeof(IceAura),
-        typeof(IceSpikes),
-        typeof(Inspire),
-        typeof(IronSkinned),
-        typeof(Juggernaut),
-        typeof(Kick),
-        typeof(LeapAttack),
-        typeof(LoneWolf),
-        typeof(MeleeExpertise),
-        typeof(PowerAttack),
-        typeof(Preparedness),
-        typeof(Pulverise),
-        typeof(Radiance),
-        typeof(Rage),
-        typeof(Rampage),
-        typeof(Robust),
-        typeof(RupturingStrike),
-        typeof(Strength),
-        typeof(StrongWilled),
-        typeof(ChampionTaunt),
-        typeof(Vengeance),
-        typeof(Whirlwind)
-    });
+        ChampionSkills ??= new HashSet<Type>
+        {
+            typeof(Assault),
+            typeof(BlessedWeapon),
+            typeof(BlackKnightCastStigma),
+            typeof(Cleave),
+            typeof(CounterAttack),
+            typeof(DazingStrikes),
+            typeof(SirKayDeathStrike),
+            typeof(DefensiveStance),
+            typeof(DrainBlood),
+            typeof(EarthShaker),
+            typeof(ExtraAreaDamage),
+            typeof(ExtraBleeding),
+            typeof(ExtraStun),
+            typeof(HardenedArmour),
+            typeof(HexCleave),
+            typeof(HolyArmour),
+            typeof(IceAura),
+            typeof(IceSpikes),
+            typeof(Inspire),
+            typeof(IronSkinned),
+            typeof(Juggernaut),
+            typeof(Kick),
+            typeof(LeapAttack),
+            typeof(LoneWolf),
+            typeof(MeleeExpertise),
+            typeof(PowerAttack),
+            typeof(Preparedness),
+            typeof(Pulverise),
+            typeof(Radiance),
+            typeof(Rage),
+            typeof(Rampage),
+            typeof(Robust),
+            typeof(RupturingStrike),
+            typeof(Strength),
+            typeof(StrongWilled),
+            typeof(ChampionTaunt),
+            typeof(Vengeance),
+            typeof(Whirlwind)
+        }.Concat(GetCommonSkills());
+
+        return ChampionSkills;
+    }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.Flurry;
 
+[ConfigurationElement(nameof(Flurry))]
 [SkillAttributes(SkillAttributes.Melee)]
 public class Flurry : ActiveSkill
 {

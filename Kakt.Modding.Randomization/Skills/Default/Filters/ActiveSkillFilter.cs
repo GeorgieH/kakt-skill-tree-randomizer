@@ -18,7 +18,9 @@ public class ActiveSkillFilter : ISkillSelector
             .Where(s => s is ActiveSkill)
             .Select(s => s!.GetType());
 
-        input.SkillTypes = input.SkillTypes.Except(existingSkillTypes);
+        input.SkillTypes = input.SkillTypes
+            .Where(typeof(ActiveSkill).IsAssignableFrom)
+            .Except(existingSkillTypes);
 
         return this.next.SelectSkill(input);
     }

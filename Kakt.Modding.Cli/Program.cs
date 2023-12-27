@@ -1,4 +1,5 @@
-﻿using Kakt.Modding.Configuration.IO;
+﻿using Kakt.Modding.Cli;
+using Kakt.Modding.Configuration.IO;
 using Kakt.Modding.Configuration.IO.SkillTree;
 using Kakt.Modding.Randomization.Skills.Default;
 using System.Text;
@@ -21,7 +22,7 @@ if (!File.Exists(skillTreePath))
 
 var document = CfgDocument.Parse(skillTreePath);
 
-var randomizer = new DefaultSkillTreeRandomizer();
+var randomizer = new DefaultSkillTreeRandomizer(new ConsoleLogger());
 var heroes = randomizer.Generate();
 
 SkillTreeWriter.Overwrite(document, heroes);
@@ -33,4 +34,9 @@ if (Directory.Exists(outputPath))
     Directory.Delete(outputPath, true);
 }
 
-File.WriteAllText(Path.Combine(outputPath, "Cfg", "Config", "SkillTree.cfg"), document.ToString(), Encoding.UTF8);
+var configPath = Path.Combine(outputPath, "Cfg", "Config");
+Directory.CreateDirectory(configPath);
+
+File.WriteAllText(Path.Combine(configPath, "SkillTree.cfg"), document.ToString(), Encoding.UTF8);
+
+Exit("Done!");

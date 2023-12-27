@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Skills\Default\Filters\HeroClassSkillFilter.*.cs">
-      <DependentUpon>HeroClassSkillFilter.cs</DependentUpon>
-    </Compile>
+    <Compile Update="Skills\Default\SkillRepository.*.cs">
+	  <DependentUpon>SkillRepository.cs</DependentUpon>
+	</Compile>
   </ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kakt.Modding.Randomization", "Kakt.Modding.Randomization\Kakt.Modding.Randomization.csproj", "{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kakt.Modding.Configuration.IO", "Kakt.Modding.Configuration.IO\Kakt.Modding.Configuration.IO.csproj", "{27750F68-BFCE-4541-96EC-BA3868706D7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kakt.Modding.Configuration.IO", "Kakt.Modding.Configuration.IO\Kakt.Modding.Configuration.IO.csproj", "{27750F68-BFCE-4541-96EC-BA3868706D7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

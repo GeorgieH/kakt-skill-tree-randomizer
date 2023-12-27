@@ -12,4 +12,10 @@
     <ProjectReference Include="..\Kakt.Modding.Randomization\Kakt.Modding.Randomization.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="SkillTree.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

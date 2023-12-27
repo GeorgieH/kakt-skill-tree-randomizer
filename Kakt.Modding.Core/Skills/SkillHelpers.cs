@@ -4,21 +4,29 @@ namespace Kakt.Modding.Core.Skills;
 
 public static class SkillHelpers
 {
-    private static readonly Dictionary<Type, IEnumerable<SkillUpgrade>> SkillUpgradeCache = [];
+    private static readonly Dictionary<Type, IEnumerable<Type>> SkillUpgradeTypeCache = [];
 
     public static IEnumerable<SkillUpgrade> GetSkillUpgrades(Type skillType)
     {
-        if (SkillUpgradeCache.TryGetValue(skillType, out var cachedSkillUpgrades))
+        if (!SkillUpgradeTypeCache.TryGetValue(skillType, out var skillUpgradeTypes))
         {
-            return cachedSkillUpgrades;
+            var genericTypeArgument = skillType;
+            var attr = skillType.GetCustomAttribute<SkillUpgradeTypeAttribute>(true);
+
+            if (attr is not null)
+            {
+                genericTypeArgument = attr.SkillType;
+            }
+
+            var skillUpgradeType = typeof(SkillUpgrade<>).MakeGenericType(genericTypeArgument);
+
+            skillUpgradeTypes = Assembly
+                .GetExecutingAssembly()
+                .GetTypes()
+                .Where(skillUpgradeType.IsAssignableFrom);
+
+            SkillUpgradeTypeCache.Add(skillType, skillUpgradeTypes);
         }
-
-        var skillUpgradeType = typeof(SkillUpgrade<>).MakeGenericType(skillType);
-
-        var skillUpgradeTypes = Assembly
-            .GetExecutingAssembly()
-            .GetTypes()
-            .Where(skillUpgradeType.IsAssignableFrom);
 
         var skillUpgrades = new List<SkillUpgrade>();
 
@@ -27,8 +35,6 @@ public static class SkillHelpers
             var skillUpgrade = (SkillUpgrade)Activator.CreateInstance(type)!;
             skillUpgrades.Add(skillUpgrade);
         }
-
-        SkillUpgradeCache.Add(skillType, skillUpgrades);
 
         return skillUpgrades;
     }

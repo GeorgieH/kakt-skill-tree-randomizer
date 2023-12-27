@@ -35,46 +35,54 @@ using Kakt.Modding.Core.Skills.StormOfArrows;
 using Kakt.Modding.Core.Skills.Surge;
 using Kakt.Modding.Core.Skills.TrueAim;
 
-namespace Kakt.Modding.Randomization.Skills.Default.Filters;
+namespace Kakt.Modding.Randomization.Skills.Default;
 
-public partial class HeroClassSkillFilter
+public static partial class SkillRepository
 {
-    private static readonly IEnumerable<Type> MarksmanSkills = CommonSkills!.Concat(new HashSet<Type>
+    private static IEnumerable<Type>? MarksmanSkills;
+
+    public static IEnumerable<Type> GetMarksmanSkills()
     {
-        typeof(AimedShot),
-        typeof(CripplingShot),
-        typeof(CoverExpert),
-        typeof(MarksmanDash),
-        typeof(Deflection),
-        typeof(DelayedBarrage),
-        typeof(Evasion),
-        typeof(FireArrow),
-        typeof(FireBomb),
-        typeof(FirstShot),
-        typeof(SirDamasGasTrap),
-        typeof(Hunter),
-        typeof(Ironclad),
-        typeof(LightningArrow),
-        typeof(MarksmanLongReach),
-        typeof(LowProfile),
-        typeof(MarkTarget),
-        typeof(MasterOfTraps),
-        typeof(OnTheProwl),
-        typeof(PiercingShot),
-        typeof(PointBlankVolley),
-        typeof(PoisonBomb),
-        typeof(PoisonedArrow),
-        typeof(RainOfArrows),
-        typeof(RazorArrow),
-        typeof(Ready),
-        typeof(Robust),
-        typeof(MarksmanScout),
-        typeof(Sentinel),
-        typeof(Skirmisher),
-        typeof(SirDamasSmokeBomb),
-        typeof(SmotheringShot),
-        typeof(StormOfArrows),
-        typeof(Surge),
-        typeof(TrueAim)
-    });
+        MarksmanSkills ??= new HashSet<Type>
+        {
+            typeof(AimedShot),
+            typeof(CripplingShot),
+            typeof(CoverExpert),
+            typeof(MarksmanDash),
+            typeof(Deflection),
+            typeof(DelayedBarrage),
+            typeof(Evasion),
+            typeof(FireArrow),
+            typeof(FireBomb),
+            typeof(FirstShot),
+            typeof(SirDamasGasTrap),
+            typeof(Hunter),
+            typeof(Ironclad),
+            typeof(LightningArrow),
+            typeof(MarksmanLongReach),
+            typeof(LowProfile),
+            typeof(MarkTarget),
+            typeof(MasterOfTraps),
+            typeof(OnTheProwl),
+            typeof(PiercingShot),
+            typeof(PointBlankVolley),
+            typeof(PoisonBomb),
+            typeof(PoisonedArrow),
+            typeof(RainOfArrows),
+            typeof(RazorArrow),
+            typeof(Ready),
+            typeof(Robust),
+            typeof(Scout),
+            typeof(MarksmanScout),
+            typeof(Sentinel),
+            typeof(Skirmisher),
+            typeof(SirDamasSmokeBomb),
+            typeof(SmotheringShot),
+            typeof(StormOfArrows),
+            typeof(Surge),
+            typeof(TrueAim)
+        }.Concat(GetCommonSkills());
+
+        return MarksmanSkills;
+    }
 }

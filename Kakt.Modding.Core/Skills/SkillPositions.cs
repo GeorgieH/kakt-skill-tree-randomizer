@@ -14,7 +14,7 @@ public static class SkillPositions
     public static readonly Position2D Tier2Skill1 = new(120, 310);
     public static readonly Position2D Tier2Skill2 = new(310, 310);
     public static readonly Position2D Tier2Skill3 = new(500, 310);
-    public static readonly Position2D Tier2Skill4 = new(210, 420);
+    public static readonly Position2D Tier2Skill4 = new(215, 420);
     public static readonly Position2D Tier2Skill5 = new(405, 420);
     public static readonly Position2D Tier2Skill6 = new(500, 420);
 

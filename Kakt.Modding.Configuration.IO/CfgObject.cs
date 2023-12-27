@@ -19,15 +19,17 @@ public class CfgObject : CfgElement
     {
         var stringBuilder = new StringBuilder();
 
-        stringBuilder.AppendLine(Name);
-        stringBuilder.AppendLine(StartToken);
+        var indentation = GetIndentation(indentationLevel);
+
+        stringBuilder.AppendLine($"{indentation}{Name}");
+        stringBuilder.AppendLine($"{indentation}{StartToken}");
 
         foreach (var element in Elements)
         {
-            stringBuilder.AppendLine(element.ToString(indentationLevel + 1));
+            stringBuilder.Append(element.ToString(indentationLevel + 1));
         }
 
-        stringBuilder.AppendLine(EndToken);
+        stringBuilder.AppendLine($"{indentation}{EndToken}");
 
         return stringBuilder.ToString();
     }

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills;
 
-public abstract class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
+public abstract class SkillUpgrade : ISkill
 {
     private string? nameOverride;
     private string? prerequisiteOverride;
@@ -32,20 +32,5 @@ public abstract class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
     public void OverridePrerequisite(string prerequisiteOverride)
     {
         this.prerequisiteOverride = prerequisiteOverride;
-    }
-
-    public override bool Equals(object? obj)
-    {
-        return Equals(obj as SkillUpgrade);
-    }
-
-    public bool Equals(SkillUpgrade? other)
-    {
-        return other is not null && Name == other.Name;
-    }
-
-    public override int GetHashCode()
-    {
-        return HashCode.Combine(Name);
     }
 }

@@ -17,7 +17,9 @@ public class UpgradablePassiveSkillFilter : ISkillSelector
             .Where(s => s is UpgradablePassiveSkill)
             .Select(s => s.GetType());
 
-        input.SkillTypes = input.SkillTypes.Except(existingSkillTypes);
+        input.SkillTypes = input.SkillTypes
+            .Where(typeof(UpgradablePassiveSkill).IsAssignableFrom)
+            .Except(existingSkillTypes);
 
         return this.next.SelectSkill(input);
     }

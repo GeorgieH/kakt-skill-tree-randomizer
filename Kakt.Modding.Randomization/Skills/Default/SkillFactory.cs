@@ -27,17 +27,13 @@ public static class SkillFactory
             return;
         }
 
-        var skillUpgrades = SkillHelpers
-            .GetSkillUpgrades(skill.GetType())
-            .ToList();
-
-        skillUpgrades.Shuffle(SkillUpgradesRng);
+        var skillUpgrades = GetSkillUpgrades(skill);
 
         AddUpgrades(skill, skillUpgrades);
 
         if (skillUpgrades.Count < 4)
         {
-            skillUpgrades.Shuffle(SkillUpgradesRng);
+            skillUpgrades = GetSkillUpgrades(skill);
             AddUpgrades(skill, skillUpgrades.Take(4 - skillUpgrades.Count));
         }
 
@@ -45,6 +41,17 @@ public static class SkillFactory
         skill.Upgrades[1].LevelLimit = 0;
         skill.Upgrades[2].LevelLimit = HeroLevelLimits.Five;
         skill.Upgrades[3].LevelLimit = HeroLevelLimits.Ten;
+    }
+
+    private static List<SkillUpgrade> GetSkillUpgrades(Skill skill)
+    {
+        var skillUpgrades = SkillHelpers
+            .GetSkillUpgrades(skill.GetType())
+            .ToList();
+
+        skillUpgrades.Shuffle(SkillUpgradesRng);
+
+        return skillUpgrades;
     }
 
     private static void AddUpgrades(Skill skill, IEnumerable<SkillUpgrade> skillUpgrades)

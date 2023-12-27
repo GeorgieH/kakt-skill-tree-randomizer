@@ -1,4 +1,6 @@
-﻿namespace Kakt.Modding.Randomization.Skills.Default.Filters;
+﻿using Kakt.Modding.Core.Skills;
+
+namespace Kakt.Modding.Randomization.Skills.Default.Filters;
 
 public class PassiveSkillFilter : ISkillSelector
 {
@@ -22,7 +24,10 @@ public class PassiveSkillFilter : ISkillSelector
 
         var existingSkillTypes = existingUpgradablePassiveSkillTypes.Concat(existingPassiveSkillTypesAtSameTier);
 
-        input.SkillTypes = input.SkillTypes.Except(existingSkillTypes);
+        input.SkillTypes = input.SkillTypes
+            .Where(t => !typeof(UpgradablePassiveSkill).IsAssignableFrom(t))
+            .Where(typeof(PassiveSkill).IsAssignableFrom)
+            .Except(existingSkillTypes);
 
         return this.next.SelectSkill(input);
     }
