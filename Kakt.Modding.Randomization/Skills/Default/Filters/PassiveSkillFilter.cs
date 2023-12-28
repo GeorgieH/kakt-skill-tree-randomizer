@@ -25,7 +25,6 @@ public class PassiveSkillFilter : ISkillSelector
         var existingSkillTypes = existingUpgradablePassiveSkillTypes.Concat(existingPassiveSkillTypesAtSameTier);
 
         input.SkillTypes = input.SkillTypes
-            .Where(t => !typeof(UpgradablePassiveSkill).IsAssignableFrom(t))
             .Where(typeof(PassiveSkill).IsAssignableFrom)
             .Except(existingSkillTypes);
 

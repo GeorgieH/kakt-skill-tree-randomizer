@@ -1,6 +1,7 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Core.Skills.FireBolt;
+using Kakt.Modding.Core.Skills.FlamingStrike;
 using Kakt.Modding.Core.Skills.ForceBolt;
 using Kakt.Modding.Core.Skills.IceBolt;
 using Kakt.Modding.Core.Skills.LightningStrike;
@@ -13,7 +14,6 @@ using Kakt.Modding.Core.Skills.Strike.Sage;
 using Kakt.Modding.Core.Skills.Strike.Vanguard;
 using Kakt.Modding.Randomization.Skills.Default.Filters;
 using Kakt.Modding.Randomization.Skills.Default.Validators;
-using System.Diagnostics;
 
 namespace Kakt.Modding.Randomization.Skills.Default;
 
@@ -21,12 +21,12 @@ public class DefaultSkillTreeRandomizer
 {
     private static readonly Random BasicArcanistSkillsRng = new();
 
-    private static readonly List<ActiveSkill> BasicArcanistSkills =
+    private static readonly List<Type> BasicArcanistSkills =
     [
-        new FireBolt(),
-        new ForceBolt(),
-        new IceBolt(),
-        new ShadowBolt()
+        typeof(FireBolt),
+        typeof(ForceBolt),
+        typeof(IceBolt),
+        typeof(ShadowBolt)
     ];
 
     private readonly ILogger logger;
@@ -85,10 +85,14 @@ public class DefaultSkillTreeRandomizer
         {
             skill = new SirMordredStrike();
         }
+        else if (hero is SirPercival)
+        {
+            skill = new FlamingStrike();
+        }
         else if (hero is Arcanist)
         {
-            BasicArcanistSkills.Shuffle(BasicArcanistSkillsRng);
-            skill = BasicArcanistSkills.First();
+            var type = BasicArcanistSkills.Random(BasicArcanistSkillsRng);
+            skill = (Skill)Activator.CreateInstance(type)!;
         }
         else if (hero is Champion)
         {
@@ -167,7 +171,7 @@ public class DefaultSkillTreeRandomizer
 
         var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<PassiveSkill>(hero, skillTier, input, skillSelector);
-        SkillFactory.Build(skill, skillTier, skillNumber);
+        SkillFactory.Build(skill, skillTier, skillNumber, isPassive: true);
 
         return skill;
     }

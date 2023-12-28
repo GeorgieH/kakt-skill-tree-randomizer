@@ -19,7 +19,6 @@ using Kakt.Modding.Core.Skills.PotentHex;
 using Kakt.Modding.Core.Skills.Pyromania;
 using Kakt.Modding.Core.Skills.QuickCurse;
 using Kakt.Modding.Core.Skills.SlowingHex;
-using Kakt.Modding.Core.Skills.SoothingWords;
 using Kakt.Modding.Core.Skills.TerrorWings;
 using Kakt.Modding.Core.Skills.Wildfire;
 
@@ -54,7 +53,6 @@ public static partial class SkillRepository
             typeof(Pyromania),
             typeof(QuickCurse),
             typeof(SlowingHex),
-            typeof(SoothingWords),
             typeof(TerrorWings),
             typeof(Wildfire)
         };

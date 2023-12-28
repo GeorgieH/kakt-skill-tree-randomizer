@@ -6,13 +6,17 @@ public static class SkillFactory
 {
     private static readonly Random SkillUpgradesRng = new();
 
-    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false)
+    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool isPassive = false)
     {
         skill.Starter = starter;
         skill.Tier = skillTier;
 
-        AddUpgrades(skill);
-        SetUpgradePositions(skill, skillNumber);
+        if (!isPassive)
+        {
+            AddUpgrades(skill);
+        }
+
+        SetIconPositions(skill, skillNumber, isPassive);
 
         foreach (var skillUpgrade in skill.Upgrades)
         {
@@ -22,11 +26,6 @@ public static class SkillFactory
 
     private static void AddUpgrades(Skill skill)
     {
-        if (IsPassiveSkill(skill))
-        {
-            return;
-        }
-
         var skillUpgrades = GetSkillUpgrades(skill);
 
         AddUpgrades(skill, skillUpgrades);
@@ -63,24 +62,18 @@ public static class SkillFactory
         }
     }
 
-    private static void SetUpgradePositions(Skill skill, int skillNumber)
+    private static void SetIconPositions(Skill skill, int skillNumber, bool isPassive)
     {
         var input = new SkillPositionCalculatorInput(skillNumber, skill);
         var output = SkillPositionCalculator.Calculate(input);
         skill.IconPosition = output.SkillPosition;
 
-        if (!IsPassiveSkill(skill))
+        if (!isPassive)
         {
             skill.Upgrades[0].IconPosition = output.SkillUpgradePosition1;
             skill.Upgrades[1].IconPosition = output.SkillUpgradePosition2;
             skill.Upgrades[2].IconPosition = output.SkillUpgradePosition3;
             skill.Upgrades[3].IconPosition = output.SkillUpgradePosition4;
         }
-    }
-
-    private static bool IsPassiveSkill(Skill skill)
-    {
-        return skill is PassiveSkill
-            && skill is not UpgradablePassiveSkill;
     }
 }

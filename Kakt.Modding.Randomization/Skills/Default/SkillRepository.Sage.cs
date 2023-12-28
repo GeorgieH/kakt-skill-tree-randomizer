@@ -23,6 +23,7 @@ using Kakt.Modding.Core.Skills.MonsterHunter;
 using Kakt.Modding.Core.Skills.Mysticism;
 using Kakt.Modding.Core.Skills.PurgingStrike;
 using Kakt.Modding.Core.Skills.RayOfLight;
+using Kakt.Modding.Core.Skills.SoothingWords;
 using Kakt.Modding.Core.Skills.StrongWilled;
 using Kakt.Modding.Core.Skills.Teleport;
 using Kakt.Modding.Core.Skills.Thunderbolt;
@@ -65,6 +66,7 @@ public static partial class SkillRepository
             typeof(Mysticism),
             typeof(PurgingStrike),
             typeof(RayOfLight),
+            typeof(SoothingWords),
             typeof(StrongWilled),
             typeof(Teleport),
             typeof(Thunderbolt),

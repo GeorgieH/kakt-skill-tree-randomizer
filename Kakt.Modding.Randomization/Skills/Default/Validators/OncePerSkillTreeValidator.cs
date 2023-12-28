@@ -51,6 +51,7 @@ using Kakt.Modding.Core.Skills.PotentHex;
 using Kakt.Modding.Core.Skills.Pyromania;
 using Kakt.Modding.Core.Skills.QuickCurse;
 using Kakt.Modding.Core.Skills.QuickFooted;
+using Kakt.Modding.Core.Skills.Rage;
 using Kakt.Modding.Core.Skills.Ready;
 using Kakt.Modding.Core.Skills.Ruthlessness;
 using Kakt.Modding.Core.Skills.Sentinel;
@@ -127,6 +128,7 @@ public class OncePerSkillTreeValidator : ISkillSelector
         typeof(Pyromania),
         typeof(QuickCurse),
         typeof(QuickFooted),
+        typeof(Rage),
         typeof(Ready),
         typeof(Ruthlessness),
         typeof(Sentinel),
