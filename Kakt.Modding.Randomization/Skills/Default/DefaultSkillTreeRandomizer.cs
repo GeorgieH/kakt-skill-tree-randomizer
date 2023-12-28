@@ -1,13 +1,17 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
+using Kakt.Modding.Core.Skills.Dash;
 using Kakt.Modding.Core.Skills.FireBolt;
 using Kakt.Modding.Core.Skills.FlamingStrike;
 using Kakt.Modding.Core.Skills.ForceBolt;
+using Kakt.Modding.Core.Skills.Hide;
 using Kakt.Modding.Core.Skills.IceBolt;
+using Kakt.Modding.Core.Skills.Jump;
 using Kakt.Modding.Core.Skills.LightningStrike;
 using Kakt.Modding.Core.Skills.PoisonCut;
 using Kakt.Modding.Core.Skills.ShadowBolt;
 using Kakt.Modding.Core.Skills.Shoot;
+using Kakt.Modding.Core.Skills.Sprint;
 using Kakt.Modding.Core.Skills.Strike;
 using Kakt.Modding.Core.Skills.Strike.Champion;
 using Kakt.Modding.Core.Skills.Strike.Defender;
@@ -21,8 +25,9 @@ namespace Kakt.Modding.Randomization.Skills.Default;
 public partial class DefaultSkillTreeRandomizer
 {
     private static readonly Random BasicArcanistSkillsRng = new();
+    private static readonly Random VanguardMovementSkillsRng = new();
 
-    private static readonly List<Type> BasicArcanistSkills =
+    public static readonly List<Type> BasicArcanistSkills =
     [
         typeof(FireBolt),
         typeof(ForceBolt),
@@ -30,15 +35,26 @@ public partial class DefaultSkillTreeRandomizer
         typeof(ShadowBolt)
     ];
 
+    public static readonly List<Type> VanguardMovementSkills =
+    [
+        typeof(VanguardDash),
+        typeof(Jump),
+        typeof(Sprint),
+    ];
+
     private readonly ILogger logger;
+
+    private ISkillRepository skillRepository;
 
     public DefaultSkillTreeRandomizer(ILogger logger)
     {
         this.logger = logger;
     }
 
-    public IEnumerable<Hero> Generate()
+    public IEnumerable<Hero> Generate(DefaultRandomizationProfile profile)
     {
+        skillRepository = InitializeSkillRepository(profile);
+
         var heroes = Heroes.GetAll();
 
         foreach (var hero in heroes)
@@ -46,9 +62,35 @@ public partial class DefaultSkillTreeRandomizer
             logger.Log($"Randomizing {hero.GetType().Name}...");
 
             hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
-            hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
-            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, true);
-            hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4);
+
+            if (hero is Vanguard
+                && profile.Flags.VanguardsAlwaysGetTierOneMovementSkill)
+            {
+                var skillType = VanguardMovementSkills.Random(VanguardMovementSkillsRng);
+                var skill = (ActiveSkill)Activator.CreateInstance(skillType)!;
+                SkillFactory.Build(skill, SkillTier.One, 2);
+                hero.SkillTree.TierOneActiveSkillTwo = skill;
+            }
+            else
+            {
+                hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
+            }
+
+            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, starter: true);
+
+            if (hero is Vanguard
+                && profile.Flags.VanguardsAlwaysGetTierOneHide
+                && !hero.SkillTree.Skills.Any(s => s is Hide))
+            {
+                var hide = new Hide();
+                SkillFactory.Build(hide, SkillTier.One, 4);
+                hero.SkillTree.TierOneActiveSkillFour = hide;
+            }
+            else
+            {
+                hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4);
+            }
+
             hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One, 5);
             hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One, 6);
             hero.SkillTree.TierOnePassiveSkillThree = GetPassiveSkill(hero, SkillTier.One, 7);
@@ -70,10 +112,44 @@ public partial class DefaultSkillTreeRandomizer
 
             DeduplicateSkillNames(hero);
 
-            AcquireSkills(hero);
+            AcquireSkills(hero, profile);
         }
 
         return heroes;
+    }
+
+    private ISkillRepository InitializeSkillRepository(DefaultRandomizationProfile profile)
+    {
+        logger.Log("Initializing skills profile...");
+
+        var repository = new SkillRepository();
+
+        AddSkillTypes(profile.SkillTree.Common, repository.AddCommonSkillType);
+        AddSkillTypes(profile.SkillTree.Arcanist, repository.AddArcanistSkillType);
+        AddSkillTypes(profile.SkillTree.Champion, repository.AddChampionSkillType);
+        AddSkillTypes(profile.SkillTree.Defender, repository.AddDefenderSkillType);
+        AddSkillTypes(profile.SkillTree.Marksman, repository.AddMarksmanSkillType);
+        AddSkillTypes(profile.SkillTree.Sage, repository.AddSageSkillType);
+        AddSkillTypes(profile.SkillTree.Vanguard, repository.AddVanguardSkillType);
+
+        return repository;
+    }
+
+    private static void AddSkillTypes(IEnumerable<string> skills, Action<Type> add)
+    {
+        foreach (var skill in skills)
+        {
+            var skillType = Core.Skills.Skills
+                .GetAllTypes()
+                .FirstOrDefault(s => s.Name == skill);
+
+            if (skillType == default)
+            {
+                throw new InvalidSkillTypeException(skill);
+            }
+
+            add(skillType);
+        }
     }
 
     private static ActiveSkill GetBasicAttack(Hero hero)
@@ -131,10 +207,10 @@ public partial class DefaultSkillTreeRandomizer
         return (ActiveSkill)skill;
     }
 
-    private static ActiveSkill GetActiveSkill(Hero hero, SkillTier skillTier, int skillNumber, bool starter = false)
+    private ActiveSkill GetActiveSkill(Hero hero, SkillTier skillTier, int skillNumber, bool starter = false)
     {
         var skillSelector =
-            new HeroClassSkillFilter(
+            new HeroClassSkillFilter(skillRepository,
             new ActiveSkillFilter(
             new RandomSkillSelector()));
 
@@ -145,17 +221,17 @@ public partial class DefaultSkillTreeRandomizer
         return skill;
     }
 
-    private static UpgradablePassiveSkill GetUpgradablePassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
+    private UpgradablePassiveSkill GetUpgradablePassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
     {
         var skillSelector =
-            new HeroClassSkillFilter(
-            new UpgradablePassiveSkillFilter(
-            new OncePerSkillTreeValidator(
-            new OncePerSkillTierValidator(
-            new SkillAttributeValidator(
-            new EffectValidator(
-            new ArmourerValidator(
-            new RandomSkillSelector())))))));
+                new HeroClassSkillFilter(skillRepository,
+                new UpgradablePassiveSkillFilter(
+                new OncePerSkillTreeValidator(
+                new OncePerSkillTierValidator(
+                new SkillAttributeValidator(
+                new EffectValidator(
+                new ArmourerValidator(
+                new RandomSkillSelector())))))));
 
         var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<UpgradablePassiveSkill>(hero, skillTier, input, skillSelector);
@@ -164,10 +240,10 @@ public partial class DefaultSkillTreeRandomizer
         return skill;
     }
 
-    private static PassiveSkill GetPassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
+    private PassiveSkill GetPassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
     {
         var skillSelector =
-            new HeroClassSkillFilter(
+            new HeroClassSkillFilter(skillRepository,
             new PassiveSkillFilter(
             new OncePerSkillTreeValidator(
             new OncePerSkillTierValidator(
@@ -244,8 +320,9 @@ public partial class DefaultSkillTreeRandomizer
         }
     }
 
-    private static void AcquireSkills(Hero hero)
+    private static void AcquireSkills(Hero hero, DefaultRandomizationProfile profile)
     {
-        RandomSkillPointDistributer.Distribute(hero);
+        var distributer = new RandomSkillPointDistributer(profile);
+        distributer.Distribute(hero);
     }
 }

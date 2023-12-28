@@ -44,6 +44,12 @@ public class SkillTree
         set => skills[2] = value;
     }
 
+    public ActiveSkill? TierOneActiveSkillFour
+    {
+        get => skills[3] as ActiveSkill;
+        set => skills[3] = value;
+    }
+
     public UpgradablePassiveSkill? TierOneUpgradablePassiveSkillOne
     {
         get => skills[3] as UpgradablePassiveSkill;

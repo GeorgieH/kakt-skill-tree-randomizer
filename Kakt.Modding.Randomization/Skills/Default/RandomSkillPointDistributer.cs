@@ -1,15 +1,24 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Heroes.Configuration;
 using Kakt.Modding.Core.Skills;
+using Kakt.Modding.Core.Skills.Hide;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
-namespace Kakt.Modding.Randomization.Skills;
+namespace Kakt.Modding.Randomization.Skills.Default;
 
-public static class RandomSkillPointDistributer
+public class RandomSkillPointDistributer
 {
     private static readonly Random Rng = new();
 
-    public static void Distribute(Hero hero)
+    private readonly DefaultRandomizationProfile profile;
+
+    public RandomSkillPointDistributer(DefaultRandomizationProfile profile)
+    {
+        this.profile = profile;
+    }
+
+    public void Distribute(Hero hero)
     {
         var startingLevels = GetStartingLevels(hero);
 
@@ -51,7 +60,7 @@ public static class RandomSkillPointDistributer
         return preset;
     }
 
-    private static void SpendSkillPoints(Hero hero, int heroLevel, Preset preset)
+    private void SpendSkillPoints(Hero hero, int heroLevel, Preset preset)
     {
         var skillPool = new HashSet<ISkill>();
         var upgradeToSkillLookup = new Dictionary<SkillUpgrade, Skill>();
@@ -86,28 +95,46 @@ public static class RandomSkillPointDistributer
 
         while (remainingSkillPoints > 0)
         {
-            var maxSkillTier = spentSkillPoints switch
+            ISkill skill;
+
+            if (hero is Vanguard
+                && this.profile.Flags.VanguardsAlwaysGetTierOneHide
+                && !acquiredSkills.Any(s => s is Hide))
             {
-                < 8 => SkillTier.One,
-                < 24 => SkillTier.Two,
-                _ => SkillTier.Three,
-            };
+                skill = skillPool.First(s => s is Hide);
+            }
+            else if (hero is Vanguard
+                && this.profile.Flags.VanguardsAlwaysGetTierOneMovementSkill
+                && !acquiredSkills.Any(s => DefaultSkillTreeRandomizer.VanguardMovementSkills.Contains(s.GetType())))
+            {
+                skill = hero.SkillTree.TierOneActiveSkillTwo!;
+            }
+            else
+            {
+                var maxSkillTier = spentSkillPoints switch
+                {
+                    < 8 => SkillTier.One,
+                    < 24 => SkillTier.Two,
+                    _ => SkillTier.Three,
+                };
 
-            var candidateSkills = skillPool
-                .Where(s => (int)s.Tier <= (int)maxSkillTier)
-                .Where(s => GetSkillCost(hero, s) <= remainingSkillPoints)
-                .Where(s => s is Skill
-                    || (s is SkillUpgrade u
-                        && u.LevelLimit <= currentHeroLevel
-                        && acquiredSkills.Contains(upgradeToSkillLookup[u])));
+                var candidateSkills = skillPool
+                    .Where(s => (int)s.Tier <= (int)maxSkillTier)
+                    .Where(s => GetSkillCost(hero, s) <= remainingSkillPoints)
+                    .Where(s => s is Skill
+                        || s is SkillUpgrade u
+                            && u.LevelLimit <= currentHeroLevel
+                            && acquiredSkills.Contains(upgradeToSkillLookup[u]));
 
-            var skill = candidateSkills.Random(Rng);
+                skill = candidateSkills.Random(Rng);
+            }
+            
             acquiredSkills.Add(skill);
             skillPool.Remove(skill);
 
             spentSkillPoints += GetSkillCost(hero, skill);
             remainingSkillPoints = maxSkillPoints + bonusSkillPoints - spentSkillPoints;
-            currentHeroLevel = ((spentSkillPoints - bonusSkillPoints) / 2) + 1;
+            currentHeroLevel = (spentSkillPoints - bonusSkillPoints) / 2 + 1;
 
             if (heroLevel % 5 == 0
                 && hero.Traits.HasFlag(HeroTraits.Skilled))

@@ -3,8 +3,10 @@ using Kakt.Modding.Configuration;
 using Kakt.Modding.Configuration.SkillTree;
 using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
+using Kakt.Modding.Randomization.Skills;
 using Kakt.Modding.Randomization.Skills.Default;
 using System.Text;
+using System.Text.Json;
 
 static void Exit(string message)
 {
@@ -37,6 +39,18 @@ static string GetOutputPath()
 static string GetSkillTreePath()
 {
     return Path.Combine(GetCfgPath(), FileNames.SkillTree);
+}
+
+static string GetRandomizationConfiguration()
+{
+    var path = Path.Combine(GetLocalPath(), "randomization_config");
+
+    if (!File.Exists(path))
+    {
+        Exit(GetFileNotFoundMessage(path));
+    }
+
+    return File.ReadAllText(path, Encoding.UTF8);
 }
 
 static string GetHeroConfigurationFileName(Hero hero)
@@ -134,7 +148,7 @@ static void CheckHeroConfigurationsExist(IEnumerable<Hero> heroes)
 
     if (exit)
     {
-        Exit("ERROR: One or more hero .cfg files not found");
+        Exit("(ERROR) One or more hero .cfg files not found");
     }
 }
 
@@ -168,8 +182,21 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
 
 CheckSkillTreeExists();
 
+var randomizationConfig = GetRandomizationConfiguration();
+var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig);
+
 var randomizer = new DefaultSkillTreeRandomizer(new ConsoleLogger());
-var heroes = randomizer.Generate();
+
+IEnumerable<Hero> heroes = null!;
+
+try
+{
+    heroes = randomizer.Generate(config!.Profiles.Default);
+}
+catch (InvalidSkillTypeException ex)
+{
+    Exit($"(ERROR) Invalid skill type: {ex.Skill}");
+}
 
 CheckHeroConfigurationsExist(heroes);
 

@@ -4,10 +4,12 @@ namespace Kakt.Modding.Randomization.Skills.Default.Filters;
 
 public partial class HeroClassSkillFilter : ISkillSelector
 {
+    private readonly ISkillRepository skillRepository;
     private readonly ISkillSelector next;
 
-    public HeroClassSkillFilter(ISkillSelector next)
+    public HeroClassSkillFilter(ISkillRepository skillRepository, ISkillSelector next)
     {
+        this.skillRepository = skillRepository;
         this.next = next;
     }
 
@@ -15,12 +17,12 @@ public partial class HeroClassSkillFilter : ISkillSelector
     {
         var skillTypes = input.Hero switch
         {
-            Arcanist => SkillRepository.GetArcanistSkills(),
-            Champion => SkillRepository.GetChampionSkills(),
-            Defender => SkillRepository.GetDefenderSkills(),
-            Marksman => SkillRepository.GetMarksmanSkills(),
-            Sage => SkillRepository.GetSageSkills(),
-            Vanguard => SkillRepository.GetVanguardSkills(),
+            Arcanist => this.skillRepository.GetArcanistSkillTypes(),
+            Champion => this.skillRepository.GetChampionSkillTypes(),
+            Defender => this.skillRepository.GetDefenderSkillTypes(),
+            Marksman => this.skillRepository.GetMarksmanSkillTypes(),
+            Sage => this.skillRepository.GetSageSkillTypes(),
+            Vanguard => this.skillRepository.GetVanguardSkillTypes(),
             _ => throw new NotImplementedException()
         };
 
