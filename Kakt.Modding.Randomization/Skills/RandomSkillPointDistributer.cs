@@ -1,6 +1,7 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Heroes.Configuration;
 using Kakt.Modding.Core.Skills;
+using System.Reflection;
 
 namespace Kakt.Modding.Randomization.Skills;
 
@@ -80,11 +81,11 @@ public static class RandomSkillPointDistributer
         var currentHeroLevel = 1;
         var maxSkillPoints = (heroLevel - 1) * 2;
         var remainingSkillPoints = maxSkillPoints;
+        var spentSkillPoints = 0;
+        var bonusSkillPoints = 0;
 
         while (remainingSkillPoints > 0)
         {
-            var spentSkillPoints = maxSkillPoints - remainingSkillPoints;
-
             var maxSkillTier = spentSkillPoints switch
             {
                 < 8 => SkillTier.One,
@@ -104,8 +105,16 @@ public static class RandomSkillPointDistributer
             acquiredSkills.Add(skill);
             skillPool.Remove(skill);
 
-            remainingSkillPoints -= GetSkillCost(hero, skill);
-            currentHeroLevel = ((maxSkillPoints - remainingSkillPoints) / 2) + 1;
+            spentSkillPoints += GetSkillCost(hero, skill);
+            remainingSkillPoints = maxSkillPoints + bonusSkillPoints - spentSkillPoints;
+            currentHeroLevel = ((spentSkillPoints - bonusSkillPoints) / 2) + 1;
+
+            if (heroLevel % 5 == 0
+                && hero.Traits.HasFlag(HeroTraits.Skilled))
+            {
+                bonusSkillPoints++;
+                remainingSkillPoints++;
+            }
         }
 
         foreach (var skill in acquiredSkills)
@@ -118,14 +127,17 @@ public static class RandomSkillPointDistributer
     {
         if (skill is ActiveSkill)
         {
-            // Talented
-            if (hero is SirKay || hero is SirBedievere)
+            if (hero.Traits.HasFlag(HeroTraits.Frigid) && IsIceSkill(skill))
             {
                 return 1;
             }
 
-            // Conservative
-            if (hero is SirGawain)
+            if (hero.Traits.HasFlag(HeroTraits.Talented))
+            {
+                return 1;
+            }
+
+            if (hero.Traits.HasFlag(HeroTraits.Conservative))
             {
                 return 3;
             }
@@ -135,10 +147,27 @@ public static class RandomSkillPointDistributer
 
         if (skill is PassiveSkill)
         {
+            if (hero.Traits.HasFlag(HeroTraits.Frigid) && IsIceSkill(skill))
+            {
+                return 1;
+            }
+
             return 2;
         }
 
         return 1;
+    }
+
+    private static bool IsIceSkill(ISkill skill)
+    {
+        var attr = skill.GetType().GetCustomAttribute<SkillAttributesAttribute>(true);
+
+        if (attr is null)
+        {
+            return false;
+        }
+
+        return attr.SkillAttributes.HasFlag(SkillAttributes.Ice);
     }
 
     private static int[] GetStartingLevels(Hero hero)
@@ -151,7 +180,7 @@ public static class RandomSkillPointDistributer
             LadyDindraine => [1],
             LadyGuinevere => [8],
             LadyIsolde => [10],
-            LadyMorganaLeFey => [14],
+            LadyMorganaLeFay => [14],
             LadyMorgawse => [9],
             Merlin => [9],
             RedKnight => [15],

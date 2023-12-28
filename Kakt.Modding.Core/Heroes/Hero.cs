@@ -8,7 +8,7 @@ public abstract class Hero : IEquatable<Hero?>
     public abstract string Name { get; }
 
     public SkillTree SkillTree { get; } = new();
-
+    public HeroTraits Traits { get; set; }
     public List<Preset> Presets { get; } = new();
 
     public override bool Equals(object? obj)

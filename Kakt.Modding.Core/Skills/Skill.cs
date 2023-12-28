@@ -4,6 +4,7 @@ public abstract class Skill : ISkill
 {
     private string? nameOverride;
 
+    public string ConfigurationName { get; set; }
     public int Cost { get; set; } = SkillCosts.Two;
     public string? IconName { get; set; }
     public Position2D IconPosition { get; set; }

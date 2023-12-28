@@ -6,14 +6,14 @@ public partial class CfgProperty : CfgElement
 {
     private static readonly Regex Regex = GetRegex();
 
-    public CfgProperty(string key, object value)
+    public CfgProperty(string name, object value)
     {
-        Key = key;
+        Name = name;
         Value = value;
     }
 
-    public string Key { get; }
-    public object Value { get; }
+    public override string Name { get; }
+    public object Value { get; set; }
 
     public static bool TryParse(string line, out CfgProperty property)
     {
@@ -37,7 +37,7 @@ public partial class CfgProperty : CfgElement
 
     public override string ToString(int indentationLevel)
     {
-        return $"{GetIndentation(indentationLevel)}{Key}={Value}{Environment.NewLine}";
+        return $"{GetIndentation(indentationLevel)}{Name}={Value}{Environment.NewLine}";
     }
 
     [GeneratedRegex("(?<key>.*)=(?<value>.*)")]

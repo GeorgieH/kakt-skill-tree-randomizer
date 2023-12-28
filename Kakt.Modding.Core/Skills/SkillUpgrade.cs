@@ -5,6 +5,7 @@ public abstract class SkillUpgrade : ISkill
     private string? nameOverride;
     private string? prerequisiteOverride;
 
+    public string ConfigurationName { get; set; }
     public int Cost => SkillCosts.One;
     public string? IconName { get; set; }
     public Position2D IconPosition { get; set; }

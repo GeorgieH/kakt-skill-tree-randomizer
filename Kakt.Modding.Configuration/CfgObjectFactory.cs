@@ -76,7 +76,9 @@ public static class CfgObjectFactory
 
     private static CfgObject GetSkillObject(Skill skill, string skillName)
     {
-        var obj = new CfgObject(skillName);
+        skill.ConfigurationName = skillName;
+
+        var obj = new CfgObject(skill.ConfigurationName);
 
         if (skill.Starter)
         {
@@ -102,7 +104,9 @@ public static class CfgObjectFactory
 
     private static CfgObject GetSkillUpgradeObject(SkillUpgrade skillUpgrade, string skillName, int index)
     {
-        var obj = new CfgObject($"{skillName}_p{index}");
+        skillUpgrade.ConfigurationName = $"{skillName}_p{index}";
+
+        var obj = new CfgObject(skillUpgrade.ConfigurationName);
 
         obj.Elements.Add(new CfgProperty("Cost", skillUpgrade.Cost));
 

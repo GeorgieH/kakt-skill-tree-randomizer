@@ -9,6 +9,8 @@ public class CfgComment : CfgElement
 
     public string Content { get; }
 
+    public override string Name => string.Empty;
+
     public static bool TryParse(string line, out CfgComment comment)
     {
         comment = null!;

@@ -2,6 +2,14 @@
 
 public abstract class CfgElement
 {
+    public virtual CfgElement? this[string name]
+    {
+        get => throw new NotImplementedException();
+        set => throw new NotImplementedException();
+    }
+
+    public abstract string Name { get; }
+
     public abstract string ToString(int indentationLevel);
 
     protected static string GetIndentation(int indentationLevel)

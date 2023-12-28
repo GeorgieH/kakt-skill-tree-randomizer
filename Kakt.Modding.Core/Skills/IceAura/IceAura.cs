@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.IceAura;
 
-[SkillAttributes(SkillAttributes.Spell | SkillAttributes.Area)]
+[SkillAttributes(SkillAttributes.Spell | SkillAttributes.Ice | SkillAttributes.Area)]
 [CausesEffects(Effects.Chill)]
 public class IceAura : ActiveSkill
 {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.FreezingAttack;
 
-[SkillAttributes(SkillAttributes.Melee)]
+[SkillAttributes(SkillAttributes.Melee | SkillAttributes.Ice)]
 [CausesEffects(Effects.Freeze)]
 public class FreezingAttack : ActiveSkill
 {

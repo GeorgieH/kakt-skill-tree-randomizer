@@ -12,7 +12,7 @@ public static class Heroes
             new LadyDindraine(),
             new LadyGuinevere(),
             new LadyIsolde(),
-            new LadyMorganaLeFey(),
+            new LadyMorganaLeFay(),
             new LadyMorgawse(),
             new Merlin(),
             new RedKnight(),

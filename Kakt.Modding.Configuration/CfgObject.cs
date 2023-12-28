@@ -12,8 +12,19 @@ public class CfgObject : CfgElement
         Name = name;
     }
 
+    public override CfgElement? this[string name]
+    {
+        get => Elements.FirstOrDefault(e => e.Name == name);
+        set
+        {
+            var index = Elements.FindIndex(e => e.Name == name);
+            Elements[index] = value!;
+        }
+    }
+
     public List<CfgElement> Elements { get; } = [];
-    public string Name { get; }
+
+    public override string Name { get; }
 
     public override string ToString(int indentationLevel)
     {

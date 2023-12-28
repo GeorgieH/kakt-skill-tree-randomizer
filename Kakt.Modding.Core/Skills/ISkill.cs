@@ -2,6 +2,7 @@
 
 public interface ISkill
 {
+    string ConfigurationName { get; set; }
     string? IconName { get; set; }
     string Name { get; }
     SkillTier Tier { get; }

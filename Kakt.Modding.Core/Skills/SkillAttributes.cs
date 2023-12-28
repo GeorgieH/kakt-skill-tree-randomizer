@@ -7,12 +7,13 @@ public enum SkillAttributes
     Area = 1,
     Fire = 2,
     Hex = 4,
-    Lightning = 8,
-    Melee = 16,
-    Movement = 32,
-    Ranged = 64,
-    Spell = 128,
-    Summon = 256,
-    Support = 512,
-    Trap = 1024
+    Ice = 8,
+    Lightning = 16,
+    Melee = 32,
+    Movement = 64,
+    Ranged = 128,
+    Spell = 256,
+    Summon = 512,
+    Support = 1024,
+    Trap = 2048
 }

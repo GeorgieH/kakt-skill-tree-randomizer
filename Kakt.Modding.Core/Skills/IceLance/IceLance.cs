@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Core.Skills.IceLance;
 
-[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Spell)]
+[SkillAttributes(SkillAttributes.Ranged | SkillAttributes.Spell | SkillAttributes.Ice)]
 [CausesEffects(Effects.Chill)]
 public class IceLance : ActiveSkill
 {

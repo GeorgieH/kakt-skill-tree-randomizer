@@ -6,6 +6,16 @@ public class CfgDocument
 {
     public static readonly string Indent = "    ";
 
+    public CfgElement? this[string name]
+    {
+        get => Elements.FirstOrDefault(e => e.Name == name);
+        set
+        {
+            var index = Elements.FindIndex(e => e.Name == name);
+            Elements[index] = value!;
+        }
+    }
+
     public List<CfgElement> Elements { get; } = [];
 
     public static CfgDocument Parse(string path)
