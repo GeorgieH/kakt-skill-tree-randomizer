@@ -43,13 +43,24 @@ public class RandomSkillPointDistributer
 
         if (index == 0)
         {
-            preset = new Preset(PresetNames.Campaign);
+            if (hero is Merlin)
+            {
+                preset = new Preset(PresetNames.Act2WitchQueen);
+            }
+            else
+            {
+                preset = new Preset(PresetNames.Campaign);
+            }
         }
         else if (index == 1)
         {
             if (hero is LadyBoudicea)
             {
                 preset = new Preset(PresetNames.Campaign2);
+            }
+            else if (hero is Merlin)
+            {
+                preset = new Preset(PresetNames.Campaign);
             }
             else if (hero is SirLeodegrance)
             {
@@ -209,7 +220,7 @@ public class RandomSkillPointDistributer
             LadyIsolde => [10],
             LadyMorganaLeFay => [14],
             LadyMorgawse => [9],
-            Merlin => [9],
+            Merlin => [8, 9],
             RedKnight => [15],
             SirBalan => [3],
             SirBalin => [3],

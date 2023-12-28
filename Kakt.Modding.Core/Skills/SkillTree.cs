@@ -26,6 +26,12 @@ public class SkillTree
         TierThreePassiveSkillThree
     ];
 
+    public IEnumerable<ActiveSkill?> StarterSkills =>
+    [
+        TierOneActiveSkillOne,
+        TierOneActiveSkillThree
+    ];
+
     public ActiveSkill? TierOneActiveSkillOne
     {
         get => skills[0] as ActiveSkill;

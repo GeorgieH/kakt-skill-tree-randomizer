@@ -8,10 +8,10 @@ public class CfgDocument
 
     public CfgElement? this[string name]
     {
-        get => Elements.FirstOrDefault(e => e.Name == name);
+        get => Elements.FirstOrDefault(e => string.Equals(e.Name, name, StringComparison.OrdinalIgnoreCase));
         set
         {
-            var index = Elements.FindIndex(e => e.Name == name);
+            var index = Elements.FindIndex(e => string.Equals(e.Name, name, StringComparison.OrdinalIgnoreCase));
             Elements[index] = value!;
         }
     }
@@ -75,7 +75,8 @@ public class CfgDocument
 
     public void OverwriteObject(string name, CfgObject newObj)
     {
-        var index = Elements.FindIndex(e => e is CfgObject o && o.Name == name);
+        var index = Elements.FindIndex(e => e is CfgObject o
+                && string.Equals(o.Name, name, StringComparison.OrdinalIgnoreCase));
 
         if (index == -1)
         {
