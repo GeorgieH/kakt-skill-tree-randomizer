@@ -43,7 +43,7 @@ static string GetSkillTreePath()
 
 static string GetRandomizationConfiguration()
 {
-    var path = Path.Combine(GetLocalPath(), "randomization_config");
+    var path = Path.Combine(GetLocalPath(), "randomization_config.json");
 
     if (!File.Exists(path))
     {
