@@ -6,6 +6,8 @@ namespace Kakt.Modding.Randomization.Skills;
 
 public static class RandomSkillPointDistributer
 {
+    private static readonly Random Rng = new();
+
     public static void Distribute(Hero hero)
     {
         var startingLevels = GetStartingLevels(hero);
@@ -20,7 +22,7 @@ public static class RandomSkillPointDistributer
             }
 
             var preset = GetPreset(hero, i);
-            SpendSkillPoints(hero, preset, level);
+            SpendSkillPoints(hero, level, preset);
             hero.Presets.Add(preset);
         }
     }
@@ -48,7 +50,7 @@ public static class RandomSkillPointDistributer
         return preset;
     }
 
-    private static void SpendSkillPoints(Hero hero, Preset preset, int level)
+    private static void SpendSkillPoints(Hero hero, int heroLevel, Preset preset)
     {
         var skillPool = new HashSet<ISkill>();
         var upgradeToSkillLookup = new Dictionary<SkillUpgrade, Skill>();
@@ -64,7 +66,79 @@ public static class RandomSkillPointDistributer
             }
         }
 
-        var skillPoints = (level - 1) * 2;
+        var acquiredSkills = new HashSet<ISkill>();
+
+        foreach (var skill in skillPool)
+        {
+            if (skill is Skill s && s.Starter)
+            {
+                acquiredSkills.Add(skill);
+                skillPool.Remove(skill);
+            }
+        }
+
+        var currentHeroLevel = 1;
+        var maxSkillPoints = (heroLevel - 1) * 2;
+        var remainingSkillPoints = maxSkillPoints;
+
+        while (remainingSkillPoints > 0)
+        {
+            var spentSkillPoints = maxSkillPoints - remainingSkillPoints;
+
+            var maxSkillTier = spentSkillPoints switch
+            {
+                < 8 => SkillTier.One,
+                < 24 => SkillTier.Two,
+                _ => SkillTier.Three,
+            };
+
+            var candidateSkills = skillPool
+                .Where(s => (int)s.Tier <= (int)maxSkillTier)
+                .Where(s => GetSkillCost(hero, s) <= remainingSkillPoints)
+                .Where(s => s is Skill
+                    || (s is SkillUpgrade u
+                        && u.LevelLimit <= currentHeroLevel
+                        && acquiredSkills.Contains(upgradeToSkillLookup[u])));
+
+            var skill = candidateSkills.Random(Rng);
+            acquiredSkills.Add(skill);
+            skillPool.Remove(skill);
+
+            remainingSkillPoints -= GetSkillCost(hero, skill);
+            currentHeroLevel = ((maxSkillPoints - remainingSkillPoints) / 2) + 1;
+        }
+
+        foreach (var skill in acquiredSkills)
+        {
+            preset.LearnedSkills.Add(skill);
+        }
+    }
+
+    private static int GetSkillCost(Hero hero, ISkill skill)
+    {
+        if (skill is ActiveSkill)
+        {
+            // Talented
+            if (hero is SirKay || hero is SirBedievere)
+            {
+                return 1;
+            }
+
+            // Conservative
+            if (hero is SirGawain)
+            {
+                return 3;
+            }
+
+            return 2;
+        }
+
+        if (skill is PassiveSkill)
+        {
+            return 2;
+        }
+
+        return 1;
     }
 
     private static int[] GetStartingLevels(Hero hero)
