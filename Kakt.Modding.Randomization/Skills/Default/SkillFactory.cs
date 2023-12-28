@@ -6,7 +6,7 @@ public static class SkillFactory
 {
     private static readonly Random SkillUpgradesRng = new();
 
-    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool hasUpgrades = false)
+    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool hasUpgrades = true)
     {
         skill.Starter = starter;
         skill.Tier = skillTier;

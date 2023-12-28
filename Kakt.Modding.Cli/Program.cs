@@ -4,7 +4,6 @@ using Kakt.Modding.Configuration.SkillTree;
 using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Randomization.Skills.Default;
-using System.Reflection.Metadata;
 using System.Text;
 
 static void Exit(string message)
@@ -12,6 +11,7 @@ static void Exit(string message)
     Console.WriteLine(message);
     Console.WriteLine("Press any key to exit...");
     Console.ReadKey();
+    Environment.Exit(0);
 }
 
 static string GetFileNotFoundMessage(string path)
@@ -24,6 +24,11 @@ static string GetLocalPath()
     return AppDomain.CurrentDomain.BaseDirectory;
 }
 
+static string GetCfgPath()
+{
+    return Path.Combine(GetLocalPath(), "Cfg");
+}
+
 static string GetOutputPath()
 {
     return Path.Combine(GetLocalPath(), "King Arthur Knight's Tale");
@@ -31,7 +36,7 @@ static string GetOutputPath()
 
 static string GetSkillTreePath()
 {
-    return Path.Combine(GetLocalPath(), FileNames.SkillTree);
+    return Path.Combine(GetCfgPath(), FileNames.SkillTree);
 }
 
 static string GetHeroConfigurationFileName(Hero hero)
@@ -57,6 +62,8 @@ static string GetHeroConfigurationFileName(Hero hero)
         SirDamas => FileNames.SirDamas,
         SirEctor => FileNames.SirEctor,
         SirGalahad => FileNames.SirGalahad,
+        SirGawain => FileNames.SirGawain,
+        SirGeraint => FileNames.SirGeraint,
         SirKay => FileNames.SirKay,
         SirLancelot => FileNames.SirLancelot,
         SirLanval => FileNames.SirLanval,
@@ -75,7 +82,7 @@ static string GetHeroConfigurationFileName(Hero hero)
 
 static string GetHeroConfigurationFilePath(Hero hero)
 {
-    return Path.Combine(GetLocalPath(), GetHeroConfigurationFileName(hero));
+    return Path.Combine(GetCfgPath(), GetHeroConfigurationFileName(hero));
 }
 
 static void WriteFile(string path, string content)
@@ -151,7 +158,7 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
                 .Select(s => s.ConfigurationName);
 
             var value = string.Join(",", learnedSkills);
-            var property = (CfgProperty)document["Hero"]!["Presets"]![preset.Name]!;
+            var property = (CfgProperty)document["Hero"]!["Presets"]![preset.Name]!["LearnedSkills"]!;
             property.Value = value;
         }
 

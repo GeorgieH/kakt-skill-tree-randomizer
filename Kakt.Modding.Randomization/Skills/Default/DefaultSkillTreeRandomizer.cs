@@ -126,7 +126,7 @@ public partial class DefaultSkillTreeRandomizer
             throw new NotImplementedException();
         }
 
-        SkillFactory.Build(skill, SkillTier.One, 1, true);
+        SkillFactory.Build(skill, SkillTier.One, 1, starter: true);
 
         return (ActiveSkill)skill;
     }

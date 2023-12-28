@@ -193,6 +193,8 @@ public static class RandomSkillPointDistributer
             SirDamas => [10],
             SirEctor => [3],
             SirGalahad => [14],
+            SirGawain => [12],
+            SirGeraint => [10],
             SirKay => [1],
             SirLancelot => [15],
             SirLanval => [3],
