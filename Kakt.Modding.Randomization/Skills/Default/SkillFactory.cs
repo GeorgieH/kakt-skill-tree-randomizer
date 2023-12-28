@@ -6,17 +6,17 @@ public static class SkillFactory
 {
     private static readonly Random SkillUpgradesRng = new();
 
-    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool isPassive = false)
+    public static void Build(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool hasUpgrades = false)
     {
         skill.Starter = starter;
         skill.Tier = skillTier;
 
-        if (!isPassive)
+        if (hasUpgrades)
         {
             AddUpgrades(skill);
         }
 
-        SetIconPositions(skill, skillNumber, isPassive);
+        SetIconPositions(skill, skillNumber, hasUpgrades);
 
         foreach (var skillUpgrade in skill.Upgrades)
         {
@@ -62,13 +62,13 @@ public static class SkillFactory
         }
     }
 
-    private static void SetIconPositions(Skill skill, int skillNumber, bool isPassive)
+    private static void SetIconPositions(Skill skill, int skillNumber, bool hasUpgrades)
     {
         var input = new SkillPositionCalculatorInput(skillNumber, skill);
         var output = SkillPositionCalculator.Calculate(input);
         skill.IconPosition = output.SkillPosition;
 
-        if (!isPassive)
+        if (hasUpgrades)
         {
             skill.Upgrades[0].IconPosition = output.SkillUpgradePosition1;
             skill.Upgrades[1].IconPosition = output.SkillUpgradePosition2;

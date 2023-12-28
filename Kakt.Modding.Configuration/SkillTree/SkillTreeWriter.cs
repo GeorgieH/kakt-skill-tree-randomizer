@@ -1,6 +1,6 @@
 ﻿using Kakt.Modding.Core.Heroes;
 
-namespace Kakt.Modding.Configuration.IO.SkillTree;
+namespace Kakt.Modding.Configuration.SkillTree;
 
 public static class SkillTreeWriter
 {

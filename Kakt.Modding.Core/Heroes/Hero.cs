@@ -1,4 +1,5 @@
-﻿using Kakt.Modding.Core.Skills;
+﻿using Kakt.Modding.Core.Heroes.Configuration;
+using Kakt.Modding.Core.Skills;
 
 namespace Kakt.Modding.Core.Heroes;
 
@@ -7,6 +8,8 @@ public abstract class Hero : IEquatable<Hero?>
     public abstract string Name { get; }
 
     public SkillTree SkillTree { get; } = new();
+
+    public List<Preset> Presets { get; } = new();
 
     public override bool Equals(object? obj)
     {

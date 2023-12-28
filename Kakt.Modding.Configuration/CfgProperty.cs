@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Kakt.Modding.Configuration.IO;
+namespace Kakt.Modding.Configuration;
 
 public partial class CfgProperty : CfgElement
 {

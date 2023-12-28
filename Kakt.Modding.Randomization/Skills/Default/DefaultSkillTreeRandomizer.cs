@@ -5,6 +5,7 @@ using Kakt.Modding.Core.Skills.FlamingStrike;
 using Kakt.Modding.Core.Skills.ForceBolt;
 using Kakt.Modding.Core.Skills.IceBolt;
 using Kakt.Modding.Core.Skills.LightningStrike;
+using Kakt.Modding.Core.Skills.PoisonCut;
 using Kakt.Modding.Core.Skills.ShadowBolt;
 using Kakt.Modding.Core.Skills.Shoot;
 using Kakt.Modding.Core.Skills.Strike;
@@ -17,7 +18,7 @@ using Kakt.Modding.Randomization.Skills.Default.Validators;
 
 namespace Kakt.Modding.Randomization.Skills.Default;
 
-public class DefaultSkillTreeRandomizer
+public partial class DefaultSkillTreeRandomizer
 {
     private static readonly Random BasicArcanistSkillsRng = new();
 
@@ -68,6 +69,8 @@ public class DefaultSkillTreeRandomizer
             hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three, 20);
 
             DeduplicateSkillNames(hero);
+
+            AcquireSkills(hero);
         }
 
         return heroes;
@@ -88,6 +91,10 @@ public class DefaultSkillTreeRandomizer
         else if (hero is SirPercival)
         {
             skill = new FlamingStrike();
+        }
+        else if (hero is SirTristan)
+        {
+            skill = new PoisonCut();
         }
         else if (hero is Arcanist)
         {
@@ -171,7 +178,7 @@ public class DefaultSkillTreeRandomizer
 
         var input = new SkillSelectorInput(hero, skillTier);
         var skill = GetSkill<PassiveSkill>(hero, skillTier, input, skillSelector);
-        SkillFactory.Build(skill, skillTier, skillNumber, isPassive: true);
+        SkillFactory.Build(skill, skillTier, skillNumber, hasUpgrades: false);
 
         return skill;
     }
@@ -235,5 +242,10 @@ public class DefaultSkillTreeRandomizer
                 DeduplicateSkillName(skillUpgrade);
             }
         }
+    }
+
+    private static void AcquireSkills(Hero hero)
+    {
+        RandomSkillPointDistributer.Distribute(hero);
     }
 }

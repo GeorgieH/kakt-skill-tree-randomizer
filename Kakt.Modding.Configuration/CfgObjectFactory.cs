@@ -3,7 +3,7 @@ using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Core.Skills.Scout;
 
-namespace Kakt.Modding.Configuration.IO;
+namespace Kakt.Modding.Configuration;
 
 public static class CfgObjectFactory
 {

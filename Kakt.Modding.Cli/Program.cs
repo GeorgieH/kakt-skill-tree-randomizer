@@ -1,6 +1,6 @@
 ﻿using Kakt.Modding.Cli;
-using Kakt.Modding.Configuration.IO;
-using Kakt.Modding.Configuration.IO.SkillTree;
+using Kakt.Modding.Configuration;
+using Kakt.Modding.Configuration.SkillTree;
 using Kakt.Modding.Randomization.Skills.Default;
 using System.Text;
 

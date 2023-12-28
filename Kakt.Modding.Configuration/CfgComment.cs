@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Configuration.IO;
+﻿namespace Kakt.Modding.Configuration;
 
 public class CfgComment : CfgElement
 {

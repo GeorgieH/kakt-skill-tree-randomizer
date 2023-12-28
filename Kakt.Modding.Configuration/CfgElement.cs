@@ -1,4 +1,4 @@
-﻿namespace Kakt.Modding.Configuration.IO;
+﻿namespace Kakt.Modding.Configuration;
 
 public abstract class CfgElement
 {
