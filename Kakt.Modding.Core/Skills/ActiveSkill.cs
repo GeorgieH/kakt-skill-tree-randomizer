@@ -1,4 +1,5 @@
-﻿namespace Kakt.Modding.Core.Skills;
+﻿
+namespace Kakt.Modding.Core.Skills;
 
 public abstract class ActiveSkill : Skill
 {
