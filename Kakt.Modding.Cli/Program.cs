@@ -2,11 +2,14 @@
 using Kakt.Modding.Configuration;
 using Kakt.Modding.Configuration.SkillTree;
 using Kakt.Modding.Core.Heroes;
+using Kakt.Modding.Core.Heroes.Configuration;
 using Kakt.Modding.Core.Skills;
 using Kakt.Modding.Randomization.Skills;
 using Kakt.Modding.Randomization.Skills.Default;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Text.Json;
+using System.Xml.Linq;
 
 static void Exit(string message)
 {
@@ -83,7 +86,6 @@ static string GetHeroConfigurationFileName(Hero hero)
         SirLanval => FileNames.SirLanval,
         SirLeodegrance => FileNames.SirLeodegrance,
         SirLucan => FileNames.SirLucan,
-        SirMordred => FileNames.SirMordred,
         SirPelleas => FileNames.SirPelleas,
         SirPercival => FileNames.SirPercival,
         SirTegyr => FileNames.SirTegyr,
@@ -101,7 +103,7 @@ static string GetHeroConfigurationFilePath(Hero hero)
 
 static void WriteFile(string path, string content)
 {
-    File.WriteAllText(path, content, Encoding.UTF8);
+    File.WriteAllText(path, content, new UTF8Encoding(false));
 }
 
 static void CheckSkillTreeExists()
@@ -125,6 +127,11 @@ static void WriteSkillTree(string outputPath, IEnumerable<Hero> heroes)
     WriteFile(Path.Combine(configPath, FileNames.SkillTree), document.ToString());
 }
 
+static bool HeroDoesNotRequireConfiguration(Hero hero)
+{
+    return hero is SirMordred;
+}
+
 static bool CheckHeroConfigurationExists(Hero hero, out string configPath)
 {
     configPath = GetHeroConfigurationFilePath(hero);
@@ -137,6 +144,11 @@ static void CheckHeroConfigurationsExist(IEnumerable<Hero> heroes)
 
     foreach (var hero in heroes)
     {
+        if (HeroDoesNotRequireConfiguration(hero))
+        {
+            continue;
+        }
+
         var result = CheckHeroConfigurationExists(hero, out var path);
 
         if (!result)
@@ -152,6 +164,46 @@ static void CheckHeroConfigurationsExist(IEnumerable<Hero> heroes)
     }
 }
 
+static void WritePreset(CfgDocument document, Preset preset)
+{
+    var starterSkills = preset.LearnedSkills
+        .Where(s => s is Skill skill && skill.Starter);
+
+    var learnedSkills = preset.LearnedSkills
+        .Except(starterSkills)
+        .Select(s => s.ConfigurationName);
+
+    var value = string.Join(",", learnedSkills);
+    var property = (CfgProperty)document["Hero"]!["Presets"]![preset.Name]!["LearnedSkills"]!;
+    property.Value = value;
+}
+
+static void WriteMerlinPresets(string outputPath, Merlin merlin)
+{
+    var hermitPath = Path.Combine(GetCfgPath(), FileNames.MerlinHermit);
+    var hermitDocument = CfgDocument.Parse(hermitPath);
+    var hermitPreset = merlin.Presets[0];
+    WritePreset(hermitDocument, hermitPreset);
+
+    var hermitProperty = (CfgProperty)hermitDocument["Hero"]!["Components"]!["caster"]!["Skills"]!;
+    var skills = new ActiveSkill?[]
+    {
+        merlin.SkillTree.TierOneActiveSkillOne,
+        merlin.SkillTree.TierOneActiveSkillTwo,
+        merlin.SkillTree.TierOneActiveSkillThree
+    }.Select(s => s!.Name);
+    hermitProperty.Value = $"{string.Join(",", skills)},Hero_arcanist__passive,death";
+
+    WriteFile(Path.Combine(outputPath, FileNames.MerlinHermit), hermitDocument.ToString());
+
+    var merlinPath = Path.Combine(GetCfgPath(), FileNames.Merlin);
+    var merlinDocument = CfgDocument.Parse(merlinPath);
+    var merlinPreset = merlin.Presets[1];
+    WritePreset(merlinDocument, merlinPreset);
+
+    WriteFile(Path.Combine(outputPath, FileNames.Merlin), merlinDocument.ToString());
+}
+
 static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
 {
     var heroesPath = Path.Combine(outputPath, "Cfg", "Actors", "Heroes");
@@ -159,21 +211,48 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
 
     foreach (var hero in heroes)
     {
+        if (HeroDoesNotRequireConfiguration(hero))
+        {
+            continue;
+        }
+
+        if (hero is Merlin)
+        {
+            WriteMerlinPresets(heroesPath, (Merlin)hero);
+            continue;
+        }
+
         var configPath = GetHeroConfigurationFilePath(hero);
         var document = CfgDocument.Parse(configPath);
 
         foreach (var preset in hero.Presets)
         {
-            var starterSkills = preset.LearnedSkills
-                .Where(s => s is Skill skill && skill.Starter);
+            WritePreset(document, preset);
+        }
 
-            var learnedSkills = preset.LearnedSkills
-                .Except(starterSkills)
-                .Select(s => s.ConfigurationName);
+        if (hero is LadyDindraine
+            || hero is SirBalan
+            || hero is SirBalin
+            || hero is SirKay
+            || hero is SirPelleas)
+        {
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
+            property.Value = $"{string.Join(",", starterSkills)},unit__passive,death";
+        }
 
-            var value = string.Join(",", learnedSkills);
-            var property = (CfgProperty)document["Hero"]!["Presets"]![preset.Name]!["LearnedSkills"]!;
-            property.Value = value;
+        if (hero is RedKnight)
+        {
+            var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
+            property.Value = $"{hero.SkillTree.TierOneActiveSkillThree!.Name},unit__passive,death";
+        }
+
+        if (hero is SirDagonet
+            || hero is SirEctor)
+        {
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
+            property.Value = $"{string.Join(",", starterSkills)},Hero_arcanist__passive,death";
         }
 
         WriteFile(Path.Combine(heroesPath, GetHeroConfigurationFileName(hero)), document.ToString());
@@ -208,7 +287,6 @@ if (Directory.Exists(outputPath))
 }
 
 WriteSkillTree(outputPath, heroes);
-
 WriteHeroConfigurations(outputPath, heroes);
 
 Exit("Done!");

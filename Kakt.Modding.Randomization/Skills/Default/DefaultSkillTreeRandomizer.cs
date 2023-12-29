@@ -1,17 +1,13 @@
 ﻿using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Skills;
-using Kakt.Modding.Core.Skills.Dash;
 using Kakt.Modding.Core.Skills.FireBolt;
 using Kakt.Modding.Core.Skills.FlamingStrike;
 using Kakt.Modding.Core.Skills.ForceBolt;
-using Kakt.Modding.Core.Skills.Hide;
 using Kakt.Modding.Core.Skills.IceBolt;
-using Kakt.Modding.Core.Skills.Jump;
 using Kakt.Modding.Core.Skills.LightningStrike;
 using Kakt.Modding.Core.Skills.PoisonCut;
 using Kakt.Modding.Core.Skills.ShadowBolt;
 using Kakt.Modding.Core.Skills.Shoot;
-using Kakt.Modding.Core.Skills.Sprint;
 using Kakt.Modding.Core.Skills.Strike;
 using Kakt.Modding.Core.Skills.Strike.Champion;
 using Kakt.Modding.Core.Skills.Strike.Defender;
@@ -24,24 +20,6 @@ namespace Kakt.Modding.Randomization.Skills.Default;
 
 public partial class DefaultSkillTreeRandomizer
 {
-    private static readonly Random BasicArcanistSkillsRng = new();
-    private static readonly Random VanguardMovementSkillsRng = new();
-
-    public static readonly List<Type> BasicArcanistSkills =
-    [
-        typeof(FireBolt),
-        typeof(ForceBolt),
-        typeof(IceBolt),
-        typeof(ShadowBolt)
-    ];
-
-    public static readonly List<Type> VanguardMovementSkills =
-    [
-        typeof(VanguardDash),
-        typeof(Jump),
-        typeof(Sprint),
-    ];
-
     private readonly ILogger logger;
 
     private ISkillRepository skillRepository;
@@ -62,53 +40,36 @@ public partial class DefaultSkillTreeRandomizer
             logger.Log($"Randomizing {hero.GetType().Name}...");
 
             hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
+            hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2, profile);
+            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, profile, starter: true);
 
-            if (hero is Vanguard
-                && profile.Flags.VanguardsAlwaysGetTierOneMovementSkill)
+            if (hero is Vanguard)
             {
-                var skillType = VanguardMovementSkills.Random(VanguardMovementSkillsRng);
-                var skill = (ActiveSkill)Activator.CreateInstance(skillType)!;
-                SkillFactory.Build(skill, SkillTier.One, 2);
-                hero.SkillTree.TierOneActiveSkillTwo = skill;
+                hero.SkillTree.TierOneActiveSkillFour = GetActiveSkill(hero, SkillTier.One, 4, profile);
             }
             else
             {
-                hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
+                hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4, profile);
             }
 
-            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, starter: true);
+            hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One, 5, profile);
+            hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One, 6, profile);
+            hero.SkillTree.TierOnePassiveSkillThree = GetPassiveSkill(hero, SkillTier.One, 7, profile);
 
-            if (hero is Vanguard
-                && profile.Flags.VanguardsAlwaysGetTierOneHide
-                && !hero.SkillTree.Skills.Any(s => s is Hide))
-            {
-                var hide = new Hide();
-                SkillFactory.Build(hide, SkillTier.One, 4);
-                hero.SkillTree.TierOneActiveSkillFour = hide;
-            }
-            else
-            {
-                hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4);
-            }
+            hero.SkillTree.TierTwoActiveSkillOne = GetActiveSkill(hero, SkillTier.Two, 8, profile);
+            hero.SkillTree.TierTwoActiveSkillTwo = GetActiveSkill(hero, SkillTier.Two, 9, profile);
+            hero.SkillTree.TierTwoActiveSkillThree = GetActiveSkill(hero, SkillTier.Two, 11, profile);
+            hero.SkillTree.TierTwoUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Two, 10, profile);
+            hero.SkillTree.TierTwoPassiveSkillOne = GetPassiveSkill(hero, SkillTier.Two, 12, profile);
+            hero.SkillTree.TierTwoPassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Two, 13, profile);
 
-            hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One, 5);
-            hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One, 6);
-            hero.SkillTree.TierOnePassiveSkillThree = GetPassiveSkill(hero, SkillTier.One, 7);
-
-            hero.SkillTree.TierTwoActiveSkillOne = GetActiveSkill(hero, SkillTier.Two, 8);
-            hero.SkillTree.TierTwoActiveSkillTwo = GetActiveSkill(hero, SkillTier.Two, 9);
-            hero.SkillTree.TierTwoActiveSkillThree = GetActiveSkill(hero, SkillTier.Two, 11);
-            hero.SkillTree.TierTwoUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Two, 10);
-            hero.SkillTree.TierTwoPassiveSkillOne = GetPassiveSkill(hero, SkillTier.Two, 12);
-            hero.SkillTree.TierTwoPassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Two, 13);
-
-            hero.SkillTree.TierThreeActiveSkillOne = GetActiveSkill(hero, SkillTier.Three, 14);
-            hero.SkillTree.TierThreeActiveSkillTwo = GetActiveSkill(hero, SkillTier.Three, 17);
-            hero.SkillTree.TierThreeUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Three, 15);
-            hero.SkillTree.TierThreeUpgradablePassiveSkillTwo = GetUpgradablePassiveSkill(hero, SkillTier.Three, 16);
-            hero.SkillTree.TierThreePassiveSkillOne = GetPassiveSkill(hero, SkillTier.Three, 18);
-            hero.SkillTree.TierThreePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Three, 19);
-            hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three, 20);
+            hero.SkillTree.TierThreeActiveSkillOne = GetActiveSkill(hero, SkillTier.Three, 14, profile);
+            hero.SkillTree.TierThreeActiveSkillTwo = GetActiveSkill(hero, SkillTier.Three, 17, profile);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.Three, 15, profile);
+            hero.SkillTree.TierThreeUpgradablePassiveSkillTwo = GetUpgradablePassiveSkill(hero, SkillTier.Three, 16, profile);
+            hero.SkillTree.TierThreePassiveSkillOne = GetPassiveSkill(hero, SkillTier.Three, 18, profile);
+            hero.SkillTree.TierThreePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.Three, 19, profile);
+            hero.SkillTree.TierThreePassiveSkillThree = GetPassiveSkill(hero, SkillTier.Three, 20, profile);
 
             DeduplicateSkillNames(hero);
 
@@ -160,22 +121,33 @@ public partial class DefaultSkillTreeRandomizer
         {
             skill = new LightningStrike();
         }
+        else if (hero is LadyMorganaLeFay)
+        {
+            skill = new IceBolt();
+        }
+        else if (hero is Merlin)
+        {
+            skill = new FireBolt();
+        }
+        else if (hero is SirDagonet)
+        {
+            skill = new ShadowBolt();
+        }
+        else if (hero is SirEctor)
+        {
+            skill = new ForceBolt();
+        }
         else if (hero is SirMordred)
         {
             skill = new SirMordredStrike();
         }
-        else if (hero is SirPercival)
+        else if (hero is SirGalahad || hero is SirPercival)
         {
             skill = new FlamingStrike();
         }
         else if (hero is SirTristan)
         {
             skill = new PoisonCut();
-        }
-        else if (hero is Arcanist)
-        {
-            var type = BasicArcanistSkills.Random(BasicArcanistSkillsRng);
-            skill = (Skill)Activator.CreateInstance(type)!;
         }
         else if (hero is Champion)
         {
@@ -207,21 +179,23 @@ public partial class DefaultSkillTreeRandomizer
         return (ActiveSkill)skill;
     }
 
-    private ActiveSkill GetActiveSkill(Hero hero, SkillTier skillTier, int skillNumber, bool starter = false)
+    private ActiveSkill GetActiveSkill(
+        Hero hero, SkillTier skillTier, int skillNumber, DefaultRandomizationProfile profile, bool starter = false)
     {
         var skillSelector =
             new HeroClassSkillFilter(skillRepository,
             new ActiveSkillFilter(
             new RandomSkillSelector()));
 
-        var input = new SkillSelectorInput(hero, skillTier);
-        var skill = GetSkill<ActiveSkill>(hero, skillTier, input, skillSelector);
+        var input = new SkillSelectorInput(hero, skillTier, skillNumber, profile);
+        var skill = GetSkill<ActiveSkill>(input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber, starter);
 
         return skill;
     }
 
-    private UpgradablePassiveSkill GetUpgradablePassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
+    private UpgradablePassiveSkill GetUpgradablePassiveSkill(
+        Hero hero, SkillTier skillTier, int skillNumber, DefaultRandomizationProfile profile)
     {
         var skillSelector =
                 new HeroClassSkillFilter(skillRepository,
@@ -233,14 +207,15 @@ public partial class DefaultSkillTreeRandomizer
                 new ArmourerValidator(
                 new RandomSkillSelector())))))));
 
-        var input = new SkillSelectorInput(hero, skillTier);
-        var skill = GetSkill<UpgradablePassiveSkill>(hero, skillTier, input, skillSelector);
+        var input = new SkillSelectorInput(hero, skillTier, skillNumber, profile);
+        var skill = GetSkill<UpgradablePassiveSkill>(input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber);
 
         return skill;
     }
 
-    private PassiveSkill GetPassiveSkill(Hero hero, SkillTier skillTier, int skillNumber)
+    private PassiveSkill GetPassiveSkill(
+        Hero hero, SkillTier skillTier, int skillNumber, DefaultRandomizationProfile profile)
     {
         var skillSelector =
             new HeroClassSkillFilter(skillRepository,
@@ -252,14 +227,14 @@ public partial class DefaultSkillTreeRandomizer
             new ArmourerValidator(
             new RandomSkillSelector())))))));
 
-        var input = new SkillSelectorInput(hero, skillTier);
-        var skill = GetSkill<PassiveSkill>(hero, skillTier, input, skillSelector);
+        var input = new SkillSelectorInput(hero, skillTier, skillNumber, profile);
+        var skill = GetSkill<PassiveSkill>(input, skillSelector);
         SkillFactory.Build(skill, skillTier, skillNumber, hasUpgrades: false);
 
         return skill;
     }
 
-    private static T GetSkill<T>(Hero hero, SkillTier skillTier, SkillSelectorInput input, ISkillSelector skillSelector) where T : Skill
+    private static T GetSkill<T>(SkillSelectorInput input, ISkillSelector skillSelector) where T : Skill
     {
         T skill;
 
@@ -273,12 +248,12 @@ public partial class DefaultSkillTreeRandomizer
             var excludedSkillTypes = input.ExcludedSkillTypes;
             excludedSkillTypes.Add(ex.SkillType);
 
-            input = new SkillSelectorInput(hero, skillTier)
+            input = new SkillSelectorInput(input.Hero, input.SkillTier, input.SkillNumber, input.Profile)
             {
                 ExcludedSkillTypes = excludedSkillTypes
             };
 
-            skill = GetSkill<T>(hero, skillTier, input, skillSelector);
+            skill = GetSkill<T>(input, skillSelector);
         }
 
         return skill;
