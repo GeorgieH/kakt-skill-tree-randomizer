@@ -118,6 +118,9 @@
     <None Update="randomization_config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="README.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="run_randomizer.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

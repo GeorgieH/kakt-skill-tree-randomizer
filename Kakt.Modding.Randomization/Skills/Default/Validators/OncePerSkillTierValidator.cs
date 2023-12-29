@@ -1,5 +1,4 @@
-﻿using Kakt.Modding.Core.Skills.EnchantedWeapon;
-using Kakt.Modding.Core.Skills.Robust;
+﻿using Kakt.Modding.Core.Skills.Robust;
 using Kakt.Modding.Core.Skills.Scout.Marksman;
 using Kakt.Modding.Core.Skills.Scout.Vanguard;
 using Kakt.Modding.Core.Skills.Strength;
@@ -10,7 +9,6 @@ public class OncePerSkillTierValidator : ISkillSelector
 {
     private static readonly HashSet<Type> Types =
     [
-        typeof(EnchantedWeapon),
         typeof(Robust),
         typeof(MarksmanScout),
         typeof(VanguardScout),
