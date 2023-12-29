@@ -5,7 +5,6 @@ public class LadyBoudiceaFlurry : Flurry
 {
     public LadyBoudiceaFlurry()
     {
-        CasterName = "Hero_defender__flurry";
         IconName = "Hero_defender__flurry";
     }
 

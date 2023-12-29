@@ -7,7 +7,6 @@ public static class FileNames
     public static readonly string BlackKnight = "BlackKnight.cfg";
     public static readonly string FaerieKnight = "FaerieKnight.cfg";
     public static readonly string LadyBoudicea = "LadyBoudicea.cfg";
-    public static readonly string LadyDindraine = "LadyDindraine.cfg";
     public static readonly string LadyGuinevere = "LadyGuinevere.cfg";
     public static readonly string LadyIsolde = "LadyIsolde.cfg";
     public static readonly string LadyMorganaLeFay = "MorganaleFay.cfg";
@@ -26,7 +25,6 @@ public static class FileNames
     public static readonly string SirGalahad = "SirGalahad.cfg";
     public static readonly string SirGawain = "SirGawain.cfg";
     public static readonly string SirGeraint = "SirGeraint.cfg";
-    public static readonly string SirKay = "SirKay.cfg";
     public static readonly string SirLancelot = "SirLancelot.cfg";
     public static readonly string SirLanval = "SirLanval.cfg";
     public static readonly string SirLeodegrance = "SirLeodegrance.cfg";

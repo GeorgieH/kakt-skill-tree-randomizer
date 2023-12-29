@@ -5,7 +5,6 @@ public class FaerieKnightForceBolt : ForceBolt
 {
     public FaerieKnightForceBolt()
     {
-        CasterName = "Hero_arcanist__forceBolt";
         IconName = "Hero_arcanist__forceBolt";
     }
 

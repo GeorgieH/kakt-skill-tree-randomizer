@@ -14,13 +14,6 @@ public abstract class Skill : ISkill
     public abstract SkillType Type { get; }
     public List<SkillUpgrade> Upgrades { get; } = [];
 
-    protected string? CasterName { get; set; }
-
-    public string GetCasterName()
-    {
-        return string.IsNullOrWhiteSpace(CasterName) ? Name : CasterName;
-    }
-
     public string GetNameOrOverride()
     {
         return string.IsNullOrWhiteSpace(nameOverride) ? Name : nameOverride;

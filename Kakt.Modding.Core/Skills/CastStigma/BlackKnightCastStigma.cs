@@ -5,7 +5,6 @@ public class BlackKnightCastStigma : CastStigma
 {
     public BlackKnightCastStigma()
     {
-        CasterName = "SirMordred__castStigma";
         IconName = "SirMordred__castStigma";
     }
 
