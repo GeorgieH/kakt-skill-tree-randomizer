@@ -114,12 +114,6 @@ public class RandomSkillPointDistributer
             {
                 skill = skillPool.First(s => s is Hide);
             }
-            else if (hero is Vanguard
-                && this.profile.Flags.VanguardsAlwaysGetTierOneMovementSkill
-                && !acquiredSkills.Any(s => DefaultSkillTreeRandomizer.VanguardMovementSkills.Contains(s.GetType())))
-            {
-                skill = hero.SkillTree.TierOneActiveSkillTwo!;
-            }
             else
             {
                 var maxSkillTier = spentSkillPoints switch

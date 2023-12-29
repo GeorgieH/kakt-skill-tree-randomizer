@@ -5,6 +5,7 @@ public class LadyBoudiceaPoisonBomb : PoisonBomb
 {
     public LadyBoudiceaPoisonBomb()
     {
+        CasterName = "Hero_marksman__poisonBomb";
         IconName = "Hero_marksman__poisonBomb";
     }
 

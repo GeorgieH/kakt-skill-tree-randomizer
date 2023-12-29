@@ -76,20 +76,26 @@ public partial class DefaultSkillTreeRandomizer
                 hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2);
             }
 
-            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, starter: true);
-
-            if (hero is Vanguard
-                && profile.Flags.VanguardsAlwaysGetTierOneHide
-                && !hero.SkillTree.Skills.Any(s => s is Hide))
+            if (hero is Vanguard)
             {
-                var hide = new Hide();
-                SkillFactory.Build(hide, SkillTier.One, 4);
-                hero.SkillTree.TierOneActiveSkillFour = hide;
+                if (profile.Flags.VanguardsAlwaysGetTierOneHide
+                    && !hero.SkillTree.Skills.Any(s => s is Hide))
+                {
+                    var hide = new Hide();
+                    SkillFactory.Build(hide, SkillTier.One, 4);
+                    hero.SkillTree.TierOneActiveSkillFour = hide;
+                }
+                else
+                {
+                    hero.SkillTree.TierOneActiveSkillFour = GetActiveSkill(hero, SkillTier.One, 4);
+                }
             }
             else
             {
                 hero.SkillTree.TierOneUpgradablePassiveSkillOne = GetUpgradablePassiveSkill(hero, SkillTier.One, 4);
             }
+
+            hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, starter: true);
 
             hero.SkillTree.TierOnePassiveSkillOne = GetPassiveSkill(hero, SkillTier.One, 5);
             hero.SkillTree.TierOnePassiveSkillTwo = GetPassiveSkill(hero, SkillTier.One, 6);
@@ -164,7 +170,7 @@ public partial class DefaultSkillTreeRandomizer
         {
             skill = new SirMordredStrike();
         }
-        else if (hero is SirPercival)
+        else if (hero is SirGalahad || hero is SirPercival)
         {
             skill = new FlamingStrike();
         }

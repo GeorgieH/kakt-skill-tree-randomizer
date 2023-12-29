@@ -84,7 +84,6 @@ static string GetHeroConfigurationFileName(Hero hero)
         SirLanval => FileNames.SirLanval,
         SirLeodegrance => FileNames.SirLeodegrance,
         SirLucan => FileNames.SirLucan,
-        SirMordred => FileNames.SirMordred,
         SirPelleas => FileNames.SirPelleas,
         SirPercival => FileNames.SirPercival,
         SirTegyr => FileNames.SirTegyr,
@@ -138,6 +137,11 @@ static void CheckHeroConfigurationsExist(IEnumerable<Hero> heroes)
 
     foreach (var hero in heroes)
     {
+        if (hero is SirMordred)
+        {
+            continue;
+        }
+
         var result = CheckHeroConfigurationExists(hero, out var path);
 
         if (!result)
@@ -180,7 +184,7 @@ static void WriteMerlinPresets(Merlin merlin)
         merlin.SkillTree.TierOneActiveSkillOne,
         merlin.SkillTree.TierOneActiveSkillTwo,
         merlin.SkillTree.TierOneActiveSkillThree
-    }.Select(s => s!.Name);
+    }.Select(s => s!.GetCasterName());
     hermitProperty.Value = $"{string.Join(",", skills)},Hero_arcanist__passive,death";
 
     var merlinPath = Path.Combine(GetCfgPath(), FileNames.Merlin);
@@ -189,7 +193,7 @@ static void WriteMerlinPresets(Merlin merlin)
     WritePreset(merlinDocument, merlinPreset);
 
     var merlinProperty = (CfgProperty)merlinDocument["Hero"]!["Components"]!["caster"]!["skills"]!;
-    merlinProperty.Value = $"{merlin.SkillTree.TierOneActiveSkillOne!.Name},Hero_arcanist__passive,death";
+    merlinProperty.Value = $"{merlin.SkillTree.TierOneActiveSkillOne!.GetCasterName()},Hero_arcanist__passive,death";
 }
 
 static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
@@ -199,6 +203,11 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
 
     foreach (var hero in heroes)
     {
+        if (hero is SirMordred)
+        {
+            continue;
+        }
+
         if (hero is Merlin)
         {
             WriteMerlinPresets((Merlin)hero);
@@ -219,7 +228,7 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
             || hero is SirKay
             || hero is SirPelleas)
         {
-            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.GetCasterName());
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
             property.Value = $"{string.Join(",", starterSkills)},unit__passive,death";
         }
@@ -227,48 +236,25 @@ static void WriteHeroConfigurations(string outputPath, IEnumerable<Hero> heroes)
         if (hero is LadyMorganaLeFay)
         {
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
-            property.Value = $"{hero.SkillTree.TierOneActiveSkillOne!.Name},Hero_arcanist__passive,death";
+            property.Value = $"{hero.SkillTree.TierOneActiveSkillOne!.GetCasterName()},Hero_arcanist__passive,death";
         }
 
         if (hero is RedKnight)
         {
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
-            property.Value = $"{hero.SkillTree.TierOneActiveSkillOne!.Name},unit__passive,death";
+            property.Value = $"{hero.SkillTree.TierOneActiveSkillOne!.GetCasterName()},unit__passive,death";
         }
 
         if (hero is SirDagonet
             || hero is SirEctor)
         {
-            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.GetCasterName());
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
             property.Value = $"{string.Join(",", starterSkills)},Hero_arcanist__passive,death";
         }
 
-        if (hero is SirGalahad)
-        {
-            var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
-            property.Value = $"{hero.SkillTree.TierOneActiveSkillOne!.Name},SirGalahad__passive,death";
-        }
-
         WriteFile(Path.Combine(heroesPath, GetHeroConfigurationFileName(hero)), document.ToString());
     }
-}
-
-static void WriteSirKayPrisonConfiguration(string outputPath, SirKay sirKay)
-{
-    var soldiersPath = Path.Combine(outputPath, "Cfg", "Actors", "Soldiers");
-    Directory.CreateDirectory(soldiersPath);
-
-    var configPath = Path.Combine(GetCfgPath(), FileNames.SirKayPrison);
-    var document = CfgDocument.Parse(configPath);
-
-    var starterSkills = sirKay.SkillTree.StarterSkills
-        .Select(s => s!.Name);
-
-    var property = (CfgProperty)document["Soldier"]!["Components"]!["caster"]!["Skills"]!;
-    property.Value = $"{string.Join(",", starterSkills)},unit__passive,death";
-
-    WriteFile(Path.Combine(soldiersPath, FileNames.SirKayPrison), document.ToString());
 }
 
 CheckSkillTreeExists();
@@ -300,6 +286,5 @@ if (Directory.Exists(outputPath))
 
 WriteSkillTree(outputPath, heroes);
 WriteHeroConfigurations(outputPath, heroes);
-WriteSirKayPrisonConfiguration(outputPath, (SirKay)heroes.First(h => h is SirKay));
 
 Exit("Done!");

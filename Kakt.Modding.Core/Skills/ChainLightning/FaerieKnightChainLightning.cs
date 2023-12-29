@@ -5,6 +5,7 @@ public class FaerieKnightChainLightning : ChainLightning
 {
     public FaerieKnightChainLightning()
     {
+        CasterName = "SirMordred__chainLightning";
         IconName = "SirMordred__chainLightning";
     }
 

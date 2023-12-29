@@ -27,12 +27,10 @@ public static class FileNames
     public static readonly string SirGawain = "SirGawain.cfg";
     public static readonly string SirGeraint = "SirGeraint.cfg";
     public static readonly string SirKay = "SirKay.cfg";
-    public static readonly string SirKayPrison = "SirKay_prison.cfg";
     public static readonly string SirLancelot = "SirLancelot.cfg";
     public static readonly string SirLanval = "SirLanval.cfg";
     public static readonly string SirLeodegrance = "SirLeodegrance.cfg";
     public static readonly string SirLucan = "SirLucan.cfg";
-    public static readonly string SirMordred = "SirMordred.cfg";
     public static readonly string SirPelleas = "SirPelleas.cfg";
     public static readonly string SirPercival = "SirPercival.cfg";
     public static readonly string SirTegyr = "SirTegyr.cfg";

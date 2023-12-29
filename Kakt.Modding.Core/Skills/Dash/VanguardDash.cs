@@ -5,6 +5,7 @@ public class VanguardDash : Dash
 {
     public VanguardDash()
     {
+        CasterName = "Hero_marksman__dash";
         IconName = "Hero_marksman__dash";
     }
 

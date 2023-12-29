@@ -5,6 +5,7 @@ public class SirDamasGasTrap : GasTrap
 {
     public SirDamasGasTrap()
     {
+        CasterName = "Hero_vanguard__poisonTrap";
         IconName = "Hero_vanguard__poisonTrap";
     }
 
