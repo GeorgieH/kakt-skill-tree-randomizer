@@ -1,0 +1,7 @@
+{
+  "Name": "Dash",
+  "CodeName": "Hero_marksman__dash",
+  "ConfigurationName": "Dash",
+  "Type": "Active",
+  "Attributes": [ "Movement" ]
+}
