@@ -1,0 +1,6 @@
+{
+  "Name": "Dedication",
+  "CodeName": "Hero_sage__dedication",
+  "Type": "Passive",
+  "PrerequisiteAttributes": [ "Support" ]
+}

@@ -1,0 +1,6 @@
+{
+  "Name": "Charge",
+  "CodeName": "Hero_vanguard__charge",
+  "Type": "Active",
+  "Attributes": [ "Movement", "Melee" ]
+}

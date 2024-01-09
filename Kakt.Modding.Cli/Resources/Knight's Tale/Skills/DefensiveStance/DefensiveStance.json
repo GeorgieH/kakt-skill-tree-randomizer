@@ -1,0 +1,6 @@
+{
+  "Name": "DefensiveStance",
+  "CodeName": "Hero_champion__defensiveStance",
+  "Type": "Active",
+  "Attributes": [ "Support" ]
+}

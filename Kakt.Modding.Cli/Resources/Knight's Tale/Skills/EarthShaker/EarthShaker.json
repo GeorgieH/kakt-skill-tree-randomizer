@@ -1,0 +1,6 @@
+{
+  "Name": "EarthShaker",
+  "CodeName": "Hero_champion__earthShaker",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Area" ]
+}

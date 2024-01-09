@@ -1,0 +1,8 @@
+{
+  "Name": "BloodHex",
+  "CodeName": "Hero_arcanist__bloodCurse",
+  "ConfigurationName": "BloodCurse",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Hex" ],
+  "Effects": [ "Bleed" ]
+}
