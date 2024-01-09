@@ -576,4 +576,24 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Knight%27s Tale\Skills\DebilitatingThrow\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Dedication\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\DefensiveStance\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Deflection\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\DelayedBarrage\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\DivineFavour\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Divine\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Dodge\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\DrainLife\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\EarthShaker\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\EnchantedWeapon\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Encouragement\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Evasion\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\ExtraAreaDamage\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\ExtraBleeding\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\ExtraDamage\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\ExtraStun\" />
+  </ItemGroup>
+
 </Project>
