@@ -13,6 +13,156 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\Knight%27s Tale\Skills\DebilitatingThrow\DebilitatingThrow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DebilitatingThrow\Upgrades\Daze.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DebilitatingThrow\Upgrades\Hasty.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DebilitatingThrow\Upgrades\SteadyAim.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DebilitatingThrow\Upgrades\WeightedProjectile.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Dedication\Dedication.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DefensiveStance\DefensiveStance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DefensiveStance\Upgrades\ActiveDefense.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DefensiveStance\Upgrades\Perseverance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DefensiveStance\Upgrades\RestingStance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DefensiveStance\Upgrades\Steadiness.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Deflection\Deflection.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DelayedBarrage\DelayedBarrage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DelayedBarrage\Upgrades\Bombardment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DelayedBarrage\Upgrades\ContinuousOnslaught.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DelayedBarrage\Upgrades\FocusedFire.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DelayedBarrage\Upgrades\FormationBreaker.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DivineFavour\DivineFavour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DivineFavour\Upgrades\Empower.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DivineFavour\Upgrades\LordsHerald.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DivineFavour\Upgrades\ShieldOfFaith.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DivineFavour\Upgrades\Zeal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Divine\Divine.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Dodge\Dodge.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainBlood\DrainBlood.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainBlood\Upgrades\Bloodletting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainBlood\Upgrades\Bloodthirst.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainBlood\Upgrades\Haemophilia.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainBlood\Upgrades\SapSpirit.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainLife\DrainLife.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainLife\Upgrades\Devourer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainLife\Upgrades\EverlastingHunger.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainLife\Upgrades\Harbinger.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\DrainLife\Upgrades\Reaper.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EarthShaker\EarthShaker.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EarthShaker\Upgrades\EarthSplitter.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EarthShaker\Upgrades\GroundSurge.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EarthShaker\Upgrades\Magnitude.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EarthShaker\Upgrades\Stumble.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\EnchantedWeapon\EnchantedWeapon.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Encouragement\Encouragement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Encouragement\Upgrades\RosaryPrayer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Encouragement\Upgrades\SwiftJustice.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Encouragement\Upgrades\TheLordsWill.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Encouragement\Upgrades\TheLordsWrath.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Evasion\Evasion.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\ExtraAreaDamage\ExtraAreaDamage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\ExtraBleeding\ExtraBleeding.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\ExtraDamage\ExtraDamage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\ExtraStun\ExtraStun.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Knight's Tale\Cfg\BlackKnight.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
