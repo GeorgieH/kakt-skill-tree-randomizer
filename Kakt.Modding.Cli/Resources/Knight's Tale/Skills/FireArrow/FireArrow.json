@@ -1,0 +1,7 @@
+{
+  "Name": "FireArrow",
+  "CodeName": "Hero_marksman__fireBolt",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Fire" ],
+  "Effects": [ "Burn" ]
+}

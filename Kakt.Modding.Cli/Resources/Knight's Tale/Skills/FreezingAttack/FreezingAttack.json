@@ -1,0 +1,7 @@
+{
+  "Name": "FreezingAttack",
+  "CodeName": "Hero_sage__freezingAttack",
+  "Type": "Active",
+  "Attributes": [ "Melee", "Ice" ],
+  "Effects": [ "Freeze" ]
+}

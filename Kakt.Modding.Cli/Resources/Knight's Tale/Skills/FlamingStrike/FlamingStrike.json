@@ -1,0 +1,7 @@
+{
+  "Name": "FlamingStrike",
+  "CodeName": "SirPercivale__flamingStrike",
+  "Type": "Active",
+  "Attributes": [ "Melee", "Fire" ],
+  "Effects": [ "Burn" ]
+}

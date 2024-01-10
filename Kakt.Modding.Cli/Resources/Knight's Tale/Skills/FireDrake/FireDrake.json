@@ -1,0 +1,6 @@
+{
+  "Name": "FireDrake",
+  "CodeName": "Hero_arcanist__fireDrake",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Fire", "Area" ]
+}
