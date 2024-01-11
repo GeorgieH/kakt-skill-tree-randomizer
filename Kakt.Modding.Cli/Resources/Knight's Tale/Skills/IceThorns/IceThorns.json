@@ -1,0 +1,7 @@
+{
+  "Name": "IceThorns",
+  "CodeName": "Morgana__iceThorns",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Ice", "Area" ],
+  "Effects": [ "Chill" ]
+}

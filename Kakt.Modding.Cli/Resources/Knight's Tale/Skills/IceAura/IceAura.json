@@ -1,0 +1,7 @@
+{
+  "Name": "IceAura",
+  "CodeName": "Hero_sage__iceAura",
+  "Type": "Active",
+  "Attributes": [ "Spell", "Ice", "Area" ],
+  "Effects": [ "Chill" ]
+}

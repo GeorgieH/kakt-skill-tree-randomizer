@@ -1,0 +1,7 @@
+{
+  "Name": "IceBolt",
+  "CodeName": "Morgana__iceBolt",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Ice" ],
+  "Effects": [ "Chill" ]
+}

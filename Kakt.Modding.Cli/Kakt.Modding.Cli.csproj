@@ -517,6 +517,111 @@
     <None Update="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\SpellResistance.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceAura\IceAura.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceAura\Upgrades\FrostSkin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceAura\Upgrades\Permafrost.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceAura\Upgrades\ScathingCold.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceAura\Upgrades\Winterborn.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceBolt\IceBolt.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceBolt\Upgrades\DamnedPrey.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceBolt\Upgrades\Mindgame.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceBolt\Upgrades\MultipleTargets.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceBolt\Upgrades\PiercingBolt.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceLance\IceLance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceLance\Upgrades\Frostbite.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceLance\Upgrades\IceJavelin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceLance\Upgrades\NumbingFreeze.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceLance\Upgrades\Wintersmith.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceShield\IceShield.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceShield\Upgrades\ElementalIce.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceShield\Upgrades\GlacialAegis.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceShield\Upgrades\LastingIce.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceShield\Upgrades\RimeBreath.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceSpikes\IceSpikes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\BurstingSpikes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\FrostShards.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\IceForge.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\Impaler.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceThorns\IceThorns.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\ElementalIce.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\FreezeBurns.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\Hoarfrost.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\JaggedThorns.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceWall\IceWall.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\EndlessWinter.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\IcyWinds.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\Permafrost.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\ReinforcedWall.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Knight's Tale\Cfg\BlackKnight.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1123,6 +1228,13 @@
     <Folder Include="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceAura\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceBolt\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceLance\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceShield\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\" />
   </ItemGroup>
 
 </Project>
