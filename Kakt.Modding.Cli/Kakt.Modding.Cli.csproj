@@ -370,6 +370,153 @@
     <None Update="Resources\Knight%27s Tale\Skills\FrostArmour\Upgrades\Hardened.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\GasTrap.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\SirDamasGasTrap.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\Upgrades\CorrosivePoison.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\Upgrades\Enfeeble.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\Upgrades\QuickAssembly.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GasTrap\Upgrades\ThickCloud.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlacialStrike\GlacialStrike.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlacialStrike\Upgrades\AntediluvianRime.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlacialStrike\Upgrades\Hailstorm.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlacialStrike\Upgrades\PrimalIce.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlacialStrike\Upgrades\Wintersmith.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlobeOfProtection\GlobeOfProtection.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlobeOfProtection\Upgrades\Discipline.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlobeOfProtection\Upgrades\DispelMagic.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlobeOfProtection\Upgrades\ElementalArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\GlobeOfProtection\Upgrades\SoulWarding.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Guard\Guard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Guard\Upgrades\DefendAlly.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Guard\Upgrades\KnightlyZeal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Guard\Upgrades\RestingGuard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Guard\Upgrades\Vindicator.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HardenedArmour\HardenedArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HardenedArmour\Upgrades\FittedArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HardenedArmour\Upgrades\ThickSkinned.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HexCleave\HexCleave.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HexCleave\Upgrades\DarkSorcery.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HexCleave\Upgrades\Desecration.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HexCleave\Upgrades\Malediction.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HexCleave\Upgrades\RunicBlade.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hide\Hide.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hide\Upgrades\Preparation.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hide\Upgrades\Stalker.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hide\Upgrades\Subtle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hide\Upgrades\SurpriseDamage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolyArmour\HolyArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\Aegis.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\DivineArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\HallowedChampion.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\Martyrdom.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolySmite\HolySmite.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\AngelicFlames.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\Castigation.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\GreaterSmite.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\SaintlyFervor.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hunter\Hunter.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\GiantSlayer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\RepelDeath.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\SidheSlaughterer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\SpellResistance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Knight's Tale\Cfg\BlackKnight.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -966,6 +1113,16 @@
     <Folder Include="Resources\Knight%27s Tale\Skills\ForceCleave\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\FreezingAttack\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\FrostArmour\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\GasTrap\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\GlacialStrike\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\GlobeOfProtection\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Guard\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\HardenedArmour\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\HexCleave\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Hide\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\HolyArmour\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\HolySmite\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Hunter\Upgrades\" />
   </ItemGroup>
 
 </Project>

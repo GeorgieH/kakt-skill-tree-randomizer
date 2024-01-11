@@ -1,0 +1,7 @@
+{
+  "Name": "GlobeOfProtection",
+  "CodeName": "Hero_sage__globeOfprotection",
+  "ConfigurationName": "GlobeofProtection",
+  "Type": "Active",
+  "Attributes": [ "Support", "Spell" ]
+}

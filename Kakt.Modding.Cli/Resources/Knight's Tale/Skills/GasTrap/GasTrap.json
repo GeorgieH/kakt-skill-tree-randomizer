@@ -1,0 +1,8 @@
+{
+  "Name": "GasTrap",
+  "CodeName": "Hero_vanguard__poisonTrap",
+  "ConfigurationName": "PoisonTrap",
+  "Type": "Active",
+  "Attributes": [ "Trap" ],
+  "Effects": [ "Poison" ]
+}
