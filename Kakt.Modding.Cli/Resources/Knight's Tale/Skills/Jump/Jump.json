@@ -1,0 +1,6 @@
+{
+  "Name": "Jump",
+  "CodeName": "Hero_vanguard__jump",
+  "Type": "Active",
+  "Attributes": [ "Movement" ]
+}

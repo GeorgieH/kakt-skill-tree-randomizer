@@ -622,6 +622,276 @@
     <None Update="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\ReinforcedWall.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Illusion\Illusion.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Illusion\Upgrades\FertileMind.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Illusion\Upgrades\Illusionist.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Illusion\Upgrades\Mirage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Illusion\Upgrades\Shivers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Immolation\Immolation.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Immolation\Upgrades\CleansingFlame.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Immolation\Upgrades\Embers.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Immolation\Upgrades\FieryJudgement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Immolation\Upgrades\TrialByFire.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Inspire\Inspire.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Inspire\Upgrades\Mobilization.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Inspire\Upgrades\MotivateSelf.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Inspire\Upgrades\Tranquility.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Inspire\Upgrades\Unbind.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Ironclad\Ironclad.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\IronSkinned\IronSkinned.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Judgement\Judgement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Judgement\Upgrade\BlindingJustice.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Judgement\Upgrade\ExtraVerdict.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Judgement\Upgrade\Penance.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Judgement\Upgrade\Tribunal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Juggernaut\Juggernaut.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\JumpingAttack\JumpingAttack.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\JumpingAttack\Upgrades\HitAndRun.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\JumpingAttack\Upgrades\LongRush.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\JumpingAttack\Upgrades\Nimble.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\JumpingAttack\Upgrades\Recoil.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Jump\Jump.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Jump\Upgrades\Hurdle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Jump\Upgrades\LongJump.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Jump\Upgrades\Lope.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Jump\Upgrades\Vault.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Kick\Kick.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Kick\Upgrades\Kneebreaker.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Kick\Upgrades\NumbingAttack.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Kick\Upgrades\PowerKick.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\Kick\Upgrades\SnapKick.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LeapAttack\LeapAttack.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LeapAttack\Upgrades\AfterShock.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LeapAttack\Upgrades\LimberFooted.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LeapAttack\Upgrades\PowerLeap.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LeapAttack\Upgrades\Weaken.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningArrow\LightningArrow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningArrow\Upgrades\ForkedLightning.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningArrow\Upgrades\IntenseLightning.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningArrow\Upgrades\Longshot.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningArrow\Upgrades\Thundershot.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningCleave\LightningCleave.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningCleave\Upgrades\JoltingSlash.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningCleave\Upgrades\LastingThunder.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningCleave\Upgrades\SelfSufficiency.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningCleave\Upgrades\SwiftStrike.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningStrike\LightningStrike.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningStrike\Upgrades\Disruption.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningStrike\Upgrades\GloryKill.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningStrike\Upgrades\GreaterLightning.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningStrike\Upgrades\Overheat.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningTrap\LightningTrap.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningTrap\Upgrades\Farcaster.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningTrap\Upgrades\ForkedDischarge.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningTrap\Upgrades\Thunderflash.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LightningTrap\Upgrades\Thunderstrike.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LoneWolf\LoneWolf.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LoneWolf\Upgrades\Battleborn.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LoneWolf\Upgrades\Unburdened.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LoneWolf\Upgrades\Unhindered.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LoneWolf\Upgrades\Unyielding.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\ArcanistLongReach.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\LongReach.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\Upgrades\Composure.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\Upgrades\Disengaged.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\Upgrades\EagleEye.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LongReach\Upgrades\Prepared.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\LowProfile\LowProfile.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MagicalArmour\MagicalArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MagicalArmour\Upgrades\EnchantedArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MagicalArmour\Upgrades\ExtendedArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MagicalArmour\Upgrades\ReinforcedArmour.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MagicalArmour\Upgrades\ResistInjury.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MarkTarget\MarkTarget.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MarkTarget\Upgrades\Blink.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MarkTarget\Upgrades\Deadeye.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MarkTarget\Upgrades\Entangle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MarkTarget\Upgrades\EvilEye.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MassProtection\MassProtection.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MassProtection\Upgrades\Aegis.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MassProtection\Upgrades\Cleanse.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MassProtection\Upgrades\Durability.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Knight%27s Tale\Skills\MassProtection\Upgrades\Safeguard.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Knight's Tale\Cfg\BlackKnight.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1235,6 +1505,27 @@
     <Folder Include="Resources\Knight%27s Tale\Skills\IceSpikes\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\IceThorns\Upgrades\" />
     <Folder Include="Resources\Knight%27s Tale\Skills\IceWall\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Illusion\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Immolation\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Inspire\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Ironclad\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\IronSkinned\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Judgement\Upgrade\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Juggernaut\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\JumpingAttack\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Jump\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\Kick\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LeapAttack\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LightningArrow\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LightningCleave\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LightningStrike\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LightningTrap\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LoneWolf\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LongReach\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\LowProfile\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\MagicalArmour\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\MarkTarget\Upgrades\" />
+    <Folder Include="Resources\Knight%27s Tale\Skills\MassProtection\Upgrades\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,6 @@
+{
+  "Name": "JumpingAttack",
+  "CodeName": "Hero_vanguard__jumpingAttack",
+  "Type": "Active",
+  "Attributes": [ "Movement", "Melee" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "Immolation",
+  "CodeName": "SirPercivale__immolation",
+  "Type": "Active",
+  "Attributes": [ "Melee", "Fire" ],
+  "Effects": [ "Burn" ]
+}

@@ -1,0 +1,5 @@
+{
+  "Name": "Recoil",
+  "CodeName": "Hero_vanguard__jumpingAttack_recoil",
+  "Effects": [ "Knockback", "Knockdown" ]
+}
