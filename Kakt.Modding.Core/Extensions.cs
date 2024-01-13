@@ -37,7 +37,6 @@ public static class Extensions
 
         return skill.Upgrades
             .Any(s => s.CanCauseEffects(effects));
-
     }
 
     public static bool CanCauseEffects(this SkillUpgrade skillUpgrade, Effects effects)

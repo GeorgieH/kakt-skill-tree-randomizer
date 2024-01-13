@@ -17,6 +17,8 @@ public class Skill : ISkill, IEquatable<Skill?>
     public Effects PrerequisiteEffects { get; set; }
     public bool Starter { get; set; }
     public SkillTier Tier { get; set; }
+    public Position2D IconPosition { get; set; }
+    public int Cost { get; set; } = SkillCosts.Two;
     public List<SkillUpgrade> Upgrades { get; } = [];
 
     public Skill Copy()

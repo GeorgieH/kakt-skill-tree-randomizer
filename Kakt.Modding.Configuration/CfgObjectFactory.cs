@@ -1,7 +1,5 @@
-﻿using Kakt.Modding.Core;
-using Kakt.Modding.Core.Heroes;
-using Kakt.Modding.Core.Skills;
-using Kakt.Modding.Core.Skills.Scout;
+﻿using Kakt.Modding.Domain.Heroes;
+using Kakt.Modding.Domain.Skills;
 
 namespace Kakt.Modding.Configuration;
 
@@ -15,7 +13,7 @@ public static class CfgObjectFactory
 
         foreach (var skill in hero.SkillTree.Skills)
         {
-            var skillName = skill!.GetConfigurationElementName();
+            var skillName = skill!.ConfigurationName!;
 
             if (skillRegister.TryGetValue(skillName, out var list))
             {
@@ -45,7 +43,7 @@ public static class CfgObjectFactory
 
         foreach (var skill in hero.SkillTree.Skills)
         {
-            var skillName = skill!.GetConfigurationElementName();
+            var skillName = skill!.ConfigurationName!;
 
             if (skillRegister.TryGetValue(skillName, out var list))
             {
@@ -132,7 +130,7 @@ public static class CfgObjectFactory
 
     private static string GetSkillNamePostfix(string skillName, int index)
     {
-        if (skillName != nameof(Scout) && index == 1)
+        if (skillName != "Scout" && index == 1)
         {
             return string.Empty;
         }
