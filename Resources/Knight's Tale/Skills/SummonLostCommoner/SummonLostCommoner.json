@@ -1,0 +1,6 @@
+{
+  "Name": "SummonLostCommoner",
+  "CodeName": "Hero_arcanist__summonLostCommoner",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Summon" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "ShieldCharge",
+  "CodeName": "Hero_defender__shieldCharge",
+  "Type": "Active",
+  "Attributes": [ "Movement", "Melee" ],
+  "Effects": [ "Knockback", "Knockdown" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "Sprint",
+  "CodeName": "Hero_vanguard__sprint",
+  "Type": "Active",
+  "Attributes": [ "Movement" ],
+  "Effects": [ "Hidden" ]
+}
