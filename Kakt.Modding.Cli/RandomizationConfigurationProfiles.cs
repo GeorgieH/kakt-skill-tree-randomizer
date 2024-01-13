@@ -1,4 +1,4 @@
-﻿using Kakt.Modding.Randomization.Skills.Default;
+﻿using Kakt.Modding.Application.Randomization.Profiles.Default;
 
 namespace Kakt.Modding.Cli;
 

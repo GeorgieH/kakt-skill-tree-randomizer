@@ -5,7 +5,6 @@ namespace Kakt.Modding.Application;
 
 public interface IDocumentRepository
 {
-    IEnumerable<CfgDocument> AsEnumerable();
     CfgDocument GetSkillTreeDocument();
     CfgDocument GetHeroDocument(Hero hero);
     CfgDocument GetHermitDocument();
