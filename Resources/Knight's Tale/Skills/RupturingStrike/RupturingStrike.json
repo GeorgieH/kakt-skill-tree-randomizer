@@ -1,0 +1,7 @@
+{
+  "Name": "RupturingStrike",
+  "CodeName": "Hero_champion__rupturingStrike",
+  "Type": "Active",
+  "Attributes": [ "Melee" ],
+  "Effects": [ "Bleed" ]
+}

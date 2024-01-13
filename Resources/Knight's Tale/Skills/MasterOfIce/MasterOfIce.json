@@ -1,0 +1,9 @@
+{
+  "Name": "MasterOfIce",
+  "CodeName": "Hero_sage__masterOfice",
+  "ConfigurationName": "MasterofIce",
+  "Type": "Passive",
+  "Upgradable": true,
+  "Attributes": [ "Ice" ],
+  "PrerequisiteEffects": [ "Chill", "Freeze" ]
+}

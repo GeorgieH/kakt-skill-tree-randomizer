@@ -60,6 +60,8 @@ var mediator = host.Services.GetRequiredService<IMediator>();
 var randomizationConfig = GetRandomizationConfiguration();
 var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig)!;
 
+await Bootstrapper.Run(mediator);
+
 var heroRepository = host.Services.GetRequiredService<IHeroRepository>();
 var heroes = heroRepository.GetAll();
 

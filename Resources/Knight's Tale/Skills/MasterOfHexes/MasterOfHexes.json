@@ -1,0 +1,8 @@
+{
+  "Name": "MasterOfHexes",
+  "CodeName": "Hero_arcanist__masterOfcurses",
+  "ConfigurationName": "MasterOfcurses",
+  "Type": "Passive",
+  "Upgradable": true,
+  "PrerequisiteAttributes": [ "Hex" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "MasterBleeding",
+  "CodeName": "Hero_champion__masterBleeding",
+  "Type": "Passive",
+  "Upgradable": true,
+  "PrerequisiteEffects": [ "Bleed" ]
+}

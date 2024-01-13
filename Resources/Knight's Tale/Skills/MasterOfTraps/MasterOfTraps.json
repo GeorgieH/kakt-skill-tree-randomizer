@@ -1,0 +1,8 @@
+{
+  "Name": "MasterOfTraps",
+  "CodeName": "Hero_vanguard__masterOftraps",
+  "ConfigurationName": "MasterofTraps",
+  "Type": "Passive",
+  "Upgradable": true,
+  "PrerequisiteAttributes": [ "Trap" ]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "MasterOfFire",
+  "CodeName": "Hero_arcanist__masterofFire",
+  "ConfigurationName": "MasterofFire",
+  "Type": "Passive",
+  "Upgradable": true,
+  "PrerequisiteEffects": [ "Burn" ]
+}
