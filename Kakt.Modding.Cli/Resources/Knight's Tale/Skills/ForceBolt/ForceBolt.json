@@ -1,7 +1,0 @@
-{
-  "Name": "ForceBolt",
-  "CodeName": "Hero_arcanist__forceBolt",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell" ],
-  "Effects": [ "Knockback" ]
-}

@@ -4,6 +4,7 @@ using Kakt.Modding.Configuration.SkillTree;
 using Kakt.Modding.Core.Heroes;
 using Kakt.Modding.Core.Heroes.Configuration;
 using Kakt.Modding.Core.Skills;
+using Kakt.Modding.Domain.Heroes;
 using Kakt.Modding.Randomization.Skills;
 using Kakt.Modding.Randomization.Skills.Default;
 using System.Reflection.Metadata;

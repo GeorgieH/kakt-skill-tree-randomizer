@@ -1,7 +1,0 @@
-{
-  "Name": "LightningStrike",
-  "CodeName": "FaerieKnight__LightningStrike",
-  "Type": "Active",
-  "Attributes": [ "Melee", "Lightning" ],
-  "Effects": [ "Shock" ]
-}

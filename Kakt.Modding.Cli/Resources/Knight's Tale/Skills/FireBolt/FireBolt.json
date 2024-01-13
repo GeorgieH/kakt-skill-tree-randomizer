@@ -1,7 +1,0 @@
-{
-  "Name": "FireBolt",
-  "CodeName": "Merlin__fireBolt",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Fire" ],
-  "Effects": [ "Burn", "Knockback" ]
-}

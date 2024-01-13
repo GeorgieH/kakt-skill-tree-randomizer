@@ -1,7 +1,0 @@
-{
-  "Name": "ChainLightning",
-  "CodeName": "SirMordred__chainLightning",
-  "ConfigurationName": "ChainLightning",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Lightning" ]
-}
