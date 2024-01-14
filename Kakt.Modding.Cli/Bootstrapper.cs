@@ -155,6 +155,11 @@ internal static class Bootstrapper
             }
         }
 
+        if (jsonObject.TryGetProperty(nameof(Skill.PrerequisiteAttributesCheckType), out var prerequisiteAttributesCheckType))
+        {
+            skill.PrerequisiteAttributesCheckType = Enum.Parse<PrerequisiteCheckType>(prerequisiteAttributesCheckType.GetString()!);
+        }
+
         if (jsonObject.TryGetProperty(nameof(Skill.Effects), out var effects))
         {
             foreach (var effect in effects.EnumerateArray())

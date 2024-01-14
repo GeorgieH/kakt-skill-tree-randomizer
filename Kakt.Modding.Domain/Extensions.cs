@@ -36,16 +36,29 @@ public static class Extensions
             .Any(e => source.HasFlag(e));
     }
 
-    public static bool HasSkillAttributes(this Hero hero, SkillAttributes skillAttributes)
+    public static bool HasAnySkillWithAnySkillAttribute(this Hero hero, SkillAttributes skillAttributes)
     {
         return hero.SkillTree.Skills
-            .Any(s => s!.HasSkillAttributes(skillAttributes));
+            .Any(s => s!.HasAnySkillAttribute(skillAttributes));
     }
 
-    public static bool HasSkillAttributes(this Skill skill, SkillAttributes skillAttributes)
+    public static bool HasAnySkillWithAllSkillAttributes(this Hero hero, SkillAttributes skillAttributes)
+    {
+        return hero.SkillTree.Skills
+            .Any(s => s!.HasAllSkillAttributes(skillAttributes));
+    }
+
+    public static bool HasAnySkillAttribute(this Skill skill, SkillAttributes skillAttributes)
     {
         return skillAttributes
             .GetFlags()
             .Any(s => skill.Attributes.HasFlag(s));
+    }
+
+    public static bool HasAllSkillAttributes(this Skill skill, SkillAttributes skillAttributes)
+    {
+        return skillAttributes
+            .GetFlags()
+            .All(s => skill.Attributes.HasFlag(s));
     }
 }

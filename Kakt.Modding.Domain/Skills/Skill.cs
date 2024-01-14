@@ -13,6 +13,7 @@ public class Skill : ISkill, IEquatable<Skill?>
     public bool Upgradable { get; set; }
     public SkillAttributes Attributes { get; set; }
     public SkillAttributes PrerequisiteAttributes { get; set; }
+    public PrerequisiteCheckType PrerequisiteAttributesCheckType { get; set; }
     public Effects Effects { get; set; }
     public Effects PrerequisiteEffects { get; set; }
     public bool Starter { get; set; }
@@ -33,6 +34,7 @@ public class Skill : ISkill, IEquatable<Skill?>
             Upgradable = Upgradable,
             Attributes = Attributes,
             PrerequisiteAttributes = PrerequisiteAttributes,
+            PrerequisiteAttributesCheckType = PrerequisiteAttributesCheckType,
             Effects = Effects,
             PrerequisiteEffects = PrerequisiteEffects
         };

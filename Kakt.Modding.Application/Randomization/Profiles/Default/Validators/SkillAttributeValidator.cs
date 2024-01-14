@@ -18,10 +18,23 @@ public class SkillAttributeValidator : ISkillSelector
 
         var prerequisiteAttributes = output.Skill.PrerequisiteAttributes;
 
-        if (prerequisiteAttributes != SkillAttributes.None
-            && !input.Hero.HasSkillAttributes(prerequisiteAttributes))
+        if (prerequisiteAttributes != SkillAttributes.None)
         {
-            throw new InvalidSkillSelectionException(output.Skill);
+            bool valid;
+
+            if (output.Skill.PrerequisiteAttributesCheckType == PrerequisiteCheckType.All)
+            {
+                valid = input.Hero.HasAnySkillWithAllSkillAttributes(prerequisiteAttributes);
+            }
+            else
+            {
+                valid = input.Hero.HasAnySkillWithAnySkillAttribute(prerequisiteAttributes);
+            }
+
+            if (!valid)
+            {
+                throw new InvalidSkillSelectionException(output.Skill);
+            }
         }
 
         return output;
