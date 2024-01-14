@@ -83,7 +83,7 @@ public class GetRandomSkillTreeConfigurationHandler : IRequestHandler<GetRandomS
             || hero is SirKay
             || hero is SirPelleas)
         {
-            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.CodeName);
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
             property.Value = $"{string.Join(",", starterSkills)},unit__passive,death";
         }
@@ -91,13 +91,13 @@ public class GetRandomSkillTreeConfigurationHandler : IRequestHandler<GetRandomS
         if (hero is RedKnight)
         {
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
-            property.Value = $"{hero.SkillTree.TierOneActiveSkillThree!.Name},unit__passive,death";
+            property.Value = $"{hero.SkillTree.TierOneActiveSkillThree!.CodeName},unit__passive,death";
         }
 
         if (hero is SirDagonet
             || hero is SirEctor)
         {
-            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.Name);
+            var starterSkills = hero.SkillTree.StarterSkills.Select(s => s!.CodeName);
             var property = (CfgProperty)document["Hero"]!["Components"]!["caster"]!["skills"]!;
             property.Value = $"{string.Join(",", starterSkills)},Hero_arcanist__passive,death";
         }
@@ -115,7 +115,7 @@ public class GetRandomSkillTreeConfigurationHandler : IRequestHandler<GetRandomS
             merlin.SkillTree.TierOneActiveSkillOne,
             merlin.SkillTree.TierOneActiveSkillTwo,
             merlin.SkillTree.TierOneActiveSkillThree
-        }.Select(s => s!.Name);
+        }.Select(s => s!.CodeName);
         hermitProperty.Value = $"{string.Join(",", skills)},Hero_arcanist__passive,death";
 
         var merlinDocument = this.documentRepository.GetHeroDocument(merlin);

@@ -2,5 +2,6 @@
   "Name": "PotentHex",
   "CodeName": "Hero_arcanist__potentCurse",
   "ConfigurationName": "PotentCurse",
-  "Type": "Passive"
+  "Type": "Passive",
+  "PrerequisiteAttributes": [ "Hex" ]
 }
