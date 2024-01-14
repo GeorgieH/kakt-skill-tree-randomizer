@@ -61,7 +61,7 @@ logger.Log("Initializing...");
 
 var mediator = host.Services.GetRequiredService<IMediator>();
 
-await Bootstrapper.Run(mediator);
+await Bootstrapper.Run(mediator, logger);
 
 var heroRepository = host.Services.GetRequiredService<IHeroRepository>();
 var heroes = heroRepository.GetAll();

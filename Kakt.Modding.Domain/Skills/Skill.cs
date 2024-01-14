@@ -3,7 +3,7 @@ namespace Kakt.Modding.Domain.Skills;
 
 public class Skill : ISkill, IEquatable<Skill?>
 {
-    private string? nameOverride;
+    private string? codeNameOverride;
 
     public string Name { get; set; }
     public string CodeName { get; set; }
@@ -54,13 +54,13 @@ public class Skill : ISkill, IEquatable<Skill?>
         return HashCode.Combine(Name);
     }
 
-    public string GetNameOrOverride()
+    public string GetCodeNameOrOverride()
     {
-        return string.IsNullOrWhiteSpace(nameOverride) ? Name : nameOverride;
+        return string.IsNullOrWhiteSpace(codeNameOverride) ? CodeName : codeNameOverride;
     }
 
-    public void OverrideName(string nameOverride)
+    public void OverrideCodeName(string nameOverride)
     {
-        this.nameOverride = nameOverride;
+        this.codeNameOverride = nameOverride;
     }
 }

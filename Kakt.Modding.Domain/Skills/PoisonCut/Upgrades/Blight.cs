@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.PoisonCut.Upgrades;
 
-public class Blight : SkillUpgrade
+public class Blight : PoisonCutUpgrade
 {
     public Blight()
     {

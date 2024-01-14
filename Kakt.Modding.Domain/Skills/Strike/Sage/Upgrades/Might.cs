@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Sage.Upgrades;
 
-public class Might : SkillUpgrade
+public class Might : StrikeUpgrade
 {
     public Might()
     {

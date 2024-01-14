@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FireBolt.Upgrades;
 
-public class Inferno : SkillUpgrade
+public class Inferno : FireBoltUpgrade
 {
     public Inferno()
     {

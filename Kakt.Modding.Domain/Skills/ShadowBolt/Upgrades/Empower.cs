@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ShadowBolt.Upgrades;
 
-public class Empower : SkillUpgrade
+public class Empower : ShadowBoltUpgrade
 {
     public Empower()
     {

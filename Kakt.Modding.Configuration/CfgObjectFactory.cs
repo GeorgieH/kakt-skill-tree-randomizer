@@ -92,7 +92,7 @@ public static class CfgObjectFactory
             obj.Elements.Add(new CfgProperty("IconName", skill.IconName));
         }
 
-        obj.Elements.Add(new CfgProperty("Skill", skill.GetNameOrOverride()));
+        obj.Elements.Add(new CfgProperty("Skill", skill.GetCodeNameOrOverride()));
         obj.Elements.Add(new CfgProperty("Type", skill.Type.ToString().ToLower()));
         obj.Elements.Add(new CfgProperty("IconPos", $"{skill.IconPosition.X};{skill.IconPosition.Y}"));
         obj.Elements.Add(new CfgProperty("Tier", (int)skill.Tier));
@@ -120,7 +120,7 @@ public static class CfgObjectFactory
             obj.Elements.Add(new CfgProperty("IconName", skillUpgrade.IconName));
         }
 
-        obj.Elements.Add(new CfgProperty("Skill", skillUpgrade.GetNameOrOverride()));
+        obj.Elements.Add(new CfgProperty("Skill", skillUpgrade.GetCodeNameOrOverride()));
         obj.Elements.Add(new CfgProperty("Type", skillUpgrade.Type.ToString().ToLower()));
         obj.Elements.Add(new CfgProperty("IconPos", $"{skillUpgrade.IconPosition.X};{skillUpgrade.IconPosition.Y}"));
         obj.Elements.Add(new CfgProperty("Tier", (int)skillUpgrade.Tier));

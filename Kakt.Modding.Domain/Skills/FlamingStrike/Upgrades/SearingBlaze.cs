@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FlamingStrike.Upgrades;
 
-public class SearingBlaze : SkillUpgrade
+public class SearingBlaze : FlamingStrikeUpgrade
 {
     public SearingBlaze()
     {

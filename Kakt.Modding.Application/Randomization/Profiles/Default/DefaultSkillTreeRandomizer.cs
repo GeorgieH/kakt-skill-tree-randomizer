@@ -241,13 +241,13 @@ public class DefaultSkillTreeRandomizer
 
         void DeduplicateSkillName(ISkill skill)
         {
-            var skillName = skill.Name;
+            var skillName = skill.CodeName;
 
             if (skillRegister!.TryGetValue(skillName, out var index))
             {
                 var newIndex = index + 1;
                 skillRegister[skillName] = newIndex;
-                skill.OverrideName($"{skillName}{newIndex}");
+                skill.OverrideCodeName($"{skillName}{newIndex}");
 
                 if (string.IsNullOrWhiteSpace(skill.IconName))
                 {

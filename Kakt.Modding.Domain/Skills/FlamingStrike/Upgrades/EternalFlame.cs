@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FlamingStrike.Upgrades;
 
-public class EternalFlame : SkillUpgrade
+public class EternalFlame : FlamingStrikeUpgrade
 {
     public EternalFlame()
     {

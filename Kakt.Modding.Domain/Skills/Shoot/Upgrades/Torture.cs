@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Shoot.Upgrades;
 
-public class Torture : SkillUpgrade
+public class Torture : ShootUpgrade
 {
     public Torture()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.PoisonCut.Upgrades;
 
-public class FetidBlade : SkillUpgrade
+public class FetidBlade : PoisonCutUpgrade
 {
     public FetidBlade()
     {

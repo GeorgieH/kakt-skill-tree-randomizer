@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Champion.Upgrades;
 
-public class MindBreak : SkillUpgrade
+public class MindBreak : StrikeUpgrade
 {
     public MindBreak()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ForceBolt.Upgrades;
 
-public class MultipleTargets : SkillUpgrade
+public class MultipleTargets : ForceBoltUpgrade
 {
     public MultipleTargets()
     {

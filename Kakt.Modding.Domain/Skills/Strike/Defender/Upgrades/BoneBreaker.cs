@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Defender.Upgrades;
 
-public class BoneBreaker : SkillUpgrade
+public class BoneBreaker : StrikeUpgrade
 {
     public BoneBreaker()
     {

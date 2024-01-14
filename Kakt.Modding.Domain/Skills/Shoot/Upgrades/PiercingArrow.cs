@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Shoot.Upgrades;
 
-public class PiercingArrow : SkillUpgrade
+public class PiercingArrow : ShootUpgrade
 {
     public PiercingArrow()
     {

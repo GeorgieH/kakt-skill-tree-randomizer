@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FlamingStrike.Upgrades;
 
-public class CharredFlesh : SkillUpgrade
+public class CharredFlesh : FlamingStrikeUpgrade
 {
     public CharredFlesh()
     {

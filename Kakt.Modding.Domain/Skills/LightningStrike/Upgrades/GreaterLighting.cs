@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.LightningStrike.Upgrades;
 
-public class GreaterLighting : SkillUpgrade
+public class GreaterLighting : LightningStrikeUpgrade
 {
     public GreaterLighting()
     {

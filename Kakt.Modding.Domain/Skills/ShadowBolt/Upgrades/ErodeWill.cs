@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ShadowBolt.Upgrades;
 
-public class ErodeWill : SkillUpgrade
+public class ErodeWill : ShadowBoltUpgrade
 {
     public ErodeWill()
     {

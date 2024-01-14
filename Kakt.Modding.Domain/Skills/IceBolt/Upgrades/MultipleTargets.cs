@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.IceBolt.Upgrades;
 
-public class MultipleTargets : SkillUpgrade
+public class MultipleTargets : IceBoltUpgrade
 {
     public MultipleTargets()
     {

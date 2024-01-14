@@ -1,4 +1,5 @@
-﻿using Kakt.Modding.Application.Skills;
+﻿using Kakt.Modding.Application;
+using Kakt.Modding.Application.Skills;
 using Kakt.Modding.Domain.Skills;
 using MediatR;
 using System.Text.Json;
@@ -9,7 +10,7 @@ internal static class Bootstrapper
 {
     private static readonly string SkillsPath = @"Resources\Knight's Tale\Skills";
 
-    public static async Task Run(IMediator mediator)
+    public static async Task Run(IMediator mediator, ILogger logger)
     {
         var rootPath = AppDomain.CurrentDomain.BaseDirectory;
         var skillsPath = Path.Combine(rootPath, SkillsPath);
@@ -21,10 +22,13 @@ internal static class Bootstrapper
 
             foreach (var skill in skills)
             {
+                logger.Log($"Adding {skill.Name}...");
+
                 await mediator.Send(new AddSkillCommand(skill));
 
                 foreach (var skillUpgrade in skillUpgrades)
                 {
+                    skillUpgrade.Prerequisite = skill.ConfigurationName!;
                     await mediator.Send(new AddSkillUpgradeCommand(skill, skillUpgrade));
                 }
             }
@@ -111,7 +115,7 @@ internal static class Bootstrapper
         {
             skill.ConfigurationName = configurationName.GetString();
         }
-        else
+        else if (skill.ConfigurationName is null)
         {
             skill.ConfigurationName = skill.Name;
         }

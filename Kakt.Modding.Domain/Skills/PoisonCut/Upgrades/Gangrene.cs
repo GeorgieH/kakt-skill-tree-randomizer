@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.PoisonCut.Upgrades;
 
-public class Gangrene : SkillUpgrade
+public class Gangrene : PoisonCutUpgrade
 {
     public Gangrene()
     {

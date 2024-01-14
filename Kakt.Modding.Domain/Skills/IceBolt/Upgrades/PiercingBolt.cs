@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.IceBolt.Upgrades;
 
-public class PiercingBolt : SkillUpgrade
+public class PiercingBolt : IceBoltUpgrade
 {
     public PiercingBolt()
     {

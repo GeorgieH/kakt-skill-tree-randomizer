@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Vanguard.Upgrades;
 
-public class RelentlessStrikes : SkillUpgrade
+public class RelentlessStrikes : StrikeUpgrade
 {
     public RelentlessStrikes()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FireBolt.Upgrades;
 
-public class MultipleTargets : SkillUpgrade
+public class MultipleTargets : FireBoltUpgrade
 {
     public MultipleTargets()
     {

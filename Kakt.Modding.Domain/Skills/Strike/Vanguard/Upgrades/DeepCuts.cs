@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Vanguard.Upgrades;
 
-public class DeepCuts : SkillUpgrade
+public class DeepCuts : StrikeUpgrade
 {
     public DeepCuts()
     {

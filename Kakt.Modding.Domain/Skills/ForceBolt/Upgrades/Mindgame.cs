@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ForceBolt.Upgrades;
 
-public class Mindgame : SkillUpgrade
+public class Mindgame : ForceBoltUpgrade
 {
     public Mindgame()
     {

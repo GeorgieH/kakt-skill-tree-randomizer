@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Vanguard.Upgrades;
 
-public class PoisonedBlade : SkillUpgrade
+public class PoisonedBlade : StrikeUpgrade
 {
     public PoisonedBlade()
     {

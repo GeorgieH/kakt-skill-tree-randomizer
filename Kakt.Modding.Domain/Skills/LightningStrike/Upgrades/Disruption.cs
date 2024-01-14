@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.LightningStrike.Upgrades;
 
-public class Disruption : SkillUpgrade
+public class Disruption : LightningStrikeUpgrade
 {
     public Disruption()
     {

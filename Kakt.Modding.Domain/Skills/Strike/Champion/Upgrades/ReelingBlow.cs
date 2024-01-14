@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Champion.Upgrades;
 
-public class ReelingBlow : SkillUpgrade
+public class ReelingBlow : StrikeUpgrade
 {
     public ReelingBlow()
     {

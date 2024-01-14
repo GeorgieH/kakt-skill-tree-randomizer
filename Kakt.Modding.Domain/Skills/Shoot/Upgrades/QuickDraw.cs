@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Shoot.Upgrades;
 
-public class QuickDraw : SkillUpgrade
+public class QuickDraw : ShootUpgrade
 {
     public QuickDraw()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Sage.Upgrades;
 
-public class ChillingTouch : SkillUpgrade
+public class ChillingTouch : StrikeUpgrade
 {
     public ChillingTouch()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Sage.Upgrades;
 
-public class Splinter : SkillUpgrade
+public class Splinter : StrikeUpgrade
 {
     public Splinter()
     {

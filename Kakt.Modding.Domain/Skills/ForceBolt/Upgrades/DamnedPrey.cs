@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ForceBolt.Upgrades;
 
-public class DamnedPrey : SkillUpgrade
+public class DamnedPrey : ForceBoltUpgrade
 {
     public DamnedPrey()
     {

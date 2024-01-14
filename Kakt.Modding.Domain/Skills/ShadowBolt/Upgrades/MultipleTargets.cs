@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.ShadowBolt.Upgrades;
 
-public class MultipleTargets : SkillUpgrade
+public class MultipleTargets : ShadowBoltUpgrade
 {
     public MultipleTargets()
     {

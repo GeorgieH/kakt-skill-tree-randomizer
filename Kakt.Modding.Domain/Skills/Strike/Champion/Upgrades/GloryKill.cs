@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Champion.Upgrades;
 
-public class GloryKill : SkillUpgrade
+public class GloryKill : StrikeUpgrade
 {
     public GloryKill()
     {

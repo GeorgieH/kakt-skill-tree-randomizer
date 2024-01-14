@@ -5,7 +5,8 @@ public interface ISkill
     string ConfigurationName { get; set; }
     string? IconName { get; set; }
     string Name { get; }
+    string CodeName { get; }
     SkillTier Tier { get; }
-    string GetNameOrOverride();
-    void OverrideName(string nameOverride);
+    string GetCodeNameOrOverride();
+    void OverrideCodeName(string nameOverride);
 }

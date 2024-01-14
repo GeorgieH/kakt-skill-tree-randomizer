@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Vanguard.Upgrades;
 
-public class FinishingBlow : SkillUpgrade
+public class FinishingBlow : StrikeUpgrade
 {
     public FinishingBlow()
     {

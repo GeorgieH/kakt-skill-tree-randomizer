@@ -1,7 +1,7 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Shoot.Upgrades;
 
 
-public class Thunder : SkillUpgrade
+public class Thunder : ShootUpgrade
 {
     public Thunder()
     {

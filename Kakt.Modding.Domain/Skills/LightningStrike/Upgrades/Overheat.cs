@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.LightningStrike.Upgrades;
 
-public class Overheat : SkillUpgrade
+public class Overheat : LightningStrikeUpgrade
 {
     public Overheat()
     {

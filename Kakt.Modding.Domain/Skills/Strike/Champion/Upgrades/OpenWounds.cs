@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Champion.Upgrades;
 
-public class OpenWounds : SkillUpgrade
+public class OpenWounds : StrikeUpgrade
 {
     public OpenWounds()
     {

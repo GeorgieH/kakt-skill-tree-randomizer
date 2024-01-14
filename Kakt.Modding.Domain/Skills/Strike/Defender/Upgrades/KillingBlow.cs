@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Defender.Upgrades;
 
-public class KillingBlow : SkillUpgrade
+public class KillingBlow : StrikeUpgrade
 {
     public KillingBlow()
     {

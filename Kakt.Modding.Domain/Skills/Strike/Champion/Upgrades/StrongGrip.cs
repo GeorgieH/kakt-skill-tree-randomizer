@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Strike.Champion.Upgrades;
 
-public class StrongGrip : SkillUpgrade
+public class StrongGrip : StrikeUpgrade
 {
     public StrongGrip()
     {

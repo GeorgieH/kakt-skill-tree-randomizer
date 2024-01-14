@@ -3,7 +3,7 @@ namespace Kakt.Modding.Domain.Skills;
 
 public class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
 {
-    private string? nameOverride;
+    private string? codeNameOverride;
     private string? prerequisiteOverride;
 
     public string Name { get; set; }
@@ -17,6 +17,7 @@ public class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
     public int LevelLimit { get; set; }
     public Position2D IconPosition { get; set; }
     public int Cost => SkillCosts.One;
+    public string Prerequisite { get; set; }
 
     public SkillUpgrade Copy()
     {
@@ -26,6 +27,7 @@ public class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
             CodeName = CodeName,
             Effects = Effects,
             PrerequisiteEffects = PrerequisiteEffects,
+            Prerequisite = Prerequisite,
         };
     }
 
@@ -45,19 +47,19 @@ public class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
         return HashCode.Combine(Name);
     }
 
-    public string GetNameOrOverride()
+    public string GetCodeNameOrOverride()
     {
-        return string.IsNullOrWhiteSpace(nameOverride) ? Name : nameOverride;
+        return string.IsNullOrWhiteSpace(codeNameOverride) ? CodeName : codeNameOverride;
     }
 
     public string GetPrerequisiteOrOverride()
     {
-        return string.IsNullOrWhiteSpace(prerequisiteOverride) ? ConfigurationName : prerequisiteOverride;
+        return string.IsNullOrWhiteSpace(prerequisiteOverride) ? Prerequisite : prerequisiteOverride;
     }
 
-    public void OverrideName(string nameOverride)
+    public void OverrideCodeName(string nameOverride)
     {
-        this.nameOverride = nameOverride;
+        this.codeNameOverride = nameOverride;
     }
 
     public void OverridePrerequisite(string prerequisiteOverride)

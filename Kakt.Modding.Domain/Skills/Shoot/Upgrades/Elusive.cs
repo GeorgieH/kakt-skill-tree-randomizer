@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.Shoot.Upgrades;
 
-public class Elusive : SkillUpgrade
+public class Elusive : ShootUpgrade
 {
     public Elusive()
     {

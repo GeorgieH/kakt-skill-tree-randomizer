@@ -1,6 +1,6 @@
 ﻿namespace Kakt.Modding.Domain.Skills.FireBolt.Upgrades;
 
-public class Overheat : SkillUpgrade
+public class Overheat : FireBoltUpgrade
 {
     public Overheat()
     {
