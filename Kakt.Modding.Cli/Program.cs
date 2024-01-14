@@ -4,6 +4,7 @@ using Kakt.Modding.Application.Randomization;
 using Kakt.Modding.Application.Skills;
 using Kakt.Modding.Cli;
 using Kakt.Modding.Configuration;
+using Kakt.Modding.Domain.Heroes;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -55,15 +56,18 @@ builder.Services.AddMediatR(config =>
 
 using var host = builder.Build();
 
-var mediator = host.Services.GetRequiredService<IMediator>();
+var logger = host.Services.GetRequiredService<ILogger>();
+logger.Log("Initializing...");
 
-var randomizationConfig = GetRandomizationConfiguration();
-var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig)!;
+var mediator = host.Services.GetRequiredService<IMediator>();
 
 await Bootstrapper.Run(mediator);
 
 var heroRepository = host.Services.GetRequiredService<IHeroRepository>();
 var heroes = heroRepository.GetAll();
+
+var randomizationConfig = GetRandomizationConfiguration();
+var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig)!;
 
 foreach (var hero in heroes)
 {
@@ -85,6 +89,11 @@ var heroesOutputPath = Path.Combine(outputPath, "Cfg", "Actors", "Heroes");
 
 foreach (var hero in heroes)
 {
+    if (hero is SirMordred)
+    {
+        continue;
+    }
+
     WriteDocument(heroesOutputPath, FileSystemHelpers.GetHeroConfigurationFileName(hero), documentRepository.GetHeroDocument(hero));
 }
 

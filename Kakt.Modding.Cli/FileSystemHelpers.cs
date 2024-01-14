@@ -12,7 +12,7 @@ public static class FileSystemHelpers
 
     public static string GetCfgPath()
     {
-        return Path.Combine(GetLocalPath(), "Cfg");
+        return Path.Combine(GetLocalPath(), "Resources", "Knight's Tale", "Cfg");
     }
 
     public static string GetOutputPath()

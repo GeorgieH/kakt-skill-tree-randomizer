@@ -77,7 +77,11 @@ public class RandomSkillPointDistributor
             foreach (var skillUpgrade in skill!.Upgrades)
             {
                 skillPool.Add(skillUpgrade);
-                upgradeToSkillLookup.Add(skillUpgrade, skill);
+
+                if (!upgradeToSkillLookup.ContainsKey(skillUpgrade))
+                {
+                    upgradeToSkillLookup.Add(skillUpgrade, skill);
+                }
             }
         }
 

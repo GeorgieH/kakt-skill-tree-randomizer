@@ -39,6 +39,7 @@ public class DocumentRepository : IDocumentRepository
         }
 
         document = CfgDocument.Parse(path);
+        documents.Add(path, document);
 
         return document;
     }

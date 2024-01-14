@@ -4,7 +4,7 @@ public class SkillTree
 {
     private readonly Skill?[] skills = new Skill?[20];
 
-    public IEnumerable<Skill?> Skills => skills;
+    public IEnumerable<Skill?> Skills => skills.Where(s => s is not null);
 
     public IEnumerable<Skill?> UpgradablePassiveSkills =>
     [

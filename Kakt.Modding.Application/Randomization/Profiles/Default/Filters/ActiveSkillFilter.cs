@@ -22,7 +22,6 @@ public class ActiveSkillFilter : ISkillSelector
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
         var existingSkills = input.Hero.SkillTree.Skills
-            .Where(s => s is not null)
             .Where(s => s!.Type == SkillType.Active);
 
         input.IncludedSkills = input.IncludedSkills

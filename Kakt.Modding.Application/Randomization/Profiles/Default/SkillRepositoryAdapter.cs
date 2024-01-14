@@ -14,39 +14,40 @@ public class SkillRepositoryAdapter
 
     public IEnumerable<Skill> GetArcanistSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Arcanist);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Arcanist);
     }
 
     public IEnumerable<Skill> GetChampionSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Champion);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Champion);
     }
 
     public IEnumerable<Skill> GetDefenderSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Defender);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Defender);
     }
 
     public IEnumerable<Skill> GetMarksmanSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Marksman);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Marksman);
     }
 
     public IEnumerable<Skill> GetSageSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Sage);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Sage);
     }
 
     public IEnumerable<Skill> GetVanguardSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Vanguard);
+        return GetSkills(profile.SkillPools.Common, profile.SkillPools.Vanguard);
     }
 
-    private IEnumerable<Skill> GetSkills(DefaultRandomizationProfileSkillPool skillPool)
+    private IEnumerable<Skill> GetSkills(
+        DefaultRandomizationProfileSkillPool commonSkillPool, DefaultRandomizationProfileSkillPool heroClassSkillPool)
     {
         return this.skillRepository
             .AsEnumerable()
-            .Where(s => skillPool.Include.Contains(s.Name))
-            .Where(s => !skillPool.Exclude.Contains(s.Name));
+            .Where(s => commonSkillPool.Include.Contains(s.Name) || heroClassSkillPool.Include.Contains(s.Name))
+            .Where(s => !heroClassSkillPool.Exclude.Contains(s.Name));
     }
 }

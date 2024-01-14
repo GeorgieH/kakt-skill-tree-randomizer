@@ -2,6 +2,6 @@
 
 public class DefaultRandomizationProfileSkillPool
 {
-    public HashSet<string> Include { get; set; }
-    public HashSet<string> Exclude { get; set; }
+    public HashSet<string> Include { get; set; } = [];
+    public HashSet<string> Exclude { get; set; } = [];
 }

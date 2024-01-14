@@ -21,8 +21,6 @@ public class HeroSkillFilter : ISkillSelector
             case FaerieKnight:
                 SetSkillPool(input, input.Profile.SkillPools.FaerieKnight);
                 break;
-            default:
-                throw new NotImplementedException();
         }
 
         return this.next.SelectSkill(input);

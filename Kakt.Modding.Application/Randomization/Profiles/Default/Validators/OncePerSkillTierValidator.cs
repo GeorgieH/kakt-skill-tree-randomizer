@@ -19,7 +19,6 @@ public class OncePerSkillTierValidator : ISkillSelector
         }
 
         var exists = input.Hero.SkillTree.Skills
-            .Where(s => s is not null)
             .Where(s => s!.Tier == input.SkillTier)
             .Any(output.Skill.Equals);
 

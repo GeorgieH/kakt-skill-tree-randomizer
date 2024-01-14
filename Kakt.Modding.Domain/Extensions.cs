@@ -8,7 +8,6 @@ public static class Extensions
     public static bool CanCauseEffects(this Hero hero, Effects effects)
     {
         return hero.SkillTree.Skills
-            .Where(s => s is not null)
             .Any(s => s!.CanCauseEffects(effects));
     }
 
@@ -40,7 +39,6 @@ public static class Extensions
     public static bool HasSkillAttributes(this Hero hero, SkillAttributes skillAttributes)
     {
         return hero.SkillTree.Skills
-            .Where(s => s is not null)
             .Any(s => s!.HasSkillAttributes(skillAttributes));
     }
 
