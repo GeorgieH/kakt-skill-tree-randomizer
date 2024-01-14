@@ -2,14 +2,6 @@
 
 public class OncePerSkillTierValidator : ISkillSelector
 {
-    private static readonly HashSet<string> Skills =
-    [
-        SkillNames.Robust,
-        SkillNames.MarksmanScout,
-        SkillNames.VanguardScout,
-        SkillNames.Strength
-    ];
-
     private readonly ISkillSelector next;
 
     public OncePerSkillTierValidator(ISkillSelector next)
@@ -21,7 +13,7 @@ public class OncePerSkillTierValidator : ISkillSelector
     {
         var output = this.next.SelectSkill(input);
 
-        if (!Skills.Contains(output.Skill.Name))
+        if (!input.Profile.Rules.OncePerSkillTier.Contains(output.Skill.Name))
         {
             return output;
         }

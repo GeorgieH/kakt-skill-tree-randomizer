@@ -1,0 +1,6 @@
+{
+  "Name": "ThunderStorm",
+  "CodeName": "Hero_sage__thunderStorm",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell", "Lightning", "Area" ]
+}

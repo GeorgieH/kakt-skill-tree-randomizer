@@ -13,7 +13,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Kakt.Modding.Configuration\Kakt.Modding.Configuration.csproj" />
     <ProjectReference Include="..\Kakt.Modding.Domain\Kakt.Modding.Domain.csproj" />
-    <ProjectReference Include="..\Kakt.Modding.Randomization\Kakt.Modding.Randomization.csproj" />
   </ItemGroup>
 
 </Project>

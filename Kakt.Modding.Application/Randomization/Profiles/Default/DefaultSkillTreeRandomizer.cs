@@ -148,8 +148,9 @@ public class DefaultSkillTreeRandomizer
     {
         var skillSelector =
             new HeroClassSkillFilter(
+            new HeroSkillFilter(
             new ActiveSkillFilter(
-            new RandomSkillSelector()));
+            new RandomSkillSelector())));
 
         var input = new SkillSelectorInput(
             hero, skillTier, skillNumber, this.skillRepository, this.randomNumberGeneratorService, profile);
@@ -164,13 +165,14 @@ public class DefaultSkillTreeRandomizer
     {
         var skillSelector =
             new HeroClassSkillFilter(
+            new HeroSkillFilter(
             new UpgradablePassiveSkillFilter(
             new OncePerSkillTreeValidator(
             new OncePerSkillTierValidator(
             new SkillAttributeValidator(
             new EffectValidator(
             new ArmourerValidator(
-            new RandomSkillSelector())))))));
+            new RandomSkillSelector()))))))));
 
         var input = new SkillSelectorInput(
             hero, skillTier, skillNumber, this.skillRepository, this.randomNumberGeneratorService, profile);
@@ -185,13 +187,14 @@ public class DefaultSkillTreeRandomizer
     {
         var skillSelector =
             new HeroClassSkillFilter(
+            new HeroSkillFilter(
             new PassiveSkillFilter(
             new OncePerSkillTreeValidator(
             new OncePerSkillTierValidator(
             new SkillAttributeValidator(
             new EffectValidator(
             new ArmourerValidator(
-            new RandomSkillSelector())))))));
+            new RandomSkillSelector()))))))));
 
         var input = new SkillSelectorInput(
             hero, skillTier, skillNumber, this.skillRepository, this.randomNumberGeneratorService, profile);

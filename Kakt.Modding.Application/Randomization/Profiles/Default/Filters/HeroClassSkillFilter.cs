@@ -2,7 +2,7 @@
 
 namespace Kakt.Modding.Application.Randomization.Profiles.Default.Filters;
 
-public partial class HeroClassSkillFilter : ISkillSelector
+public class HeroClassSkillFilter : ISkillSelector
 {
     private readonly ISkillSelector next;
 

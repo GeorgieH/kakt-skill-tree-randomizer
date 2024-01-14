@@ -14,38 +14,39 @@ public class SkillRepositoryAdapter
 
     public IEnumerable<Skill> GetArcanistSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Arcanist.Include);
+        return GetSkills(profile.SkillPools.Arcanist);
     }
 
     public IEnumerable<Skill> GetChampionSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Champion.Include);
+        return GetSkills(profile.SkillPools.Champion);
     }
 
     public IEnumerable<Skill> GetDefenderSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Defender.Include);
+        return GetSkills(profile.SkillPools.Defender);
     }
 
     public IEnumerable<Skill> GetMarksmanSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Marksman.Include);
+        return GetSkills(profile.SkillPools.Marksman);
     }
 
     public IEnumerable<Skill> GetSageSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Sage.Include);
+        return GetSkills(profile.SkillPools.Sage);
     }
 
     public IEnumerable<Skill> GetVanguardSkills(DefaultRandomizationProfile profile)
     {
-        return GetSkills(profile.SkillPools.Vanguard.Include);
+        return GetSkills(profile.SkillPools.Vanguard);
     }
 
-    private IEnumerable<Skill> GetSkills(HashSet<string> skillPool)
+    private IEnumerable<Skill> GetSkills(DefaultRandomizationProfileSkillPool skillPool)
     {
         return this.skillRepository
             .AsEnumerable()
-            .Where(x => skillPool.Contains(x.Name));
+            .Where(s => skillPool.Include.Contains(s.Name))
+            .Where(s => !skillPool.Exclude.Contains(s.Name));
     }
 }

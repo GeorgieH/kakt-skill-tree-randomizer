@@ -1,0 +1,6 @@
+{
+  "Name": "Teleport",
+  "CodeName": "Hero_arcanist__teleport",
+  "Type": "Active",
+  "Attributes": [ "Movement", "Ranged", "Spell" ]
+}

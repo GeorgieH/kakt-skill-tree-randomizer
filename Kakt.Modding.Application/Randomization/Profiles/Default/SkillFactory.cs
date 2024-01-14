@@ -34,6 +34,8 @@ public class SkillFactory : ISkillFactory
 
     public Skill Get(Skill skill, SkillTier skillTier, int skillNumber, bool starter = false, bool hasUpgrades = true)
     {
+        skill = skill.Copy();
+
         skill.Starter = starter;
         skill.Tier = skillTier;
 
@@ -74,6 +76,7 @@ public class SkillFactory : ISkillFactory
     {
         var skillUpgrades = this.skillUpgradeRepository
             .Get(skill)
+            .Select(s => s.Copy())
             .ToList();
 
         var random = this.randomNumberGeneratorService.GetRandom();

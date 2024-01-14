@@ -6,8 +6,8 @@ public interface ISkillRepository
 {
     IEnumerable<Skill> AsEnumerable();
     void Add(Skill skill);
-    Skill Get(Skill skill);
     Skill Get(Type skillType);
+    IEnumerable<Skill> GetAll(IEnumerable<string> skillNames);
 }
 
 public class SkillRepository : ISkillRepository
@@ -24,13 +24,13 @@ public class SkillRepository : ISkillRepository
         skills.Add(skill);
     }
 
-    public Skill Get(Skill skill)
-    {
-        return skills.First(skill.Equals).Copy();
-    }
-
     public Skill Get(Type skillType)
     {
-        return skills.First(x => x.GetType() == skillType).Copy();
+        return skills.First(x => x.GetType() == skillType);
+    }
+
+    public IEnumerable<Skill> GetAll(IEnumerable<string> skillNames)
+    {
+        return skills.Where(s => skillNames.Any(s.Name.Equals));
     }
 }

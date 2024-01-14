@@ -26,13 +26,6 @@ public class SkillUpgradeRepository : ISkillUpgradeRepository
 
     public IEnumerable<SkillUpgrade> Get(Skill skill)
     {
-        var result = new List<SkillUpgrade>();
-        
-        foreach (var skillUpgrade in skillUpgrades[skill])
-        {
-            result.Add(skillUpgrade.Copy());
-        }
-
-        return result;
+        return skillUpgrades[skill].ToList();
     }
 }

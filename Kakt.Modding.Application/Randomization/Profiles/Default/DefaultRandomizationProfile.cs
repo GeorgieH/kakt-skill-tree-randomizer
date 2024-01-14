@@ -6,6 +6,7 @@ namespace Kakt.Modding.Application.Randomization.Profiles.Default;
 public class DefaultRandomizationProfile : ISkillTreeRandomizer
 {
     public DefaultRandomizationProfileFlags Flags { get; set; }
+    public DefaultRandomizationProfileRules Rules { get; set; }
     public DefaultRandomizationProfileSkillPools SkillPools { get; set; }
 
     public void SetRandomSkillTree(

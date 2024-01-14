@@ -28,7 +28,7 @@ public class ActiveSkillFilter : ISkillSelector
         input.IncludedSkills = input.IncludedSkills
             .Where(s => s.Type == SkillType.Active)
             .Except(existingSkills)
-            .Where(s => RespectsRandomizationProfile(input.Hero, s, input.SkillNumber, input.Profile))!;
+            .Where(s => RespectsRandomizationProfile(input.Hero, s!, input.SkillNumber, input.Profile))!;
 
         return this.next.SelectSkill(input);
     }
@@ -40,23 +40,31 @@ public class ActiveSkillFilter : ISkillSelector
         {
             if (hero is Vanguard)
             {
-                if (profile.Flags.VanguardsAlwaysGetTierOneHide)
-                {
-                    return !skill.Name.Equals(SkillNames.Hide);
-                }
-
                 if (profile.Flags.VanguardsAlwaysGetTierOneMovementSkill)
                 {
                     return VanguardMovementSkills.Contains(skill.Name);
+                }
+
+                if (profile.Flags.VanguardsAlwaysGetTierOneHide)
+                {
+                    return !skill.Name.Equals(SkillNames.Hide);
                 }
             }
         }
 
         if (skillNumber == 3)
         {
-            if (hero is Vanguard && profile.Flags.VanguardsAlwaysGetTierOneHide)
+            if (hero is Vanguard)
             {
-                return !skill.Name.Equals(SkillNames.Hide);
+                if (profile.Flags.VanguardsAlwaysGetTierOneTrapSkill)
+                {
+                    return skill.Attributes.HasFlag(SkillAttributes.Trap);
+                }
+
+                if (profile.Flags.VanguardsAlwaysGetTierOneHide)
+                {
+                    return !skill.Name.Equals(SkillNames.Hide);
+                }
             }
         }
 
