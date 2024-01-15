@@ -25,6 +25,7 @@ public class SkillUpgrade : ISkill, IEquatable<SkillUpgrade?>
         {
             Name = Name,
             CodeName = CodeName,
+            ConfigurationName = ConfigurationName,
             Effects = Effects,
             PrerequisiteEffects = PrerequisiteEffects,
             Prerequisite = Prerequisite,

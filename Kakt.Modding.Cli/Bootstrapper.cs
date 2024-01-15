@@ -28,8 +28,9 @@ internal static class Bootstrapper
 
                 foreach (var skillUpgrade in skillUpgrades)
                 {
-                    skillUpgrade.Prerequisite = skill.ConfigurationName!;
-                    await mediator.Send(new AddSkillUpgradeCommand(skill, skillUpgrade));
+                    var skillUpgradeCopy = skillUpgrade.Copy();
+                    skillUpgradeCopy.Prerequisite = skill.ConfigurationName!;
+                    await mediator.Send(new AddSkillUpgradeCommand(skill, skillUpgradeCopy));
                 }
             }
         }
