@@ -42,61 +42,70 @@ static void WriteDocument(string outputPath, string fileName, CfgDocument docume
     FileSystemHelpers.WriteFile(Path.Combine(outputPath, fileName), document.ToString());
 }
 
-var builder = Host.CreateApplicationBuilder(args);
-
-builder.Services.AddSingleton<IHeroRepository, HeroRepository>();
-builder.Services.AddSingleton<ISkillRepository, SkillRepository>();
-builder.Services.AddSingleton<ISkillUpgradeRepository, SkillUpgradeRepository>();
-builder.Services.AddSingleton<IRandomNumberGeneratorService, RandomNumberGeneratorService>();
-builder.Services.AddSingleton<IDocumentRepository, DocumentRepository>();
-builder.Services.AddSingleton<ILogger, ConsoleLogger>();
-
-builder.Services.AddMediatR(config =>
-    config.RegisterServicesFromAssembly(typeof(GetRandomSkillTreeConfigurationCommand).Assembly));
-
-using var host = builder.Build();
-
-var logger = host.Services.GetRequiredService<ILogger>();
-logger.Log("Initializing...");
-
-var mediator = host.Services.GetRequiredService<IMediator>();
-
-await Bootstrapper.Run(mediator, logger);
-
-var heroRepository = host.Services.GetRequiredService<IHeroRepository>();
-var heroes = heroRepository.GetAll();
-
-var randomizationConfig = GetRandomizationConfiguration();
-var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig)!;
-
-foreach (var hero in heroes)
+try
 {
-    await mediator.Send(new GetRandomSkillTreeConfigurationCommand(hero, config.Profiles.Default));
-}
+    var builder = Host.CreateApplicationBuilder(args);
 
-var outputPath = FileSystemHelpers.GetOutputPath();
+    builder.Services.AddSingleton<IHeroRepository, HeroRepository>();
+    builder.Services.AddSingleton<ISkillRepository, SkillRepository>();
+    builder.Services.AddSingleton<ISkillUpgradeRepository, SkillUpgradeRepository>();
+    builder.Services.AddSingleton<IRandomNumberGeneratorService, RandomNumberGeneratorService>();
+    builder.Services.AddSingleton<IDocumentRepository, DocumentRepository>();
+    builder.Services.AddSingleton<ILogger, ConsoleLogger>();
 
-if (Directory.Exists(outputPath))
-{
-    Directory.Delete(outputPath, true);
-}
+    builder.Services.AddMediatR(config =>
+        config.RegisterServicesFromAssembly(typeof(GetRandomSkillTreeConfigurationCommand).Assembly));
 
-var documentRepository = host.Services.GetRequiredService<IDocumentRepository>();
+    using var host = builder.Build();
 
-WriteDocument(Path.Combine(outputPath, "Cfg", "Config"), FileNames.SkillTree, documentRepository.GetSkillTreeDocument());
+    var logger = host.Services.GetRequiredService<ILogger>();
+    logger.Log("Initializing...");
 
-var heroesOutputPath = Path.Combine(outputPath, "Cfg", "Actors", "Heroes");
+    var mediator = host.Services.GetRequiredService<IMediator>();
 
-foreach (var hero in heroes)
-{
-    if (hero is SirMordred)
+    await Bootstrapper.Run(mediator, logger);
+
+    var heroRepository = host.Services.GetRequiredService<IHeroRepository>();
+    var heroes = heroRepository.GetAll();
+
+    var randomizationConfig = GetRandomizationConfiguration();
+    var config = JsonSerializer.Deserialize<RandomizationConfiguration>(randomizationConfig)!;
+
+    foreach (var hero in heroes)
     {
-        continue;
+        await mediator.Send(new GetRandomSkillTreeConfigurationCommand(hero, config.Profiles.Default));
     }
 
-    WriteDocument(heroesOutputPath, FileSystemHelpers.GetHeroConfigurationFileName(hero), documentRepository.GetHeroDocument(hero));
+    var outputPath = FileSystemHelpers.GetOutputPath();
+
+    if (Directory.Exists(outputPath))
+    {
+        Directory.Delete(outputPath, true);
+    }
+
+    var documentRepository = host.Services.GetRequiredService<IDocumentRepository>();
+
+    WriteDocument(Path.Combine(outputPath, "Cfg", "Config"), FileNames.SkillTree, documentRepository.GetSkillTreeDocument());
+
+    var heroesOutputPath = Path.Combine(outputPath, "Cfg", "Actors", "Heroes");
+
+    foreach (var hero in heroes)
+    {
+        if (hero is SirMordred)
+        {
+            continue;
+        }
+
+        WriteDocument(heroesOutputPath, FileSystemHelpers.GetHeroConfigurationFileName(hero), documentRepository.GetHeroDocument(hero));
+    }
+
+    WriteDocument(heroesOutputPath, FileNames.MerlinHermit, documentRepository.GetHermitDocument());
+
+    Exit("Done!");
 }
-
-WriteDocument(heroesOutputPath, FileNames.MerlinHermit, documentRepository.GetHermitDocument());
-
-Exit("Done!");
+catch (Exception ex)
+{
+    var path = Path.Combine(FileSystemHelpers.GetLocalPath(), $"debug_log_{DateTime.Now:yyyyMMddHHmmss}.txt");
+    FileSystemHelpers.WriteFile(path, ex.ToString());
+    Exit($"ERROR: An unexpected error occurred. Debug log has been created at {path}");
+}

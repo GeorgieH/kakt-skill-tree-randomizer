@@ -44,6 +44,11 @@ public class ActiveSkillFilter : ISkillSelector
                     return VanguardMovementSkills.Contains(skill.Name);
                 }
 
+                if (profile.Flags.VanguardsAlwaysGetTierOneTrapSkill)
+                {
+                    return !skill.Attributes.HasFlag(SkillAttributes.Trap);
+                }
+
                 if (profile.Flags.VanguardsAlwaysGetTierOneHide)
                 {
                     return !skill.Name.Equals(SkillNames.Hide);
