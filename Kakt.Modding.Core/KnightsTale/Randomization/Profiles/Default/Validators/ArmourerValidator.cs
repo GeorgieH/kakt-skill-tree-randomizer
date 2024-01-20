@@ -19,7 +19,7 @@ public class ArmourerValidator : ISkillSelector
         {
             if (input.Hero is not Champion
                 && input.Hero is not Defender
-                && !input.Hero.SkillTree.Skills.Any(s => SkillNames.Ironclad.Equals(s!.Name)))
+                && !input.Hero.SkillTree.Skills.Select(s => s.Name).Any(SkillNames.Ironclad.Equals))
             {
                 throw new InvalidSkillSelectionException(output.SkillInfo);
             }

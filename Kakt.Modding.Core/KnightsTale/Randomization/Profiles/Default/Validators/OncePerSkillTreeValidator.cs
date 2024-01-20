@@ -18,7 +18,9 @@ public class OncePerSkillTreeValidator : ISkillSelector
             return output;
         }
 
-        var exists = input.Hero.SkillTree.Skills.Any(output.SkillInfo.Equals);
+        var exists = input.Hero.SkillTree.Skills
+            .Select(s => s.Info)
+            .Any(output.SkillInfo.Equals);
 
         if (exists)
         {
