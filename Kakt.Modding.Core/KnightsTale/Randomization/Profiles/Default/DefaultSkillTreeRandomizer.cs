@@ -20,6 +20,7 @@ namespace Kakt.Modding.Core.KnightsTale.Randomization.Profiles.Default;
 public class DefaultSkillTreeRandomizer : ISkillTreeRandomizer<DefaultRandomizationProfile>
 {
     private readonly IContainer container;
+    private readonly ILogger logger;
     private readonly IHeroRepository heroRepository;
     private readonly ISkillInfoRepository skillInfoRepository;
     private readonly ISkillUpgradeInfoRepository skillUpgradeInfoRepository;
@@ -27,12 +28,14 @@ public class DefaultSkillTreeRandomizer : ISkillTreeRandomizer<DefaultRandomizat
 
     public DefaultSkillTreeRandomizer(
         IContainer container,
+        ILogger logger,
         IHeroRepository heroRepository,
         ISkillInfoRepository skillInfoRepository,
         ISkillUpgradeInfoRepository skillUpgradeInfoRepository,
         ISkillFactory skillFactory)
     {
         this.container = container;
+        this.logger = logger;
         this.heroRepository = heroRepository;
         this.skillInfoRepository = skillInfoRepository;
         this.skillUpgradeInfoRepository = skillUpgradeInfoRepository;
@@ -48,6 +51,8 @@ public class DefaultSkillTreeRandomizer : ISkillTreeRandomizer<DefaultRandomizat
 
         foreach (var hero in heroes)
         {
+            logger.Log($"Randomizing {hero.GetType().Name}...");
+
             hero.SkillTree.TierOneActiveSkillOne = GetBasicAttack(hero);
             hero.SkillTree.TierOneActiveSkillTwo = GetActiveSkill(hero, SkillTier.One, 2, profile);
             hero.SkillTree.TierOneActiveSkillThree = GetActiveSkill(hero, SkillTier.One, 3, profile, starter: true);

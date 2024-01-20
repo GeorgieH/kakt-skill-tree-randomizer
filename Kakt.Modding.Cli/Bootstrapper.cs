@@ -26,7 +26,7 @@ internal static class Bootstrapper
     private static void RegisterDependencies(IContainer container)
     {
         container.Register<IDocumentRepository, DocumentRepository>(Reuse.Singleton);
-        container.Register<IFileSystemService, IFileSystemService>(Reuse.Singleton);
+        container.Register<IFileSystemService, FileSystemService>(Reuse.Singleton);
         container.Register<IHeroConfigurationWriter, HeroConfigurationWriter>(Reuse.Singleton);
         container.Register<IHeroRepository, HeroRepository>(Reuse.Singleton);
         container.Register<ILogger, ConsoleLogger>(Reuse.Singleton);
