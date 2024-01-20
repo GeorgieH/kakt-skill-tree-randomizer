@@ -1,7 +1,4 @@
-﻿using Kakt.Modding.Domain.Heroes;
-using Kakt.Modding.Domain.Skills;
-
-namespace Kakt.Modding.Configuration;
+﻿namespace Kakt.Modding.Configuration;
 
 public static class CfgObjectFactory
 {

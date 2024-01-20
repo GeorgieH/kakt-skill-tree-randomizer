@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Kakt.Modding.Domain\Kakt.Modding.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

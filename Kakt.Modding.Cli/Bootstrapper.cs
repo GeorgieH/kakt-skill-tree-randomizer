@@ -1,209 +1,85 @@
-﻿using Kakt.Modding.Application;
-using Kakt.Modding.Application.Skills;
-using Kakt.Modding.Domain.Skills;
-using MediatR;
-using System.Text.Json;
+﻿using DryIoc;
+using Kakt.Modding.Cli.KnightsTale;
+using Kakt.Modding.Core;
+using Kakt.Modding.Core.KnightsTale.Heroes;
+using Kakt.Modding.Core.KnightsTale.Randomization;
+using Kakt.Modding.Core.KnightsTale.Randomization.Profiles.Default;
+using Kakt.Modding.Core.KnightsTale.Randomization.Profiles.Default.Filters;
+using Kakt.Modding.Core.KnightsTale.Randomization.Profiles.Default.Validators;
+using Kakt.Modding.Core.KnightsTale.Skills;
 
 namespace Kakt.Modding.Cli;
 
 internal static class Bootstrapper
 {
-    private static readonly string SkillsPath = @"Resources\Knight's Tale\Skills";
-
-    public static async Task Run(IMediator mediator, ILogger logger)
+    public static void Run(IContainer container)
     {
-        var rootPath = AppDomain.CurrentDomain.BaseDirectory;
-        var skillsPath = Path.Combine(rootPath, SkillsPath);
+        RegisterDependencies(container);
 
-        foreach (var directory in Directory.EnumerateDirectories(skillsPath))
-        {
-            var skills = GetSkills(directory);
-            var skillUpgrades = GetSkillUpgrades(directory);
+        var logger = container.Resolve<ILogger>();
+        logger.Log("Initializing...");
 
-            foreach (var skill in skills)
-            {
-                logger.Log($"Adding {skill.Name}...");
-
-                await mediator.Send(new AddSkillCommand(skill));
-
-                foreach (var skillUpgrade in skillUpgrades)
-                {
-                    var skillUpgradeCopy = skillUpgrade.Copy();
-                    skillUpgradeCopy.Prerequisite = skill.ConfigurationName!;
-                    await mediator.Send(new AddSkillUpgradeCommand(skill, skillUpgradeCopy));
-                }
-            }
-        }
+        var skillInfoFactory = container.Resolve<ISkillInfoFactory>();
+        skillInfoFactory.Initialize();
     }
 
-    private static IEnumerable<Skill> GetSkills(string directory)
+    private static void RegisterDependencies(IContainer container)
     {
-        var skillFiles = new Queue<string>(Directory.EnumerateFiles(directory));
-        var skills = new HashSet<Skill>();
+        container.Register<IDocumentRepository, DocumentRepository>(Reuse.Singleton);
+        container.Register<IFileSystemService, IFileSystemService>(Reuse.Singleton);
+        container.Register<IHeroConfigurationWriter, HeroConfigurationWriter>(Reuse.Singleton);
+        container.Register<IHeroRepository, HeroRepository>(Reuse.Singleton);
+        container.Register<ILogger, ConsoleLogger>(Reuse.Singleton);
+        container.Register<IRandomizationConfigurationService, RandomizationConfigurationService>(Reuse.Singleton);
+        container.Register<IRandomNumberGeneratorService, RandomNumberGeneratorService>(Reuse.Singleton);
+        container.Register<IRandomSkillPointDistributor, RandomSkillPointDistributor>(Reuse.Singleton);
+        container.Register<ISkillFactory, SkillFactory>(Reuse.Singleton);
+        container.Register<ISkillInfoFactory, SkillInfoFactory>(Reuse.Singleton);
+        container.Register<ISkillInfoRepository, SkillInfoRepository>(Reuse.Singleton);
+        container.Register<ISkillNameDeduplicator, SkillNameDeduplicator>(Reuse.Singleton);
+        container.Register<ISkillTreeRandomizer<DefaultRandomizationProfile>, DefaultSkillTreeRandomizer>(Reuse.Singleton);
+        container.Register<ISkillUpgradeInfoRepository, SkillUpgradeInfoRepository>(Reuse.Singleton);
 
-        while (skillFiles.Any())
-        {
-            var skillFile = skillFiles.Dequeue();
-            var skillJson = File.ReadAllText(skillFile);
+        RegisterDefaultRandomizationProfileSkillSelectors(container);
 
-            if (TryDeserializeToSkill(skillJson, skills, out var skill))
+        container.RegisterMany(new[]
             {
-                skills.Add(skill!);
-            }
-            else
-            {
-                skillFiles.Enqueue(skillFile);
-            }
-        }
-
-        return skills;
+                typeof(GenerateRandomSkillTreeConfigurationMessageHandler),
+            },
+            serviceTypeCondition: Registrator.Interfaces);
     }
 
-    private static IEnumerable<SkillUpgrade> GetSkillUpgrades(string directory)
+    private static void RegisterDefaultRandomizationProfileSkillSelectors(IContainer container)
     {
-        var skillUpgrades = new HashSet<SkillUpgrade>();
-        var upgradesDirectory = Path.Combine(directory, "Upgrades");
+        // Active
+        const string activeKey = "Active";
+        container.Register<ISkillSelector, RandomSkillSelector>(serviceKey: activeKey);
+        container.Register<ISkillSelector, ActiveSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
+        container.Register<ISkillSelector, HeroSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
+        container.Register<ISkillSelector, HeroClassSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
 
-        if (Directory.Exists(upgradesDirectory))
-        {
-            foreach (var skillUpgradeFile in Directory.EnumerateFiles(upgradesDirectory))
-            {
-                var skillUpgradeJson = File.ReadAllText(skillUpgradeFile);
-                skillUpgrades.Add(DeserializeToSkillUpgrade(skillUpgradeJson));
-            }
-        }
+        // Upgradable Passive
+        const string upgradablePassiveKey = "UpgradablePassive";
+        container.Register<ISkillSelector, RandomSkillSelector>(serviceKey: upgradablePassiveKey);
+        container.Register<ISkillSelector, ArmourerValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, EffectValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, SkillAttributeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, OncePerSkillTierValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, OncePerSkillTreeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, UpgradablePassiveSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, HeroSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, HeroClassSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
 
-        return skillUpgrades;
-    }
-
-    private static bool TryDeserializeToSkill(string skillJson, IEnumerable<Skill> skills, out Skill? skill)
-    {
-        skill = new();
-
-        var jsonObject = JsonSerializer.Deserialize<JsonElement>(skillJson);
-
-        if (jsonObject.TryGetProperty("_Base", out var @base))
-        {
-            var baseSkill = skills.FirstOrDefault(x => x.Name.Equals(@base.GetString()));
-
-            if (baseSkill is not null)
-            {
-                skill = baseSkill.Copy();
-            }
-            else
-            {
-                skill = null;
-                return false;
-            }
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.Name), out var name))
-        {
-            skill.Name = name.GetString()!;
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.CodeName), out var codeName))
-        {
-            skill.CodeName = codeName.GetString()!;
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.Type), out var type))
-        {
-            skill.Type = Enum.Parse<SkillType>(type.GetString()!);
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.ConfigurationName), out var configurationName))
-        {
-            skill.ConfigurationName = configurationName.GetString();
-        }
-        else if (skill.ConfigurationName is null)
-        {
-            skill.ConfigurationName = skill.Name;
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.IconName), out var iconName))
-        {
-            skill.IconName = iconName.GetString();
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.Upgradable), out var upgradable))
-        {
-            skill.Upgradable = upgradable.GetBoolean();
-        }
-        else
-        {
-            skill.Upgradable = skill.Type switch
-            {
-                SkillType.Active => true,
-                SkillType.Passive => false,
-                _ => throw new NotImplementedException(),
-            };
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.Attributes), out var attributes))
-        {
-            foreach (var attribute in attributes.EnumerateArray())
-            {
-                skill.Attributes |= Enum.Parse<SkillAttributes>(attribute.GetString()!);
-            }
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.PrerequisiteAttributes), out var prerequisiteAttributes))
-        {
-            foreach (var attribute in prerequisiteAttributes.EnumerateArray())
-            {
-                skill.PrerequisiteAttributes |= Enum.Parse<SkillAttributes>(attribute.GetString()!);
-            }
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.PrerequisiteAttributesCheckType), out var prerequisiteAttributesCheckType))
-        {
-            skill.PrerequisiteAttributesCheckType = Enum.Parse<PrerequisiteCheckType>(prerequisiteAttributesCheckType.GetString()!);
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.Effects), out var effects))
-        {
-            foreach (var effect in effects.EnumerateArray())
-            {
-                skill.Effects |= Enum.Parse<Effects>(effect.GetString()!);
-            }
-        }
-
-        if (jsonObject.TryGetProperty(nameof(Skill.PrerequisiteEffects), out var prerequisiteEffects))
-        {
-            foreach (var effect in prerequisiteEffects.EnumerateArray())
-            {
-                skill.PrerequisiteEffects |= Enum.Parse<Effects>(effect.GetString()!);
-            }
-        }
-
-        return true;
-    }
-
-    private static SkillUpgrade DeserializeToSkillUpgrade(string skillUpgradeJson)
-    {
-        var skillUpgrade = new SkillUpgrade();
-
-        var jsonObject = JsonSerializer.Deserialize<JsonElement>(skillUpgradeJson);
-
-        if (jsonObject.TryGetProperty(nameof(SkillUpgrade.Name), out var name))
-        {
-            skillUpgrade.Name = name.GetString()!;
-        }
-
-        if (jsonObject.TryGetProperty(nameof(SkillUpgrade.CodeName), out var codeName))
-        {
-            skillUpgrade.CodeName = codeName.GetString()!;
-        }
-
-        if (jsonObject.TryGetProperty(nameof(SkillUpgrade.Effects), out var effects))
-        {
-            foreach (var effect in effects.EnumerateArray())
-            {
-                skillUpgrade.Effects |= Enum.Parse<Effects>(effect.GetString()!);
-            }
-        }
-
-        return skillUpgrade;
+        // Passive
+        const string passiveKey = "Passive";
+        container.Register<ISkillSelector, RandomSkillSelector>(serviceKey: passiveKey);
+        container.Register<ISkillSelector, ArmourerValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, EffectValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, SkillAttributeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, OncePerSkillTierValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, OncePerSkillTreeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, PassiveSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, HeroSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, HeroClassSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
     }
 }

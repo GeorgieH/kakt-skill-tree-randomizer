@@ -1,4 +1,4 @@
-﻿using Kakt.Modding.Application;
+﻿using Kakt.Modding.Core;
 
 namespace Kakt.Modding.Cli;
 

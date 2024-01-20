@@ -6,15 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-  </ItemGroup>
 	
   <ItemGroup>
-    <ProjectReference Include="..\Kakt.Modding.Application\Kakt.Modding.Application.csproj" />
-    <ProjectReference Include="..\Kakt.Modding.Configuration\Kakt.Modding.Configuration.csproj" />
+    <ProjectReference Include="..\Kakt.Modding.Core\Kakt.Modding.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="randomization_config.json">
+    <None Update="knights_tale_config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="README.txt">
