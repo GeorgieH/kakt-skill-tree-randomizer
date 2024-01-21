@@ -352,6 +352,9 @@
         "BlackKnight": {
           "Include": [
             "LeapAttack"
+          ],
+          "Exclude": [
+            "Preparedness"
           ]
         },
         "FaerieKnight": {
@@ -364,9 +367,19 @@
             "WallOfFlame"
           ]
         },
+        "SirLancelot": {
+          "Exclude": [
+            "Preparedness"
+          ]
+        },
         "SirYvain": {
           "Exclude": [
             "Surge"
+          ]
+        },
+        "WhiteKnight": {
+          "Exclude": [
+            "Preparedness"
           ]
         }
       }
