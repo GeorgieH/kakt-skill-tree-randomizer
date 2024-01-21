@@ -35,13 +35,14 @@ public class SkillInfoFactory : ISkillInfoFactory
         foreach (var directory in fileSystemService.GetDirectories(path))
         {
             var skillInfos = GetSkills(directory);
-            var skillUpgradeInfos = GetSkillUpgrades(directory);
 
             foreach (var skillInfo in skillInfos)
             {
                 logger.Log($"Adding {skillInfo.Name}...");
 
                 skillInfoRepository.Add(skillInfo);
+
+                var skillUpgradeInfos = GetSkillUpgrades(directory);
 
                 foreach (var skillUpgradeInfo in skillUpgradeInfos)
                 {

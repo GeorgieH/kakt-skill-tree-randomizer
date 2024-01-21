@@ -38,11 +38,11 @@ public class SkillInfo : IEquatable<SkillInfo?>
     public bool Equals(SkillInfo? other)
     {
         return other is not null &&
-               Name == other.Name;
+               CodeName == other.CodeName;
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Name);
+        return HashCode.Combine(CodeName);
     }
 }
