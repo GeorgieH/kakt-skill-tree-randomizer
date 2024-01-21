@@ -2,11 +2,11 @@
 
 namespace Kakt.Modding.Core.KnightsTale.Randomization.Profiles.Default.Validators;
 
-public class ArmourerValidator : ISkillSelector
+public class HeroTraitValidator : ISkillSelector
 {
     private readonly ISkillSelector next;
 
-    public ArmourerValidator(ISkillSelector next)
+    public HeroTraitValidator(ISkillSelector next)
     {
         this.next = next;
     }
@@ -15,13 +15,12 @@ public class ArmourerValidator : ISkillSelector
     {
         var output = next.SelectSkill(input);
 
-        var hero = input.Hero;
-
-        if (output.SkillInfo.Name.Equals(SkillNames.Armourer))
+        if (input.Hero.Traits.HasFlag(HeroTraits.Sober))
         {
-            if (hero is not Champion
-                && hero is not Defender
-                && !hero.SkillTree.Skills.Select(s => s.Name).Any(SkillNames.Ironclad.Equals))
+            var name = output.SkillInfo.Name;
+
+            if (name.Equals(SkillNames.MasterAlchemist)
+                || name.Equals(SkillNames.MasterOfPotions))
             {
                 throw new InvalidSkillSelectionException(output.SkillInfo);
             }

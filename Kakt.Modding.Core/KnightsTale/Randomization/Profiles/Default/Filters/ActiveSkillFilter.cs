@@ -22,20 +22,24 @@ public class ActiveSkillFilter : ISkillSelector
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
         var existingSkills = input.Hero.SkillTree.Skills
-            .Where(s => s!.Type == SkillType.Active)
+            .Where(s => s.Type == SkillType.Active)
             .Select(s => s.Info);
 
         input.IncludedSkillInfos = input.IncludedSkillInfos
             .Where(s => s.Type == SkillType.Active)
             .Except(existingSkills)
-            .Where(s => RespectsRandomizationProfile(input.Hero, s!, input.SkillNumber, input.Profile))!;
+            .Where(s => RespectsRandomizationProfile(s, input))
+            .Where(s => RespectsHeroRestrictions(s, input));
 
         return next.SelectSkill(input);
     }
 
-    private static bool RespectsRandomizationProfile(
-        Hero hero, SkillInfo skillInfo, int skillNumber, DefaultRandomizationProfile profile)
+    private static bool RespectsRandomizationProfile(SkillInfo skillInfo, SkillSelectorInput input)
     {
+        var hero = input.Hero;
+        var profile = input.Profile;
+        var skillNumber = input.SkillNumber;
+
         if (hero is Vanguard)
         {
             if (profile.Flags.VanguardsAlwaysGetTierOneMovementSkill)
@@ -76,6 +80,21 @@ public class ActiveSkillFilter : ISkillSelector
                     return skillInfo.Name.Equals(SkillNames.Hide);
                 }
             }
+        }
+
+        return true;
+    }
+
+    private static bool RespectsHeroRestrictions(SkillInfo skillInfo, SkillSelectorInput input)
+    {
+        var hero = input.Hero;
+        var skillTier = input.SkillTier;
+
+        if (hero is SirLanval
+            && skillTier == SkillTier.One
+            && skillInfo.Name == SkillNames.Preparedness)
+        {
+            return false;
         }
 
         return true;

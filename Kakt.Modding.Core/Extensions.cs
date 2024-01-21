@@ -29,6 +29,11 @@ public static class Extensions
         return CanCauseEffects(skillUpgrade.Effects, effects);
     }
 
+    public static bool CanCauseEffects(this ISkill skill, Effects effects)
+    {
+        return CanCauseEffects(skill.Effects, effects);
+    }
+
     private static bool CanCauseEffects(Effects source, Effects target)
     {
         return target

@@ -2,6 +2,6 @@
 
 public class DefaultRandomizationProfileRules
 {
-    public HashSet<string> OncePerSkillTree { get; set; }
-    public HashSet<string> OncePerSkillTier { get; set; }
+    public HashSet<string> OncePerSkillTree { get; set; } = [];
+    public HashSet<string> OncePerSkillTier { get; set; } = [];
 }

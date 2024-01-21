@@ -18,15 +18,15 @@ public class HeroSkillFilter : ISkillSelector
 
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
-        switch (input.Hero)
-        {
-            case BlackKnight:
-                SetSkillPool(input, input.Profile.SkillPools.BlackKnight);
-                break;
-            case FaerieKnight:
-                SetSkillPool(input, input.Profile.SkillPools.FaerieKnight);
-                break;
-        }
+        var heroName = input.Hero.GetType().Name;
+        var skillPools = input.Profile.SkillPools;
+
+        var skillPool = (DefaultRandomizationProfileSkillPool)skillPools
+            .GetType()
+            .GetProperty(heroName)!
+            .GetValue(skillPools, null)!;
+
+        SetSkillPool(input, skillPool);
 
         return next.SelectSkill(input);
     }

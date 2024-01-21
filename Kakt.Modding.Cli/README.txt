@@ -29,10 +29,12 @@ To uninstall, verify the integrity of game files through Steam:
 FURTHER INFORMATION
 -------------------
 
-For further information, including how to configure your own skill pools, refer to the wiki on GitHub: https://github.com/GeorgieH/kakt-skill-tree-randomizer/wiki
+For further information, including how to configure your own skill pools, refer to the wiki on GitHub:
+https://github.com/GeorgieH/kakt-skill-tree-randomizer/wiki
 
 ---------------
 REPORTING A BUG
 ---------------
 
-If you encounter a bug, please a raise an issue in the GitHub repository and attach the generated folder if applicable: https://github.com/GeorgieH/kakt-skill-tree-randomizer/issues
+If you encounter a bug, please a raise an issue in the GitHub repository and attach the generated debug log and "King Arthur Knight's Tale" folder if applicable:
+https://github.com/GeorgieH/kakt-skill-tree-randomizer/issues

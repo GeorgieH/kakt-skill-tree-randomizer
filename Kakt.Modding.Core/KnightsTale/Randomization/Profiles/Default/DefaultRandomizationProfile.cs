@@ -2,7 +2,7 @@
 
 public class DefaultRandomizationProfile
 {
-    public DefaultRandomizationProfileFlags Flags { get; set; }
-    public DefaultRandomizationProfileRules Rules { get; set; }
-    public DefaultRandomizationProfileSkillPools SkillPools { get; set; }
+    public DefaultRandomizationProfileFlags Flags { get; set; } = new();
+    public DefaultRandomizationProfileRules Rules { get; set; } = new();
+    public DefaultRandomizationProfileSkillPools SkillPools { get; set; } = new();
 }

@@ -5,6 +5,7 @@ using Kakt.Modding.Cli.KnightsTale;
 using Kakt.Modding.Core;
 using Kakt.Modding.Core.KnightsTale.Heroes;
 using Kakt.Modding.Core.KnightsTale.Randomization;
+using System.Diagnostics;
 
 static void Exit(string message)
 {
@@ -58,6 +59,7 @@ try
 }
 catch (Exception ex)
 {
+    Debugger.Break();
     var directory = AppDomain.CurrentDomain.BaseDirectory;
     var path = Path.Combine(directory, $"debug_log_{DateTime.Now:yyyyMMddHHmmss}.txt");
     File.WriteAllText(path, ex.ToString());

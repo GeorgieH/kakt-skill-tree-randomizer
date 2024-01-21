@@ -2,6 +2,7 @@
   "Profiles": {
     "Default": {
       "Flags": {
+        "FaerieKnightAlwaysGetsTierTwoBoltSkill": true,
         "VanguardsAlwaysGetTierOneHide": false,
         "VanguardsAlwaysGetTierOneMovementSkill": false,
         "VanguardsAlwaysGetTierOneTrapSkill": false
@@ -356,6 +357,16 @@
         "FaerieKnight": {
           "Exclude": [
             "FireDrake"
+          ]
+        },
+        "Merlin": {
+          "Exclude": [
+            "WallOfFlame"
+          ]
+        },
+        "SirYvain": {
+          "Exclude": [
+            "Surge"
           ]
         }
       }

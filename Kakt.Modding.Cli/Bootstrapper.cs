@@ -57,11 +57,13 @@ internal static class Bootstrapper
         container.Register<ISkillSelector, ActiveSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
         container.Register<ISkillSelector, HeroSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
         container.Register<ISkillSelector, HeroClassSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
+        container.Register<ISkillSelector, FaerieKnightActiveSkillFilter>(setup: Setup.DecoratorOf(decorateeServiceKey: activeKey));
 
         // Upgradable Passive
         const string upgradablePassiveKey = "UpgradablePassive";
         container.Register<ISkillSelector, RandomSkillSelector>(serviceKey: upgradablePassiveKey);
         container.Register<ISkillSelector, ArmourerValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
+        container.Register<ISkillSelector, HeroTraitValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
         container.Register<ISkillSelector, EffectValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
         container.Register<ISkillSelector, SkillAttributeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
         container.Register<ISkillSelector, OncePerSkillTierValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: upgradablePassiveKey));
@@ -74,6 +76,7 @@ internal static class Bootstrapper
         const string passiveKey = "Passive";
         container.Register<ISkillSelector, RandomSkillSelector>(serviceKey: passiveKey);
         container.Register<ISkillSelector, ArmourerValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
+        container.Register<ISkillSelector, HeroTraitValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
         container.Register<ISkillSelector, EffectValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
         container.Register<ISkillSelector, SkillAttributeValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));
         container.Register<ISkillSelector, OncePerSkillTierValidator>(setup: Setup.DecoratorOf(decorateeServiceKey: passiveKey));

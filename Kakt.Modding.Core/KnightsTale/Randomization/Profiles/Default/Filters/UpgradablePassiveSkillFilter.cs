@@ -14,14 +14,14 @@ public class UpgradablePassiveSkillFilter : ISkillSelector
     public SkillSelectorOutput SelectSkill(SkillSelectorInput input)
     {
         var existingSkills = input.Hero.SkillTree.Skills
-            .Where(s => s!.Type == SkillType.Passive)
-            .Where(s => s!.Upgradable)
+            .Where(s => s.Type == SkillType.Passive)
+            .Where(s => s.Upgradable)
             .Select(s => s.Info);
 
         input.IncludedSkillInfos = input.IncludedSkillInfos
-            .Where(s => s!.Type == SkillType.Passive)
-            .Where(s => s!.Upgradable)
-            .Except(existingSkills)!;
+            .Where(s => s.Type == SkillType.Passive)
+            .Where(s => s.Upgradable)
+            .Except(existingSkills);
 
         return next.SelectSkill(input);
     }

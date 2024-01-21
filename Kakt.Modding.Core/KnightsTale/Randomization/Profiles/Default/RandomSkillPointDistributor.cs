@@ -122,7 +122,8 @@ public class RandomSkillPointDistributor : IRandomSkillPointDistributor
                 .Where(s => s is Skill
                     || s is SkillUpgrade u
                         && u.LevelLimit <= currentHeroLevel
-                        && acquiredSkills.Contains(upgradeToSkillLookup[u]));
+                        && acquiredSkills.Contains(upgradeToSkillLookup[u])
+                        && AcquiredSkillsHavePrerequisiteEffects(acquiredSkills, u));
 
             var skill = candidateSkills.Random(randomNumberGeneratorService.GetRandom());
 
@@ -183,6 +184,16 @@ public class RandomSkillPointDistributor : IRandomSkillPointDistributor
         }
 
         return 1;
+    }
+
+    private static bool AcquiredSkillsHavePrerequisiteEffects(IEnumerable<ISkill> skills, SkillUpgrade upgrade)
+    {
+        if (upgrade.PrerequisiteEffects == Effects.None)
+        {
+            return true;
+        }
+
+        return skills.Any(s => s.CanCauseEffects(upgrade.PrerequisiteEffects));
     }
 
     private static bool IsIceSkill(Skill skill)

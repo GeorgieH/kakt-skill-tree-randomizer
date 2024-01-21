@@ -7,5 +7,6 @@ public enum HeroTraits
     Conservative = 1,
     Frigid = 2,
     Skilled = 4,
-    Talented = 8
+    Sober = 8,
+    Talented = 16
 }

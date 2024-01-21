@@ -4,5 +4,5 @@ namespace Kakt.Modding.Core.KnightsTale.Randomization.Profiles;
 
 public class RandomizationConfigurationProfiles
 {
-    public DefaultRandomizationProfile Default { get; set; }
+    public DefaultRandomizationProfile Default { get; set; } = new();
 }
