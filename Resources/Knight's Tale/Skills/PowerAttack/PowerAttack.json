@@ -1,0 +1,6 @@
+{
+  "Name": "PowerAttack",
+  "CodeName": "Hero_champion__powerAttack",
+  "Type": "Active",
+  "Attributes": [ "Melee" ]
+}

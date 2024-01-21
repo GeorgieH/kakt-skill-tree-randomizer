@@ -1,0 +1,7 @@
+{
+  "Name": "LightningTrap",
+  "CodeName": "Hero_vanguard__lightningTrap",
+  "Type": "Active",
+  "Attributes": [ "Trap" ],
+  "Effects": [ "Shock" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "DebilitatingThrow",
+  "CodeName": "Hero_vanguard__debilitatingThrow_weightedProjectile",
+  "Type": "Active",
+  "Attributes": [ "Ranged" ],
+  "Effects": [ "Knockback", "Knockdown" ]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "PoisonedArrow",
+  "CodeName": "Hero_marksman__poisonedBolt",
+  "ConfigurationName": "PoisonedBolt",
+  "Type": "Active",
+  "Attributes": [ "Ranged" ],
+  "Effects": [ "Poison" ]
+}

@@ -1,0 +1,6 @@
+{
+  "Name": "MasterInvoker",
+  "CodeName": "Hero_arcanist__masterInvoker",
+  "Type": "Passive",
+  "PrerequisiteAttributes": [ "Summon" ]
+}

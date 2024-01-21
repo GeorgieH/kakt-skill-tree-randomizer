@@ -1,0 +1,6 @@
+{
+  "Name": "LeapAttack",
+  "CodeName": "BlackKnight__leapAttack",
+  "Type": "Active",
+  "Attributes": [ "Melee", "Area" ]
+}

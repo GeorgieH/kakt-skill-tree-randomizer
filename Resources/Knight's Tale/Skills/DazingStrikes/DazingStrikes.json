@@ -1,0 +1,7 @@
+{
+  "Name": "DazingStrikes",
+  "CodeName": "Hero_champion__dazingStrikes",
+  "Type": "Passive",
+  "Upgradable": true,
+  "Effects": [ "Stun" ]
+}

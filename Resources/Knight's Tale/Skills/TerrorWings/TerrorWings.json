@@ -1,0 +1,6 @@
+{
+  "Name": "TerrorWings",
+  "CodeName": "Hero_arcanist__terrorWings",
+  "Type": "Passive",
+  "PrerequisiteAttributes": [ "Hex" ]
+}

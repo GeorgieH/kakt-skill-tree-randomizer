@@ -1,0 +1,7 @@
+{
+  "Name": "LightningArrow",
+  "CodeName": "SirGeraint__lightningArrow",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Lightning" ],
+  "Effects": [ "Shock" ]
+}

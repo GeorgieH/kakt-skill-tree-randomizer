@@ -1,0 +1,7 @@
+{
+  "Name": "ThrowingAxe",
+  "CodeName": "RedKnight__throwingAxe",
+  "Type": "Active",
+  "Attributes": [ "Ranged" ],
+  "Effects": [ "Knockback" ]
+}

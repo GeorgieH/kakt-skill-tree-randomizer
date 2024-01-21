@@ -1,0 +1,8 @@
+{
+  "Name": "RayOfLight",
+  "CodeName": "Hero_sage__rayofLight",
+  "ConfigurationName": "RayofLight",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell" ],
+  "Effects": [ "Blind" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "Pulverise",
+  "CodeName": "Hero_champion__pulverise",
+  "Type": "Active",
+  "Attributes": [ "Area" ],
+  "Effects": [ "Knockback" ]
+}

@@ -1,9 +1,4 @@
-﻿using Kakt.Modding.Core;
-using Kakt.Modding.Core.Heroes;
-using Kakt.Modding.Core.Skills;
-using Kakt.Modding.Core.Skills.Scout;
-
-namespace Kakt.Modding.Configuration;
+﻿namespace Kakt.Modding.Configuration;
 
 public static class CfgObjectFactory
 {
@@ -15,7 +10,7 @@ public static class CfgObjectFactory
 
         foreach (var skill in hero.SkillTree.Skills)
         {
-            var skillName = skill!.GetConfigurationElementName();
+            var skillName = skill!.ConfigurationName!;
 
             if (skillRegister.TryGetValue(skillName, out var list))
             {
@@ -45,7 +40,7 @@ public static class CfgObjectFactory
 
         foreach (var skill in hero.SkillTree.Skills)
         {
-            var skillName = skill!.GetConfigurationElementName();
+            var skillName = skill!.ConfigurationName!;
 
             if (skillRegister.TryGetValue(skillName, out var list))
             {
@@ -94,7 +89,7 @@ public static class CfgObjectFactory
             obj.Elements.Add(new CfgProperty("IconName", skill.IconName));
         }
 
-        obj.Elements.Add(new CfgProperty("Skill", skill.GetNameOrOverride()));
+        obj.Elements.Add(new CfgProperty("Skill", skill.GetCodeNameOrOverride()));
         obj.Elements.Add(new CfgProperty("Type", skill.Type.ToString().ToLower()));
         obj.Elements.Add(new CfgProperty("IconPos", $"{skill.IconPosition.X};{skill.IconPosition.Y}"));
         obj.Elements.Add(new CfgProperty("Tier", (int)skill.Tier));
@@ -122,7 +117,7 @@ public static class CfgObjectFactory
             obj.Elements.Add(new CfgProperty("IconName", skillUpgrade.IconName));
         }
 
-        obj.Elements.Add(new CfgProperty("Skill", skillUpgrade.GetNameOrOverride()));
+        obj.Elements.Add(new CfgProperty("Skill", skillUpgrade.GetCodeNameOrOverride()));
         obj.Elements.Add(new CfgProperty("Type", skillUpgrade.Type.ToString().ToLower()));
         obj.Elements.Add(new CfgProperty("IconPos", $"{skillUpgrade.IconPosition.X};{skillUpgrade.IconPosition.Y}"));
         obj.Elements.Add(new CfgProperty("Tier", (int)skillUpgrade.Tier));
@@ -132,7 +127,7 @@ public static class CfgObjectFactory
 
     private static string GetSkillNamePostfix(string skillName, int index)
     {
-        if (skillName != nameof(Scout) && index == 1)
+        if (skillName != "Scout" && index == 1)
         {
             return string.Empty;
         }

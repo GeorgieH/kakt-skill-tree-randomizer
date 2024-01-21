@@ -1,0 +1,8 @@
+{
+  "Name": "MasterOfLightning",
+  "CodeName": "Hero_sage__masterofLightning",
+  "ConfigurationName": "MasterofLightning",
+  "Type": "Passive",
+  "Upgradable": true,
+  "PrerequisiteAttributes": [ "Lightning" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "MindFog",
+  "CodeName": "Hero_arcanist__mindFog",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Spell" ],
+  "Effects": [ "Chill" ]
+}

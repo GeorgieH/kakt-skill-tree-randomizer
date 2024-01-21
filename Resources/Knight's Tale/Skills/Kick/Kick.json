@@ -1,0 +1,7 @@
+{
+  "Name": "Kick",
+  "CodeName": "SirKay__kick",
+  "Type": "Active",
+  "Attributes": [ "Melee" ],
+  "Effects": [ "Knockback" ]
+}

@@ -1,0 +1,7 @@
+{
+  "Name": "SmotheringShot",
+  "CodeName": "Hero_marksman__smotheringShot",
+  "Type": "Active",
+  "Attributes": [ "Ranged" ],
+  "Effects": [ "Silence" ]
+}

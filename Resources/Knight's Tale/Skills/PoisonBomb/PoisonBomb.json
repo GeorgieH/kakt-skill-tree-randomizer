@@ -1,0 +1,7 @@
+{
+  "Name": "PoisonBomb",
+  "CodeName": "Hero_marksman__poisonBomb",
+  "Type": "Active",
+  "Attributes": [ "Ranged", "Area" ],
+  "Effects": [ "Poison" ]
+}

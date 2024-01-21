@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kakt.Modding.Core", "Kakt.Modding.Core\Kakt.Modding.Core.csproj", "{5BE6273E-B1BF-430E-A7C7-422AC044838C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kakt.Modding.Cli", "Kakt.Modding.Cli\Kakt.Modding.Cli.csproj", "{53889589-F97B-4C34-B119-41DDD596BE9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AB391225-971A-4CBC-A0EC-2D99CD84F18C}"
@@ -13,9 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kakt.Modding.Randomization", "Kakt.Modding.Randomization\Kakt.Modding.Randomization.csproj", "{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kakt.Modding.Configuration", "Kakt.Modding.Configuration\Kakt.Modding.Configuration.csproj", "{2544EA1C-2AB8-4501-8E9C-6246FE2FD645}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kakt.Modding.Core", "Kakt.Modding.Core\Kakt.Modding.Core.csproj", "{FA1FF43C-FFAE-4355-9816-3B4CA3467BAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +19,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BE6273E-B1BF-430E-A7C7-422AC044838C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BE6273E-B1BF-430E-A7C7-422AC044838C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BE6273E-B1BF-430E-A7C7-422AC044838C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BE6273E-B1BF-430E-A7C7-422AC044838C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53889589-F97B-4C34-B119-41DDD596BE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53889589-F97B-4C34-B119-41DDD596BE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53889589-F97B-4C34-B119-41DDD596BE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53889589-F97B-4C34-B119-41DDD596BE9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC36B3D0-EC43-4DD1-A4E0-E39AD1A043B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2544EA1C-2AB8-4501-8E9C-6246FE2FD645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2544EA1C-2AB8-4501-8E9C-6246FE2FD645}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2544EA1C-2AB8-4501-8E9C-6246FE2FD645}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2544EA1C-2AB8-4501-8E9C-6246FE2FD645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1FF43C-FFAE-4355-9816-3B4CA3467BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1FF43C-FFAE-4355-9816-3B4CA3467BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1FF43C-FFAE-4355-9816-3B4CA3467BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1FF43C-FFAE-4355-9816-3B4CA3467BAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
