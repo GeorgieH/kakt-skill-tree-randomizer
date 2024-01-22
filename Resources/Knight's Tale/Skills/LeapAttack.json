@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "LeapAttack",
+      "CodeName": "BlackKnight__leapAttack",
+      "Type": "Active",
+      "Attributes": [
+        "Melee",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AfterShock",
+      "CodeName": "BlackKnight__leapAttack_aftershock"
+    },
+    {
+      "Name": "LimberFooted",
+      "CodeName": "BlackKnight__leapAttack_limberFooted"
+    },
+    {
+      "Name": "PowerLeap",
+      "CodeName": "BlackKnight__leapAttack_powerLeap"
+    },
+    {
+      "Name": "Weaken",
+      "CodeName": "BlackKnight__leapAttack_weaken",
+      "Effects": [
+        "Weakness"
+      ]
+    }
+  ]
+}

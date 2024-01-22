@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "DrainBlood",
+      "CodeName": "Hero_champion__drainBlood",
+      "Type": "Active",
+      "PrerequisiteEffects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Bloodletting",
+      "CodeName": "Hero_champion__drainBlood_bloodletting",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "Bloodthirst",
+      "CodeName": "Hero_champion__drainBlood_bloodthirst"
+    },
+    {
+      "Name": "Haemophilia",
+      "CodeName": "Hero_champion__drainBlood_haemophilia"
+    },
+    {
+      "Name": "SapSpirit",
+      "CodeName": "Hero_champion__drainBlood_sapSpirit"
+    }
+  ]
+}

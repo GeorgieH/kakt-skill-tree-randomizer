@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "DeathStrike",
+      "CodeName": "SirKay__deathStrike",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ]
+    },
+    {
+      "_Base": "DeathStrike",
+      "Name": "RedKnightDeathStrike",
+      "CodeName": "RedKnight__deathStrike",
+      "IconName": "SirKay__deathStrike"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Bloodletting",
+      "CodeName": "SirKay__deathStrike_bloodletting",
+      "Effects": [
+        "Bleed"
+      ]
+    },
+    {
+      "Name": "FastRecovery",
+      "CodeName": "SirKay__deathStrike_fastRecovery"
+    },
+    {
+      "Name": "RendingBlow",
+      "CodeName": "SirKay__deathStrike_rendingBlow"
+    },
+    {
+      "Name": "Swiftness",
+      "CodeName": "SirKay__deathStrike_swiftness"
+    }
+  ]
+}

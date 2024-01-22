@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "IceWall",
+      "CodeName": "Hero_sage__iceWall",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Ice"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EndlessWinter",
+      "CodeName": "Hero_sage__iceWall_endlessWinter",
+      "Effects": [
+        "Freeze"
+      ]
+    },
+    {
+      "Name": "IcyWinds",
+      "CodeName": "Hero_sage__iceWall_icyWinds"
+    },
+    {
+      "Name": "Permafrost",
+      "CodeName": "Hero_sage__iceWall_permafrost"
+    },
+    {
+      "Name": "ReinforcedWall",
+      "CodeName": "Hero_sage__iceWall_reinforcedWall"
+    }
+  ]
+}

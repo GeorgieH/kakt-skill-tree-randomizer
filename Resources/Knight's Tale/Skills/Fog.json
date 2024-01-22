@@ -1,0 +1,27 @@
+{
+  "Skills": [
+    {
+      "Name": "Fog",
+      "CodeName": "Hero_arcanist__fog",
+      "Type": "Active"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ElementalFog",
+      "CodeName": "Hero_arcanist__fog_elementalFog"
+    },
+    {
+      "Name": "FogBarrier",
+      "CodeName": "Hero_arcanist__fog_fogBarrier"
+    },
+    {
+      "Name": "FogWalker",
+      "CodeName": "Hero_arcanist__fog_fogwalker"
+    },
+    {
+      "Name": "PersistentFog",
+      "CodeName": "Hero_arcanist__fog_persistentFog"
+    }
+  ]
+}

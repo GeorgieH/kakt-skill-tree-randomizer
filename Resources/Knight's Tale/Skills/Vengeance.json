@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "Vengeance",
+      "CodeName": "Hero_champion__vengeance",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Avenger",
+      "CodeName": "Hero_champion__vengeance_avanger"
+    },
+    {
+      "Name": "Berserk",
+      "CodeName": "Hero_champion__vengeance_berserk"
+    },
+    {
+      "Name": "CombatFever",
+      "CodeName": "Hero_champion__vengeance_combatFever"
+    },
+    {
+      "Name": "Frenzy",
+      "CodeName": "Hero_champion__vengeance_frenzy"
+    }
+  ]
+}

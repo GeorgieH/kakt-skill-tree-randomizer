@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "MeleeExpertise",
+      "CodeName": "Hero_champion__meleeExpertise",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteAttributes": [
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "CombatSpecialist",
+      "CodeName": "Hero_champion__meleeExpertise_combatSpecialist"
+    },
+    {
+      "Name": "HeatOfTheBattle",
+      "CodeName": "Hero_champion__meleeExpertise_heatOfthebattle"
+    },
+    {
+      "Name": "KillingSpree",
+      "CodeName": "Hero_champion__meleeExpertise_killingSpree"
+    },
+    {
+      "Name": "Overdrive",
+      "CodeName": "Hero_champion__meleeExpertise_overdrive"
+    }
+  ]
+}

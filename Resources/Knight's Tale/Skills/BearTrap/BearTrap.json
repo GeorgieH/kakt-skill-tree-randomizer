@@ -1,7 +1,0 @@
-{
-  "Name": "BearTrap",
-  "CodeName": "Hero_vanguard__bearTrap",
-  "Type": "Active",
-  "Attributes": [ "Trap" ],
-  "Effects": [ "Slow" ]
-}

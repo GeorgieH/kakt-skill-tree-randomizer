@@ -1,7 +1,0 @@
-{
-  "Name": "MarkTarget",
-  "CodeName": "Hero_marksman__markTarget",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell" ],
-  "Effects": [ "Vulnerability" ]
-}

@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "IceShield",
+      "CodeName": "Hero_sage__iceShield",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Ice",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ElementalIce",
+      "CodeName": "Hero_sage__iceShield_elementalIce"
+    },
+    {
+      "Name": "GlacialAegis",
+      "CodeName": "Hero_sage__iceShield_glacialAegis"
+    },
+    {
+      "Name": "LastingIce",
+      "CodeName": "Hero_sage__iceShield_lastingIce"
+    },
+    {
+      "Name": "RimeBreath",
+      "CodeName": "Hero_sage__iceShield_rimeBreath"
+    }
+  ]
+}

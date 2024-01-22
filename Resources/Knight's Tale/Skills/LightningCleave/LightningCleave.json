@@ -1,7 +1,0 @@
-{
-  "Name": "LightningCleave",
-  "CodeName": "SirMordred__lightningCleave",
-  "Type": "Active",
-  "Attributes": [ "Melee", "Area", "Lightning" ],
-  "Effects": [ "Shock" ]
-}

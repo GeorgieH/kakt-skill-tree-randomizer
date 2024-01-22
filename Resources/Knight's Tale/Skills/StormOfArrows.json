@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "StormOfArrows",
+      "CodeName": "SirGeraint__stormofArrows",
+      "ConfigurationName": "StormofArrows",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area",
+        "Lightning"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Cloudburst",
+      "CodeName": "SirGeraint__stormofArrows_cloudburst"
+    },
+    {
+      "Name": "Downpour",
+      "CodeName": "SirGeraint__stormofArrows_downpour"
+    },
+    {
+      "Name": "PersistentDischarge",
+      "CodeName": "SirGeraint__stormofArrows_persistentDischarge"
+    },
+    {
+      "Name": "ShredderArrows",
+      "CodeName": "SirGeraint__stormofArrows_shredderArrows"
+    }
+  ]
+}

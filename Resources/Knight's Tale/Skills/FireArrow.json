@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "FireArrow",
+      "CodeName": "Hero_marksman__fireBolt",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Fire"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "CripplingHit",
+      "CodeName": "Hero_marksman__fireBolt_cripplingHit"
+    },
+    {
+      "Name": "ExplosiveArrow",
+      "CodeName": "Hero_marksman__fireBolt_explosiveBolt"
+    },
+    {
+      "Name": "GreekFire",
+      "CodeName": "Hero_marksman__fireBolt_greekFire"
+    },
+    {
+      "Name": "HeatedArrow",
+      "CodeName": "Hero_marksman__fireBolt_heatedBolt"
+    }
+  ]
+}

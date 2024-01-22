@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "PoisonedArrow",
+      "CodeName": "Hero_marksman__poisonedBolt",
+      "ConfigurationName": "PoisonedBolt",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Poison"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AgonyShot",
+      "CodeName": "Hero_marksman__poisonedBolt_agonyShot"
+    },
+    {
+      "Name": "PoisonBlast",
+      "CodeName": "Hero_marksman__poisonedBolt_poisonExplosion"
+    },
+    {
+      "Name": "Sickness",
+      "CodeName": "Hero_marksman__poisonedBolt_sickness"
+    },
+    {
+      "Name": "ToxicArrow",
+      "CodeName": "Hero_marksman__poisonedBolt_toxicBolt"
+    }
+  ]
+}

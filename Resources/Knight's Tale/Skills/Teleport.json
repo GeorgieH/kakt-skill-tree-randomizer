@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "Teleport",
+      "CodeName": "Hero_arcanist__teleport",
+      "Type": "Active",
+      "Attributes": [
+        "Movement",
+        "Ranged",
+        "Spell"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AstralJourney",
+      "CodeName": "Hero_sage__teleport_astralJourney"
+    },
+    {
+      "Name": "FarReach",
+      "CodeName": "Hero_sage__teleport_farReach"
+    },
+    {
+      "Name": "ShadowGate",
+      "CodeName": "Hero_sage__teleport_shadowGate"
+    },
+    {
+      "Name": "TimeShift",
+      "CodeName": "Hero_sage__teleport_timeShift"
+    }
+  ]
+}

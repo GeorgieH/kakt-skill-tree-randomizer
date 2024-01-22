@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "FireBomb",
+      "CodeName": "Hero_marksman__fireBomb",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Fire",
+        "Area"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "OiledWrappings",
+      "CodeName": "Hero_marksman__fireBomb_oiledWrappings"
+    },
+    {
+      "Name": "PertubingHit",
+      "CodeName": "Hero_marksman__fireBomb_perturbingHit"
+    },
+    {
+      "Name": "StreamlinedCanister",
+      "CodeName": "Hero_marksman__fireBomb_streamlinedCanister"
+    },
+    {
+      "Name": "VolatileOils",
+      "CodeName": "Hero_marksman__fireBomb_volatileOils"
+    }
+  ]
+}

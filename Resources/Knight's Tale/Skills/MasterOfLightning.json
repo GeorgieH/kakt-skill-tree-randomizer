@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfLightning",
+      "CodeName": "Hero_sage__masterofLightning",
+      "ConfigurationName": "MasterofLightning",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteAttributes": [
+        "Lightning"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Channeling",
+      "CodeName": "Hero_sage__masterofLightning_channeling"
+    },
+    {
+      "Name": "LightningLash",
+      "CodeName": "Hero_sage__masterofLightning_lightningLash",
+      "PrerequisiteEffects": [
+        "Shock",
+        "Stun"
+      ]
+    },
+    {
+      "Name": "LightningShackles",
+      "CodeName": "Hero_sage__masterofLightning_lightningShackles"
+    },
+    {
+      "Name": "Stormborn",
+      "CodeName": "Hero_sage__masterofLightning_stormborn"
+    }
+  ]
+}

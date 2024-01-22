@@ -1,6 +1,0 @@
-{
-  "Name": "SummonLostKnight",
-  "CodeName": "Hero_arcanist__summonLostKnight",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Summon" ]
-}

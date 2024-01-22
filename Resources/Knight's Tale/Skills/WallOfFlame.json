@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "WallOfFlame",
+      "CodeName": "Hero_arcanist__wallOfflame",
+      "ConfigurationName": "WallofFlame",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Fire",
+        "Area"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Cauterize",
+      "CodeName": "Hero_arcanist__wallOfflame_cauterize"
+    },
+    {
+      "Name": "DarkFlames",
+      "CodeName": "Hero_arcanist__wallOfflame_darkFlames"
+    },
+    {
+      "Name": "Firestorm",
+      "CodeName": "Hero_arcanist__wallOfflame_firestorm"
+    },
+    {
+      "Name": "Incendiary",
+      "CodeName": "Hero_arcanist__wallOfflame_incendiary"
+    }
+  ]
+}

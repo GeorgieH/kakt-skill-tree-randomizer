@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterBleeding",
+      "CodeName": "Hero_champion__masterBleeding",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteEffects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BleedingImmunity",
+      "CodeName": "Hero_champion__masterBleeding_bleedingImmunity"
+    },
+    {
+      "Name": "BloodFrenzy",
+      "CodeName": "Hero_champion__masterBleeding_bloodFrenzy"
+    },
+    {
+      "Name": "Gash",
+      "CodeName": "Hero_champion__masterBleeding_gash"
+    },
+    {
+      "Name": "Scarification",
+      "CodeName": "Hero_champion__masterBleeding_scarification"
+    }
+  ]
+}

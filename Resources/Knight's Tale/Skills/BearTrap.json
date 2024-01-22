@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "BearTrap",
+      "CodeName": "Hero_vanguard__bearTrap",
+      "Type": "Active",
+      "Attributes": [
+        "Trap"
+      ],
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BleedingGash",
+      "CodeName": "Hero_vanguard__bearTrap_bleedingGlash",
+      "Effects": [
+        "Bleed"
+      ]
+    },
+    {
+      "Name": "HandyTrap",
+      "CodeName": "Hero_vanguard__bearTrap_handyTrap"
+    },
+    {
+      "Name": "Precision",
+      "CodeName": "Hero_vanguard__bearTrap_precision"
+    },
+    {
+      "Name": "Shackles",
+      "CodeName": "Hero_vanguard__bearTrap_shackles"
+    }
+  ]
+}

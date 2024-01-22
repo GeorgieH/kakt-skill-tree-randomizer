@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "SmotheringShot",
+      "CodeName": "Hero_marksman__smotheringShot",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Silence"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BurstLungs",
+      "CodeName": "Hero_marksman__smotheringShot_burstLungs"
+    },
+    {
+      "Name": "Quickhand",
+      "CodeName": "Hero_marksman__smotheringShot_quickhand"
+    },
+    {
+      "Name": "Slowness",
+      "CodeName": "Hero_marksman__smotheringShot_slowness",
+      "Effects": [
+        "Slow"
+      ]
+    },
+    {
+      "Name": "Suffocation",
+      "CodeName": "Hero_marksman__smotheringShot_suffocation",
+      "Effects": [
+        "Weakness"
+      ]
+    }
+  ]
+}

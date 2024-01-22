@@ -1,0 +1,38 @@
+{
+  "Skills": [
+    {
+      "Name": "IceAura",
+      "CodeName": "Hero_sage__iceAura",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Ice",
+        "Area"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FrostSkin",
+      "CodeName": "Hero_sage__iceAura_frostSkin"
+    },
+    {
+      "Name": "Permafrost",
+      "CodeName": "Hero_sage__iceAura_permafrost",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "ScathingCold",
+      "CodeName": "Hero_sage__iceAura_scathingCold"
+    },
+    {
+      "Name": "Winterborn",
+      "CodeName": "Hero_sage__iceAura_winterborn"
+    }
+  ]
+}

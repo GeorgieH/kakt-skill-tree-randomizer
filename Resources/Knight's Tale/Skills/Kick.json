@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "Kick",
+      "CodeName": "SirKay__kick",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ],
+      "Effects": [
+        "Knockback"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Kneebreaker",
+      "CodeName": "SirKay__kick_kneebreaker",
+      "Effects": [
+        "Knockdown"
+      ]
+    },
+    {
+      "Name": "NumbingAttack",
+      "CodeName": "SirKay__kick_numbingAttack"
+    },
+    {
+      "Name": "PowerKick",
+      "CodeName": "SirKay__kick_powerKick"
+    },
+    {
+      "Name": "SnapKick",
+      "CodeName": "SirKay__kick_snapKick"
+    }
+  ]
+}

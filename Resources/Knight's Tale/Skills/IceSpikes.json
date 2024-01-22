@@ -1,0 +1,40 @@
+{
+  "Skills": [
+    {
+      "Name": "IceSpikes",
+      "CodeName": "Hero_sage__iceSpikes",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Ice",
+        "Area"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BurstingSpikes",
+      "CodeName": "Hero_sage__iceSpikes_burstingSpikes",
+      "Effects": [
+        "Knockback",
+        "Knockdown"
+      ]
+    },
+    {
+      "Name": "FrostShards",
+      "CodeName": "Hero_sage__iceSpikes_frostShards"
+    },
+    {
+      "Name": "IceForge",
+      "CodeName": "Hero_sage__iceSpikes_iceForge"
+    },
+    {
+      "Name": "Impaler",
+      "CodeName": "Hero_sage__iceSpikes_impaler"
+    }
+  ]
+}

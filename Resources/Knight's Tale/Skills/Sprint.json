@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "Sprint",
+      "CodeName": "Hero_vanguard__sprint",
+      "Type": "Active",
+      "Attributes": [
+        "Movement"
+      ],
+      "Effects": [
+        "Hidden"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ElusiveDash",
+      "CodeName": "Hero_vanguard__sprint_elusiveDash"
+    },
+    {
+      "Name": "NimbleFooted",
+      "CodeName": "Hero_vanguard__sprint_nimbleFooted"
+    },
+    {
+      "Name": "SlipThrough",
+      "CodeName": "Hero_vanguard__sprint_slipThrough"
+    },
+    {
+      "Name": "StagsHeart",
+      "CodeName": "Hero_vanguard__sprint_stagsHeart"
+    }
+  ]
+}

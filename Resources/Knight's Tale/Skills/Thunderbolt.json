@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "Thunderbolt",
+      "CodeName": "SirMordred__thunderBolt",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Lightning"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DamageConductor",
+      "CodeName": "SirMordred__thunderbolt_damageConductor"
+    },
+    {
+      "Name": "StreakingThunder",
+      "CodeName": "SirMordred__thunderbolt_streakingThunder"
+    },
+    {
+      "Name": "Thunderblast",
+      "CodeName": "SirMordred__thunderbolt_thunderblast",
+      "Effects": [
+        "Stun"
+      ]
+    },
+    {
+      "Name": "Thunderwrath",
+      "CodeName": "SirMordred__thunderbolt_thunderwrath"
+    }
+  ]
+}

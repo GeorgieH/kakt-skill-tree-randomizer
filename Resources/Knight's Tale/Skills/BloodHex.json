@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "BloodHex",
+      "CodeName": "Hero_arcanist__bloodCurse",
+      "ConfigurationName": "BloodCurse",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Hex"
+      ],
+      "Effects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BadBlood",
+      "CodeName": "Hero_arcanist__bloodCurse_badBlood"
+    },
+    {
+      "Name": "BlackBlood",
+      "CodeName": "Hero_arcanist__bloodCurse_blackBlood"
+    },
+    {
+      "Name": "Hemophilia",
+      "CodeName": "Hero_arcanist__bloodCurse_hemophilia"
+    },
+    {
+      "Name": "ShortSyllables",
+      "CodeName": "Hero_arcanist__bloodCurse_shortSyllables"
+    }
+  ]
+}

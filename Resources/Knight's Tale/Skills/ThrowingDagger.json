@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "ThrowingDagger",
+      "CodeName": "Hero_vanguard__throwingDagger",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BalancedThrow",
+      "CodeName": "Hero_vanguard__throwingDagger_balancedThrow"
+    },
+    {
+      "Name": "Lethality",
+      "CodeName": "Hero_vanguard__throwingDagger_lethality"
+    },
+    {
+      "Name": "PoisonedDagger",
+      "CodeName": "Hero_vanguard__throwingDagger_poisonedDagger"
+    },
+    {
+      "Name": "TwinDaggers",
+      "CodeName": "Hero_vanguard__throwingDagger_twinDaggers"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfTraps",
+      "CodeName": "Hero_vanguard__masterOftraps",
+      "ConfigurationName": "MasterofTraps",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteAttributes": [
+        "Trap"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BarbedTraps",
+      "CodeName": "Hero_vanguard__masterOftraps_barbedTraps"
+    },
+    {
+      "Name": "BetterTools",
+      "CodeName": "Hero_vanguard__masterOftraps_betterTools"
+    },
+    {
+      "Name": "DeactivateTrap",
+      "CodeName": "Hero_vanguard__masterOftraps_deactivateTrap"
+    },
+    {
+      "Name": "SerratedTraps",
+      "CodeName": "Hero_vanguard__masterOftraps_serratedTraps"
+    }
+  ]
+}

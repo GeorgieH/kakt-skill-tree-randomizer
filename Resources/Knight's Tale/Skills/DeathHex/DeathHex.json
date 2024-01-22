@@ -1,7 +1,0 @@
-{
-  "Name": "DeathHex",
-  "CodeName": "Hero_arcanist__deathCurse",
-  "ConfigurationName": "DeathCurse",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Hex" ]
-}

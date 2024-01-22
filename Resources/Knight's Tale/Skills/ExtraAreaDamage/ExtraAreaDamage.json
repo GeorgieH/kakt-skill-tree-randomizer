@@ -1,6 +1,0 @@
-{
-  "Name": "ExtraAreaDamage",
-  "CodeName": "Hero_champion__extraAreadamage",
-  "Type": "Passive",
-  "PrerequisiteAttributes": [ "Area" ]
-}

@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "DefensiveStance",
+      "CodeName": "Hero_champion__defensiveStance",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ActiveDefense",
+      "CodeName": "Hero_champion__defensiveStance_activeDefense"
+    },
+    {
+      "Name": "Perseverance",
+      "CodeName": "Hero_champion__defensiveStance_perseverance"
+    },
+    {
+      "Name": "RestingStance",
+      "CodeName": "Hero_champion__defensiveStance_restingStance"
+    },
+    {
+      "Name": "Steadiness",
+      "CodeName": "Hero_champion__defensiveStance_steadiness"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterAssassin",
+      "CodeName": "Hero_vanguard__masterAssassin",
+      "Type": "Passive",
+      "PrerequisiteEffects": [
+        "Hidden"
+      ]
+    }
+  ]
+}

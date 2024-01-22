@@ -1,7 +1,0 @@
-{
-  "Name": "Cleave",
-  "CodeName": "Hero_champion__cleave",
-  "ConfigurationName": "Cleeve",
-  "Type": "Active",
-  "Attributes": [ "Melee", "Area" ]
-}

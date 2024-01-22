@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "RainOfArrows",
+      "CodeName": "SirYvain__rainofArrows",
+      "ConfigurationName": "RainofArrows",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Broadheads",
+      "CodeName": "SirYvain__rainofArrows_broadheads"
+    },
+    {
+      "Name": "CripplingVolley",
+      "CodeName": "SirYvain__rainofArrows_cripplingVolley"
+    },
+    {
+      "Name": "HeavyBolts",
+      "CodeName": "SirYvain__rainofArrows_heavyBolts"
+    },
+    {
+      "Name": "QuiverOfPlenty",
+      "CodeName": "SirYvain__rainofArrows_quiverofPlenty"
+    }
+  ]
+}

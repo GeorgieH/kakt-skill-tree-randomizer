@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "Assassination",
+      "CodeName": "Hero_vanguard__assassination",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Brutality",
+      "CodeName": "Hero_vanguard__assassination_brutality"
+    },
+    {
+      "Name": "Remorseless",
+      "CodeName": "Hero_vanguard__assassination_remorseless"
+    },
+    {
+      "Name": "Vigor",
+      "CodeName": "Hero_vanguard__assassination_vigor"
+    },
+    {
+      "Name": "WeakSpots",
+      "CodeName": "Hero_vanguard__assassination_weakSpots"
+    }
+  ]
+}

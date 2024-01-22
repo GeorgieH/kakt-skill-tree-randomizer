@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "SpellResistance",
+      "CodeName": "Hero_arcanist__spellResistance",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AncientWard",
+      "CodeName": "Hero_arcanist__spellResistance_ancientWard"
+    },
+    {
+      "Name": "Flameborn",
+      "CodeName": "Hero_arcanist__spellResistance_flameborn"
+    },
+    {
+      "Name": "MentalFort",
+      "CodeName": "Hero_arcanist__mentalGuard_mentalFort"
+    },
+    {
+      "Name": "Protection",
+      "CodeName": "Hero_arcanist__spellResistance_protection"
+    }
+  ]
+}

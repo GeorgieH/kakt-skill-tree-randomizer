@@ -1,0 +1,41 @@
+{
+  "Skills": [
+    {
+      "Name": "CastStigma",
+      "CodeName": "SirMordred__castStigma",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Hex"
+      ],
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "_Base": "CastStigma",
+      "Name": "BlackKnightCastStigma",
+      "CodeName": "BlackKnight__castStigma",
+      "IconName": "SirMordred__castStigma"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "LastingStigma",
+      "CodeName": "SirMordred__castStigma_lastingStigma"
+    },
+    {
+      "Name": "MindShackle",
+      "CodeName": "SirMordred__castStigma_mindShackle"
+    },
+    {
+      "Name": "StigmaOfDishonor",
+      "CodeName": "SirMordred__castStigma_stigmaofDishonor"
+    },
+    {
+      "Name": "WastingSign",
+      "CodeName": "SirMordred__castStigma_wastingSign"
+    }
+  ]
+}

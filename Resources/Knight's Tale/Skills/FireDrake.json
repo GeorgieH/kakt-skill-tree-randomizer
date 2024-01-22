@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "FireDrake",
+      "CodeName": "Hero_arcanist__fireDrake",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Fire",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DrakesCurse",
+      "CodeName": "Hero_arcanist__fireDrake_drakesCurse",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "GreatSerpent",
+      "CodeName": "Hero_arcanist__fireDrake_greatSerpent"
+    },
+    {
+      "Name": "Inferno",
+      "CodeName": "Hero_arcanist__fireDrake_inferno",
+      "Effects": [
+        "Burn"
+      ]
+    },
+    {
+      "Name": "ScorchingBlaze",
+      "CodeName": "Hero_arcanist__fireDrake_scorchingBlaze"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "Skills": [
+    {
+      "Name": "GlacialStrike",
+      "CodeName": "Morgana__glacialStrike",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Ice"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AntediluvianRime",
+      "CodeName": "Morgana__glacialStrike_antediluvianRime",
+      "Effects": [
+        "Freeze"
+      ]
+    },
+    {
+      "Name": "Hailstorm",
+      "CodeName": "Morgana__glacialStrike_hailstorm"
+    },
+    {
+      "Name": "PrimalIce",
+      "CodeName": "Morgana__glacialStrike_primalIce"
+    },
+    {
+      "Name": "Wintersmith",
+      "CodeName": "Morgana__glacialStrike_wintersmith"
+    }
+  ]
+}

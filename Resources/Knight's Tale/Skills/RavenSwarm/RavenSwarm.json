@@ -1,7 +1,0 @@
-{
-  "Name": "RavenSwarm",
-  "CodeName": "Hero_arcanist__ravenSwarm",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell" ],
-  "Effects": [ "Slow" ]
-}

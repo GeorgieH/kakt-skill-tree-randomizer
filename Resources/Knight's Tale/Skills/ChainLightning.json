@@ -1,0 +1,41 @@
+{
+  "Skills": [
+    {
+      "Name": "ChainLightning",
+      "CodeName": "SirMordred__chainLightning",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Lightning"
+      ]
+    },
+    {
+      "_Base": "ChainLightning",
+      "Name": "FaerieKnightChainLightning",
+      "CodeName": "FaerieKnight__chainLightning",
+      "IconName": "SirMordred__chainLightning"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ElectricPower",
+      "CodeName": "SirMordred__chainLightning_electricPower"
+    },
+    {
+      "Name": "FulgurousWhip",
+      "CodeName": "SirMordred__chainLightning_fulgurousWhip"
+    },
+    {
+      "Name": "ScourgeOfMordred",
+      "CodeName": "SirMordred__chainLightning_scourgeofMordred",
+      "Effects": [
+        "Shock"
+      ]
+    },
+    {
+      "Name": "SwiftBolt",
+      "CodeName": "SirMordred__chainLightning_swiftBolt"
+    }
+  ]
+}

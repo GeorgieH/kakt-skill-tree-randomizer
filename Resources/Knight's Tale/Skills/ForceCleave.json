@@ -1,0 +1,40 @@
+{
+  "Skills": [
+    {
+      "Name": "ForceCleave",
+      "CodeName": "FaerieKnight__forceCleave",
+      "Type": "Active",
+      "Attributes": [
+        "Melee",
+        "Area"
+      ],
+      "Effects": [
+        "Knockback"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Dominance",
+      "CodeName": "FaerieKnight__forceCleave_dominance",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "Feebleness",
+      "CodeName": "FaerieKnight__forceCleave_feebleness",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "FlowingCleave",
+      "CodeName": "FaerieKnight__forceCleave_flowingCleave"
+    },
+    {
+      "Name": "RendingCleave",
+      "CodeName": "FaerieKnight__forceCleave_rendingCleave"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "FrostArmour",
+      "CodeName": "Hero_sage__frostArmour",
+      "Type": "Passive",
+      "Upgradable": true,
+      "Attributes": [
+        "Ice"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ColdSkin",
+      "CodeName": "Hero_sage__frostArmour_coldSkin"
+    },
+    {
+      "Name": "EnchantedArmour",
+      "CodeName": "Hero_sage__frostArmour_enchantedArmour"
+    },
+    {
+      "Name": "Hail",
+      "CodeName": "Hero_sage__frostArmour_hail"
+    },
+    {
+      "Name": "Hardened",
+      "CodeName": "Hero_sage__frostArmour_hardened"
+    }
+  ]
+}

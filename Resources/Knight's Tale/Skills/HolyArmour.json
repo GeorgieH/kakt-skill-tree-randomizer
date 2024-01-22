@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "HolyArmour",
+      "CodeName": "WhiteKnight__holyArmour",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Aegis",
+      "CodeName": "WhiteKnight__holyArmour_aegis"
+    },
+    {
+      "Name": "DivineArmour",
+      "CodeName": "WhiteKnight__holyArmour_divineArmour"
+    },
+    {
+      "Name": "HallowedChampion",
+      "CodeName": "WhiteKnight__holyArmour_hallowedChampion"
+    },
+    {
+      "Name": "Martyrdom",
+      "CodeName": "WhiteKnight__holyArmour_martyrdom"
+    }
+  ]
+}

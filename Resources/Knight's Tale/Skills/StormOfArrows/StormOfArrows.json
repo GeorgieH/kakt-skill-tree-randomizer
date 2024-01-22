@@ -1,7 +1,0 @@
-{
-  "Name": "StormOfArrows",
-  "CodeName": "SirGeraint__stormofArrows",
-  "ConfigurationName": "StormofArrows",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Area", "Lightning" ]
-}

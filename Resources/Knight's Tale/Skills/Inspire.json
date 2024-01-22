@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "Inspire",
+      "CodeName": "Hero_sage__inspire",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Mobilization",
+      "CodeName": "Hero_sage__inspire_mobilization"
+    },
+    {
+      "Name": "MotivateSelf",
+      "CodeName": "Hero_sage__inspire_motivateSelf"
+    },
+    {
+      "Name": "Tranquility",
+      "CodeName": "Hero_sage__inspire_tranquility"
+    },
+    {
+      "Name": "Unbind",
+      "CodeName": "Hero_sage__inspire_unbind"
+    }
+  ]
+}

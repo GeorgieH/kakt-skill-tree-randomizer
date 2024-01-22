@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "RayOfLight",
+      "CodeName": "Hero_sage__rayofLight",
+      "ConfigurationName": "RayofLight",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell"
+      ],
+      "Effects": [
+        "Blind"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FocusedBeam",
+      "CodeName": "Hero_sage__rayofLight_focusedBeam"
+    },
+    {
+      "Name": "InnerGlare",
+      "CodeName": "Hero_sage__rayofLight_innerGlare"
+    },
+    {
+      "Name": "ScaldingRay",
+      "CodeName": "Hero_sage__rayofLight_scaldingRay"
+    },
+    {
+      "Name": "Sunblaze",
+      "CodeName": "Hero_sage__rayofLight_sunblaze"
+    }
+  ]
+}

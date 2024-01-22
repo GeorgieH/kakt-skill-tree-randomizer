@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "LightningCleave",
+      "CodeName": "SirMordred__lightningCleave",
+      "Type": "Active",
+      "Attributes": [
+        "Melee",
+        "Area",
+        "Lightning"
+      ],
+      "Effects": [
+        "Shock"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "JoltingSlash",
+      "CodeName": "SirMordred__lightningCleave_joltingSlash"
+    },
+    {
+      "Name": "LastingThunder",
+      "CodeName": "SirMordred__lightningCleave_lastingThunder"
+    },
+    {
+      "Name": "SelfSufficiency",
+      "CodeName": "SirMordred__lightningCleave_selfSufficiency"
+    },
+    {
+      "Name": "SwiftStrike",
+      "CodeName": "SirMordred__lightningCleave_swiftStrike"
+    }
+  ]
+}

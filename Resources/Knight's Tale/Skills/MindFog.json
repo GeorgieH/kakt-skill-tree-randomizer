@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "MindFog",
+      "CodeName": "Hero_arcanist__mindFog",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Gloomchild",
+      "CodeName": "Hero_arcanist__mindFog_gloomchild"
+    },
+    {
+      "Name": "LongReach",
+      "CodeName": "Hero_arcanist__mindFog_longReach"
+    },
+    {
+      "Name": "MindDrain",
+      "CodeName": "Hero_arcanist__mindFog_mindDrain",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "Puppeteer",
+      "CodeName": "Hero_arcanist__mindFog_puppeteer"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "AimedShot",
+      "CodeName": "Hero_marksman__aimedShot",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DirectHit",
+      "CodeName": "Hero_marksman__aimedShot_directHit"
+    },
+    {
+      "Name": "FastAim",
+      "CodeName": "Hero_marksman__aimedShot_fastAim"
+    },
+    {
+      "Name": "LongRangeShot",
+      "CodeName": "Hero_marksman__aimedShot_longRangeshot"
+    },
+    {
+      "Name": "UnblockableShot",
+      "CodeName": "Hero_marksman__aimedShot_unblockableShot"
+    }
+  ]
+}

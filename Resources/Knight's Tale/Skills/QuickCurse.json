@@ -1,0 +1,12 @@
+{
+  "Skills": [
+    {
+      "Name": "QuickCurse",
+      "CodeName": "Hero_arcanist__quickCurse",
+      "Type": "Passive",
+      "PrerequisiteAttributes": [
+        "Hex"
+      ]
+    }
+  ]
+}

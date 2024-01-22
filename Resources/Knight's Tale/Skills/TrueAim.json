@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "TrueAim",
+      "CodeName": "SirYvain__trueAim",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Advantageous",
+      "CodeName": "SirYvain__trueAim_advantageous",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "Fortunate",
+      "CodeName": "SirYvain__trueAim_fortunate"
+    },
+    {
+      "Name": "Godspeed",
+      "CodeName": "SirYvain__trueAim_godspeed"
+    },
+    {
+      "Name": "Opportune",
+      "CodeName": "SirYvain__trueAim_opportune"
+    }
+  ]
+}

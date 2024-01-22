@@ -1,0 +1,42 @@
+{
+  "Skills": [
+    {
+      "Name": "FallingStar",
+      "CodeName": "Hero_arcanist__fallingStar",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Fire",
+        "Area"
+      ],
+      "Effects": [
+        "Knockback"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "CometSwarm",
+      "CodeName": "Hero_arcanist__fallingStar_cometSwarm"
+    },
+    {
+      "Name": "Firestarter",
+      "CodeName": "Hero_arcanist__fallingStar_firestarter",
+      "Effects": [
+        "Burn"
+      ]
+    },
+    {
+      "Name": "Impact",
+      "CodeName": "Hero_arcanist__fallingStar_impact"
+    },
+    {
+      "Name": "Shockwave",
+      "CodeName": "Hero_arcanist__fallingStar_shockwave",
+      "Effects": [
+        "Knockdown"
+      ]
+    }
+  ]
+}

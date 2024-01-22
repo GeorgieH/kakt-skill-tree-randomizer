@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "DamageFocus",
+      "CodeName": "Hero_champion__damageFocus",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FocusedWatch",
+      "CodeName": "Hero_champion__damageFocus_focusedWatch"
+    },
+    {
+      "Name": "Readiness",
+      "CodeName": "Hero_champion__damageFocus_readiness"
+    },
+    {
+      "Name": "SaveStrength",
+      "CodeName": "Hero_champion__damageFocus_saveStrength"
+    },
+    {
+      "Name": "SmiteTheWeak",
+      "CodeName": "Hero_champion__damageFocus_smiteTheweak"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "Taunt",
+      "CodeName": "Hero_defender__taunt",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    },
+    {
+      "_Base": "Taunt",
+      "Name": "ChampionTaunt",
+      "CodeName": "Hero_champion__taunt",
+      "IconName": "Hero_defender__taunt"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ArmourBait",
+      "CodeName": "Hero_defender__taunt_armourBait"
+    },
+    {
+      "Name": "Demoralize",
+      "CodeName": "Hero_defender__taunt_demoralize"
+    },
+    {
+      "Name": "FomorianCurse",
+      "CodeName": "Hero_defender__taunt_fomorianCurse"
+    },
+    {
+      "Name": "WarCry",
+      "CodeName": "Hero_defender__taunt_warCry"
+    }
+  ]
+}

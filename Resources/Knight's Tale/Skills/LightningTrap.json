@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "LightningTrap",
+      "CodeName": "Hero_vanguard__lightningTrap",
+      "Type": "Active",
+      "Attributes": [
+        "Trap"
+      ],
+      "Effects": [
+        "Shock"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Farcaster",
+      "CodeName": "Hero_vanguard__lightningTrap_farcaster"
+    },
+    {
+      "Name": "ForkedDischarge",
+      "CodeName": "Hero_vanguard__lightningTrap_forkedDischarge"
+    },
+    {
+      "Name": "Thunderflash",
+      "CodeName": "Hero_vanguard__lightningTrap_thunderflash"
+    },
+    {
+      "Name": "Thunderstrike",
+      "CodeName": "Hero_vanguard__lightningTrap_thunderstrike"
+    }
+  ]
+}

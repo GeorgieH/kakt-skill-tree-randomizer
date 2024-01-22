@@ -1,0 +1,29 @@
+{
+  "Skills": [
+    {
+      "Name": "AuraOfProtection",
+      "CodeName": "Hero_sage__auraOfprotection",
+      "ConfigurationName": "AuraofProtection",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExtendedAura",
+      "CodeName": "Hero_sage__auraOfprotection_extendedAura"
+    },
+    {
+      "Name": "KeenMind",
+      "CodeName": "Hero_sage__auraOfprotection_keenMind"
+    },
+    {
+      "Name": "Mist",
+      "CodeName": "Hero_sage__auraOfprotection_mist"
+    },
+    {
+      "Name": "ReinforcedAura",
+      "CodeName": "Hero_sage__auraOfprotection_reinforcedAura"
+    }
+  ]
+}

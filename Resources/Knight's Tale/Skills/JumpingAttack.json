@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "JumpingAttack",
+      "CodeName": "Hero_vanguard__jumpingAttack",
+      "Type": "Active",
+      "Attributes": [
+        "Movement",
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "HitAndRun",
+      "CodeName": "Hero_vanguard__jumpingAttack_hitAndrun"
+    },
+    {
+      "Name": "LongRush",
+      "CodeName": "Hero_vanguard__jumpingAttack_longRush"
+    },
+    {
+      "Name": "Nimble",
+      "CodeName": "Hero_vanguard__jumpingAttack_nimble"
+    },
+    {
+      "Name": "Recoil",
+      "CodeName": "Hero_vanguard__jumpingAttack_recoil",
+      "Effects": [
+        "Knockback",
+        "Knockdown"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "Pulverise",
+      "CodeName": "Hero_champion__pulverise",
+      "Type": "Active",
+      "Attributes": [
+        "Area"
+      ],
+      "Effects": [
+        "Knockback"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Behemoth",
+      "CodeName": "Hero_champion__pulverise_behemoth"
+    },
+    {
+      "Name": "HeavyImpact",
+      "CodeName": "Hero_champion__pulverise_heavyImpact"
+    },
+    {
+      "Name": "Might",
+      "CodeName": "Hero_champion__pulverise_might"
+    },
+    {
+      "Name": "Stomp",
+      "CodeName": "Hero_champion__pulverise_stomp"
+    }
+  ]
+}

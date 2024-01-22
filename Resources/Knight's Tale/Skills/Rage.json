@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "Rage",
+      "CodeName": "Hero_champion__rage",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AngerManagement",
+      "CodeName": "Hero_champion__rage_angerManagement"
+    },
+    {
+      "Name": "Bloodlust",
+      "CodeName": "Hero_champion__rage_bloodlust"
+    },
+    {
+      "Name": "BloodRage",
+      "CodeName": "Hero_champion__rage_bloodRage"
+    },
+    {
+      "Name": "ExtendedRage",
+      "CodeName": "Hero_champion__rage_extendedRage"
+    }
+  ]
+}

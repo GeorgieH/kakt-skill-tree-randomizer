@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "CleansingFire",
+      "CodeName": "Hero_sage__cleansingFire",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Fire"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Conflagaration",
+      "CodeName": "Hero_sage__cleansingFire_conflagration"
+    },
+    {
+      "Name": "FieryPurge",
+      "CodeName": "Hero_sage__cleansingFire_fieryPurge"
+    },
+    {
+      "Name": "Fireborn",
+      "CodeName": "Hero_sage__cleansingFire_fireborn"
+    },
+    {
+      "Name": "Rekindle",
+      "CodeName": "Hero_sage__cleansingFire_rekindle"
+    }
+  ]
+}

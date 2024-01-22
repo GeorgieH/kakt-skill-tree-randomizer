@@ -1,6 +1,0 @@
-{
-  "Name": "DrainBlood",
-  "CodeName": "Hero_champion__drainBlood",
-  "Type": "Active",
-  "PrerequisiteEffects": [ "Bleed" ]
-}

@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "SoothingWords",
+      "CodeName": "Hero_sage__soothingWords",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Cure",
+      "CodeName": "Hero_sage__soothingWords_cure"
+    },
+    {
+      "Name": "Healer",
+      "CodeName": "Hero_sage__soothingWords_healer"
+    },
+    {
+      "Name": "Medicines",
+      "CodeName": "Hero_sage__soothingWords_medicines"
+    },
+    {
+      "Name": "Recreator",
+      "CodeName": "Hero_sage__soothingWords_recreator"
+    }
+  ]
+}

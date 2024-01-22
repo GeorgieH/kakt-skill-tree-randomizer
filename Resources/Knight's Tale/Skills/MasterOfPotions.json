@@ -1,0 +1,29 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfPotions",
+      "CodeName": "SirDagonet__masterofPotions",
+      "ConfigurationName": "MasterofPotions",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "HasteningMixture",
+      "CodeName": "SirDagonet__masterofPotions_hasteningMixture"
+    },
+    {
+      "Name": "Infusion",
+      "CodeName": "SirDagonet__masterofPotions_infusion"
+    },
+    {
+      "Name": "MagicalResidue",
+      "CodeName": "SirDagonet__masterofPotions_magicalResidue"
+    },
+    {
+      "Name": "RareIngredients",
+      "CodeName": "SirDagonet__masterofPotions_rareIngredients"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "Skills": [
+    {
+      "Name": "ShieldCharge",
+      "CodeName": "Hero_defender__shieldCharge",
+      "Type": "Active",
+      "Attributes": [
+        "Movement",
+        "Melee"
+      ],
+      "Effects": [
+        "Knockback",
+        "Knockdown"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExtendedCharge",
+      "CodeName": "Hero_defender__shieldCharge_extendedCharge"
+    },
+    {
+      "Name": "Momentum",
+      "CodeName": "Hero_defender__shieldCharge_momentum"
+    },
+    {
+      "Name": "ShieldSpikes",
+      "CodeName": "Hero_defender__shieldCharge_shieldSpikes"
+    },
+    {
+      "Name": "WeightedCharge",
+      "CodeName": "Hero_defender__shieldCharge_weighedCharge"
+    }
+  ]
+}

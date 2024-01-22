@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "Alchemist",
+      "CodeName": "Hero_marksman__alchemist",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteEffects": [
+        "Poison"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Corrosion",
+      "CodeName": "Hero_marksman__alchemist_corrosion"
+    },
+    {
+      "Name": "ExtraDamage",
+      "CodeName": "Hero_marksman__alchemist_extraDamage"
+    },
+    {
+      "Name": "LongDuration",
+      "CodeName": "Hero_marksman__alchemist_longDuration"
+    },
+    {
+      "Name": "MasterPoisoner",
+      "CodeName": "Hero_marksman__alchemist_masterPoisoner"
+    }
+  ]
+}

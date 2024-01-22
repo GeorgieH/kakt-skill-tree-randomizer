@@ -1,8 +1,0 @@
-{
-  "Name": "SlowingHex",
-  "CodeName": "Hero_arcanist__curse",
-  "ConfigurationName": "Curse",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Hex" ],
-  "Effects": [ "Slow" ]
-}

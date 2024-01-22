@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfIce",
+      "CodeName": "Hero_sage__masterOfice",
+      "ConfigurationName": "MasterofIce",
+      "Type": "Passive",
+      "Upgradable": true,
+      "Attributes": [
+        "Ice"
+      ],
+      "PrerequisiteEffects": [
+        "Chill",
+        "Freeze"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ColdBlood",
+      "CodeName": "Hero_sage__masterOfice_coldBlood"
+    },
+    {
+      "Name": "EnhancedByCold",
+      "CodeName": "Hero_sage__masterOfice_enhancedBycold"
+    },
+    {
+      "Name": "FrozenPower",
+      "CodeName": "Hero_sage__masterOfice_frozenPower"
+    },
+    {
+      "Name": "Shatter",
+      "CodeName": "Hero_sage__masterOfice_shatter"
+    }
+  ]
+}

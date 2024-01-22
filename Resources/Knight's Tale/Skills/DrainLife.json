@@ -1,0 +1,27 @@
+{
+  "Skills": [
+    {
+      "Name": "DrainLife",
+      "CodeName": "SirTristan__drainLife",
+      "Type": "Active"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Devourer",
+      "CodeName": "SirTristan__drainLife_devourer"
+    },
+    {
+      "Name": "EverlastingHunger",
+      "CodeName": "SirTristan__drainLife_everlastingHunger"
+    },
+    {
+      "Name": "Harbinger",
+      "CodeName": "SirTristan__drainLife_harbinger"
+    },
+    {
+      "Name": "Reaper",
+      "CodeName": "SirTristan__drainLife_reaper"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Berserking",
+      "CodeName": "Hero_vanguard__berserking",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Enraged",
+      "CodeName": "Hero_vanguard__berserking_enraged"
+    },
+    {
+      "Name": "Fury",
+      "CodeName": "Hero_vanguard__berserking_fury"
+    },
+    {
+      "Name": "Recklessness",
+      "CodeName": "Hero_vanguard__berserking_recklessness"
+    },
+    {
+      "Name": "WarChanting",
+      "CodeName": "Hero_vanguard__berserking_warChanting"
+    }
+  ]
+}

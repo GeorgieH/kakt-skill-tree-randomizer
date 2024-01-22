@@ -1,0 +1,13 @@
+{
+  "Skills": [
+    {
+      "Name": "ExtraStun",
+      "CodeName": "Hero_champion__extraStun",
+      "Type": "Passive",
+      "PrerequisiteEffects": [
+        "Slow",
+        "Stun"
+      ]
+    }
+  ]
+}

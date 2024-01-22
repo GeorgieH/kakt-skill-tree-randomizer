@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "ThunderStorm",
+      "CodeName": "Hero_sage__thunderStorm",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Lightning",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Everstorm",
+      "CodeName": "Hero_sage__thunderStorm_everstorm"
+    },
+    {
+      "Name": "GreaterStorm",
+      "CodeName": "Hero_sage__thunderStorm_greaterStorm"
+    },
+    {
+      "Name": "Thunderburst",
+      "CodeName": "Hero_sage__thunderStorm_thunderburst"
+    },
+    {
+      "Name": "Thundershock",
+      "CodeName": "Hero_sage__thunderStorm_thundershock",
+      "Effects": [
+        "Shock"
+      ]
+    }
+  ]
+}

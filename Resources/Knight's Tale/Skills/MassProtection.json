@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "MassProtection",
+      "CodeName": "Hero_sage__massProtection",
+      "Type": "Active",
+      "Attributes": [
+        "Support",
+        "Spell"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Aegis",
+      "CodeName": "Hero_sage__massProtection_aegis"
+    },
+    {
+      "Name": "Cleanse",
+      "CodeName": "Hero_sage__massProtection_cleanse"
+    },
+    {
+      "Name": "Durability",
+      "CodeName": "Hero_sage__massProtection_durability"
+    },
+    {
+      "Name": "Safeguard",
+      "CodeName": "Hero_sage__massProtection_safeguard"
+    }
+  ]
+}

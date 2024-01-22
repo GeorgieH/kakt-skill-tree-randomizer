@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "Sentinel",
+      "CodeName": "Hero_marksman__sentinel",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Broadshot",
+      "CodeName": "Hero_marksman__sentinel_broadShot"
+    },
+    {
+      "Name": "Prudence",
+      "CodeName": "Hero_marksman__sentinel_prudence"
+    },
+    {
+      "Name": "RapidFire",
+      "CodeName": "Hero_marksman__sentinel_rapidFire"
+    },
+    {
+      "Name": "Watchful",
+      "CodeName": "Hero_marksman__sentinel_watchful"
+    }
+  ]
+}

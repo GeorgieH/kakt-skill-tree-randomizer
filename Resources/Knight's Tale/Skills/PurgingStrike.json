@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "PurgingStrike",
+      "CodeName": "Hero_Sage__purgingStrike",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Eagerness",
+      "CodeName": "Hero_Sage__purgingStrike_eagerness"
+    },
+    {
+      "Name": "Enfeeble",
+      "CodeName": "Hero_Sage__purgingStrike_enfeeble"
+    },
+    {
+      "Name": "KillingBlow",
+      "CodeName": "Hero_Sage__purgingStrike_killingBlow"
+    },
+    {
+      "Name": "MightyBlow",
+      "CodeName": "Hero_Sage__purgingStrike_mightyBlow"
+    }
+  ]
+}
