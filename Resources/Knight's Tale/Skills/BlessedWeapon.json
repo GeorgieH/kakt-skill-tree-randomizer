@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "BlessedWeapon",
+      "CodeName": "WhiteKnight__blessedWeapon",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ArcaneBlessing",
+      "CodeName": "WhiteKnight__blessedWeapon_arcaneBlessing"
+    },
+    {
+      "Name": "Banishment",
+      "CodeName": "WhiteKnight__blessedWeapon_banishment"
+    },
+    {
+      "Name": "ConsecratedBlade",
+      "CodeName": "WhiteKnight__blessedWeapon_consecratedBlade"
+    },
+    {
+      "Name": "SwiftJustice",
+      "CodeName": "WhiteKnight__blessedWeapon_swiftJustice"
+    }
+  ]
+}

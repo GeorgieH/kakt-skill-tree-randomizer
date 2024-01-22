@@ -1,8 +1,0 @@
-{
-  "Name": "BitterDread",
-  "CodeName": "Hero_arcanist__bitterDread",
-  "Type": "Passive",
-  "Attributes": [ "Ice" ],
-  "PrerequisiteAttributes": [ "Hex" ],
-  "PrerequisiteEffects": [ "Chill", "Freeze" ]
-}

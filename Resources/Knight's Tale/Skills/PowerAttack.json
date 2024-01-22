@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "PowerAttack",
+      "CodeName": "Hero_champion__powerAttack",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Initiator",
+      "CodeName": "Hero_champion__powerAttack_initiator"
+    },
+    {
+      "Name": "ReadyToPurge",
+      "CodeName": "Hero_champion__powerAttack_readyTopurge"
+    },
+    {
+      "Name": "StunningBlow",
+      "CodeName": "Hero_champion__powerAttack_stunningBlow",
+      "Effects": [
+        "Stun"
+      ]
+    },
+    {
+      "Name": "Vulnerability",
+      "CodeName": "Hero_champion__powerAttack_vulnerability",
+      "Effects": [
+        "Vulnerability"
+      ]
+    }
+  ]
+}

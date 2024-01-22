@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "Assault",
+      "CodeName": "SirLancelot__assault",
+      "Type": "Active",
+      "Attributes": [
+        "Movement",
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Blitz",
+      "CodeName": "SirLancelot__assault_blitz"
+    },
+    {
+      "Name": "Lunge",
+      "CodeName": "SirLancelot__assault_lunge"
+    },
+    {
+      "Name": "Onslaught",
+      "CodeName": "SirLancelot__assault_onslaught"
+    },
+    {
+      "Name": "ShockingAssault",
+      "CodeName": "SirLancelot__assault_shockingAssault",
+      "Effects": [
+        "Shock"
+      ]
+    }
+  ]
+}

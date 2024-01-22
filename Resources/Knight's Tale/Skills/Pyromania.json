@@ -1,0 +1,12 @@
+{
+  "Skills": [
+    {
+      "Name": "Pyromania",
+      "CodeName": "Hero_marksman__pyromania",
+      "Type": "Passive",
+      "PrerequisiteEffects": [
+        "Burn"
+      ]
+    }
+  ]
+}

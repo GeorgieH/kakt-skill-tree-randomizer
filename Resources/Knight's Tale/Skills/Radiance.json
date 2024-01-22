@@ -1,0 +1,40 @@
+{
+  "Skills": [
+    {
+      "Name": "Radiance",
+      "CodeName": "SirLancelot__radiance",
+      "Type": "Active",
+      "Attributes": [
+        "Area",
+        "Spell"
+      ],
+      "Effects": [
+        "Blind"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ChillingRadiance",
+      "CodeName": "SirLancelot__radiance_chillingRadiance",
+      "Effects": [
+        "Chill"
+      ]
+    },
+    {
+      "Name": "Fluence",
+      "CodeName": "SirLancelot__radiance_fluence"
+    },
+    {
+      "Name": "InnerRadiance",
+      "CodeName": "SirLancelot__radiance_innateRadiance"
+    },
+    {
+      "Name": "Vulnerability",
+      "CodeName": "SirLancelot__radiance_vulnerability",
+      "Effects": [
+        "Vulnerability"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Mock",
+      "CodeName": "RedKnight__mock",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AcridJeer",
+      "CodeName": "RedKnight__mock_acridJeer"
+    },
+    {
+      "Name": "BellowingTirade",
+      "CodeName": "RedKnight__mock_bellowingTirade"
+    },
+    {
+      "Name": "MasterfulInsults",
+      "CodeName": "RedKnight__mock_masterfulInsults"
+    },
+    {
+      "Name": "PottyMouth",
+      "CodeName": "RedKnight__mock_pottyMouth"
+    }
+  ]
+}

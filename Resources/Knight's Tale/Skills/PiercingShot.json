@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "PiercingShot",
+      "CodeName": "SirYvain__piercingShot",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BarbedShot",
+      "CodeName": "SirYvain__piercingShot_barbedShot"
+    },
+    {
+      "Name": "BodkinShot",
+      "CodeName": "SirYvain__piercingShot_bodkinShot"
+    },
+    {
+      "Name": "OpenWounds",
+      "CodeName": "SirYvain__piercingShot_quickReload",
+      "Effects": [
+        "Bleed"
+      ]
+    },
+    {
+      "Name": "Windlass",
+      "CodeName": "SirYvain__piercingShot_windlass"
+    }
+  ]
+}

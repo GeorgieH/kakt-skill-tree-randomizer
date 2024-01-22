@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "SmokeBomb",
+      "CodeName": "SirTristan__smokeBomb",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    },
+    {
+      "_Base": "SmokeBomb",
+      "Name": "SirDamasSmokeBomb",
+      "CodeName": "SirDamas__smokeBomb",
+      "IconName": "SirTristan__smokeBomb"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AlchemistsPurse",
+      "CodeName": "SirTristan__smokeBomb_alchemistsPurse"
+    },
+    {
+      "Name": "Bomblets",
+      "CodeName": "SirTristan__smokeBomb_bomblets"
+    },
+    {
+      "Name": "ClingingVapor",
+      "CodeName": "SirTristan__smokeBomb_clingingVapor"
+    },
+    {
+      "Name": "VolatileMixture",
+      "CodeName": "SirTristan__smokeBomb_volatileMixture"
+    }
+  ]
+}

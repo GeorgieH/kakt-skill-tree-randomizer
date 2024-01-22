@@ -1,7 +1,0 @@
-{
-  "Name": "Favoured",
-  "CodeName": "Hero_sage__favoured",
-  "Type": "Passive",
-  "PrerequisiteAttributes": [ "Spell", "Support" ],
-  "PrerequisiteAttributesCheckType": "All"
-}

@@ -1,7 +1,0 @@
-{
-  "Name": "Radiance",
-  "CodeName": "SirLancelot__radiance",
-  "Type": "Active",
-  "Attributes": [ "Area", "Spell" ],
-  "Effects": [ "Blind" ]
-}

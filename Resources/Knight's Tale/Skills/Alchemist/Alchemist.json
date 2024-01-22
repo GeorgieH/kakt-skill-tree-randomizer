@@ -1,7 +1,0 @@
-{
-  "Name": "Alchemist",
-  "CodeName": "Hero_marksman__alchemist",
-  "Type": "Passive",
-  "Upgradable": true,
-  "PrerequisiteEffects": [ "Poison" ]
-}

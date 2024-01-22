@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "Surge",
+      "CodeName": "SirGeraint__surge",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Lightning",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Energetic",
+      "CodeName": "SirGeraint__surge_energetic"
+    },
+    {
+      "Name": "NewApproach",
+      "CodeName": "SirGeraint__surge_newApproach"
+    },
+    {
+      "Name": "Rush",
+      "CodeName": "SirGeraint__surge_rush"
+    },
+    {
+      "Name": "Sidestep",
+      "CodeName": "SirGeraint__surge_sidestep"
+    }
+  ]
+}

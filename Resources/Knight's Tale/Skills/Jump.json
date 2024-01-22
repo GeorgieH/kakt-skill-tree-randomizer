@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Jump",
+      "CodeName": "Hero_vanguard__jump",
+      "Type": "Active",
+      "Attributes": [
+        "Movement"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Hurdle",
+      "CodeName": "Hero_vanguard__jump_hurdle"
+    },
+    {
+      "Name": "LongJump",
+      "CodeName": "Hero_vanguard__jump_longJump"
+    },
+    {
+      "Name": "Lope",
+      "CodeName": "Hero_vanguard__jump_lope"
+    },
+    {
+      "Name": "Vault",
+      "CodeName": "Hero_vanguard__jump_vault"
+    }
+  ]
+}

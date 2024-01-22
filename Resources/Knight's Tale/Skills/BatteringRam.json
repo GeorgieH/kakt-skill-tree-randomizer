@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "BatteringRam",
+      "CodeName": "Hero_defender__batteringRam",
+      "Type": "Active",
+      "Attributes": [
+        "Melee",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Charge",
+      "CodeName": "Hero_defender__batteringRam_charge"
+    },
+    {
+      "Name": "CripplingBlow",
+      "CodeName": "Hero_defender__batteringRam_cripplingBlow",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "Reinforced",
+      "CodeName": "Hero_defender__batteringRam_reinforced"
+    },
+    {
+      "Name": "Shatterer",
+      "CodeName": "Hero_defender__batteringRam_shatterer"
+    }
+  ]
+}

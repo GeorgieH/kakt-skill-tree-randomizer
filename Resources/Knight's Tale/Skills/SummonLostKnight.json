@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "SummonLostKnight",
+      "CodeName": "Hero_arcanist__summonLostKnight",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Summon"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EngravedBlade",
+      "CodeName": "Hero_arcanist__summonLostKnight_engravedBlade"
+    },
+    {
+      "Name": "EternalServitude",
+      "CodeName": "Hero_arcanist__summonLostKnight_eternalServitude"
+    },
+    {
+      "Name": "UndeadFortitude",
+      "CodeName": "Hero_arcanist__summonLostKnight_undeadFortitude"
+    },
+    {
+      "Name": "WartimeMemories",
+      "CodeName": "Hero_arcanist__summonLostKnight_wartimeMemories"
+    }
+  ]
+}

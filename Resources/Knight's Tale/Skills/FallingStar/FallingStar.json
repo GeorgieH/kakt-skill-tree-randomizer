@@ -1,7 +1,0 @@
-{
-  "Name": "FallingStar",
-  "CodeName": "Hero_arcanist__fallingStar",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Fire", "Area" ],
-  "Effects": [ "Knockback" ]
-}

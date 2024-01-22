@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "Illusion",
+      "CodeName": "Hero_arcanist__illusion",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FertileMind",
+      "CodeName": "Hero_arcanist__illusion_fertileMind"
+    },
+    {
+      "Name": "Illusionist",
+      "CodeName": "Hero_arcanist__illusion_illusionist"
+    },
+    {
+      "Name": "Mirage",
+      "CodeName": "Hero_arcanist__illusion_mirage"
+    },
+    {
+      "Name": "Shivers",
+      "CodeName": "Hero_arcanist__illusion_shivers",
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ]
+}

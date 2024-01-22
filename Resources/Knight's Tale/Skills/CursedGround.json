@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "CursedGround",
+      "CodeName": "SirDagonet__cursedGround",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Hex",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Foulness",
+      "CodeName": "SirDagonet__cursedGround_foulness"
+    },
+    {
+      "Name": "Malevolence",
+      "CodeName": "SirDagonet__cursedGround_malevolence"
+    },
+    {
+      "Name": "Miasma",
+      "CodeName": "SirDagonet__cursedGround_miasma",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "Quagmire",
+      "CodeName": "SirDagonet__cursedGround_quagmire",
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ]
+}

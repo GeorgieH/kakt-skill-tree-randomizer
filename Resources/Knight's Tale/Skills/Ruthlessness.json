@@ -1,0 +1,27 @@
+{
+  "Skills": [
+    {
+      "Name": "Ruthlessness",
+      "CodeName": "SirGawain__ruthlessness",
+      "Type": "Active"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Anger",
+      "CodeName": "SirGawain__ruthlessness_anger"
+    },
+    {
+      "Name": "Cruelty",
+      "CodeName": "SirGawain__ruthlessness_cruelty"
+    },
+    {
+      "Name": "Resolve",
+      "CodeName": "SirGawain__ruthlessness_resolve"
+    },
+    {
+      "Name": "Unfaltering",
+      "CodeName": "SirGawain__ruthlessness_unfaltering"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "DivineFavour",
+      "CodeName": "SirGalahad__divineFavour",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Empower",
+      "CodeName": "SirGalahad__divineFavour_empower"
+    },
+    {
+      "Name": "LordsHerald",
+      "CodeName": "SirGalahad__divineFavour_lordsHerald"
+    },
+    {
+      "Name": "ShieldOfFaith",
+      "CodeName": "SirGalahad__divineFavour_shieldOfFaith"
+    },
+    {
+      "Name": "Zeal",
+      "CodeName": "SirGalahad__divineFavour_zeal"
+    }
+  ]
+}

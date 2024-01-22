@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "SlowingHex",
+      "CodeName": "Hero_arcanist__curse",
+      "ConfigurationName": "Curse",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Hex"
+      ],
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Fatigue",
+      "CodeName": "Hero_arcanist__curse_fatigue"
+    },
+    {
+      "Name": "MassHex",
+      "CodeName": "Hero_arcanist__curse_massCurse"
+    },
+    {
+      "Name": "Vulnerability",
+      "CodeName": "Hero_arcanist__curse_vulnerability",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "Witchcraft",
+      "CodeName": "Hero_arcanist__curse_witchcraft"
+    }
+  ]
+}

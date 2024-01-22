@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "SummonLostCommoner",
+      "CodeName": "Hero_arcanist__summonLostCommoner",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Summon"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EnchantedSkin",
+      "CodeName": "Hero_arcanist__summonLostCommoner_enchantedSkin"
+    },
+    {
+      "Name": "Purposefulness",
+      "CodeName": "Hero_arcanist__summonLostCommoner_purposefulness"
+    },
+    {
+      "Name": "RottenCarcass",
+      "CodeName": "Hero_arcanist__summonLostCommoner_rottenCarcass"
+    },
+    {
+      "Name": "RunicBones",
+      "CodeName": "Hero_arcanist__summonLostCommoner_runicBones"
+    }
+  ]
+}

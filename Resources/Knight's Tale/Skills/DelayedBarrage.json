@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "DelayedBarrage",
+      "CodeName": "SirYvain__delayedBarrage",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Bombardment",
+      "CodeName": "SirYvain__delayedBarrage_bombardment"
+    },
+    {
+      "Name": "ContinuousOnslaught",
+      "CodeName": "SirYvain__delayedBarrage_continuousOnslaught"
+    },
+    {
+      "Name": "FocusedFire",
+      "CodeName": "SirYvain__delayedBarrage_focusedFire"
+    },
+    {
+      "Name": "FormationBreaker",
+      "CodeName": "SirYvain__delayedBarrage_formationBreaker",
+      "Effects": [
+        "Vulnerability"
+      ]
+    }
+  ]
+}

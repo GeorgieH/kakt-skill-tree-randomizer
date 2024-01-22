@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "BleedingStrike",
+      "CodeName": "RedKnight__bleedingStrike",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ],
+      "Effects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DeeperCuts",
+      "CodeName": "RedKnight__bleedingStrike_deeperCuts"
+    },
+    {
+      "Name": "JaggedEdge",
+      "CodeName": "RedKnight__bleedingStrike_jaggedEdge"
+    },
+    {
+      "Name": "TargetVitals",
+      "CodeName": "RedKnight__bleedingStrike_targetVitals"
+    },
+    {
+      "Name": "TasteTheirBlood",
+      "CodeName": "RedKnight__bleedingStrike_tasteTheirBlood"
+    }
+  ]
+}

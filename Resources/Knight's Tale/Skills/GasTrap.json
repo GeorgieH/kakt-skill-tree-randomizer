@@ -1,0 +1,46 @@
+{
+  "Skills": [
+    {
+      "Name": "GasTrap",
+      "CodeName": "Hero_vanguard__poisonTrap",
+      "ConfigurationName": "PoisonTrap",
+      "Type": "Active",
+      "Attributes": [
+        "Trap"
+      ],
+      "Effects": [
+        "Poison"
+      ]
+    },
+    {
+      "_Base": "GasTrap",
+      "Name": "SirDamasGasTrap",
+      "CodeName": "SirDamas__poisonTrap",
+      "IconName": "Hero_vanguard__poisonTrap"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "CorrosivePoison",
+      "CodeName": "Hero_vanguard__poisonTrap_corrosivePoison"
+    },
+    {
+      "Name": "Enfeeble",
+      "CodeName": "Hero_vanguard__poisonTrap_enfeeble",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "QuickAssembly",
+      "CodeName": "Hero_vanguard__poisonTrap_quickAssembly"
+    },
+    {
+      "Name": "ThickCloud",
+      "CodeName": "Hero_vanguard__poisonTrap_thickCloud",
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ]
+}

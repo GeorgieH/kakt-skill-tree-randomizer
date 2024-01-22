@@ -1,7 +1,0 @@
-{
-  "Name": "FireBlast",
-  "CodeName": "Hero_arcanist__fireBlast",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Fire", "Area" ],
-  "Effects": [ "Burn" ]
-}

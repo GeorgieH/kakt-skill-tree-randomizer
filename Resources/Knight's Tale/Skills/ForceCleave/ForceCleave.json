@@ -1,7 +1,0 @@
-{
-  "Name": "ForceCleave",
-  "CodeName": "FaerieKnight__forceCleave",
-  "Type": "Active",
-  "Attributes": [ "Melee", "Area" ],
-  "Effects": [ "Knockback" ]
-}

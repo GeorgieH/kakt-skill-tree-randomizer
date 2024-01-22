@@ -1,0 +1,38 @@
+{
+  "Skills": [
+    {
+      "Name": "IceLance",
+      "CodeName": "Hero_sage__iceLance",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Ice"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Frostbite",
+      "CodeName": "Hero_sage__iceLance_frostbite"
+    },
+    {
+      "Name": "IceJavelin",
+      "CodeName": "Hero_sage__iceLance_iceJavelin"
+    },
+    {
+      "Name": "NumbingFreeze",
+      "CodeName": "Hero_sage__iceLance_numbingFreeze",
+      "Effects": [
+        "Freeze"
+      ]
+    },
+    {
+      "Name": "Wintersmith",
+      "CodeName": "Hero_sage__iceLance_wintersmith"
+    }
+  ]
+}

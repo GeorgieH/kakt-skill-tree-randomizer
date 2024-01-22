@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "LongReach",
+      "CodeName": "Hero_marksman__longReach",
+      "Type": "Passive",
+      "Upgradable": true
+    },
+    {
+      "_Base": "LongReach",
+      "Name": "ArcanistLongReach",
+      "CodeName": "Hero_arcanist__longReach",
+      "ConfigurationName": "LongReach"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Composure",
+      "CodeName": "Hero_marksman__longReach_composure"
+    },
+    {
+      "Name": "Disengaged",
+      "CodeName": "Hero_marksman__longReach_disengaged"
+    },
+    {
+      "Name": "EagleEye",
+      "CodeName": "Hero_marksman__longReach_eagleEye"
+    },
+    {
+      "Name": "Prepared",
+      "CodeName": "Hero_marksman__longReach_prepared"
+    }
+  ]
+}

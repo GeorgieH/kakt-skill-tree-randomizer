@@ -1,7 +1,0 @@
-{
-  "Name": "FrostArmour",
-  "CodeName": "Hero_sage__frostArmour",
-  "Type": "Passive",
-  "Upgradable": true,
-  "Attributes": [ "Ice" ]
-}

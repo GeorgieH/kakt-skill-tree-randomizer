@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "MonsterHunter",
+      "CodeName": "SirGawain__monsterHunter",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FleetFooted",
+      "CodeName": "SirGawain__monsterHunter_fleetFooted"
+    },
+    {
+      "Name": "FomoriSlayer",
+      "CodeName": "SirGawain__monsterHunter_fomoriSlayer"
+    },
+    {
+      "Name": "LostSlayer",
+      "CodeName": "SirGawain__monsterHunter_lostSlayer"
+    },
+    {
+      "Name": "SidheSlayer",
+      "CodeName": "SirGawain__monsterHunter_sidheSlayer"
+    }
+  ]
+}

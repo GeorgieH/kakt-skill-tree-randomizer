@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "IceThorns",
+      "CodeName": "Morgana__iceThorns",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Ice",
+        "Area"
+      ],
+      "Effects": [
+        "Chill"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ElementalIce",
+      "CodeName": "Morgana__iceThorns_elementalIce"
+    },
+    {
+      "Name": "FreezeBurns",
+      "CodeName": "Morgana__iceThorns_freezeBurns",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "Hoarfrost",
+      "CodeName": "Morgana__iceThorns_hoarfrost"
+    },
+    {
+      "Name": "JaggedThorns",
+      "CodeName": "Morgana__iceThorns_jaggedThorns"
+    }
+  ]
+}

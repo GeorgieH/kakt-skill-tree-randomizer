@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfFire",
+      "CodeName": "Hero_arcanist__masterofFire",
+      "ConfigurationName": "MasterofFire",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteEffects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EngulfingFlames",
+      "CodeName": "Hero_arcanist__masterofFire_engulfingFlames"
+    },
+    {
+      "Name": "Firepower",
+      "CodeName": "Hero_arcanist__masterofFire_firepower"
+    },
+    {
+      "Name": "Firestarter",
+      "CodeName": "Hero_arcanist__masterofFire_firestarter"
+    },
+    {
+      "Name": "Inferno",
+      "CodeName": "Hero_arcanist__masterofFire_inferno"
+    }
+  ]
+}

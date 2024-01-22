@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Rampage",
+      "CodeName": "Hero_champion__rampage",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Destruction",
+      "CodeName": "Hero_champion__rampage_destruction"
+    },
+    {
+      "Name": "Frenzy",
+      "CodeName": "Hero_champion__rampage_frenzy"
+    },
+    {
+      "Name": "Persistence",
+      "CodeName": "Hero_champion__rampage_persistence"
+    },
+    {
+      "Name": "RunAmok",
+      "CodeName": "Hero_champion__rampage_runAmok"
+    }
+  ]
+}

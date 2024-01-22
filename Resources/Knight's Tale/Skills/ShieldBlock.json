@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "ShieldBlock",
+      "CodeName": "Hero_defender__shieldBlock",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FirstStrike",
+      "CodeName": "Hero_defender__shieldBlock_firstStrike"
+    },
+    {
+      "Name": "FlankDefense",
+      "CodeName": "Hero_defender__shieldBlock_flankDefense"
+    },
+    {
+      "Name": "ShieldBait",
+      "CodeName": "Hero_defender__shieldBlock_shiledBait"
+    },
+    {
+      "Name": "ShieldSuperiority",
+      "CodeName": "Hero_defender__shieldBlock_shieldSuperiority"
+    },
+    {
+      "Name": "StalwartDefender",
+      "CodeName": "Hero_defender__shieldBlock_stalwartDefender"
+    }
+  ]
+}

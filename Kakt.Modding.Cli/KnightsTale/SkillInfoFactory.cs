@@ -32,9 +32,12 @@ public class SkillInfoFactory : ISkillInfoFactory
     {
         var path = fileSystemService.SkillInfoDirectory;
 
-        foreach (var directory in fileSystemService.GetDirectories(path))
+        foreach (var file in fileSystemService.GetFiles(path))
         {
-            var skillInfos = GetSkills(directory);
+            var json = fileSystemService.GetFileText(file);
+            var document = JsonDocument.Parse(json);
+
+            var skillInfos = GetSkills(document);
 
             foreach (var skillInfo in skillInfos)
             {
@@ -42,7 +45,7 @@ public class SkillInfoFactory : ISkillInfoFactory
 
                 skillInfoRepository.Add(skillInfo);
 
-                var skillUpgradeInfos = GetSkillUpgrades(directory);
+                var skillUpgradeInfos = GetSkillUpgrades(document);
 
                 foreach (var skillUpgradeInfo in skillUpgradeInfos)
                 {
@@ -53,83 +56,65 @@ public class SkillInfoFactory : ISkillInfoFactory
         }
     }
 
-    private IEnumerable<SkillInfo> GetSkills(string directory)
+    private IEnumerable<SkillInfo> GetSkills(JsonDocument document)
     {
-        var infoFiles = new Queue<string>(fileSystemService.GetFiles(directory));
-        var infos = new HashSet<SkillInfo>();
+        var skills = new HashSet<SkillInfo>();
 
-        while (infoFiles.Any())
+        foreach (var skill in document.RootElement.GetProperty("Skills").EnumerateArray())
         {
-            var infoFile = infoFiles.Dequeue();
-            var infoJson = fileSystemService.GetFileText(infoFile);
+            var s = DeserializeToSkill(skill, skills);
+            skills.Add(s);
+        }
 
-            if (TryDeserializeToSkill(infoJson, infos, out var skill))
+        return skills;
+    }
+
+    private IEnumerable<SkillUpgradeInfo> GetSkillUpgrades(JsonDocument document)
+    {
+        var upgrades = new HashSet<SkillUpgradeInfo>();
+
+        if (document.RootElement.TryGetProperty("Upgrades", out var element))
+        {
+            foreach (var upgrade in element.EnumerateArray())
             {
-                infos.Add(skill!);
-            }
-            else
-            {
-                infoFiles.Enqueue(infoFile);
+                var u = DeserializeToSkillUpgrade(upgrade);
+                upgrades.Add(u);
             }
         }
 
-        return infos;
+        return upgrades;
     }
 
-    private IEnumerable<SkillUpgradeInfo> GetSkillUpgrades(string directory)
+    private static SkillInfo DeserializeToSkill(JsonElement element, IEnumerable<SkillInfo> skills)
     {
-        var skillUpgrades = new HashSet<SkillUpgradeInfo>();
-        var upgradesDirectory = fileSystemService.GetSkillUpgradesDirectory(directory);
+        var info = new SkillInfo();
 
-        if (fileSystemService.DirectoryExists(upgradesDirectory))
+        if (element.TryGetProperty("_Base", out var @base))
         {
-            foreach (var skillUpgradeFile in fileSystemService.GetFiles(upgradesDirectory))
-            {
-                var skillUpgradeJson = fileSystemService.GetFileText(skillUpgradeFile);
-                skillUpgrades.Add(DeserializeToSkillUpgrade(skillUpgradeJson));
-            }
-        }
-
-        return skillUpgrades;
-    }
-
-    private static bool TryDeserializeToSkill(string infoJson, IEnumerable<SkillInfo> infos, out SkillInfo? info)
-    {
-        info = new();
-
-        var jsonObject = JsonSerializer.Deserialize<JsonElement>(infoJson);
-
-        if (jsonObject.TryGetProperty("_Base", out var @base))
-        {
-            var baseSkill = infos.FirstOrDefault(x => x.Name.Equals(@base.GetString()));
+            var baseSkill = skills.FirstOrDefault(x => x.Name.Equals(@base.GetString()));
 
             if (baseSkill is not null)
             {
                 info = baseSkill.Copy();
             }
-            else
-            {
-                info = null;
-                return false;
-            }
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.Name), out var name))
+        if (element.TryGetProperty(nameof(SkillInfo.Name), out var name))
         {
             info.Name = name.GetString()!;
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.CodeName), out var codeName))
+        if (element.TryGetProperty(nameof(SkillInfo.CodeName), out var codeName))
         {
             info.CodeName = codeName.GetString()!;
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.Type), out var type))
+        if (element.TryGetProperty(nameof(SkillInfo.Type), out var type))
         {
             info.Type = Enum.Parse<SkillType>(type.GetString()!);
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.ConfigurationName), out var configurationName))
+        if (element.TryGetProperty(nameof(SkillInfo.ConfigurationName), out var configurationName))
         {
             info.ConfigurationName = configurationName.GetString();
         }
@@ -138,12 +123,12 @@ public class SkillInfoFactory : ISkillInfoFactory
             info.ConfigurationName = info.Name;
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.IconName), out var iconName))
+        if (element.TryGetProperty(nameof(SkillInfo.IconName), out var iconName))
         {
             info.IconName = iconName.GetString();
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.Upgradable), out var upgradable))
+        if (element.TryGetProperty(nameof(SkillInfo.Upgradable), out var upgradable))
         {
             info.Upgradable = upgradable.GetBoolean();
         }
@@ -157,7 +142,7 @@ public class SkillInfoFactory : ISkillInfoFactory
             };
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.Attributes), out var attributes))
+        if (element.TryGetProperty(nameof(SkillInfo.Attributes), out var attributes))
         {
             foreach (var attribute in attributes.EnumerateArray())
             {
@@ -165,7 +150,7 @@ public class SkillInfoFactory : ISkillInfoFactory
             }
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.PrerequisiteAttributes), out var prerequisiteAttributes))
+        if (element.TryGetProperty(nameof(SkillInfo.PrerequisiteAttributes), out var prerequisiteAttributes))
         {
             foreach (var attribute in prerequisiteAttributes.EnumerateArray())
             {
@@ -173,12 +158,12 @@ public class SkillInfoFactory : ISkillInfoFactory
             }
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.PrerequisiteAttributesCheckType), out var prerequisiteAttributesCheckType))
+        if (element.TryGetProperty(nameof(SkillInfo.PrerequisiteAttributesCheckType), out var prerequisiteAttributesCheckType))
         {
             info.PrerequisiteAttributesCheckType = Enum.Parse<PrerequisiteCheckType>(prerequisiteAttributesCheckType.GetString()!);
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.Effects), out var effects))
+        if (element.TryGetProperty(nameof(SkillInfo.Effects), out var effects))
         {
             foreach (var effect in effects.EnumerateArray())
             {
@@ -186,7 +171,7 @@ public class SkillInfoFactory : ISkillInfoFactory
             }
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillInfo.PrerequisiteEffects), out var prerequisiteEffects))
+        if (element.TryGetProperty(nameof(SkillInfo.PrerequisiteEffects), out var prerequisiteEffects))
         {
             foreach (var effect in prerequisiteEffects.EnumerateArray())
             {
@@ -194,26 +179,24 @@ public class SkillInfoFactory : ISkillInfoFactory
             }
         }
 
-        return true;
+        return info;
     }
 
-    private SkillUpgradeInfo DeserializeToSkillUpgrade(string skillUpgradeJson)
+    private SkillUpgradeInfo DeserializeToSkillUpgrade(JsonElement element)
     {
         var info = new SkillUpgradeInfo();
 
-        var jsonObject = JsonSerializer.Deserialize<JsonElement>(skillUpgradeJson);
-
-        if (jsonObject.TryGetProperty(nameof(SkillUpgradeInfo.Name), out var name))
+        if (element.TryGetProperty(nameof(SkillUpgradeInfo.Name), out var name))
         {
             info.Name = name.GetString()!;
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillUpgradeInfo.CodeName), out var codeName))
+        if (element.TryGetProperty(nameof(SkillUpgradeInfo.CodeName), out var codeName))
         {
             info.CodeName = codeName.GetString()!;
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillUpgradeInfo.Effects), out var effects))
+        if (element.TryGetProperty(nameof(SkillUpgradeInfo.Effects), out var effects))
         {
             foreach (var effect in effects.EnumerateArray())
             {
@@ -221,7 +204,7 @@ public class SkillInfoFactory : ISkillInfoFactory
             }
         }
 
-        if (jsonObject.TryGetProperty(nameof(SkillUpgradeInfo.PrerequisiteEffects), out var prerequisiteEffects))
+        if (element.TryGetProperty(nameof(SkillUpgradeInfo.PrerequisiteEffects), out var prerequisiteEffects))
         {
             foreach (var effect in prerequisiteEffects.EnumerateArray())
             {

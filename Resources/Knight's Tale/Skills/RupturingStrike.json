@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "RupturingStrike",
+      "CodeName": "Hero_champion__rupturingStrike",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ],
+      "Effects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Bloodbath",
+      "CodeName": "Hero_champion__rupturingStrike_bloodbath"
+    },
+    {
+      "Name": "Hemorrhage",
+      "CodeName": "Hero_champion__rupturingStrike_hemorrhage"
+    },
+    {
+      "Name": "Sadism",
+      "CodeName": "Hero_champion__rupturingStrike_sadism"
+    },
+    {
+      "Name": "ThroatSlice",
+      "CodeName": "Hero_champion__rupturingStrike_throatSlice"
+    }
+  ]
+}

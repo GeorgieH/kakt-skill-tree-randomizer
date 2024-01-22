@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "DazingStrikes",
+      "CodeName": "Hero_champion__dazingStrikes",
+      "Type": "Passive",
+      "Upgradable": true,
+      "Effects": [
+        "Stun"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Exploitation",
+      "CodeName": "Hero_champion__dazingStrikes_exploitation"
+    },
+    {
+      "Name": "ExtraStun",
+      "CodeName": "Hero_champion__extraStun"
+    },
+    {
+      "Name": "SlowImmunity",
+      "CodeName": "Hero_champion__dazingStrikes_slowImmunity"
+    },
+    {
+      "Name": "StunImmunity",
+      "CodeName": "Hero_champion__dazingStrikes_stunImmunity"
+    }
+  ]
+}

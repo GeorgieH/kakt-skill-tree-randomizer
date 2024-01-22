@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "Hunter",
+      "CodeName": "Hero_marksman__hunter",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "GiantSlayer",
+      "CodeName": "Hero_marksman__hunter_giantSlayer"
+    },
+    {
+      "Name": "RepelDeath",
+      "CodeName": "Hero_marksman__hunter_repelDeath"
+    },
+    {
+      "Name": "SidheSlaughterer",
+      "CodeName": "Hero_marksman__hunter_sidheSlaughterer"
+    },
+    {
+      "Name": "SpellResistance",
+      "CodeName": "Hero_arcanist__spellResistance"
+    }
+  ]
+}

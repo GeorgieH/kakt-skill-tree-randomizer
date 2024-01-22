@@ -1,7 +1,0 @@
-{
-  "Name": "IceSpikes",
-  "CodeName": "Hero_sage__iceSpikes",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Ice", "Area" ],
-  "Effects": [ "Chill" ]
-}

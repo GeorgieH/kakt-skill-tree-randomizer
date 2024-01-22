@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "Backstab",
+      "CodeName": "Hero_vanguard__backstab",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Ambush",
+      "CodeName": "Hero_vanguard__backstab_ambush"
+    },
+    {
+      "Name": "Finisher",
+      "CodeName": "Hero_vanguard__backstab_finisher"
+    },
+    {
+      "Name": "FocusedStrike",
+      "CodeName": "Hero_vanguard__backstab_focusedStrike"
+    },
+    {
+      "Name": "Mutilate",
+      "CodeName": "Hero_vanguard__backstab_mutilate",
+      "Effects": [
+        "Vulnerability"
+      ]
+    }
+  ]
+}

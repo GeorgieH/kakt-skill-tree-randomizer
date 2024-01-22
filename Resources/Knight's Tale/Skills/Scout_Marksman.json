@@ -1,0 +1,29 @@
+{
+  "Skills": [
+    {
+      "Name": "MarksmanScout",
+      "CodeName": "Hero_vanguard__scout",
+      "ConfigurationName": "FleetFooted",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Evasive",
+      "CodeName": "Hero_marksman__fleetFooted_evasive"
+    },
+    {
+      "Name": "FirstDodge",
+      "CodeName": "Hero_marksman__fleetFooted_firstDodge"
+    },
+    {
+      "Name": "OnTheRun",
+      "CodeName": "Hero_marksman__fleetFooted_onTherun"
+    },
+    {
+      "Name": "Recon",
+      "CodeName": "Hero_marksman__fleetFooted_recon"
+    }
+  ]
+}

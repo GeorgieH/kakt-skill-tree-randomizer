@@ -1,0 +1,33 @@
+{
+  "Skills": [
+    {
+      "Name": "RazorArrow",
+      "CodeName": "Hero_marksman__razorArrow",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Bleed"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExploitWeakspots",
+      "CodeName": "Hero_marksman__razorArrow_exploitWeakspots"
+    },
+    {
+      "Name": "HookedEdge",
+      "CodeName": "Hero_marksman__razorArrow_hookedEdge"
+    },
+    {
+      "Name": "Precision",
+      "CodeName": "Hero_marksman__razorArrow_precision"
+    },
+    {
+      "Name": "RightInTheKnee",
+      "CodeName": "Hero_marksman__razorArrow_rightintheKnee"
+    }
+  ]
+}

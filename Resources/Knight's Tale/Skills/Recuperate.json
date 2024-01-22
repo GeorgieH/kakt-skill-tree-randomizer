@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Recuperate",
+      "CodeName": "Hero_defender__recuperate",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Benediction",
+      "CodeName": "Hero_defender__recuperate_benediction"
+    },
+    {
+      "Name": "Bolster",
+      "CodeName": "Hero_defender__recuperate_bolster"
+    },
+    {
+      "Name": "RegainArmour",
+      "CodeName": "Hero_defender__recuperate_regainArmour"
+    },
+    {
+      "Name": "SteelResolve",
+      "CodeName": "Hero_defender__recuperate_steelResolve"
+    }
+  ]
+}

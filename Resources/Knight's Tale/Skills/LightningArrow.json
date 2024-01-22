@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "LightningArrow",
+      "CodeName": "SirGeraint__lightningArrow",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Lightning"
+      ],
+      "Effects": [
+        "Shock"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ForkedLightning",
+      "CodeName": "SirGeraint__lightningArrow_forkedLightning"
+    },
+    {
+      "Name": "IntenseLightning",
+      "CodeName": "SirGeraint__lightningArrow_firebolt"
+    },
+    {
+      "Name": "Longshot",
+      "CodeName": "SirGeraint__lightningArrow_longshot"
+    },
+    {
+      "Name": "Thundershot",
+      "CodeName": "SirGeraint__lightningArrow_thundershot"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "Skills": [
+    {
+      "Name": "Strength",
+      "CodeName": "Hero_champion__strength",
+      "Type": "Passive"
+    }
+  ]
+}

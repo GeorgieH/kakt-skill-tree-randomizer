@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "DebilitatingThrow",
+      "CodeName": "Hero_vanguard__debilitatingThrow_weightedProjectile",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Knockback",
+        "Knockdown"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Daze",
+      "CodeName": "Hero_vanguard__debilitatingThrow_daze"
+    },
+    {
+      "Name": "Hasty",
+      "CodeName": "Hero_vanguard__debilitatingThrow_hasty"
+    },
+    {
+      "Name": "SteadyAim",
+      "CodeName": "Hero_vanguard__debilitatingThrow_steadyAim"
+    },
+    {
+      "Name": "WeightedProjectile",
+      "CodeName": "Hero_vanguard__debilitatingThrow_weightedProjectile"
+    }
+  ]
+}

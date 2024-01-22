@@ -1,7 +1,0 @@
-{
-  "Name": "BleedingStrike",
-  "CodeName": "RedKnight__bleedingStrike",
-  "Type": "Active",
-  "Attributes": [ "Melee" ],
-  "Effects": [ "Bleed" ]
-}

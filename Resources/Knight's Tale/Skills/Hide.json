@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Hide",
+      "CodeName": "Hero_vanguard__hide",
+      "Type": "Active",
+      "Effects": [
+        "Hidden"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Preparation",
+      "CodeName": "Hero_vanguard__hide_preparation"
+    },
+    {
+      "Name": "Stalker",
+      "CodeName": "Hero_vanguard__hide_stalker"
+    },
+    {
+      "Name": "Subtle",
+      "CodeName": "Hero_vanguard__hide_subtle"
+    },
+    {
+      "Name": "SurpriseDamage",
+      "CodeName": "Hero_vanguard__hide_surpriseDamage"
+    }
+  ]
+}

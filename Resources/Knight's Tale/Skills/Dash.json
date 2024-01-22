@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "Dash",
+      "CodeName": "Hero_marksman__dash",
+      "Type": "Active",
+      "Attributes": [
+        "Movement"
+      ]
+    },
+    {
+      "_Base": "Dash",
+      "Name": "VanguardDash",
+      "CodeName": "Hero_vanguard__dash",
+      "IconName": "Hero_marksman__dash"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExtendedDash",
+      "CodeName": "Hero_marksman__dash_extendedDash"
+    },
+    {
+      "Name": "KeenEye",
+      "CodeName": "Hero_marksman__dash_keenEye"
+    },
+    {
+      "Name": "Persistence",
+      "CodeName": "Hero_marksman__dash_persistence"
+    },
+    {
+      "Name": "Sprint",
+      "CodeName": "Hero_marksman__dash_sprint"
+    }
+  ]
+}

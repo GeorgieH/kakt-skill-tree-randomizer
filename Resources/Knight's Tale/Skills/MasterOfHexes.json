@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "MasterOfHexes",
+      "CodeName": "Hero_arcanist__masterOfcurses",
+      "ConfigurationName": "MasterOfcurses",
+      "Type": "Passive",
+      "Upgradable": true,
+      "PrerequisiteAttributes": [
+        "Hex"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AncestralHex",
+      "CodeName": "Hero_arcanist__masterOfcurses_ancestralCurse"
+    },
+    {
+      "Name": "CorruptArmour",
+      "CodeName": "Hero_arcanist__masterOfcurses_corruptArmour"
+    },
+    {
+      "Name": "PowerOfHexes",
+      "CodeName": "Hero_arcanist__masterOfcurses_powerofCurses"
+    },
+    {
+      "Name": "QuickCasting",
+      "CodeName": "Hero_arcanist__masterOfcurses_quickCasting"
+    }
+  ]
+}

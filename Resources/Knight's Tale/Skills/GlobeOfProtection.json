@@ -1,0 +1,32 @@
+{
+  "Skills": [
+    {
+      "Name": "GlobeOfProtection",
+      "CodeName": "Hero_sage__globeOfprotection",
+      "ConfigurationName": "GlobeofProtection",
+      "Type": "Active",
+      "Attributes": [
+        "Support",
+        "Spell"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Discipline",
+      "CodeName": "Hero_sage__globeOfprotection_discipline"
+    },
+    {
+      "Name": "DispelMagic",
+      "CodeName": "Hero_sage__globeOfprotection_dispelMagic"
+    },
+    {
+      "Name": "ElementalArmour",
+      "CodeName": "Hero_sage__globeOfprotection_elementalArmour"
+    },
+    {
+      "Name": "SoulWarding",
+      "CodeName": "Hero_sage__globeOfprotection_soulWarding"
+    }
+  ]
+}

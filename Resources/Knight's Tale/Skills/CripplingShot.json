@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "CripplingShot",
+      "CodeName": "SirDamas__cripplingShot",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BarbedArrows",
+      "CodeName": "SirDamas__cripplingShot_barbedArrows"
+    },
+    {
+      "Name": "HeavyBlow",
+      "CodeName": "SirDamas__cripplingShot_heavyBow",
+      "Effects": [
+        "Knockback"
+      ]
+    },
+    {
+      "Name": "PoisonArrows",
+      "CodeName": "SirDamas__cripplingShot_poisonArrows",
+      "Effects": [
+        "Poison"
+      ]
+    },
+    {
+      "Name": "Tormentor",
+      "CodeName": "SirDamas__cripplingShot_tormentor"
+    }
+  ]
+}

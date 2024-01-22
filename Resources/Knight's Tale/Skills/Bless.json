@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "Bless",
+      "CodeName": "Hero_sage__bless",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Guidance",
+      "CodeName": "Hero_sage__bless_guidance"
+    },
+    {
+      "Name": "LastingBless",
+      "CodeName": "Hero_sage__bless_lastingBless"
+    },
+    {
+      "Name": "Lighten",
+      "CodeName": "Hero_sage__bless_lighten"
+    },
+    {
+      "Name": "MassBlessing",
+      "CodeName": "Hero_sage__bless_massBlessing"
+    }
+  ]
+}

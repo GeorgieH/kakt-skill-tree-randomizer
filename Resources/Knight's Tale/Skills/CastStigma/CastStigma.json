@@ -1,7 +1,0 @@
-{
-  "Name": "CastStigma",
-  "CodeName": "SirMordred__castStigma",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Hex" ],
-  "Effects": [ "Vulnerability" ]
-}

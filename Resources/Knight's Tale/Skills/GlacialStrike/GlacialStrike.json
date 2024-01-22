@@ -1,7 +1,0 @@
-{
-  "Name": "GlacialStrike",
-  "CodeName": "Morgana__glacialStrike",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Ice" ],
-  "Effects": [ "Chill" ]
-}

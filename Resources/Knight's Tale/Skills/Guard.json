@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Guard",
+      "CodeName": "Hero_defender__guard",
+      "Type": "Active",
+      "Attributes": [
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DefendAlly",
+      "CodeName": "Hero_defender__guard_defendAlly"
+    },
+    {
+      "Name": "KnightlyZeal",
+      "CodeName": "Hero_defender__guard_knightlyZeal"
+    },
+    {
+      "Name": "RestingGuard",
+      "CodeName": "Hero_defender__guard_restingGuard"
+    },
+    {
+      "Name": "Vindicator",
+      "CodeName": "Hero_defender__guard_vindicator"
+    }
+  ]
+}

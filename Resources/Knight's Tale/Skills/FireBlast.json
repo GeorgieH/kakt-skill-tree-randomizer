@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "FireBlast",
+      "CodeName": "Hero_arcanist__fireBlast",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Fire",
+        "Area"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Conflagaration",
+      "CodeName": "Hero_arcanist__fireBlast_conflagration"
+    },
+    {
+      "Name": "EarthScorcher",
+      "CodeName": "Hero_arcanist__fireBlast_earthScorcher"
+    },
+    {
+      "Name": "Immolate",
+      "CodeName": "Hero_arcanist__fireBlast_immolate"
+    },
+    {
+      "Name": "SearingImpact",
+      "CodeName": "Hero_arcanist__fireBlast_searingImpact"
+    }
+  ]
+}

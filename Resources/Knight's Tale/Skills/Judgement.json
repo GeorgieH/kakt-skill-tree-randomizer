@@ -1,0 +1,30 @@
+{
+  "Skills": [
+    {
+      "Name": "Judgement",
+      "CodeName": "Hero_sage__judgement",
+      "Type": "Active"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "BlindingJustice",
+      "CodeName": "Hero_sage__judgement_blindingJustice",
+      "Effects": [
+        "Blind"
+      ]
+    },
+    {
+      "Name": "ExtraVerdict",
+      "CodeName": "Hero_sage__judgement_extraVerdict"
+    },
+    {
+      "Name": "Penance",
+      "CodeName": "Hero_sage__judgement_penance"
+    },
+    {
+      "Name": "Tribunal",
+      "CodeName": "Hero_sage__judgement_tribunal"
+    }
+  ]
+}

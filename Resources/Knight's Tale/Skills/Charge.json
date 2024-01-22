@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "Charge",
+      "CodeName": "Hero_vanguard__charge",
+      "Type": "Active",
+      "Attributes": [
+        "Movement",
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExtendedCharge",
+      "CodeName": "Hero_vanguard__charge_extendedCharge"
+    },
+    {
+      "Name": "Momentum",
+      "CodeName": "Hero_vanguard__charge_momentum"
+    },
+    {
+      "Name": "PoisonedBlade",
+      "CodeName": "Hero_vanguard__charge_poisonedBlade",
+      "Effects": [
+        "Poison"
+      ]
+    },
+    {
+      "Name": "SuddenCharge",
+      "CodeName": "Hero_vanguard__charge_suddenCharge"
+    }
+  ]
+}

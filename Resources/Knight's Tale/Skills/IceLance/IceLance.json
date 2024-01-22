@@ -1,7 +1,0 @@
-{
-  "Name": "IceLance",
-  "CodeName": "Hero_sage__iceLance",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Ice" ],
-  "Effects": [ "Chill" ]
-}

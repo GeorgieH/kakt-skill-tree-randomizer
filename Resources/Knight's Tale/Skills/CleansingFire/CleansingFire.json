@@ -1,7 +1,0 @@
-{
-  "Name": "CleansingFire",
-  "CodeName": "Hero_sage__cleansingFire",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Fire" ],
-  "Effects": [ "Burn" ]
-}

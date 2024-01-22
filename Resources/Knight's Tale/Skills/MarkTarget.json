@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "MarkTarget",
+      "CodeName": "Hero_marksman__markTarget",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell"
+      ],
+      "Effects": [
+        "Vulnerability"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Blink",
+      "CodeName": "Hero_marksman__markTarget_blink"
+    },
+    {
+      "Name": "Deadeye",
+      "CodeName": "Hero_marksman__markTarget_deadeye"
+    },
+    {
+      "Name": "Entangle",
+      "CodeName": "Hero_marksman__markTarget_entangle"
+    },
+    {
+      "Name": "EvilEye",
+      "CodeName": "Hero_marksman__markTarget_evilEye"
+    }
+  ]
+}

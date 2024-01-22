@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "DeathHex",
+      "CodeName": "Hero_arcanist__deathCurse",
+      "ConfigurationName": "DeathCurse",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell",
+        "Hex"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Dread",
+      "CodeName": "Hero_arcanist__deathCurse_dread",
+      "Effects": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "Name": "HorridVisions",
+      "CodeName": "Hero_arcanist__deathCurse_horridVisions"
+    },
+    {
+      "Name": "Incantation",
+      "CodeName": "Hero_arcanist__deathCurse_incantation"
+    },
+    {
+      "Name": "Oblivion",
+      "CodeName": "Hero_arcanist__deathCurse_oblivion"
+    }
+  ]
+}

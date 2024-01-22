@@ -1,6 +1,0 @@
-{
-  "Name": "ExtraBleeding",
-  "CodeName": "Hero_champion__extraBleeding",
-  "Type": "Passive",
-  "PrerequisiteEffects": [ "Bleed" ]
-}

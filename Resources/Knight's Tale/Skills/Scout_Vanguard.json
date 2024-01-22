@@ -1,0 +1,38 @@
+{
+  "Skills": [
+    {
+      "Name": "VanguardScout",
+      "CodeName": "Hero_vanguard__scout",
+      "ConfigurationName": "Scout",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Forethought",
+      "CodeName": "Hero_vanguard__scout_forethought",
+      "PrerequisiteAttributes": [
+        "Movement"
+      ]
+    },
+    {
+      "Name": "Momentum",
+      "CodeName": "Hero_vanguard__scout_momentum",
+      "PrerequisiteAttributes": [
+        "Movement"
+      ]
+    },
+    {
+      "Name": "MurderousIntent",
+      "CodeName": "Hero_vanguard__scout_murderousIntent",
+      "PrerequisiteAttributes": [
+        "Movement"
+      ]
+    },
+    {
+      "Name": "OnTheRun",
+      "CodeName": "Hero_marksman__fleetFooted_onTherun"
+    }
+  ]
+}

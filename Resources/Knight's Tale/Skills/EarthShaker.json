@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "EarthShaker",
+      "CodeName": "Hero_champion__earthShaker",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EarthSplitter",
+      "CodeName": "Hero_champion__earthShaker_earthSplitter"
+    },
+    {
+      "Name": "GroundSurge",
+      "CodeName": "Hero_champion__earthShaker_groundSurge"
+    },
+    {
+      "Name": "Magnitude",
+      "CodeName": "Hero_champion__earthShaker_magnitude",
+      "Effects": [
+        "Knockback"
+      ]
+    },
+    {
+      "Name": "Stumble",
+      "CodeName": "Hero_champion__earthShaker_stumble",
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ]
+}

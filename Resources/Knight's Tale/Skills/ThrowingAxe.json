@@ -1,0 +1,39 @@
+{
+  "Skills": [
+    {
+      "Name": "ThrowingAxe",
+      "CodeName": "RedKnight__throwingAxe",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged"
+      ],
+      "Effects": [
+        "Knockback"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Bleed",
+      "CodeName": "RedKnight__throwingAxe_bleed",
+      "Effects": [
+        "Bleed"
+      ]
+    },
+    {
+      "Name": "HeavyHanded",
+      "CodeName": "RedKnight__throwingAxe_heavyHanded",
+      "Effects": [
+        "Knockdown"
+      ]
+    },
+    {
+      "Name": "JaggedEdge",
+      "CodeName": "RedKnight__throwingAxe_jaggedEdge"
+    },
+    {
+      "Name": "MasterThrower",
+      "CodeName": "RedKnight__throwingAxe_masterThrower"
+    }
+  ]
+}

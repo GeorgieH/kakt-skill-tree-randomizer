@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "CoverExpert",
+      "CodeName": "Hero_marksman__coverExpert",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Perseverance",
+      "CodeName": "Hero_marksman__coverExpert_perseverance"
+    },
+    {
+      "Name": "Protected",
+      "CodeName": "Hero_marksman__coverExpert_protected"
+    },
+    {
+      "Name": "Sharpshooter",
+      "CodeName": "Hero_marksman__coverExpert_sharpshooter"
+    },
+    {
+      "Name": "SustainedArmour",
+      "CodeName": "Hero_marksman__coverExpert_sustainedArmour"
+    }
+  ]
+}

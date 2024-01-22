@@ -1,8 +1,0 @@
-{
-  "Name": "WallOfFlame",
-  "CodeName": "Hero_arcanist__wallOfflame",
-  "ConfigurationName": "WallofFlame",
-  "Type": "Active",
-  "Attributes": [ "Ranged", "Spell", "Fire", "Area" ],
-  "Effects": [ "Burn" ]
-}

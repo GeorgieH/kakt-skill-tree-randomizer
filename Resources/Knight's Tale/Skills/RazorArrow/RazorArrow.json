@@ -1,7 +1,0 @@
-{
-  "Name": "RazorArrow",
-  "CodeName": "Hero_marksman__razorArrow",
-  "Type": "Active",
-  "Attributes": [ "Ranged" ],
-  "Effects": [ "Bleed" ]
-}

@@ -1,0 +1,40 @@
+{
+  "Skills": [
+    {
+      "Name": "PoisonBomb",
+      "CodeName": "Hero_marksman__poisonBomb",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ],
+      "Effects": [
+        "Poison"
+      ]
+    },
+    {
+      "_Base": "PoisonBomb",
+      "Name": "LadyBoudiceaPoisonBomb",
+      "CodeName": "LadyBoudicea__poisonBomb",
+      "IconName": "Hero_marksman__poisonBomb"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AcidBlast",
+      "CodeName": "Hero_marksman__poisonBomb_acidBlast"
+    },
+    {
+      "Name": "LightCoating",
+      "CodeName": "Hero_marksman__poisonBomb_lightCoating"
+    },
+    {
+      "Name": "PotentBlast",
+      "CodeName": "Hero_marksman__poisonBomb_potentBlast"
+    },
+    {
+      "Name": "ReliableToxins",
+      "CodeName": "Hero_marksman__poisonBomb_reliableToxins"
+    }
+  ]
+}

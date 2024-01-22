@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "CounterAttack",
+      "CodeName": "Hero_vanguard__counterAttack",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Awareness",
+      "CodeName": "Hero_vanguard__counterAttack_awareness"
+    },
+    {
+      "Name": "RegainFooting",
+      "CodeName": "Hero_vanguard__counterAttack_regainFooting"
+    },
+    {
+      "Name": "Riposte",
+      "CodeName": "Hero_vanguard__counterAttack_riposte"
+    },
+    {
+      "Name": "SecondWind",
+      "CodeName": "Hero_vanguard__counterAttack_secondWind"
+    }
+  ]
+}

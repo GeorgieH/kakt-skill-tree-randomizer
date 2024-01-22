@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "LoneWolf",
+      "CodeName": "SirLancelot__loneWolf",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Battleborn",
+      "CodeName": "SirLancelot__loneWolf_battleborn"
+    },
+    {
+      "Name": "Unburdened",
+      "CodeName": "SirLancelot__loneWolf_unburdened"
+    },
+    {
+      "Name": "Unhindered",
+      "CodeName": "SirLancelot__loneWolf_unhindered"
+    },
+    {
+      "Name": "Unyielding",
+      "CodeName": "SirLancelot__loneWolf_unyielding"
+    }
+  ]
+}

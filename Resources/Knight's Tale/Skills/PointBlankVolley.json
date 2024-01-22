@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "PointBlankVolley",
+      "CodeName": "Hero_marksman__pointBlankVolley",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Area"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ArrowBurst",
+      "CodeName": "Hero_marksman__pointBlankVolley_arrowBurst"
+    },
+    {
+      "Name": "Efficacy",
+      "CodeName": "Hero_marksman__pointBlankVolley_efficacy"
+    },
+    {
+      "Name": "ForcefulBlast",
+      "CodeName": "Hero_marksman__pointBlankVolley_forcefulBlast",
+      "Effects": [
+        "Knockback"
+      ]
+    },
+    {
+      "Name": "SearingArrows",
+      "CodeName": "Hero_marksman__pointBlankVolley_searingArrows",
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ]
+}

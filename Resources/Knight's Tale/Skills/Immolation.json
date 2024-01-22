@@ -1,0 +1,34 @@
+{
+  "Skills": [
+    {
+      "Name": "Immolation",
+      "CodeName": "SirPercivale__immolation",
+      "Type": "Active",
+      "Attributes": [
+        "Melee",
+        "Fire"
+      ],
+      "Effects": [
+        "Burn"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "CleansingFlame",
+      "CodeName": "SirPercivale__immolation_cleansingFlame"
+    },
+    {
+      "Name": "Embers",
+      "CodeName": "SirPercivale__immolation_embers"
+    },
+    {
+      "Name": "FieryJudgement",
+      "CodeName": "SirPercivale__immolation_fieryJudgement"
+    },
+    {
+      "Name": "TrialByFire",
+      "CodeName": "SirPercivale__immolation_trialbyFire"
+    }
+  ]
+}

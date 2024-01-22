@@ -1,0 +1,31 @@
+{
+  "Skills": [
+    {
+      "Name": "Encouragement",
+      "CodeName": "SirPercivale__encouragement",
+      "Type": "Active",
+      "Attributes": [
+        "Spell",
+        "Support"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "RosaryPrayer",
+      "CodeName": "SirPercivale__encouragement_rosaryPrayer"
+    },
+    {
+      "Name": "SwiftJustice",
+      "CodeName": "SirPercivale__encouragement_swiftJustice"
+    },
+    {
+      "Name": "TheLordsWill",
+      "CodeName": "SirPercivale__encouragement_theLordswill"
+    },
+    {
+      "Name": "TheLordsWrath",
+      "CodeName": "SirPercivale__encouragement_theLordswrath"
+    }
+  ]
+}

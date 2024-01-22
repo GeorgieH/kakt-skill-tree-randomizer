@@ -1,0 +1,20 @@
+{
+  "Skills": [
+    {
+      "Name": "MentalGuard",
+      "CodeName": "Hero_arcanist__mentalGuard",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ExtendedGuard",
+      "CodeName": "Hero_arcanist__mentalGuard_extendedGuard"
+    },
+    {
+      "Name": "MentalFort",
+      "CodeName": "Hero_arcanist__mentalGuard_mentalFort"
+    }
+  ]
+}

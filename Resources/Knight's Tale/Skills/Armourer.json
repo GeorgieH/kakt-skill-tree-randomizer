@@ -1,0 +1,20 @@
+{
+  "Skills": [
+    {
+      "Name": "Armourer",
+      "CodeName": "Hero_defender__armorer",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "FittedArmour",
+      "CodeName": "Hero_defender__armorer_fittedArmour"
+    },
+    {
+      "Name": "ThickSkinned",
+      "CodeName": "Hero_defender__armorer_thickSkinned"
+    }
+  ]
+}

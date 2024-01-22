@@ -1,0 +1,37 @@
+{
+  "Skills": [
+    {
+      "Name": "RavenSwarm",
+      "CodeName": "Hero_arcanist__ravenSwarm",
+      "Type": "Active",
+      "Attributes": [
+        "Ranged",
+        "Spell"
+      ],
+      "Effects": [
+        "Slow"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EyePecker",
+      "CodeName": "Hero_arcanist__ravenSwarm_eyePecker"
+    },
+    {
+      "Name": "PersistentFlock",
+      "CodeName": "Hero_arcanist__ravenSwarm_persistentFlock"
+    },
+    {
+      "Name": "Smother",
+      "CodeName": "Hero_arcanist__ravenSwarm_smother",
+      "Effects": [
+        "Weakness"
+      ]
+    },
+    {
+      "Name": "VengefulSwarm",
+      "CodeName": "Hero_arcanist__ravenSwarm_vengefulSwarm"
+    }
+  ]
+}

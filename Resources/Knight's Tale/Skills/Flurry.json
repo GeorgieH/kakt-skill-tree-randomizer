@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "Flurry",
+      "CodeName": "Hero_defender__flurry",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ]
+    },
+    {
+      "_Base": "Flurry",
+      "Name": "LadyBoudiceaFlurry",
+      "CodeName": "LadyBoudicea__flurry",
+      "IconName": "Hero_defender__flurry"
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "ArmourBreaker",
+      "CodeName": "Hero_defender__flurry_armourBreaker"
+    },
+    {
+      "Name": "Dismemberment",
+      "CodeName": "Hero_defender__flurry_dismemberment"
+    },
+    {
+      "Name": "ExtendedFlurry",
+      "CodeName": "Hero_defender__flurry_extendedFlurry"
+    },
+    {
+      "Name": "ZestfulFlurry",
+      "CodeName": "Hero_defender__flurry_zestfulFlurry"
+    }
+  ]
+}

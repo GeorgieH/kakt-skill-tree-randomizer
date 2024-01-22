@@ -1,0 +1,29 @@
+{
+  "Skills": [
+    {
+      "Name": "Unyielding",
+      "CodeName": "Hero_defender__toughness",
+      "ConfigurationName": "Toughness",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "Endurance",
+      "CodeName": "Hero_defender__toughness_endurance"
+    },
+    {
+      "Name": "ExtraHP",
+      "CodeName": "Hero_defender__toughness_extraHP"
+    },
+    {
+      "Name": "PhysicalResistance",
+      "CodeName": "Hero_defender__toughness_physicalResistance"
+    },
+    {
+      "Name": "Ruthlessness",
+      "CodeName": "Hero_defender__toughness_ruthlessness"
+    }
+  ]
+}

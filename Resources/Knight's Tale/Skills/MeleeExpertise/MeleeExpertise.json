@@ -1,7 +1,0 @@
-{
-  "Name": "MeleeExpertise",
-  "CodeName": "Hero_champion__meleeExpertise",
-  "Type": "Passive",
-  "Upgradable": true,
-  "PrerequisiteAttributes": [ "Melee" ]
-}

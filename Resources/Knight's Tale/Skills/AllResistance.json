@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "AllResistance",
+      "CodeName": "Hero_defender__allResistance",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "DotResistance",
+      "CodeName": "Hero_defender__dotResistance"
+    },
+    {
+      "Name": "ExtraVitality",
+      "CodeName": "Hero_defender__allResistance_extraVitality"
+    },
+    {
+      "Name": "MentalFort",
+      "CodeName": "Hero_arcanist__mentalGuard_mentalFort"
+    },
+    {
+      "Name": "PhysicalResistance",
+      "CodeName": "Hero_defender__toughness_physicalResistance"
+    }
+  ]
+}

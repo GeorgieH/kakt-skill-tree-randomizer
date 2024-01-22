@@ -1,0 +1,28 @@
+{
+  "Skills": [
+    {
+      "Name": "MagicalArmour",
+      "CodeName": "Hero_arcanist__magicalArmour",
+      "Type": "Passive",
+      "Upgradable": true
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "EnchantedArmour",
+      "CodeName": "Hero_arcanist__magicalArmour_enchantedArmour"
+    },
+    {
+      "Name": "ExtendedArmour",
+      "CodeName": "Hero_arcanist__magicalArmour_extendedArmour"
+    },
+    {
+      "Name": "ReinforcedArmour",
+      "CodeName": "Hero_arcanist__magicalArmour_reinforcedArmour"
+    },
+    {
+      "Name": "ResistInjury",
+      "CodeName": "Hero_arcanist__magicalArmour_resistInjury"
+    }
+  ]
+}

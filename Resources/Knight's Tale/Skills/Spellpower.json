@@ -1,0 +1,12 @@
+{
+  "Skills": [
+    {
+      "Name": "Spellpower",
+      "CodeName": "Hero_arcanist__spellpower",
+      "Type": "Passive",
+      "PrerequisiteAttributes": [
+        "Ranged"
+      ]
+    }
+  ]
+}

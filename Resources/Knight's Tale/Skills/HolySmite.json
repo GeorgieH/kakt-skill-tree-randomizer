@@ -1,0 +1,36 @@
+{
+  "Skills": [
+    {
+      "Name": "HolySmite",
+      "CodeName": "SirGalahad__holySmite",
+      "Type": "Active",
+      "Attributes": [
+        "Melee"
+      ]
+    }
+  ],
+  "Upgrades": [
+    {
+      "Name": "AngelicFlames",
+      "CodeName": "SirGalahad__holySmite_angelicFlames",
+      "Effects": [
+        "Burn"
+      ]
+    },
+    {
+      "Name": "Castigation",
+      "CodeName": "SirGalahad__holySmite_castigation",
+      "Effects": [
+        "Stun"
+      ]
+    },
+    {
+      "Name": "GreaterSmite",
+      "CodeName": "SirGalahad__holySmite_greaterSmite"
+    },
+    {
+      "Name": "SaintlyFervor",
+      "CodeName": "SirGalahad__holySmite_saintlyFervor"
+    }
+  ]
+}
