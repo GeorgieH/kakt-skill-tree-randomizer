@@ -2,7 +2,7 @@
   "Skills": [
     {
       "Name": "DebilitatingThrow",
-      "CodeName": "Hero_vanguard__debilitatingThrow_weightedProjectile",
+      "CodeName": "Hero_vanguard__debilitatingThrow",
       "Type": "Active",
       "Attributes": [
         "Ranged"
